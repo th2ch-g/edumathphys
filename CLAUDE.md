@@ -29,7 +29,7 @@ Follow `docs/STYLE.md`. Writing priority (continue from the first subject with s
    functional-analysis, mathematical-physics, manifolds, general-relativity, probability, quantum-field-theory, solid-state
 3. all remaining subjects
 
-Write one chapter at a time, self-review with the checklist, verify computations (`uv run --with sympy python ...`), set status, run check and build, then commit.
+Workflow: chapters are drafted in parallel by Codex subagents (one subject per agent, a few chapters per batch, `status: draft`), then reviewed by a Claude reviewer agent that verifies proofs and computations (`uv run --with sympy python ...`) and fixes errors. After review, run `npm run check && npm run build`, set `status: reviewed`, and commit only the reviewed files.
 
 ## Rules
 
