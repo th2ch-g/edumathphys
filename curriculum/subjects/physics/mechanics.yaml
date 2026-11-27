@@ -15,40 +15,52 @@ references: [kleppner-kolenkow, taylor-cm, kittel-mechanics, goldstein-cm, landa
 chapters:
   - id: kinematics
     title: 運動の記述
+    status: reviewed
     prerequisites: [analysis/differentiation]
     sections: [位置ベクトルと座標系, 速度と加速度, 等加速度運動と等速円運動, 2 次元極座標での速度と加速度, 円筒座標と球座標, 曲線運動と接線・法線成分（曲率半径）, 次元解析と単位]
   - id: newton-laws
     title: Newton の運動法則
+    status: reviewed
     sections: [慣性の法則と慣性系, 運動方程式と質量・力の定義, 作用反作用の法則, Galilei 変換と Galilei の相対性原理, 力の例（重力・弾性力・垂直抗力・張力）, 摩擦力（静止摩擦と動摩擦）, 自由物体図と連結した物体の運動]
   - id: solving-eom
     title: 運動方程式の解法
+    status: reviewed
     sections: [1 次元運動と変数分離, 速度に比例する抵抗と終端速度, 速度の 2 乗に比例する抵抗, 放物運動と空気抵抗, 一様電場・一様磁場中の荷電粒子の運動, 束縛運動（斜面・円筒面・単振り子）, 数値解法の初歩（Euler 法と Verlet 法）]
   - id: work-energy
     title: 仕事とエネルギー
+    status: reviewed
     prerequisites: [analysis/vector-calculus]
     sections: [仕事と運動エネルギー定理, 線積分としての仕事, 保存力と経路独立性（rot F = 0）, ポテンシャルエネルギーと力の関係, 力学的エネルギー保存則, ポテンシャル図による 1 次元運動の定性的理解と周期の積分表示, 非保存力と仕事率]
   - id: oscillations
     title: 振動
+    status: reviewed
     sections: [単振動と複素表示, 平衡点のまわりの微小振動と安定性, 単振り子と大振幅の周期（楕円積分）, 減衰振動（過減衰・臨界減衰）, 強制振動と共鳴・Q 値, 重ね合わせの原理とインパルス応答, 2 自由度の連成振動と基準振動]
   - id: momentum
     title: 運動量と質点系
+    status: reviewed
     sections: [運動量と力積, 質点系の内力と外力, 重心と重心運動の方程式, 運動量保存則, 重心系と質点系の運動エネルギー, 変質量系とロケット方程式]
   - id: collisions
     title: 衝突
+    status: reviewed
     sections: [衝突と力積近似, 1 次元衝突と反発係数, 弾性衝突におけるエネルギーと運動量の保存, 重心系と実験室系の変換, 2 次元弾性衝突と散乱角, 2 体問題と換算質量, 非弾性衝突と失われるエネルギー]
   - id: angular-momentum
     title: 角運動量
+    status: reviewed
     sections: [力のモーメントと角運動量, 角運動量の運動方程式と保存則, 面積速度と角運動量, 質点系の角運動量と重心まわりの分解, 内力が中心力である場合の角運動量保存, 角運動量と回転の運動エネルギー]
   - id: gravitation
     title: 万有引力と重力場
+    status: reviewed
     prerequisites: [analysis/multiple-integral]
     sections: [万有引力の法則と Cavendish の実験, 重力場と重力ポテンシャル, 球殻定理と球対称な質量分布, 重力に対する Gauss の法則, 潮汐力, 宇宙速度と脱出速度, 人工衛星と静止軌道]
   - id: central-forces
     title: 中心力と惑星の運動
+    status: reviewed
     sections: [中心力と面積速度一定の法則, 有効ポテンシャルと軌道の分類, 軌道方程式（Binet の公式）, Kepler 問題と円錐曲線, Kepler の 3 法則の導出, 円軌道の安定性と近日点移動, 散乱断面積と Rutherford 散乱]
   - id: non-inertial
     title: 非慣性系
+    status: reviewed
     sections: [並進加速度系と慣性力, 回転座標系における速度と加速度の変換, Coriolis 力と遠心力, 地球表面での運動（重力加速度の緯度変化・自由落下の東偏）, Foucault の振り子, 大気と海洋の運動における Coriolis 力, 慣性力と等価原理への序]
   - id: rigid-bodies
     title: 剛体の力学入門
+    status: reviewed
     sections: [剛体の自由度とつりあい, 固定軸まわりの回転と慣性モーメント, 慣性モーメントの計算と平行軸・直交軸の定理, 剛体の平面運動と転がり運動, 実体振り子, 角運動量ベクトルと慣性テンソル, こまとジャイロスコープの歳差運動]
