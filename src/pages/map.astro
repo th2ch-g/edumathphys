@@ -22,6 +22,12 @@ const chapterKeys = Object.fromEntries(cur.subjects.map((s) => [s.id, s.chapters
   <script is:inline type="application/json" id="map-chapters" set:html={JSON.stringify(chapterKeys)} />
 </StarlightPage>
 
+<style is:global>
+  :root {
+    --sl-content-width: 110rem;
+  }
+</style>
+
 <script>
   import { loadStore } from '../client/store.ts';
 
