@@ -368,3 +368,32 @@ a.stub-link {
 .JXGinfobox {
   display: none;
 }
+
+/* Small screens: denser boxes, slightly smaller display math, and a scroll hint for wide formulas */
+@media (max-width: 50rem) {
+  .sl-markdown-content .katex-display > .katex {
+    font-size: 0.95em;
+  }
+  .sl-markdown-content .env,
+  .sl-markdown-content .exercise,
+  .sl-markdown-content .quiz {
+    padding: 0.6rem 0.7rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .sl-markdown-content .proof {
+    padding-left: 0.6rem;
+  }
+  .sl-markdown-content .katex-display {
+    background:
+      linear-gradient(to right, var(--sl-color-bg), var(--sl-color-bg)) left / 1rem 100% no-repeat local,
+      linear-gradient(to left, var(--sl-color-bg), var(--sl-color-bg)) right / 1rem 100% no-repeat local,
+      radial-gradient(farthest-side at 0 50%, rgba(127, 127, 127, 0.35), transparent) left / 0.6rem 100% no-repeat scroll,
+      radial-gradient(farthest-side at 100% 50%, rgba(127, 127, 127, 0.35), transparent) right / 0.6rem 100% no-repeat scroll;
+  }
+  .env .katex-display,
+  .exercise .katex-display,
+  .quiz .katex-display {
+    background: none;
+  }
+}
