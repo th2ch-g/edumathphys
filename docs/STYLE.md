@@ -191,7 +191,8 @@ Conventions declared per subject (see each subject page):
 - [ ] All registry sections are covered in order.
 - [ ] Definitions precede use; every theorem has a proof or an explicit citation.
 - [ ] Non-trivial computations verified (sympy or by hand twice).
-- [ ] At least 4 exercises (basic and advanced) with complete solutions, solvable using the chapter and its prerequisites.
+- [ ] Coverage matches the standard textbooks of the subject for these sections (the site must replace them); no omitted proofs.
+- [ ] At least 8 exercises (basic and advanced) with complete solutions, solvable using the chapter and its prerequisites.
 - [ ] 3–6 quiz questions; answers and explanations agree.
 - [ ] Terms introduced with `:term`; key results labeled; notation listed in frontmatter.
 - [ ] `npm run check` and `npm run build` pass.
