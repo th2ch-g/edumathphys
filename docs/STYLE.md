@@ -150,7 +150,7 @@ One `\label` per display. Use `aligned` for multi-line equations. Unlabeled equa
 ::::
 ```
 
-More than one `[x]` makes it a multiple-choice question.
+More than one `[x]` makes it a multiple-choice question. Options are labeled (A), (B), … automatically. Every quiz renders a collapsible 模範解答 block (correct option letters or numeric answer, followed by the explanation) that readers can open without answering, so the explanation must be a complete model answer, not just a hint.
 
 ### Citations
 

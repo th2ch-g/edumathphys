@@ -235,12 +235,29 @@ button.read-toggle[aria-pressed='true'] {
 }
 .quiz.ok .quiz-result { color: var(--edu-ok); font-weight: 700; }
 .quiz.ng .quiz-result { color: var(--edu-ng); font-weight: 700; }
-.quiz-explanation {
+.sl-markdown-content details.quiz-answer {
   margin-top: 0.75rem;
   padding-top: 0.5rem;
   border-top: 1px solid var(--sl-color-gray-5);
 }
-.quiz-explanation-head { font-weight: 700; }
+details.quiz-answer > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--sl-color-text-accent);
+}
+.quiz-answer-key {
+  margin-top: 0.5rem;
+}
+.sl-markdown-content ul.quiz-options {
+  counter-reset: quiz-opt;
+}
+.quiz-option::before {
+  counter-increment: quiz-opt;
+  content: '(' counter(quiz-opt, upper-alpha) ') ';
+  font-weight: 600;
+  float: left;
+  margin-right: 0.4rem;
+}
 
 /* Bibliography and references */
 ol.bibliography li { margin-bottom: 0.25rem; }

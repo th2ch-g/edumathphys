@@ -8,7 +8,7 @@ function initQuiz(quiz: HTMLElement): void {
   const type = quiz.dataset.type as 'single' | 'multiple' | 'numeric';
   const qid = quiz.dataset.qid!;
   const options = [...quiz.querySelectorAll<HTMLLIElement>('.quiz-option')];
-  const explanation = quiz.querySelector<HTMLElement>('.quiz-explanation');
+  const explanation = quiz.querySelector<HTMLDetailsElement>('details.quiz-answer');
   let input: HTMLInputElement | undefined;
 
   if (type === 'numeric') {
@@ -90,7 +90,7 @@ function initQuiz(quiz: HTMLElement): void {
     }
     quiz.classList.add('answered', ok ? 'ok' : 'ng');
     result.textContent = ok ? '正解' : '不正解';
-    if (explanation) explanation.hidden = false;
+    if (explanation) explanation.open = true;
     check.hidden = true;
     reset.hidden = false;
     updateStore((s) => {
@@ -108,7 +108,7 @@ function initQuiz(quiz: HTMLElement): void {
       input.readOnly = false;
       input.value = '';
     }
-    if (explanation) explanation.hidden = true;
+    if (explanation) explanation.open = false;
     result.textContent = '';
     check.hidden = false;
     reset.hidden = true;

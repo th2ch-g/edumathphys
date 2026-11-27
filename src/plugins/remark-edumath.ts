@@ -139,9 +139,8 @@ export default function remarkEduMath(options: RemarkEduMathOptions) {
         else node.children.unshift(summary);
         setH(node, 'details', { className: [node.name] });
       } else if (node.type === 'containerDirective' && node.name === 'explanation') {
-        if (parent?.type !== 'containerDirective' || (parent as ContainerDirective).name !== 'quiz') fail(':::explanation must be nested inside ::::quiz', node);
-        setH(node, 'div', { className: ['quiz-explanation'], hidden: true });
-        node.children.unshift(headParagraph('quiz-explanation-head', [text('解説')]));
+        // Explanations inside quizzes are converted by transformQuiz.
+        if (!(node.data as HData | undefined)?.hName) fail(':::explanation must be nested inside ::::quiz', node);
       } else if (node.type === 'leafDirective' && node.name === 'interactive') {
         transformInteractive(node, fail);
       }
@@ -253,6 +252,7 @@ export default function remarkEduMath(options: RemarkEduMathOptions) {
     const attrs = node.attributes ?? {};
     const list = node.children.find((c): c is List => c.type === 'list' && c.children.some((li) => typeof li.checked === 'boolean'));
     const props: Record<string, unknown> = { className: ['quiz'], 'data-qid': qid, id: `q${qid.split('#q')[1]}` };
+    let answerText = '';
     if (list) {
       const correct = list.children.flatMap((li, i) => (li.checked ? [i] : []));
       if (correct.length === 0) fail('quiz needs at least one correct option ([x])', node);
@@ -264,12 +264,24 @@ export default function remarkEduMath(options: RemarkEduMathOptions) {
       });
       list.data = { ...(list.data ?? {}), hProperties: { className: ['quiz-options'], role: multiple ? 'group' : 'radiogroup' } } as List['data'];
       Object.assign(props, { 'data-type': multiple ? 'multiple' : 'single', 'data-correct': correct.join(',') });
+      answerText = correct.map((i) => `(${String.fromCharCode(65 + i)})`).join(', ');
     } else if (attrs.answer !== undefined) {
       if (Number.isNaN(Number(attrs.answer))) fail(`quiz answer must be numeric (got "${attrs.answer}")`, node);
       Object.assign(props, { 'data-type': 'numeric', 'data-answer': attrs.answer, 'data-tol': attrs.tol ?? '0' });
+      answerText = attrs.answer;
     } else {
       fail('quiz needs a task list of options or an answer attribute', node);
     }
+    // Model answer: a collapsible block readable without answering (and without JavaScript).
+    const idx = node.children.findIndex((c) => c.type === 'containerDirective' && c.name === 'explanation');
+    const answer: ContainerDirective =
+      idx >= 0 ? (node.children.splice(idx, 1)[0] as ContainerDirective) : { type: 'containerDirective', name: 'explanation', attributes: {}, children: [] };
+    answer.children.unshift(
+      { type: 'paragraph', data: { hName: 'summary' }, children: [text('模範解答')] },
+      headParagraph('quiz-answer-key', [{ type: 'strong', children: [text(`正解: ${answerText}`)] }]),
+    );
+    setH(answer, 'details', { className: ['quiz-answer'] });
+    node.children.push(answer);
     node.children.unshift(headParagraph('quiz-head', [span('env-label', [text(`問 ${number}`)])]));
     setH(node, 'div', props);
   }
