@@ -29,7 +29,10 @@ Follow `docs/STYLE.md`. Writing priority (continue from the first subject with s
    functional-analysis, mathematical-physics, manifolds, general-relativity, probability, quantum-field-theory, solid-state
 3. all remaining subjects
 
-Workflow: chapters are drafted in parallel by Codex subagents (one subject per agent, `status: draft`, brief in `docs/AGENT_BRIEF.md`); drafts under ~50 KB first get a Codex expansion pass; then they are reviewed by a Claude reviewer agent (`docs/REVIEW_BRIEF.md`; keep about 5 reviewers concurrent to stay within usage limits) that verifies proofs and computations (`uv run --with sympy python ...`) and fixes errors. After review, publish with `node scripts/stage-chapters.mjs <subject>/<chapter> ...`: it verifies check + build in a clean worktree (HEAD + those chapters only) and stages the chapters and their registry status (`reviewed`) without the other drafts; then commit and push.
+Workflow (Claude token use is kept minimal; Codex does the heavy work):
+1. Codex subagents draft chapters in parallel (one subject per agent, `status: draft`, brief in `docs/AGENT_BRIEF.md`); drafts under ~50 KB get a Codex expansion pass.
+2. A separate Codex instance reviews and fixes them adversarially (`docs/REVIEW_BRIEF.md`).
+3. Claude acts only as the final gate: `node scripts/stage-chapters.mjs <subject>/<chapter> ...` (check + build in a clean worktree with only those chapters), a light spot check, then commit and push.
 
 ## Rules
 
