@@ -1,0 +1,114 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import DependencyGraph from '../../../components/DependencyGraph.astro';
+import { LEVELS, STATUSES, formatReference, loadCurriculum, loadReferences, subjectDependencies, withBase } from '../../../lib/curriculum.ts';
+
+export function getStaticPaths() {
+  return loadCurriculum().subjects.map((s) => ({ params: { area: s.area, subject: s.id }, props: { id: s.id } }));
+}
+
+const cur = loadCurriculum();
+const { refs } = loadReferences();
+const s = cur.subjectById.get(Astro.props.id)!;
+const deps = [...subjectDependencies(s, cur.subjectById)].map((id) => cur.subjectById.get(id)!);
+const dependents = cur.subjects.filter((t) => subjectDependencies(t, cur.subjectById).has(s.id));
+const written = s.chapters.filter((c) => c.exists).length;
+const nodes = [s, ...deps, ...dependents].map((t) => ({
+  id: t.id,
+  label: t.title,
+  url: t.url,
+  className: [`area-${t.area}`, t.id === s.id ? 'current' : '', t.chapters.some((c) => c.exists) ? '' : 'unwritten'].join(' '),
+}));
+const edges = [...deps.map((d) => ({ from: d.id, to: s.id })), ...dependents.map((d) => ({ from: s.id, to: d.id }))];
+---
+
+<StarlightPage frontmatter={{ title: s.title, description: s.description, tableOfContents: false }}>
+  <p class="subject-en">{s.title_en} ・ {LEVELS[s.level]} ・ 執筆済み {written} / {s.chapters.length} 章</p>
+  <p>{s.description}</p>
+
+  {
+    edges.length > 0 && (
+      <>
+        <h2>前後の科目</h2>
+        <DependencyGraph nodes={nodes} edges={edges} label={`${s.title} の前提科目と後続科目`} />
+      </>
+    )
+  }
+
+  {
+    s.conventions.length > 0 && (
+      <>
+        <h2>記法と規約</h2>
+        <ul>
+          {s.conventions.map((c) => (
+            <li>{c}</li>
+          ))}
+        </ul>
+      </>
+    )
+  }
+
+  <h2>目次</h2>
+  <ol class="subject-toc">
+    {
+      s.chapters.map((c) => (
+        <li>
+          <div class="toc-row">
+            <a href={withBase(c.url)} class:list={[{ 'stub-link': !c.exists }]}>
+              {c.title}
+            </a>
+            <span class={`edu-status edu-status-${c.status}`}>{STATUSES[c.status]}</span>
+          </div>
+          <ol class="toc-sections">
+            {c.sections.map((sec) => (
+              <li>{sec}</li>
+            ))}
+          </ol>
+        </li>
+      ))
+    }
+  </ol>
+
+  {
+    s.references.length > 0 && (
+      <>
+        <h2>参考文献</h2>
+        <ul>
+          {s.references.map((k) => {
+            const r = refs.get(k);
+            return <li>{r ? formatReference(r) : k}</li>;
+          })}
+        </ul>
+      </>
+    )
+  }
+</StarlightPage>
+
+<style>
+  .subject-en {
+    color: var(--sl-color-gray-3);
+    font-size: var(--sl-text-sm);
+  }
+  .subject-toc > li {
+    margin-top: 0.75rem;
+  }
+  .toc-row {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    font-weight: 600;
+  }
+  .toc-sections {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0.25rem;
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-2);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 1rem;
+  }
+  .toc-sections li {
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,77 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { AREAS, LEVELS, STATUSES, loadCurriculum, withBase, type Area } from '../lib/curriculum.ts';
+
+const cur = loadCurriculum();
+const all = cur.subjects.flatMap((s) => s.chapters);
+const count = (st: string) => all.filter((c) => c.status === st).length;
+---
+
+<StarlightPage frontmatter={{ title: '執筆状況', description: '全科目・全章の執筆状況', tableOfContents: false }}>
+  <p>
+    全 {cur.subjects.length} 科目 {all.length} 章のうち、公開 {count('reviewed')} 章・草稿 {count('draft')} 章・執筆中 {count('stub')} 章。
+  </p>
+  {
+    (Object.keys(AREAS) as Area[]).map((area) => (
+      <>
+        <h2>{AREAS[area]}</h2>
+        <table class="edu-table coverage">
+          <thead>
+            <tr>
+              <th>科目</th>
+              <th>区分</th>
+              <th>章</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cur.subjects
+              .filter((s) => s.area === area)
+              .map((s) => (
+                <tr>
+                  <td>
+                    <a href={withBase(s.url)}>{s.title}</a>
+                  </td>
+                  <td>{LEVELS[s.level]}</td>
+                  <td class="chips">
+                    {s.chapters.map((c) => (
+                      <a class={`chip chip-${c.status}`} href={withBase(c.url)} title={`第${c.number}章 ${c.title}（${STATUSES[c.status]}）`}>
+                        {c.number}
+                      </a>
+                    ))}
+                  </td>
+                </tr>
+              ))}
+          </tbody>
+        </table>
+      </>
+    ))
+  }
+</StarlightPage>
+
+<style>
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+  }
+  .chip {
+    display: inline-block;
+    min-width: 1.6rem;
+    text-align: center;
+    font-size: var(--sl-text-xs);
+    border-radius: 0.25rem;
+    padding: 0 0.2rem;
+    text-decoration: none;
+    border: 1px solid var(--sl-color-gray-5);
+    color: var(--sl-color-gray-3);
+  }
+  .chip-draft {
+    border-color: var(--edu-ex);
+    color: var(--edu-ex);
+  }
+  .chip-reviewed {
+    border-color: var(--edu-ok);
+    background: color-mix(in srgb, var(--edu-ok) 20%, transparent);
+    color: var(--sl-color-white);
+  }
+</style>

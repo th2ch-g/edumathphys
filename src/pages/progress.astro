@@ -1,0 +1,78 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { loadCurriculum, withBase } from '../lib/curriculum.ts';
+import { buildDocIndex } from '../lib/doc-index.ts';
+
+const cur = loadCurriculum();
+const { docs } = buildDocIndex();
+const byFile = new Map([...docs.values()].map((d) => [d.file, d]));
+const data = cur.subjects
+  .map((s) => {
+    const chapters = s.chapters.filter((c) => c.exists).map((c) => {
+      const d = byFile.get(c.file);
+      return { key: c.url.replace(/^\/|\/$/g, ''), quiz: d?.quizIds ?? [], ex: d?.exerciseIds ?? [] };
+    });
+    return { id: s.id, title: s.title, url: withBase(s.url), chapters };
+  })
+  .filter((s) => s.chapters.length > 0);
+---
+
+<StarlightPage frontmatter={{ title: '学習進捗', description: '読了した章・解いた演習・確認テストの正答状況', tableOfContents: false }}>
+  <p>進捗はこのブラウザの localStorage にのみ保存され、サーバーには送信されない。ブラウザのデータを消去すると失われる。</p>
+  <table class="edu-table" id="progress-table">
+    <thead>
+      <tr>
+        <th>科目</th>
+        <th>読了</th>
+        <th>演習</th>
+        <th>確認テスト正答</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <p><button type="button" id="progress-reset" class="read-toggle">進捗をすべて消去</button></p>
+  <script is:inline type="application/json" id="progress-data" set:html={JSON.stringify(data)} />
+</StarlightPage>
+
+<script>
+  import { clearStore, loadStore } from '../client/store.ts';
+
+  type Data = { id: string; title: string; url: string; chapters: { key: string; quiz: string[]; ex: string[] }[] }[];
+  const data = JSON.parse(document.getElementById('progress-data')?.textContent ?? '[]') as Data;
+  const tbody = document.querySelector('#progress-table tbody')!;
+
+  function cell(done: number, total: number): HTMLTableCellElement {
+    const td = document.createElement('td');
+    const pct = total === 0 ? 0 : Math.round((100 * done) / total);
+    td.textContent = total === 0 ? '—' : `${done} / ${total}（${pct}%）`;
+    return td;
+  }
+
+  function render(): void {
+    const s = loadStore();
+    tbody.replaceChildren();
+    for (const subj of data) {
+      const tr = document.createElement('tr');
+      const name = document.createElement('td');
+      const a = document.createElement('a');
+      a.href = subj.url;
+      a.textContent = subj.title;
+      name.append(a);
+      const quiz = subj.chapters.flatMap((c) => c.quiz);
+      const ex = subj.chapters.flatMap((c) => c.ex);
+      tr.append(
+        name,
+        cell(subj.chapters.filter((c) => s.read[c.key]).length, subj.chapters.length),
+        cell(ex.filter((e) => s.ex[e]).length, ex.length),
+        cell(quiz.filter((q) => s.quiz[q]?.ok).length, quiz.length),
+      );
+      tbody.append(tr);
+    }
+  }
+
+  render();
+  document.getElementById('progress-reset')?.addEventListener('click', () => {
+    clearStore();
+    render();
+  });
+</script>

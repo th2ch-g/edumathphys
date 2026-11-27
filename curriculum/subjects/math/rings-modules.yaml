@@ -1,0 +1,33 @@
+id: rings-modules
+prefix: ring
+title: 環と加群
+title_en: Rings and Modules
+area: math
+level: undergrad-advanced
+order: 55
+description: >-
+  環とイデアル、剰余環、整域と体、単項イデアル整域と一意分解整域、多項式環、加群の基礎、単項イデアル整域上の有限生成加群の構造定理とその応用を扱う。
+prerequisites: [group-theory]
+references: [yukie-algebra2, katsurada-algebra, dummit-foote, atiyah-macdonald]
+chapters:
+  - id: rings
+    title: 環とイデアル
+    sections: [環の定義と例, 部分環とイデアル, 剰余環, 環準同型と同型定理, 素イデアルと極大イデアル]
+  - id: domains
+    title: 整域と分数体
+    sections: [整域, 分数体, Euclid 整域, 単項イデアル整域, 一意分解整域]
+  - id: polynomial-rings
+    title: 多項式環
+    sections: [多項式環, Gauss の補題, 既約性判定（Eisenstein の判定法）, 多変数多項式環, Hilbert の基底定理]
+  - id: chinese-remainder
+    title: 中国式剰余定理と局所化
+    sections: [中国式剰余定理, 局所化, 局所環]
+  - id: modules
+    title: 加群
+    sections: [加群の定義と例, 部分加群と剰余加群, 準同型と同型定理, 直和と直積, 自由加群]
+  - id: pid-modules
+    title: 単項イデアル整域上の有限生成加群
+    sections: [行列の単因子, 構造定理, 有限生成 Abel 群への応用, Jordan 標準形への応用]
+  - id: exact-sequences
+    title: 完全列とテンソル積
+    sections: [完全列, Hom 関手, 加群のテンソル積, 平坦性と射影加群・入射加群]

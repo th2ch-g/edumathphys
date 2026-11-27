@@ -1,0 +1,36 @@
+id: topology
+prefix: top
+title: 集合と位相
+title_en: General Topology
+area: math
+level: undergrad-basic
+order: 40
+description: >-
+  距離空間を経て一般の位相空間を導入し、連続写像、部分空間・積空間・商空間、連結性、コンパクト性、分離公理、完備距離空間と Baire の定理を扱う。
+prerequisites: [sets-logic, analysis]
+references: [uchida-topology, matsuzaka-sets, munkres-topology]
+chapters:
+  - id: metric-spaces
+    title: 距離空間
+    sections: [距離の公理と例, 開球と開集合, 点列の収束, 連続写像, 同値な距離]
+  - id: topological-spaces
+    title: 位相空間
+    sections: [開集合系の公理, 閉集合・閉包・内部・境界, 近傍系, 開基と準開基, 可算公理]
+  - id: continuous-maps
+    title: 連続写像と同相
+    sections: [連続写像の同値な特徴付け, 開写像と閉写像, 同相写像, 位相の強弱]
+  - id: constructions
+    title: 部分空間・積空間・商空間
+    sections: [相対位相, 積位相と Tychonoff 位相, 商位相, 貼り合わせと例（球面・射影空間・トーラス）]
+  - id: connectedness
+    title: 連結性
+    sections: [連結空間, 連結成分, 弧状連結性, 局所連結性]
+  - id: compactness
+    title: コンパクト性
+    sections: [コンパクト空間, コンパクト性と連続写像, 点列コンパクト性, Tychonoff の定理, 局所コンパクト空間と一点コンパクト化]
+  - id: separation
+    title: 分離公理
+    sections: [T₀〜T₄ 空間, Hausdorff 空間, 正規空間と Urysohn の補題, Tietze の拡張定理, 距離化可能性]
+  - id: complete-metric
+    title: 完備距離空間
+    sections: [完備性, 完備化, Baire のカテゴリー定理, 縮小写像の原理, Arzelà–Ascoli の定理]

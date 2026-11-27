@@ -1,0 +1,105 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { AREAS, LEVELS, loadCurriculum, withBase, type Area, type Level } from '../lib/curriculum.ts';
+
+const cur = loadCurriculum();
+const total = cur.subjects.reduce((n, s) => n + s.chapters.length, 0);
+const written = cur.subjects.reduce((n, s) => n + s.chapters.filter((c) => c.exists).length, 0);
+---
+
+<StarlightPage
+  frontmatter={{
+    title: 'EduMathPhys',
+    description: '大学数学・物理を学部から大学院まで日本語で体系的に独学するためのサイト',
+    template: 'splash',
+    hero: {
+      tagline: '大学数学と物理を、定義・定理・証明から体系的に。学部基礎から大学院まで日本語で独学するためのテキスト。',
+      actions: [
+        { text: '学習ロードマップ', link: withBase('/map/'), icon: 'right-arrow' },
+        { text: 'このサイトについて', link: withBase('/guide/'), variant: 'minimal' },
+      ],
+    },
+  }}
+>
+  <p class="home-stats">{cur.subjects.length} 科目・{total} 章（うち執筆済み {written} 章）</p>
+  {
+    (Object.keys(AREAS) as Area[]).map((area) => (
+      <section>
+        <h2>{AREAS[area]}</h2>
+        {(Object.keys(LEVELS) as Level[]).map((level) => {
+          const subjects = cur.subjects.filter((s) => s.area === area && s.level === level);
+          if (subjects.length === 0) return null;
+          return (
+            <>
+              <h3>{LEVELS[level]}</h3>
+              <div class="subject-grid">
+                {subjects.map((s) => {
+                  const w = s.chapters.filter((c) => c.exists).length;
+                  return (
+                    <a class:list={['subject-card', { unwritten: w === 0 }]} href={withBase(s.url)}>
+                      <span class="card-title">{s.title}</span>
+                      <span class="card-en">{s.title_en}</span>
+                      <span class="card-progress">
+                        <span class="bar" style={`--p:${(100 * w) / s.chapters.length}%`} />
+                        {w} / {s.chapters.length} 章
+                      </span>
+                    </a>
+                  );
+                })}
+              </div>
+            </>
+          );
+        })}
+      </section>
+    ))
+  }
+</StarlightPage>
+
+<style>
+  .home-stats {
+    text-align: center;
+    color: var(--sl-color-gray-3);
+  }
+  .subject-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+  .subject-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    color: var(--sl-color-white);
+  }
+  .subject-card:hover {
+    border-color: var(--sl-color-text-accent);
+  }
+  .subject-card.unwritten {
+    opacity: 0.7;
+  }
+  .card-title {
+    font-weight: 700;
+  }
+  .card-en {
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-3);
+  }
+  .card-progress {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: var(--sl-text-xs);
+    color: var(--sl-color-gray-2);
+  }
+  .bar {
+    flex: 1;
+    height: 4px;
+    border-radius: 2px;
+    background: linear-gradient(to right, var(--sl-color-text-accent) var(--p), var(--sl-color-gray-5) var(--p));
+  }
+</style>

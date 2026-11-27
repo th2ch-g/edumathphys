@@ -1,0 +1,89 @@
+---
+const PAGE_TITLE_ID = '_top';
+import { AREAS, LEVELS, STATUSES, loadCurriculum, prerequisiteLinks, withBase } from '../lib/curriculum.ts';
+
+const cur = loadCurriculum();
+const base = import.meta.env.BASE_URL.replace(/\/?$/, '/');
+const path = '/' + Astro.url.pathname.slice(base.length).replace(/^\/?/, '');
+const chapter = [...cur.chapterByKey.values()].find((c) => c.url === path);
+const subject = chapter?.subject ?? cur.subjects.find((s) => s.url === path);
+const prereqs = chapter ? prerequisiteLinks(chapter.prerequisites, cur) : [];
+const title = Astro.locals.starlightRoute.entry.data.title;
+---
+
+{
+  subject && (
+    <nav class="edu-breadcrumb" aria-label="パンくずリスト">
+      <span>{AREAS[subject.area]}</span>
+      <span aria-hidden="true">›</span>
+      <span>{LEVELS[subject.level]}</span>
+      <span aria-hidden="true">›</span>
+      {chapter ? <a href={withBase(subject.url)}>{subject.title}</a> : <span>{subject.title}</span>}
+    </nav>
+  )
+}
+<h1 id={PAGE_TITLE_ID}>
+  {chapter && <span class="edu-chapter-no">第{chapter.number}章</span>}
+  {title}
+</h1>
+{
+  chapter && (
+    <div class="edu-chapter-meta">
+      <span class={`edu-status edu-status-${chapter.status}`}>{STATUSES[chapter.status]}</span>
+      {chapter.exists && (
+        <button type="button" class="read-toggle" data-doc={chapter.url.replace(/^\/|\/$/g, "")} aria-pressed="false">
+          読了にする
+        </button>
+      )}
+    </div>
+  )
+}
+{
+  prereqs.length > 0 && (
+    <p class="edu-prereq">
+      <strong>前提:</strong>
+      {prereqs.map((p, i) => (
+        <>
+          {i > 0 && '、'}
+          <a href={withBase(p.url)}>{p.label}</a>
+        </>
+      ))}
+    </p>
+  )
+}
+
+<style>
+  h1 {
+    margin-top: 0.5rem;
+    font-size: var(--sl-text-h1);
+    line-height: var(--sl-line-height-headings);
+    font-weight: 600;
+    color: var(--sl-color-white);
+  }
+  .edu-chapter-no {
+    display: block;
+    font-size: var(--sl-text-base);
+    font-weight: 500;
+    color: var(--sl-color-gray-3);
+    letter-spacing: 0.05em;
+  }
+  .edu-breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: 1rem;
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-3);
+  }
+  .edu-chapter-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+  }
+  .edu-prereq {
+    margin-top: 0.75rem;
+    font-size: var(--sl-text-sm);
+    color: var(--sl-color-gray-2);
+  }
+</style>

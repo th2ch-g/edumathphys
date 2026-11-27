@@ -1,0 +1,87 @@
+---
+import { withBase } from '../lib/curriculum.ts';
+import { layoutGraph, type GraphEdge, type GraphNode } from '../lib/graph.ts';
+
+interface Props {
+  nodes: GraphNode[];
+  edges: GraphEdge[];
+  direction?: 'RIGHT' | 'DOWN';
+  label: string;
+}
+const { nodes, edges, direction = 'RIGHT', label } = Astro.props;
+const g = await layoutGraph(nodes, edges, direction);
+const pad = 8;
+---
+
+<div class="dep-graph" role="figure" aria-label={label}>
+  <svg viewBox={`${-pad} ${-pad} ${g.width + 2 * pad} ${g.height + 2 * pad}`} width={g.width + 2 * pad} height={g.height + 2 * pad}>
+    <defs>
+      <marker id="dep-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="currentColor"></path>
+      </marker>
+    </defs>
+    <g class="dep-edges">
+      {g.edges.map((e) => <path d={e.d} data-from={e.from} data-to={e.to} marker-end="url(#dep-arrow)" />)}
+    </g>
+    <g class="dep-nodes">
+      {
+        g.nodes.map((n) => (
+          <a href={withBase(n.url)} class:list={['dep-node', n.className]} data-node={n.id}>
+            <rect x={n.x} y={n.y} width={n.w} height={n.h} rx="7" />
+            <text x={n.x + n.w / 2} y={n.y + n.h / 2} dominant-baseline="central" text-anchor="middle">
+              {n.label}
+            </text>
+          </a>
+        ))
+      }
+    </g>
+  </svg>
+</div>
+
+<style>
+  .dep-graph {
+    overflow-x: auto;
+    margin: 1rem 0;
+    color: var(--sl-color-gray-3);
+  }
+  svg {
+    display: block;
+    max-width: none;
+  }
+  .dep-edges path {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.2;
+    opacity: 0.6;
+  }
+  .dep-node rect {
+    fill: var(--sl-color-bg);
+    stroke: var(--sl-color-gray-4);
+    stroke-width: 1.5;
+  }
+  .dep-node text {
+    fill: var(--sl-color-white);
+    font-size: 13px;
+  }
+  .dep-node:hover rect,
+  .dep-node:focus rect {
+    stroke: var(--sl-color-text-accent);
+    stroke-width: 2.5;
+  }
+  .dep-node.area-math rect {
+    stroke: var(--edu-thm);
+  }
+  .dep-node.area-physics rect {
+    stroke: var(--edu-ex);
+  }
+  .dep-node.unwritten rect {
+    stroke-dasharray: 4 3;
+  }
+  .dep-node.current rect {
+    fill: var(--sl-color-accent-low);
+    stroke-width: 3;
+  }
+  .dep-node.has-progress rect {
+    fill: color-mix(in srgb, var(--edu-ok) 25%, var(--sl-color-bg));
+  }
+</style>

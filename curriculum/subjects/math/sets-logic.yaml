@@ -1,0 +1,35 @@
+id: sets-logic
+prefix: sets
+title: 集合と論理
+title_en: Sets and Logic
+area: math
+level: undergrad-basic
+order: 10
+description: >-
+  大学数学を記述するための論理と集合の基礎。命題と量化子、集合演算、写像、同値関係と商集合、順序、濃度、選択公理と Zorn の補題を扱う。
+references: [matsuzaka-sets, uchida-topology]
+chapters:
+  - id: logic
+    title: 命題と論理
+    sections: [命題と論理結合子, 真理値表と同値変形, 述語と量化子, 量化子の否定, 証明の方法（直接法・対偶・背理法・数学的帰納法）]
+  - id: sets
+    title: 集合と集合演算
+    sections: [集合の表し方, 包含関係と相等, 和集合・共通部分・差・補集合, 集合族の演算, 直積集合と冪集合]
+  - id: maps
+    title: 写像
+    sections: [写像の定義, 単射・全射・全単射, 合成写像と逆写像, 像と逆像, 集合族と写像]
+  - id: relations
+    title: 同値関係と商集合
+    sections: [二項関係, 同値関係と同値類, 商集合と標準射影, 写像の分解, 整数の合同と ℤ/nℤ]
+  - id: orders
+    title: 順序集合
+    sections: [半順序と全順序, 最大元・極大元・上限, 整列集合, 超限帰納法, 順序同型]
+  - id: cardinality
+    title: 濃度
+    sections: [対等と濃度, 可算集合, Bernstein の定理, 非可算集合と対角線論法, 濃度の演算]
+  - id: choice
+    title: 選択公理と Zorn の補題
+    sections: [選択公理, Zorn の補題, 整列可能定理, 同値性の証明, 応用（基底の存在・極大イデアル）]
+  - id: number-systems
+    title: 数の体系の構成
+    sections: [Peano の公理と自然数, 整数と有理数の構成, Dedekind の切断による実数の構成, Cauchy 列による実数の構成, 複素数]

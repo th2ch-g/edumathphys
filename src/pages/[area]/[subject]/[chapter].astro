@@ -1,0 +1,20 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { loadCurriculum, withBase } from '../../../lib/curriculum.ts';
+
+export function getStaticPaths() {
+  return loadCurriculum()
+    .subjects.flatMap((s) => s.chapters.filter((c) => !c.exists))
+    .map((c) => ({ params: { area: c.subject.area, subject: c.subject.id, chapter: c.id }, props: { key: c.key } }));
+}
+
+const c = loadCurriculum().chapterByKey.get(Astro.props.key)!;
+---
+
+<StarlightPage frontmatter={{ title: c.title, description: `${c.subject.title} 第${c.number}章（執筆中）`, pagefind: false, tableOfContents: false }}>
+  <p>この章は現在執筆中である。予定している節は次のとおり。</p>
+  <ol>
+    {c.sections.map((s) => <li>{s}</li>)}
+  </ol>
+  <p><a href={withBase(c.subject.url)}>{c.subject.title} の目次へ戻る</a></p>
+</StarlightPage>

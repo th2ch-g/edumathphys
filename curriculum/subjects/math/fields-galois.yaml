@@ -1,0 +1,36 @@
+id: fields-galois
+prefix: gal
+title: 体と Galois 理論
+title_en: Fields and Galois Theory
+area: math
+level: undergrad-advanced
+order: 60
+description: >-
+  体の拡大、代数拡大と分解体、分離拡大と正規拡大、Galois の基本定理、有限体、円分体、方程式の可解性、作図問題を扱う。
+prerequisites: [rings-modules]
+references: [fujisaki-galois, artin-galois, dummit-foote]
+chapters:
+  - id: field-extensions
+    title: 体の拡大
+    sections: [拡大次数, 代数的元と最小多項式, 代数拡大, 単拡大]
+  - id: splitting-fields
+    title: 分解体と代数閉包
+    sections: [分解体の存在と一意性, 代数閉包, 体の同型の延長]
+  - id: separable-normal
+    title: 分離拡大と正規拡大
+    sections: [分離多項式, 分離拡大, 正規拡大, 原始元定理]
+  - id: galois-correspondence
+    title: Galois の基本定理
+    sections: [Galois 拡大, Galois 群, 基本定理, 例]
+  - id: finite-fields
+    title: 有限体
+    sections: [有限体の存在と一意性, Frobenius 写像, 有限体の Galois 群]
+  - id: cyclotomic
+    title: 円分体と巡回拡大
+    sections: [円分多項式, 円分体の Galois 群, Kummer 拡大]
+  - id: solvability
+    title: 方程式の可解性
+    sections: [冪根拡大, 可解性と可解群, 5 次方程式の非可解性]
+  - id: constructions
+    title: 作図問題
+    sections: [定規とコンパスによる作図, 作図可能数, 古典的作図問題, 正多角形の作図]

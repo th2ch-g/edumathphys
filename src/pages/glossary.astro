@@ -1,0 +1,88 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { withBase } from '../lib/curriculum.ts';
+import { buildDocIndex, type TermEntry } from '../lib/doc-index.ts';
+
+const toHiragana = (s: string) => s.replace(/[ァ-ヶ]/g, (c) => String.fromCharCode(c.charCodeAt(0) - 0x60));
+const ROWS = ['あ', 'か', 'さ', 'た', 'な', 'は', 'ま', 'や', 'ら', 'わ'];
+const ROW_START = 'あかさたなはまやらわ'.split('').map((c) => c.charCodeAt(0));
+const rowOf = (yomi: string) => {
+  const c = toHiragana(yomi).normalize('NFD').charCodeAt(0);
+  let r = 0;
+  for (let i = 0; i < ROW_START.length; i++) if (c >= ROW_START[i]) r = i;
+  return ROWS[r];
+};
+
+const { terms } = buildDocIndex();
+const merged = new Map<string, TermEntry & { occurrences: TermEntry[] }>();
+for (const t of terms) {
+  const k = `${t.term}\u0000${t.en}`;
+  const m = merged.get(k);
+  if (m) m.occurrences.push(t);
+  else merged.set(k, { ...t, occurrences: [t] });
+}
+const ja = [...merged.values()].sort((a, b) => toHiragana(a.yomi).localeCompare(toHiragana(b.yomi), 'ja'));
+const groups = ROWS.map((r) => ({ row: r, items: ja.filter((t) => rowOf(t.yomi) === r) })).filter((g) => g.items.length > 0);
+const en = [...merged.values()].sort((a, b) => a.en.localeCompare(b.en, 'en', { sensitivity: 'base' }));
+---
+
+<StarlightPage frontmatter={{ title: '用語索引', description: '本文中で定義された用語の五十音順索引と英語索引' }} headings={[...groups.map((g) => ({ depth: 2, slug: `row-${g.row}`, text: `${g.row}行` })), { depth: 2, slug: 'english', text: '英語索引' }]}>
+  <p>{merged.size} 語。各語のリンク先は、その語が定義されている箇所である。</p>
+  {
+    groups.map((g) => (
+      <>
+        <h2 id={`row-${g.row}`}>{g.row}行</h2>
+        <dl class="glossary">
+          {g.items.map((t) => (
+            <>
+              <dt>
+                {t.term} <span class="en">{t.en}</span>
+              </dt>
+              <dd>
+                {t.occurrences.map((o, i) => (
+                  <>
+                    {i > 0 && '、'}
+                    <a href={withBase(o.url)}>
+                      {o.subjectTitle ? `${o.subjectTitle}: ` : ''}
+                      {o.docTitle}
+                    </a>
+                  </>
+                ))}
+              </dd>
+            </>
+          ))}
+        </dl>
+      </>
+    ))
+  }
+  <h2 id="english">英語索引</h2>
+  <ul class="glossary-en">
+    {
+      en.map((t) => (
+        <li>
+          <a href={withBase(t.occurrences[0].url)}>{t.en}</a> — {t.term}
+        </li>
+      ))
+    }
+  </ul>
+</StarlightPage>
+
+<style>
+  .glossary dt {
+    font-weight: 700;
+    margin-top: 0.6rem;
+  }
+  .glossary .en {
+    font-weight: 400;
+    color: var(--sl-color-gray-3);
+    margin-left: 0.5rem;
+  }
+  .glossary dd {
+    margin-left: 1rem;
+    font-size: var(--sl-text-sm);
+  }
+  .glossary-en {
+    columns: 2 16rem;
+    font-size: var(--sl-text-sm);
+  }
+</style>

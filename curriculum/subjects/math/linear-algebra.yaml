@@ -1,0 +1,51 @@
+id: linear-algebra
+prefix: linalg
+title: 線形代数
+title_en: Linear Algebra
+area: math
+level: undergrad-basic
+order: 20
+description: >-
+  ベクトル空間と線形写像の理論。連立一次方程式から始め、行列式・固有値・内積空間・スペクトル定理・Jordan 標準形・双対空間・テンソル積までを扱い、
+  解析学・幾何学・量子力学など数理科学全般の共通言語を与える。
+prerequisites: [sets-logic]
+conventions:
+  - 係数体 K は実数体 ℝ または複素数体 ℂ とする（特に断らない限り一般の体でも成り立つ命題はその旨を記す）。
+  - ベクトルは列ベクトルで表し、転置を A^⊤、随伴（共役転置）を A^* で表す。
+  - 複素内積 ⟨x, y⟩ は第1引数について線形、第2引数について共役線形とする（量子力学の Dirac 記法とは逆なので注意）。
+references: [saito-linalg, sato-linalg, axler-ladr, halmos-fdvs, horn-johnson]
+chapters:
+  - id: linear-equations
+    title: 連立一次方程式と行列
+    sections: [行列とその演算, 基本変形と行階段形, 連立一次方程式の解法, 階数と解の構造, 正則行列と逆行列]
+  - id: vector-spaces
+    title: ベクトル空間・基底・次元
+    sections: [体とベクトル空間の公理, 部分空間, 一次独立と生成系, 基底と次元, 和空間と直和]
+  - id: linear-maps
+    title: 線形写像と表現行列
+    sections: [線形写像の定義と例, 核と像, 次元定理, 表現行列, 基底変換と行列の相似]
+  - id: determinants
+    title: 行列式
+    sections: [置換と符号, 多重線形交代形式としての行列式, 行列式の基本性質, 余因子展開と逆行列, Cramer の公式]
+  - id: eigenvalues
+    title: 固有値と対角化
+    status: draft
+    sections: [固有値と固有ベクトル, 特性多項式, 対角化可能性の判定, Cayley–Hamilton の定理, 三角化]
+  - id: inner-product-spaces
+    title: 内積空間
+    sections: [内積とノルム, Cauchy–Schwarz の不等式, 正規直交基底と Gram–Schmidt の直交化, 直交補空間と直交射影, 随伴写像]
+  - id: spectral-theorem
+    title: 正規作用素とスペクトル定理・二次形式
+    sections: [自己随伴作用素とユニタリ作用素, 正規作用素のスペクトル定理, 実対称行列の直交対角化, 二次形式と Sylvester の慣性法則, 正定値行列]
+  - id: jordan-form
+    title: 最小多項式と Jordan 標準形
+    sections: [最小多項式, 不変部分空間と広義固有空間, 冪零作用素の構造, Jordan 標準形の存在と一意性, Jordan 標準形の応用]
+  - id: dual-and-quotient
+    title: 双対空間と商空間
+    sections: [双対空間と双対基底, 双対写像と転置, 二重双対, 商空間, 同型定理]
+  - id: tensor-products
+    title: テンソル積と外積代数
+    sections: [双線形写像, テンソル積の普遍性, テンソル積の基底と成分, 外積代数, 行列式の再解釈]
+  - id: matrix-analysis
+    title: 行列解析
+    sections: [ベクトルと行列のノルム, 特異値分解, 行列の指数関数, 行列の関数と応用, 固有値の摂動]

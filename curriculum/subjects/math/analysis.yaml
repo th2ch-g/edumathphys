@@ -1,0 +1,54 @@
+id: analysis
+prefix: anl
+title: 解析学（微分積分学）
+title_en: Analysis (Calculus)
+area: math
+level: undergrad-basic
+order: 30
+description: >-
+  実数の連続性から出発し、ε-δ 論法による極限・連続性、1 変数と多変数の微分積分、一様収束、逆関数定理と陰関数定理、重積分、ベクトル解析の積分定理までを厳密に展開する。
+prerequisites: [sets-logic]
+conventions:
+  - ℕ = {1, 2, 3, …} とし、0 を含めるときは ℤ_{≥0} と書く。
+  - 開区間を (a, b)、閉区間を [a, b] で表す。ℝⁿ のノルムは特に断らない限り Euclid ノルム |x| とする。
+references: [sugiura-analysis, takagi-kaiseki, rudin-pma, apostol-analysis, kobayashi-bibun]
+chapters:
+  - id: real-numbers
+    title: 実数の連続性
+    sections: [実数の公理, 上限と下限, 実数の連続性の諸形式, Archimedes の性質, 有理数の稠密性]
+  - id: sequences-series
+    title: 数列と級数
+    sections: [数列の極限, 単調収束定理, Bolzano–Weierstrass の定理, Cauchy 列と完備性, 上極限と下極限, 級数の収束と判定法, 絶対収束と条件収束・再配列]
+  - id: continuity
+    title: 関数の極限と連続性
+    sections: [関数の極限（ε-δ）, 連続関数, 中間値の定理, 最大値・最小値の定理, 一様連続性, 単調関数と逆関数]
+  - id: differentiation
+    title: 1 変数関数の微分
+    sections: [微分可能性と導関数, 平均値の定理, Taylor の定理, l'Hôpital の定理, 凸関数, 極値問題]
+  - id: riemann-integral
+    title: Riemann 積分
+    sections: [Darboux 和と Riemann 積分, 可積分条件, 連続関数の可積分性, 積分の性質, 微分積分学の基本定理, 置換積分と部分積分]
+  - id: uniform-convergence
+    title: 関数列と一様収束
+    sections: [各点収束と一様収束, 一様収束と連続性・積分・微分, 関数項級数と Weierstrass の M 判定法, べき級数と収束半径, 解析関数, Weierstrass の近似定理]
+  - id: elementary-functions
+    title: 初等関数の厳密な構成
+    sections: [指数関数, 対数関数, 三角関数と円周率, 逆三角関数, 双曲線関数]
+  - id: euclidean-space
+    title: ℝⁿ の位相と多変数関数の連続性
+    sections: [ℝⁿ の距離とノルム, 開集合と閉集合, 点列の収束と完備性, コンパクト集合と Heine–Borel の定理, 連結性, 多変数関数の連続性]
+  - id: multivariable-differentiation
+    title: 多変数関数の微分
+    sections: [偏微分と方向微分, 全微分可能性, 連鎖律, 高階偏導関数と Schwarz の定理, 多変数の Taylor の定理, 極値と Hesse 行列]
+  - id: implicit-function
+    title: 逆関数定理と陰関数定理
+    sections: [縮小写像の原理, 逆関数定理, 陰関数定理, 曲面と接空間, Lagrange の未定乗数法]
+  - id: multiple-integral
+    title: 重積分
+    sections: [長方形上の積分, Jordan 可測集合, 累次積分と Fubini の定理, 変数変換公式, 極座標・球座標]
+  - id: improper-integral
+    title: 広義積分とガンマ関数・ベータ関数
+    sections: [1 変数の広義積分, 多変数の広義積分, Gauss 積分, パラメータを含む積分, ガンマ関数とベータ関数, Stirling の公式]
+  - id: vector-calculus
+    title: 線積分・面積分とベクトル解析
+    sections: [曲線と線積分, 勾配・発散・回転, Green の定理, 曲面と面積分, Gauss の発散定理, Stokes の定理]

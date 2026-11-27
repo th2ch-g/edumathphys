@@ -1,0 +1,10 @@
+---
+import Default from '@astrojs/starlight/components/MarkdownContent.astro';
+import 'node-tikzjax/css/fonts.css';
+---
+
+<Default><slot /></Default>
+
+<script>
+  import '../client/main.ts';
+</script>

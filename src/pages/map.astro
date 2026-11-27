@@ -1,0 +1,33 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import DependencyGraph from '../components/DependencyGraph.astro';
+import { loadCurriculum, subjectDependencies } from '../lib/curriculum.ts';
+
+const cur = loadCurriculum();
+const nodes = cur.subjects.map((s) => ({
+  id: s.id,
+  label: s.title,
+  url: s.url,
+  className: [`area-${s.area}`, s.chapters.some((c) => c.exists) ? '' : 'unwritten'].join(' '),
+}));
+const edges = cur.subjects.flatMap((s) => [...subjectDependencies(s, cur.subjectById)].map((d) => ({ from: d, to: s.id })));
+const chapterKeys = Object.fromEntries(cur.subjects.map((s) => [s.id, s.chapters.map((c) => c.url.replace(/^\/|\/$/g, ''))]));
+---
+
+<StarlightPage frontmatter={{ title: '学習ロードマップ', description: '科目間の前提関係（矢印は「前提 → 後続」）', tableOfContents: false }}>
+  <p>
+    矢印は「前提となる科目 → それを用いる科目」を表す。青枠は数学、橙枠は物理、破線は未執筆の科目、緑の塗りは読了した章がある科目を示す。ノードをクリックすると科目の目次へ移動する。
+  </p>
+  <DependencyGraph nodes={nodes} edges={edges} direction="RIGHT" label="全科目の前提関係グラフ" />
+  <script is:inline type="application/json" id="map-chapters" set:html={JSON.stringify(chapterKeys)} />
+</StarlightPage>
+
+<script>
+  import { loadStore } from '../client/store.ts';
+
+  const data = JSON.parse(document.getElementById('map-chapters')?.textContent ?? '{}') as Record<string, string[]>;
+  const read = loadStore().read;
+  for (const [subject, chapters] of Object.entries(data)) {
+    if (chapters.some((c) => read[c])) document.querySelector(`[data-node="${subject}"]`)?.classList.add('has-progress');
+  }
+</script>

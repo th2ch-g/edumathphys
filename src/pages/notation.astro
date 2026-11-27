@@ -1,0 +1,45 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import katex from 'katex';
+import { loadCurriculum, withBase } from '../lib/curriculum.ts';
+import { buildDocIndex } from '../lib/doc-index.ts';
+import { katexOptions } from '../lib/katex-macros.ts';
+
+const cur = loadCurriculum();
+const { notation } = buildDocIndex();
+const render = (tex: string) => katex.renderToString(tex, { ...katexOptions, macros: { ...katexOptions.macros }, throwOnError: true });
+const groups = cur.subjects
+  .map((s) => ({ subject: s, items: notation.filter((n) => n.subjectId === s.id) }))
+  .filter((g) => g.items.length > 0);
+---
+
+<StarlightPage frontmatter={{ title: '記号表', description: '各章で導入された記号の一覧' }} headings={groups.map((g) => ({ depth: 2, slug: g.subject.id, text: g.subject.title }))}>
+  <p>各章の冒頭で導入される主な記号を科目別にまとめる。共通の記法は「<a href={withBase('/guide/conventions/')}>記法と規約</a>」を参照。</p>
+  {
+    groups.map((g) => (
+      <>
+        <h2 id={g.subject.id}>{g.subject.title}</h2>
+        <table class="edu-table">
+          <thead>
+            <tr>
+              <th>記号</th>
+              <th>意味</th>
+              <th>初出</th>
+            </tr>
+          </thead>
+          <tbody>
+            {g.items.map((n) => (
+              <tr>
+                <td set:html={render(n.symbol)} />
+                <td>{n.meaning}</td>
+                <td>
+                  <a href={withBase(n.url)}>{n.docTitle}</a>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </>
+    ))
+  }
+</StarlightPage>
