@@ -45,10 +45,6 @@ Workflow (Claude token use is kept minimal; Codex does the heavy work):
 
 Unreviewed drafts live on the `drafts` branch (not published). To resume: `git checkout drafts -- src/content/docs curriculum/subjects` on top of main, then `git reset -q` (checkout also stages the drafts; `stage-chapters.mjs` must start from a clean index), then continue the workflow above.
 
-- Every chapter of every subject now exists at least as a draft.
-- First drafts, need an expansion pass (most chapters are 12–30 KB) and then review: all 46 subjects that were stubs before (algebraic-geometry … vibrations-waves).
-- Expanded, waiting for Codex review: complex-analysis, sets-logic, special-relativity, statistical-mechanics.
-- Upgraded, waiting for Codex review: linear-algebra ch1–2 (published; the upgraded text is on `drafts` only).
-- Reviewed but held: electromagnetism/relativistic-em (waits for special-relativity to be published).
-- Known `npm run check` errors in drafts: riemannian-geometry/curvature (`\owedge`), nuclear-physics/mesons-quarks (`\slashed`), plasma-physics/magnetized-kinetics (`\rhosim`). Undefined KaTeX macros: rewrite with supported commands (no `\newcommand`).
-- References softened to plain links by `scripts/soften-refs.mjs` (restore as `:ref` once the target is published): electromagnetism/electrostatics (thm-anl-divergence), mechanics/kinematics, measure-integration/lebesgue-measure, measure-integration/differentiation, analysis/euclidean-space (thm-sets-demorgan), analysis/multiple-integral (prop-sets-characteristic). Find them with `grep -rn '](/math/\|](/physics/' src/content/docs` and compare with the labels in published chapters.
+- Every chapter of every subject exists at least as a draft. Published: all subjects except the 46 below.
+- Expanded, waiting for Codex review (review jobs also fix the `npm run check` errors in these drafts): the 46 subjects that were stubs before (algebraic-geometry … vibrations-waves).
+- References softened to plain links by `scripts/soften-refs.mjs` (restore as `:ref` once the target is published): electromagnetism/electrostatics (thm-anl-divergence), mechanics/kinematics, measure-integration/lebesgue-measure, measure-integration/differentiation, analysis/euclidean-space (thm-sets-demorgan), analysis/multiple-integral (prop-sets-characteristic), complex-analysis/harmonic-functions. Find them with `grep -rn '](/math/\|](/physics/' src/content/docs` and compare with the labels in published chapters.
