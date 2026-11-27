@@ -17,6 +17,7 @@ references: [saito-linalg, satake-linalg, axler-ladr, halmos-fdvs, horn-johnson]
 chapters:
   - id: linear-equations
     title: 連立一次方程式と行列
+    status: reviewed
     sections: [行列とその演算, 基本変形と行階段形, 連立一次方程式の解法, 階数と解の構造, 正則行列と逆行列]
   - id: vector-spaces
     title: ベクトル空間・基底・次元
