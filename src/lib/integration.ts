@@ -1,3 +1,6 @@
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 import type { AstroIntegration } from 'astro';
 import { loadCurriculum, loadReferences } from './curriculum.ts';
 import { buildDocIndex, invalidateDocIndex } from './doc-index.ts';
@@ -23,6 +26,12 @@ export function edumathIntegration(opts: { watch: string[] }): AstroIntegration 
         const msg = `${errors.length} content error(s):\n- ${errors.join('\n- ')}`;
         if (command === 'build') throw new Error(msg);
         logger.warn(msg);
+      },
+      'astro:build:done': async ({ dir }) => {
+        // Raster icon for platforms that do not support SVG favicons.
+        const { default: sharp } = await import('sharp');
+        const svg = readFileSync(join(process.cwd(), 'public', 'favicon.svg'));
+        await sharp(svg, { density: 300 }).resize(180, 180).png().toFile(join(fileURLToPath(dir), 'apple-touch-icon.png'));
       },
       'astro:server:setup': ({ server, logger }) => {
         const onChange = (file: string) => {

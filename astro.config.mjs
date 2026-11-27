@@ -40,6 +40,12 @@ export default defineConfig({
     starlight({
       title: 'EduMathPhys',
       description: '大学数学・物理を学部から大学院まで日本語で体系的に独学するためのサイト',
+      logo: { src: './src/assets/logo.svg', alt: '' },
+      favicon: '/favicon.svg',
+      head: [
+        { tag: 'link', attrs: { rel: 'apple-touch-icon', href: `${base.replace(/\/?$/, '/')}apple-touch-icon.png` } },
+        { tag: 'meta', attrs: { name: 'theme-color', content: '#1e3a8a' } },
+      ],
       defaultLocale: 'root',
       locales: { root: { label: '日本語', lang: 'ja' } },
       sidebar: buildSidebar(),
