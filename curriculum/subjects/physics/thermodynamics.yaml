@@ -1,0 +1,39 @@
+id: thermodynamics
+prefix: thermo
+title: 熱力学
+title_en: Thermodynamics
+area: physics
+level: undergrad-basic
+order: 60
+description: >-
+  平衡状態と状態量、熱力学第一法則・第二法則、Carnot サイクルとエントロピー、熱力学関数と Maxwell の関係式、平衡条件と安定性、相転移と化学ポテンシャルを公理的視点も交えて扱う。
+prerequisites: [analysis]
+references: [tasaki-thermo, shimizu-thermo, callen-thermo, fermi-thermo]
+chapters:
+  - id: equilibrium
+    title: 平衡状態と状態量
+    sections: [熱力学系と平衡状態, 温度と熱力学第零法則, 状態方程式, 示量変数と示強変数]
+  - id: first-law
+    title: 熱力学第一法則
+    sections: [仕事と熱, 内部エネルギー, 準静的過程, 熱容量, 理想気体の断熱過程]
+  - id: second-law
+    title: 熱力学第二法則
+    sections: [Kelvin と Clausius の原理, Carnot サイクル, 熱力学的絶対温度, Clausius の不等式]
+  - id: entropy
+    title: エントロピー
+    sections: [エントロピーの定義, エントロピー増大則, 断熱的到達可能性とエントロピー原理]
+  - id: potentials
+    title: 熱力学関数
+    sections: [Helmholtz 自由エネルギー, Gibbs 自由エネルギーとエンタルピー, Legendre 変換, Maxwell の関係式]
+  - id: stability
+    title: 平衡条件と安定性
+    sections: [最大エントロピー原理と最小自由エネルギー原理, 熱力学的安定性条件, Le Chatelier の原理]
+  - id: phase-transitions
+    title: 相平衡と相転移
+    sections: [化学ポテンシャル, Gibbs の相律, Clausius–Clapeyron の式, van der Waals 気体と Maxwell の等面積則, 臨界点]
+  - id: mixtures
+    title: 多成分系と化学平衡
+    sections: [Gibbs–Duhem の関係, 理想混合, 化学平衡と質量作用の法則]
+  - id: third-law
+    title: 熱力学第三法則
+    sections: [Nernst の定理, 絶対零度の到達不可能性]

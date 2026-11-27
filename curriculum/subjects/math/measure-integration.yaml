@@ -1,0 +1,39 @@
+id: measure-integration
+prefix: meas
+title: 測度論と Lebesgue 積分
+title_en: Measure Theory and Lebesgue Integration
+area: math
+level: undergrad-advanced
+order: 90
+description: >-
+  σ-加法族と測度、外測度と Carathéodory の拡張定理、Lebesgue 測度、可測関数と積分、収束定理、直積測度と Fubini の定理、Lᵖ 空間、Radon–Nikodym の定理を扱う。
+prerequisites: [analysis, topology]
+references: [ito-lebesgue, folland-real, rudin-rca]
+chapters:
+  - id: sigma-algebras
+    title: σ-加法族と測度
+    sections: [Riemann 積分の限界, σ-加法族, 測度の定義と性質, Borel 集合族]
+  - id: outer-measure
+    title: 外測度と測度の拡張
+    sections: [外測度, Carathéodory の可測性, 拡張定理, 測度の一意性と π-λ 定理]
+  - id: lebesgue-measure
+    title: Lebesgue 測度
+    sections: [ℝⁿ 上の Lebesgue 測度, 正則性, 平行移動不変性, 非可測集合, Cantor 集合]
+  - id: measurable-functions
+    title: 可測関数
+    sections: [可測関数の定義, 単関数近似, ほとんど至るところ, Egorov の定理と Lusin の定理]
+  - id: integration
+    title: Lebesgue 積分
+    sections: [非負関数の積分, 単調収束定理, Fatou の補題, 可積分関数, 優収束定理, Riemann 積分との関係]
+  - id: product-measures
+    title: 直積測度と Fubini の定理
+    sections: [直積 σ-加法族, 直積測度, Fubini–Tonelli の定理, ℝⁿ における変数変換]
+  - id: lp-spaces
+    title: Lᵖ 空間
+    sections: [Hölder と Minkowski の不等式, Lᵖ の完備性（Riesz–Fischer）, 稠密な部分空間, 畳み込み]
+  - id: radon-nikodym
+    title: 符号付き測度と Radon–Nikodym の定理
+    sections: [符号付き測度と Hahn 分解, 絶対連続性, Radon–Nikodym の定理, Lebesgue 分解]
+  - id: differentiation
+    title: 微分定理
+    sections: [Vitali の被覆補題, Lebesgue の微分定理, 有界変動関数, 絶対連続関数]

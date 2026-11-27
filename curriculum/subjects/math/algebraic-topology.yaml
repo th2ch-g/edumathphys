@@ -1,0 +1,36 @@
+id: algebraic-topology
+prefix: at
+title: 代数的位相幾何
+title_en: Algebraic Topology
+area: math
+level: undergrad-advanced
+order: 160
+description: >-
+  ホモトピーと基本群、被覆空間、単体複体と特異ホモロジー、Mayer–Vietoris 完全列、CW 複体と胞体ホモロジー、コホモロジーとカップ積、Poincaré 双対性を扱う。
+prerequisites: [topology, group-theory]
+references: [hatcher-at, tamura-topology]
+chapters:
+  - id: homotopy
+    title: ホモトピー
+    sections: [ホモトピーとホモトピー同値, 可縮空間, 変位レトラクト]
+  - id: fundamental-group
+    title: 基本群
+    sections: [道とループ, 基本群の定義, 円周の基本群, Brouwer の不動点定理（2 次元）, Seifert–van Kampen の定理]
+  - id: covering-spaces
+    title: 被覆空間
+    sections: [被覆写像, 持ち上げ定理, 普遍被覆, 被覆変換群と Galois 対応]
+  - id: simplicial-homology
+    title: 単体的ホモロジー
+    sections: [単体複体, 鎖複体とホモロジー, 計算例, Euler 標数]
+  - id: singular-homology
+    title: 特異ホモロジー
+    sections: [特異鎖複体, ホモトピー不変性, 相対ホモロジーと長完全列, 切除定理, Mayer–Vietoris 完全列]
+  - id: cw-complexes
+    title: CW 複体と胞体ホモロジー
+    sections: [CW 複体, 胞体ホモロジー, 写像度, 応用]
+  - id: cohomology
+    title: コホモロジー
+    sections: [コホモロジー群, 普遍係数定理, カップ積とコホモロジー環, Künneth の公式]
+  - id: poincare-duality
+    title: Poincaré 双対性
+    sections: [向き付けと基本類, キャップ積, Poincaré 双対定理, 応用]

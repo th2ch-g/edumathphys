@@ -1,0 +1,33 @@
+id: category-homological
+prefix: cat
+title: 圏論とホモロジー代数
+title_en: Category Theory and Homological Algebra
+area: math
+level: graduate
+order: 170
+description: >-
+  圏・関手・自然変換、普遍性と極限、随伴関手、米田の補題、Abel 圏、導来関手（Ext と Tor）、スペクトル系列入門を扱う。
+prerequisites: [rings-modules, algebraic-topology]
+references: [maclane-cwm, weibel-homological, riehl-context]
+chapters:
+  - id: categories
+    title: 圏と関手
+    sections: [圏の定義と例, 関手, 自然変換, 圏同値]
+  - id: universal-properties
+    title: 普遍性と極限
+    sections: [始対象と終対象, 積と余積, 極限と余極限, 引き戻しと押し出し]
+  - id: yoneda
+    title: 米田の補題
+    sections: [表現可能関手, 米田の補題, 米田埋め込み]
+  - id: adjunctions
+    title: 随伴関手
+    sections: [随伴の定義, 単位と余単位, 随伴と極限の保存, 例]
+  - id: abelian-categories
+    title: Abel 圏
+    sections: [加法圏, Abel 圏, 完全関手, 蛇の補題と五項補題]
+  - id: derived-functors
+    title: 導来関手
+    sections: [射影分解と入射分解, 左導来関手と右導来関手, Ext と Tor, 群のコホモロジー入門]
+  - id: spectral-sequences
+    title: スペクトル系列入門
+    sections: [フィルター付き複体, 二重複体のスペクトル系列, 応用例]

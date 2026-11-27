@@ -1,0 +1,39 @@
+id: probability
+prefix: prob
+title: 確率論
+title_en: Probability Theory
+area: math
+level: undergrad-advanced
+order: 220
+description: >-
+  測度論的確率論。確率空間と確率変数、独立性、大数の法則、特性関数と中心極限定理、条件付き期待値、離散時間マルチンゲール、Markov 連鎖、Brown 運動入門を扱う。
+prerequisites: [measure-integration]
+references: [funaki-prob, durrett-prob, williams-martingales]
+chapters:
+  - id: probability-spaces
+    title: 確率空間と確率変数
+    sections: [確率空間, 確率変数と分布, 期待値, 主な確率分布]
+  - id: independence
+    title: 独立性
+    sections: [事象と σ-加法族の独立性, 独立な確率変数, Borel–Cantelli の補題, Kolmogorov の 0-1 法則]
+  - id: laws-of-large-numbers
+    title: 大数の法則
+    sections: [各種の収束概念, 弱法則, 強法則, 経験分布]
+  - id: characteristic-functions
+    title: 特性関数と弱収束
+    sections: [分布の弱収束, 特性関数, Lévy の連続性定理, 緊密性]
+  - id: central-limit
+    title: 中心極限定理
+    sections: [Lindeberg–Lévy の定理, Lindeberg の条件, 多次元の中心極限定理, 大偏差原理入門]
+  - id: conditional-expectation
+    title: 条件付き期待値
+    sections: [定義と存在, 性質, 条件付き分布]
+  - id: martingales
+    title: マルチンゲール
+    sections: [離散時間マルチンゲール, 停止時刻と任意停止定理, 収束定理, Doob の不等式]
+  - id: markov-chains
+    title: Markov 連鎖
+    sections: [推移確率, 再帰性と過渡性, 定常分布, エルゴード定理]
+  - id: brownian-motion
+    title: Brown 運動入門
+    sections: [Brown 運動の構成, 標本路の性質, 強 Markov 性と鏡像原理]

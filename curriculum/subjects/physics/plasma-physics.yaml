@@ -1,0 +1,33 @@
+id: plasma-physics
+prefix: plasma
+title: プラズマ物理
+title_en: Plasma Physics
+area: physics
+level: graduate
+order: 230
+description: >-
+  プラズマの基本的性質、荷電粒子の運動とドリフト、運動論（Vlasov 方程式と Landau 減衰）、二流体理論と電磁流体力学、プラズマ波、不安定性、核融合プラズマを扱う。
+prerequisites: [electromagnetism, statistical-mechanics, continuum-mechanics]
+references: [chen-plasma, nicholson-plasma]
+chapters:
+  - id: basics
+    title: プラズマの基本的性質
+    sections: [Debye 遮蔽, プラズマ振動, プラズマパラメータ]
+  - id: particle-motion
+    title: 荷電粒子の運動
+    sections: [サイクロトロン運動, ドリフト運動, 断熱不変量と磁気ミラー]
+  - id: kinetic-theory
+    title: 運動論
+    sections: [Vlasov 方程式, Landau 減衰, 衝突と Fokker–Planck 方程式]
+  - id: fluid-mhd
+    title: 二流体理論と電磁流体力学
+    sections: [二流体方程式, 理想 MHD, 磁気凍結, MHD 平衡]
+  - id: waves
+    title: プラズマ中の波
+    sections: [静電波, 電磁波とカットオフ, Alfvén 波]
+  - id: instabilities
+    title: 不安定性
+    sections: [二流体不安定性, MHD 不安定性, 磁気再結合]
+  - id: fusion
+    title: 核融合プラズマ
+    sections: [Lawson 条件, 磁場閉じ込めとトカマク, 慣性閉じ込め]

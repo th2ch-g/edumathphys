@@ -1,0 +1,39 @@
+id: solid-state
+prefix: ss
+title: 固体物理
+title_en: Solid State Physics
+area: physics
+level: undergrad-advanced
+order: 130
+description: >-
+  結晶構造と逆格子、格子振動とフォノン、自由電子模型、Bloch の定理とバンド理論、半導体、磁性、超伝導、トポロジカル物質入門を扱う。
+prerequisites: [quantum-mechanics, statistical-mechanics, electromagnetism]
+references: [kittel-ssp, ashcroft-mermin, simon-oxford]
+chapters:
+  - id: crystal-structure
+    title: 結晶構造
+    sections: [Bravais 格子, 単位胞と基本構造, 逆格子と Brillouin ゾーン, X 線回折と Bragg 条件]
+  - id: phonons
+    title: 格子振動とフォノン
+    sections: [1 次元格子の振動, 音響モードと光学モード, フォノンの量子化, 比熱（Einstein と Debye）, 非調和効果と熱伝導]
+  - id: free-electrons
+    title: 自由電子模型
+    sections: [Drude 模型, Sommerfeld 模型, 状態密度と Fermi 面, 電子比熱]
+  - id: band-theory
+    title: Bloch の定理とバンド理論
+    sections: [周期ポテンシャルと Bloch の定理, ほとんど自由な電子の近似, 強束縛近似, 金属・絶縁体・半導体]
+  - id: electron-dynamics
+    title: 結晶中の電子の運動
+    sections: [半古典的運動方程式, 有効質量とホール, Boltzmann 輸送方程式, 磁場中の電子と Landau 準位]
+  - id: semiconductors
+    title: 半導体
+    sections: [真性半導体と不純物半導体, キャリア統計, pn 接合, 量子井戸]
+  - id: magnetism
+    title: 磁性
+    sections: [反磁性と常磁性, 交換相互作用, 強磁性と反強磁性, スピン波]
+  - id: superconductivity
+    title: 超伝導
+    sections: [超伝導の現象論, London 方程式, Ginzburg–Landau 理論, BCS 理論の概観, Josephson 効果]
+  - id: topological
+    title: トポロジカル物質入門
+    sections: [Berry 位相とバンド, 量子 Hall 効果と Chern 数, トポロジカル絶縁体, SSH 模型]

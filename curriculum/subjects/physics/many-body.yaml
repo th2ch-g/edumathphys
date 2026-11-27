@@ -1,0 +1,36 @@
+id: many-body
+prefix: mb
+title: 多体問題
+title_en: Quantum Many-Body Theory
+area: physics
+level: graduate
+order: 170
+description: >-
+  第二量子化に基づく量子多体系の理論。Green 関数法、有限温度の松原形式、Feynman ダイアグラムと Dyson 方程式、Fermi 液体論、電子ガスの遮蔽とプラズモン、超伝導の BCS 理論、Bose 系を扱う。
+prerequisites: [advanced-quantum-mechanics, statistical-mechanics, solid-state]
+references: [fetter-walecka, mahan-many, altland-simons, abrikosov-agd]
+chapters:
+  - id: second-quantization-review
+    title: 第二量子化と多体 Hamiltonian
+    sections: [Fock 空間, 一体演算子と二体演算子, Hartree–Fock 近似]
+  - id: green-functions
+    title: Green 関数
+    sections: [1 粒子 Green 関数, スペクトル関数と Lehmann 表示, 準粒子]
+  - id: matsubara
+    title: 有限温度 Green 関数
+    sections: [虚時間形式, 松原周波数と松原和, 解析接続]
+  - id: diagrams
+    title: Feynman ダイアグラムと Dyson 方程式
+    sections: [摂動展開と Wick の定理, ダイアグラム則, 自己エネルギーと Dyson 方程式]
+  - id: electron-gas
+    title: 電子ガス
+    sections: [Jellium 模型, RPA と遮蔽, プラズモン]
+  - id: fermi-liquid
+    title: Fermi 液体論
+    sections: [Landau の Fermi 液体論, 準粒子の寿命, Luttinger の定理]
+  - id: bcs
+    title: 超伝導の微視的理論
+    sections: [Cooper 不安定性, BCS 理論, Bogoliubov 変換, ギャップ方程式]
+  - id: bose-systems
+    title: 相互作用する Bose 系
+    sections: [Bogoliubov 理論, 超流動, Gross–Pitaevskii 方程式]

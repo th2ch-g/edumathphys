@@ -1,0 +1,33 @@
+id: quantum-information
+prefix: qi
+title: 量子情報
+title_en: Quantum Information
+area: physics
+level: graduate
+order: 220
+description: >-
+  量子ビットと量子回路、量子もつれと非局所性、量子テレポーテーション、量子アルゴリズム（Shor・Grover）、量子チャネルとエントロピー、量子誤り訂正を扱う。
+prerequisites: [quantum-mechanics, linear-algebra]
+references: [nielsen-chuang, wilde-qit, preskill-notes]
+chapters:
+  - id: qubits
+    title: 量子ビット
+    sections: [量子ビットと Bloch 球, 多量子ビット系, 密度行列]
+  - id: entanglement
+    title: 量子もつれ
+    sections: [もつれ状態, Schmidt 分解, Bell の不等式と CHSH 不等式, もつれの測度]
+  - id: circuits
+    title: 量子回路
+    sections: [量子ゲート, 普遍ゲート集合, 量子テレポーテーション, 超密度符号化]
+  - id: algorithms
+    title: 量子アルゴリズム
+    sections: [Deutsch–Jozsa のアルゴリズム, 量子 Fourier 変換, Shor のアルゴリズム, Grover のアルゴリズム]
+  - id: channels
+    title: 量子チャネル
+    sections: [CPTP 写像, Kraus 表示, Stinespring 表現, 代表的なチャネル]
+  - id: entropy
+    title: 量子エントロピーと情報
+    sections: [von Neumann エントロピー, 相対エントロピー, Holevo 限界, 量子通信路容量の概観]
+  - id: error-correction
+    title: 量子誤り訂正
+    sections: [3 量子ビット符号, Shor 符号, スタビライザー符号, 誤り耐性量子計算の概観]

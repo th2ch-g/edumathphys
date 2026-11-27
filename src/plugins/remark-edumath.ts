@@ -1,4 +1,5 @@
 import { existsSync } from 'node:fs';
+import type {} from 'mdast-util-to-hast';
 import { join } from 'node:path';
 import type { Root, Nodes, Parent, PhrasingContent, RootContent, List, ListItem, Paragraph, Code } from 'mdast';
 import type { ContainerDirective, LeafDirective, TextDirective } from 'mdast-util-directive';
@@ -30,7 +31,7 @@ function setH(node: Nodes, hName: string, hProperties: Record<string, unknown> =
 }
 
 function span(className: string, children: PhrasingContent[]): PhrasingContent {
-  return { type: 'emphasis', data: { hName: 'span', hProperties: { className: [className] } } as HData, children } as PhrasingContent;
+  return { type: 'emphasis', data: { hName: 'span', hProperties: { className: [className] } }, children } as PhrasingContent;
 }
 
 /** remark-math stores the TeX source both in `value` and in prebuilt `hChildren`; keep them in sync. */
@@ -46,7 +47,7 @@ function text(value: string): PhrasingContent {
 }
 
 function headParagraph(className: string, children: PhrasingContent[]): Paragraph {
-  return { type: 'paragraph', data: { hName: 'p', hProperties: { className: [className] } } as HData, children };
+  return { type: 'paragraph', data: { hName: 'p', hProperties: { className: [className] } }, children };
 }
 
 function refText(entry: LabelEntry, currentSubject: string | undefined): string {
@@ -124,7 +125,7 @@ export default function remarkEduMath(options: RemarkEduMathOptions) {
     }
 
     // 3. Remaining block directives and equation wrappers.
-    visit(tree, (node, idx, parent) => {
+    visit(tree, (node, _idx, parent) => {
       if (node.type !== 'containerDirective' && node.type !== 'leafDirective') return;
       if (node.type === 'containerDirective' && (node.name === 'proof')) {
         transformProof(node);
@@ -133,7 +134,7 @@ export default function remarkEduMath(options: RemarkEduMathOptions) {
           if (node.name === 'solution') fail(':::solution must be nested inside ::::exercise', node);
         }
         const labelPara = directiveLabel(node);
-        const summary: Paragraph = { type: 'paragraph', data: { hName: 'summary' } as HData, children: labelPara ? labelPara.children : [text(node.name === 'solution' ? '解答' : 'ヒント')] };
+        const summary: Paragraph = { type: 'paragraph', data: { hName: 'summary' }, children: labelPara ? labelPara.children : [text(node.name === 'solution' ? '解答' : 'ヒント')] };
         if (labelPara) node.children.splice(0, 1, summary);
         else node.children.unshift(summary);
         setH(node, 'details', { className: [node.name] });
@@ -151,7 +152,7 @@ export default function remarkEduMath(options: RemarkEduMathOptions) {
       if (!parent || idx === undefined) return;
       const item = labeledEquations.get(node);
       if (!item) return;
-      const wrapper = { type: 'equationWrapper', data: { hName: 'div', hProperties: { id: item, className: ['equation'] } } as HData, children: [node] };
+      const wrapper = { type: 'equationWrapper', data: { hName: 'div', hProperties: { id: item, className: ['equation'] } }, children: [node] };
       (parent.children as unknown[]).splice(idx, 1, wrapper);
       return SKIP;
     });
@@ -169,21 +170,21 @@ export default function remarkEduMath(options: RemarkEduMathOptions) {
         if (!entry) fail(`unresolved :${node.name}[${id}]`, node);
         let label = attrs.text ?? refText(entry!, subjectId);
         if (attrs.full !== undefined && entry!.title) label += `（${entry!.title}）`;
-        replacement = [{ type: 'link', url: entry!.url, data: { hProperties: { className: ['xref'], 'data-xref': id } } as HData, children: [text(label)] }];
+        replacement = [{ type: 'link', url: entry!.url, data: { hProperties: { className: ['xref'], 'data-xref': id } }, children: [text(label)] }];
       } else if (node.name === 'cite') {
         const k = toString(node).trim();
         if (!refs.has(k)) fail(`unknown citation key "${k}"`, node);
         if (!cited.includes(k)) cited.push(k);
         const n = cited.indexOf(k) + 1;
         const loc = attrs.loc ? `, ${attrs.loc}` : '';
-        replacement = [{ type: 'link', url: `#bib-${k}`, data: { hProperties: { className: ['cite'] } } as HData, children: [text(`[${n}${loc}]`)] }];
+        replacement = [{ type: 'link', url: `#bib-${k}`, data: { hProperties: { className: ['cite'] } }, children: [text(`[${n}${loc}]`)] }];
       } else if (node.name === 'term') {
         const term = toString(node);
         const en = attrs.en ?? '';
         if (!en || !attrs.yomi) fail(`:term[${term}] requires en and yomi attributes`, node);
         const anchor = termAnchor(en, seenTerms);
         replacement = [
-          { type: 'emphasis', data: { hName: 'dfn', hProperties: { id: anchor, className: ['term'] } } as HData, children: node.children } as PhrasingContent,
+          { type: 'emphasis', data: { hName: 'dfn', hProperties: { id: anchor, className: ['term'] } }, children: node.children } as PhrasingContent,
           span('term-en', [text(`（${en}）`)]),
         ];
       }
@@ -199,11 +200,11 @@ export default function remarkEduMath(options: RemarkEduMathOptions) {
         type: 'list',
         ordered: true,
         spread: false,
-        data: { hProperties: { className: ['bibliography'] } } as HData,
+        data: { hProperties: { className: ['bibliography'] } },
         children: cited.map((k): ListItem => ({
           type: 'listItem',
           spread: false,
-          data: { hProperties: { id: `bib-${k}` } } as HData,
+          data: { hProperties: { id: `bib-${k}` } },
           children: [{ type: 'paragraph', children: referenceHtmlChildren(refs.get(k)!) }],
         })),
       };

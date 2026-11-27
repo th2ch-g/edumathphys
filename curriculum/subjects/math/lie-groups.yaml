@@ -1,0 +1,36 @@
+id: lie-groups
+prefix: lie
+title: Lie 群と表現論
+title_en: Lie Groups and Representation Theory
+area: math
+level: graduate
+order: 180
+description: >-
+  有限群の表現と指標理論から始め、Lie 群と Lie 代数、SU(2) と SO(3) の表現、半単純 Lie 代数の構造（ルート系・Dynkin 図形）、最高ウェイト理論、コンパクト Lie 群の表現（Peter–Weyl の定理）を扱う。
+prerequisites: [group-theory, manifolds]
+references: [hall-lie, fulton-harris, humphreys-lie]
+chapters:
+  - id: finite-representations
+    title: 有限群の表現
+    sections: [表現と部分表現, Maschke の定理, Schur の補題, 正則表現]
+  - id: characters
+    title: 指標理論
+    sections: [指標, 直交関係, 指標表, 誘導表現と Frobenius の相互律]
+  - id: matrix-lie-groups
+    title: 行列 Lie 群と Lie 代数
+    sections: [行列 Lie 群, 行列の指数関数, Lie 代数, Baker–Campbell–Hausdorff の公式]
+  - id: su2-so3
+    title: SU(2) と SO(3) の表現
+    sections: [SU(2) から SO(3) への二重被覆, sl(2, ℂ) の既約表現, SU(2) の既約表現, Clebsch–Gordan 分解]
+  - id: semisimple
+    title: 半単純 Lie 代数
+    sections: [可解・冪零 Lie 代数, Killing 形式と Cartan の判定法, Cartan 部分代数, ルート空間分解]
+  - id: root-systems
+    title: ルート系と Dynkin 図形
+    sections: [ルート系の公理, Weyl 群, 単純ルートと Cartan 行列, Dynkin 図形による分類]
+  - id: highest-weight
+    title: 最高ウェイト理論
+    sections: [ウェイトと最高ウェイト, Verma 加群, 有限次元既約表現の分類, Weyl の指標公式]
+  - id: compact-groups
+    title: コンパクト Lie 群の表現
+    sections: [Haar 測度, Peter–Weyl の定理, 極大トーラス]

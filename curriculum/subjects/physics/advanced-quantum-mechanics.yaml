@@ -1,0 +1,44 @@
+id: advanced-quantum-mechanics
+prefix: aqm
+title: 量子力学（発展）
+title_en: Quantum Mechanics II
+area: physics
+level: undergrad-advanced
+order: 100
+description: >-
+  散乱理論、対称性と Wigner–Eckart の定理、経路積分、第二量子化、相対論的量子力学（Klein–Gordon・Dirac 方程式）、Berry 位相、密度行列と開放量子系、量子測定理論を扱う。
+prerequisites: [quantum-mechanics, special-relativity, mathematical-physics]
+conventions:
+  - ℏ と c は明示するが、相対論的量子力学の章では計量 (+,−,−,−) を用いる。
+references: [sakurai-qm, weinberg-lqm, schwabl-aqm, messiah-qm]
+chapters:
+  - id: scattering
+    title: 散乱理論
+    sections: [散乱振幅と断面積, Lippmann–Schwinger 方程式, Born 近似, 部分波展開と位相のずれ, 光学定理, 共鳴散乱]
+  - id: symmetry
+    title: 対称性と保存則
+    sections: [Wigner の定理, 回転とテンソル演算子, Wigner–Eckart の定理, 空間反転と時間反転, Kramers 縮退]
+  - id: path-integrals
+    title: 経路積分
+    sections: [伝播関数, 経路積分の導出, 自由粒子と調和振動子, 古典極限と停留位相近似, Aharonov–Bohm 効果]
+  - id: second-quantization
+    title: 第二量子化
+    sections: [Fock 空間, ボソンの生成消滅演算子, フェルミオンの生成消滅演算子, 場の演算子, 多体 Hamiltonian]
+  - id: radiation-field
+    title: 輻射場の量子化
+    sections: [電磁場の正準量子化, 光子, 自然放出, Lamb シフトの概観]
+  - id: klein-gordon
+    title: Klein–Gordon 方程式
+    sections: [相対論的波動方程式, 負エネルギー問題, 荷電粒子と電磁場]
+  - id: dirac-equation
+    title: Dirac 方程式
+    sections: [Dirac 方程式の導出, γ 行列, 共変性, 平面波解とスピン, 非相対論的極限と g 因子, 水素原子の微細構造]
+  - id: berry-phase
+    title: 断熱近似と Berry 位相
+    sections: [断熱定理, Berry 位相, Berry 接続と曲率, 例]
+  - id: open-systems
+    title: 密度行列と開放量子系
+    sections: [密度行列と縮約密度行列, 量子もつれ, 量子チャネル, Lindblad 方程式, デコヒーレンス]
+  - id: measurement
+    title: 量子測定理論
+    sections: [射影測定と POVM, 間接測定, 量子 Zeno 効果, Bell の不等式]

@@ -1,0 +1,30 @@
+id: stochastic-analysis
+prefix: sa
+title: 確率解析
+title_en: Stochastic Analysis
+area: math
+level: graduate
+order: 230
+description: >-
+  連続時間マルチンゲール、確率積分と伊藤の公式、確率微分方程式、Girsanov の定理、拡散過程と偏微分方程式（Feynman–Kac の公式）を扱う。
+prerequisites: [probability, pde]
+references: [karatzas-shreve, oksendal-sde]
+chapters:
+  - id: continuous-martingales
+    title: 連続時間マルチンゲール
+    sections: [フィルトレーションと停止時刻, 連続マルチンゲール, 二次変分]
+  - id: stochastic-integral
+    title: 確率積分
+    sections: [単純過程の積分, 伊藤積分の構成, 伊藤の等長性, 局所マルチンゲール]
+  - id: ito-formula
+    title: 伊藤の公式
+    sections: [伊藤の公式, 多次元版, Lévy の特徴付け, 応用]
+  - id: sde
+    title: 確率微分方程式
+    sections: [強解の存在と一意性, 弱解, 線形 SDE, 数値解法]
+  - id: girsanov
+    title: Girsanov の定理
+    sections: [測度変換, Girsanov の定理, Novikov の条件]
+  - id: diffusions-pde
+    title: 拡散過程と偏微分方程式
+    sections: [生成作用素, Kolmogorov 方程式, Feynman–Kac の公式, Dirichlet 問題の確率論的表現]

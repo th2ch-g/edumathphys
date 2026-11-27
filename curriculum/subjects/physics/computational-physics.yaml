@@ -1,0 +1,30 @@
+id: computational-physics
+prefix: comp
+title: 計算物理
+title_en: Computational Physics
+area: physics
+level: undergrad-advanced
+order: 240
+description: >-
+  物理学における数値計算手法。常微分方程式の数値積分と分子動力学法、モンテカルロ法、偏微分方程式の差分解法、固有値問題と量子系の数値解法、厳密対角化、データ解析を扱う。
+prerequisites: [numerical-analysis, statistical-mechanics, quantum-mechanics]
+references: [landau-paez-cp, newman-cp, thijssen-cp]
+chapters:
+  - id: ode-integration
+    title: 運動方程式の数値積分
+    sections: [Euler 法と Runge–Kutta 法, Verlet 法とシンプレクティック性, 誤差とエネルギー保存]
+  - id: molecular-dynamics
+    title: 分子動力学法
+    sections: [Lennard-Jones 系, 周期境界条件, 温度制御と圧力制御, 物理量の測定]
+  - id: monte-carlo
+    title: モンテカルロ法
+    sections: [乱数と重点サンプリング, Metropolis 法, Ising 模型のシミュレーション, 誤差評価と自己相関]
+  - id: pde-solvers
+    title: 偏微分方程式の数値解法
+    sections: [拡散方程式の差分法, 波動方程式, Poisson 方程式と緩和法, スペクトル法]
+  - id: quantum-numerics
+    title: 量子系の数値解法
+    sections: [Schrödinger 方程式の数値解法, 時間発展（Crank–Nicolson 法）, 厳密対角化と Lanczos 法]
+  - id: data-analysis
+    title: データ解析
+    sections: [最小二乗フィッティング, ブートストラップ法, 有限サイズスケーリング]

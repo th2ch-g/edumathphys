@@ -1,0 +1,33 @@
+id: ode
+prefix: ode
+title: 常微分方程式
+title_en: Ordinary Differential Equations
+area: math
+level: undergrad-basic
+order: 80
+description: >-
+  求積法から始め、解の存在と一意性、線形微分方程式系、定数係数系と行列指数関数、級数解法と特殊関数、境界値問題と Sturm–Liouville 理論、安定性理論を扱う。
+prerequisites: [analysis, linear-algebra]
+references: [takahashi-ode, hirsch-smale-devaney, coddington-levinson]
+chapters:
+  - id: elementary-methods
+    title: 求積法
+    sections: [変数分離形, 1 階線形方程式, 完全微分方程式と積分因子, Bernoulli 型・Riccati 型]
+  - id: existence-uniqueness
+    title: 解の存在と一意性
+    sections: [Lipschitz 条件, Picard の逐次近似, Peano の存在定理, 解の延長, 初期値への連続依存性]
+  - id: linear-systems
+    title: 線形微分方程式系
+    sections: [解空間の構造, 基本行列と Wronskian, 定数変化法, 高階線形方程式]
+  - id: constant-coefficients
+    title: 定数係数線形系
+    sections: [行列指数関数による解法, Jordan 標準形と解の構造, 特性方程式, 非斉次方程式]
+  - id: series-solutions
+    title: 級数解法と特殊関数
+    sections: [正則点でのべき級数解, 確定特異点と Frobenius 法, Bessel 方程式, Legendre 方程式, 超幾何微分方程式]
+  - id: boundary-value
+    title: 境界値問題と Sturm–Liouville 理論
+    sections: [境界値問題, Green 関数, Sturm–Liouville 固有値問題, 固有関数展開]
+  - id: stability
+    title: 安定性理論
+    sections: [平衡点と線形化, 相図, Lyapunov 関数, 周期解と Poincaré–Bendixson の定理]

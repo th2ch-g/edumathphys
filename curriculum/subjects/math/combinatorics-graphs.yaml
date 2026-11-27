@@ -1,0 +1,36 @@
+id: combinatorics-graphs
+prefix: comb
+title: 組合せ論とグラフ理論
+title_en: Combinatorics and Graph Theory
+area: math
+level: undergrad-advanced
+order: 280
+description: >-
+  数え上げ（二項係数・母関数・包除原理）、Pólya の数え上げ、グラフの基本概念、木、マッチング、平面グラフと彩色、Ramsey 理論、確率的方法を扱う。
+prerequisites: [sets-logic, linear-algebra]
+references: [stanley-ec1, diestel-graph]
+chapters:
+  - id: counting
+    title: 基本的な数え上げ
+    sections: [順列と組合せ, 二項定理, 包除原理, 鳩の巣原理]
+  - id: generating-functions
+    title: 母関数
+    sections: [形式的べき級数, 漸化式の解法, Catalan 数, 分割数]
+  - id: polya
+    title: Pólya の数え上げ
+    sections: [群作用と軌道の数え上げ, 循環指数, Pólya の定理]
+  - id: graphs
+    title: グラフの基礎
+    sections: [グラフと次数, 道と連結性, Euler 路と Hamilton 路]
+  - id: trees
+    title: 木
+    sections: [木の特徴付け, 全域木, Cayley の公式, 行列木定理]
+  - id: matchings-flows
+    title: マッチングとネットワークフロー
+    sections: [Hall の結婚定理, König の定理, 最大流最小カット定理]
+  - id: planarity-coloring
+    title: 平面グラフと彩色
+    sections: [Euler の公式, Kuratowski の定理, 頂点彩色と彩色多項式, 四色定理の概観]
+  - id: ramsey-probabilistic
+    title: Ramsey 理論と確率的方法
+    sections: [Ramsey の定理, Ramsey 数の評価, 確率的方法, スペクトルグラフ理論入門]

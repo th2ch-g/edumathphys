@@ -1,0 +1,36 @@
+id: astrophysics-cosmology
+prefix: cosmo
+title: 宇宙物理・宇宙論
+title_en: Astrophysics and Cosmology
+area: physics
+level: graduate
+order: 210
+description: >-
+  恒星の構造と進化、コンパクト天体、膨張宇宙と熱史、宇宙背景放射、インフレーション、構造形成、暗黒物質と暗黒エネルギーを扱う。
+prerequisites: [general-relativity, statistical-mechanics]
+references: [weinberg-cosmology, dodelson-cosmology, kippenhahn-stellar]
+chapters:
+  - id: stellar-structure
+    title: 恒星の構造
+    sections: [静水圧平衡, エネルギー輸送, 核融合反応, 主系列星]
+  - id: stellar-evolution
+    title: 恒星の進化
+    sections: [HR 図, 巨星への進化, 超新星]
+  - id: compact-objects
+    title: コンパクト天体
+    sections: [白色矮星と Chandrasekhar 限界, 中性子星, ブラックホール天体]
+  - id: expanding-universe
+    title: 膨張宇宙
+    sections: [Hubble の法則, Friedmann 方程式と宇宙パラメータ, 宇宙論的距離]
+  - id: thermal-history
+    title: 宇宙の熱史
+    sections: [放射優勢期, ニュートリノの脱結合, ビッグバン元素合成, 再結合]
+  - id: cmb
+    title: 宇宙マイクロ波背景放射
+    sections: [黒体スペクトル, 温度ゆらぎ, 音響振動]
+  - id: inflation
+    title: インフレーション
+    sections: [地平線問題と平坦性問題, スローロール・インフレーション, 原始ゆらぎ]
+  - id: structure-formation
+    title: 構造形成と暗黒成分
+    sections: [線形摂動論, 暗黒物質, 暗黒エネルギーと宇宙の加速膨張]

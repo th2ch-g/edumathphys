@@ -1,0 +1,30 @@
+id: dynamical-systems
+prefix: dyn
+title: 力学系
+title_en: Dynamical Systems
+area: math
+level: graduate
+order: 250
+description: >-
+  連続力学系と離散力学系、双曲型不動点と安定多様体、構造安定性、分岐理論、カオス（記号力学・Smale の馬蹄）、エルゴード理論の基礎を扱う。
+prerequisites: [ode, manifolds]
+references: [hirsch-smale-devaney, guckenheimer-holmes, katok-hasselblatt]
+chapters:
+  - id: flows-maps
+    title: 流れと写像
+    sections: [連続力学系と離散力学系, 不動点と周期軌道, Poincaré 写像]
+  - id: hyperbolicity
+    title: 双曲型不動点
+    sections: [線形化と Hartman–Grobman の定理, 安定多様体定理, 中心多様体]
+  - id: bifurcations
+    title: 分岐理論
+    sections: [サドルノード分岐, 熊手型分岐, Hopf 分岐, 周期倍分岐]
+  - id: one-dim-maps
+    title: 1 次元写像
+    sections: [ロジスティック写像, Sharkovskii の定理, Feigenbaum のスケーリング]
+  - id: chaos
+    title: カオス
+    sections: [記号力学, Smale の馬蹄, Lyapunov 指数, ストレンジアトラクタ]
+  - id: ergodic-theory
+    title: エルゴード理論の基礎
+    sections: [不変測度, Birkhoff のエルゴード定理, 混合性, エントロピー]

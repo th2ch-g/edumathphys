@@ -1,0 +1,36 @@
+id: vibrations-waves
+prefix: wave
+title: 振動・波動
+title_en: Vibrations and Waves
+area: physics
+level: undergrad-basic
+order: 30
+description: >-
+  調和振動子と連成振動から波動方程式を導き、定在波・Fourier 解析、分散と群速度、反射・透過、干渉と回折、非線形波動の初歩までを扱う。
+prerequisites: [mechanics, analysis]
+references: [crawford-waves, georgi-waves]
+chapters:
+  - id: oscillators
+    title: 調和振動子
+    sections: [単振動と複素表示, 減衰振動, 強制振動と共鳴, Q 値とエネルギー]
+  - id: coupled-oscillators
+    title: 連成振動
+    sections: [2 自由度の連成振動, 基準振動, N 個の質点の連成振動, 連続極限]
+  - id: wave-equation
+    title: 波動方程式
+    sections: [弦の波動方程式, d'Alembert の解, 進行波と定在波, 境界条件と固有振動]
+  - id: fourier-waves
+    title: Fourier 解析と波
+    sections: [Fourier 級数による固有振動の重ね合わせ, Fourier 変換と波束, 不確定性関係]
+  - id: dispersion
+    title: 分散と群速度
+    sections: [分散関係, 位相速度と群速度, 波束の伝播と広がり]
+  - id: reflection-transmission
+    title: 反射と透過
+    sections: [インピーダンス, 境界での反射・透過係数, エネルギーの流れ]
+  - id: interference-diffraction
+    title: 干渉と回折
+    sections: [重ね合わせと干渉, Young の実験, Huygens–Fresnel の原理, Fraunhofer 回折]
+  - id: waves-3d
+    title: 3 次元の波と音波
+    sections: [3 次元波動方程式, 球面波, 音波, Doppler 効果]

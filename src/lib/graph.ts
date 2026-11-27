@@ -1,4 +1,5 @@
 import ELK from 'elkjs/lib/elk.bundled.js';
+import type { ElkExtendedEdge, ElkNode } from 'elkjs/lib/elk-api';
 
 export interface GraphNode {
   id: string;
@@ -31,7 +32,7 @@ export async function layoutGraph(nodes: GraphNode[], edges: GraphEdge[], direct
   const elk = new ELK();
   const ids = new Set(nodes.map((n) => n.id));
   const valid = edges.filter((e) => ids.has(e.from) && ids.has(e.to));
-  const res = await elk.layout({
+  const res: ElkNode = await elk.layout({
     id: 'root',
     layoutOptions: {
       'elk.algorithm': 'layered',
@@ -52,7 +53,7 @@ export async function layoutGraph(nodes: GraphNode[], edges: GraphEdge[], direct
       const p = pos.get(n.id)!;
       return { ...n, x: p.x ?? 0, y: p.y ?? 0, w: p.width ?? 0, h: p.height ?? 0 };
     }),
-    edges: (res.edges ?? []).map((e, i) => {
+    edges: ((res.edges ?? []) as ElkExtendedEdge[]).map((e, i) => {
       const sec = e.sections?.[0];
       const pts = sec ? [sec.startPoint, ...(sec.bendPoints ?? []), sec.endPoint] : [];
       return { from: valid[i].from, to: valid[i].to, d: smoothPath(pts) };

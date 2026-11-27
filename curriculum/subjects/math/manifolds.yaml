@@ -1,0 +1,39 @@
+id: manifolds
+prefix: mfd
+title: 多様体
+title_en: Smooth Manifolds
+area: math
+level: undergrad-advanced
+order: 140
+description: >-
+  可微分多様体と滑らかな写像、接空間とベクトル場、部分多様体、微分形式と外微分、多様体上の積分と Stokes の定理、de Rham コホモロジー、Lie 群入門、ベクトル束を扱う。
+prerequisites: [analysis, topology, linear-algebra]
+references: [matsushima-manifolds, tu-manifolds, lee-smooth]
+chapters:
+  - id: smooth-manifolds
+    title: 可微分多様体
+    sections: [座標近傍と座標変換, 可微分構造, 例（球面・射影空間・行列群）, 滑らかな写像, 1 の分割]
+  - id: tangent-spaces
+    title: 接空間と微分
+    sections: [接ベクトルの定義（導分）, 写像の微分, 接束, はめ込みと沈め込み]
+  - id: submanifolds
+    title: 部分多様体
+    sections: [正則値定理, 埋め込み, Whitney の埋め込み定理の概観, Sard の定理]
+  - id: vector-fields
+    title: ベクトル場と流れ
+    sections: [ベクトル場, 積分曲線と流れ, Lie 括弧, Lie 微分, Frobenius の定理]
+  - id: differential-forms
+    title: 微分形式
+    sections: [余接束と 1 形式, 外積代数と微分形式, 外微分, 引き戻し, 内部積と Cartan の公式]
+  - id: integration
+    title: 多様体上の積分と Stokes の定理
+    sections: [向き, 微分形式の積分, 境界付き多様体, Stokes の定理, 古典的積分定理の統一]
+  - id: de-rham
+    title: de Rham コホモロジー
+    sections: [閉形式と完全形式, Poincaré の補題, Mayer–Vietoris 完全列, 計算例, ホモトピー不変性]
+  - id: lie-groups-intro
+    title: Lie 群入門
+    sections: [Lie 群と Lie 代数, 指数写像, 閉部分群定理, 等質空間]
+  - id: vector-bundles
+    title: ベクトル束と接続
+    sections: [ベクトル束, 切断, 接続と曲率, 主束の概観]

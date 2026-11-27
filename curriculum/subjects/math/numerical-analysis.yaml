@@ -1,0 +1,36 @@
+id: numerical-analysis
+prefix: num
+title: 数値解析
+title_en: Numerical Analysis
+area: math
+level: undergrad-advanced
+order: 260
+description: >-
+  浮動小数点演算と誤差、非線形方程式の反復解法、連立一次方程式の直接法と反復法、固有値計算、補間と数値積分、常微分方程式・偏微分方程式の数値解法とその収束解析を扱う。
+prerequisites: [linear-algebra, analysis, ode]
+references: [sugihara-murota, trefethen-bau, quarteroni-numerical]
+chapters:
+  - id: floating-point
+    title: 浮動小数点数と誤差
+    sections: [浮動小数点表現, 丸め誤差と桁落ち, 条件数と安定性]
+  - id: nonlinear-equations
+    title: 非線形方程式
+    sections: [二分法, Newton 法と収束次数, 不動点反復, 多変数 Newton 法]
+  - id: linear-systems
+    title: 連立一次方程式の直接法
+    sections: [Gauss 消去法と LU 分解, ピボット選択, Cholesky 分解, QR 分解と最小二乗法]
+  - id: iterative-methods
+    title: 反復法
+    sections: [Jacobi 法と Gauss–Seidel 法, 収束条件, 共役勾配法, Krylov 部分空間法]
+  - id: eigenvalue-computation
+    title: 固有値の数値計算
+    sections: [冪乗法, QR 法, Lanczos 法]
+  - id: interpolation-quadrature
+    title: 補間と数値積分
+    sections: [Lagrange 補間と誤差, スプライン補間, Newton–Cotes 公式, Gauss 求積]
+  - id: ode-numerics
+    title: 常微分方程式の数値解法
+    sections: [Euler 法, Runge–Kutta 法, 多段階法, 安定性と硬い方程式, シンプレクティック積分法]
+  - id: pde-numerics
+    title: 偏微分方程式の数値解法
+    sections: [差分法, CFL 条件と Lax の同等定理, 有限要素法入門, スペクトル法]

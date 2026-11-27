@@ -1,0 +1,39 @@
+id: functional-analysis
+prefix: fa
+title: 関数解析
+title_en: Functional Analysis
+area: math
+level: undergrad-advanced
+order: 110
+description: >-
+  Banach 空間と Hilbert 空間、有界線形作用素、Hahn–Banach・一様有界性・開写像・閉グラフの各定理、弱位相、コンパクト作用素と Fredholm 理論、自己共役作用素のスペクトル定理（非有界を含む）を扱う。
+prerequisites: [measure-integration, linear-algebra]
+references: [kuroda-fa, reed-simon-1, brezis-fa, kreyszig-fa]
+chapters:
+  - id: normed-spaces
+    title: ノルム空間と Banach 空間
+    sections: [ノルム空間, Banach 空間の例, 有界線形作用素, 有限次元ノルム空間]
+  - id: hilbert-spaces
+    title: Hilbert 空間
+    sections: [内積空間と Hilbert 空間, 射影定理, Riesz の表現定理, 正規直交基底と Parseval の等式]
+  - id: hahn-banach
+    title: Hahn–Banach の定理と双対空間
+    sections: [解析的 Hahn–Banach の定理, 幾何的 Hahn–Banach の定理（分離定理）, 双対空間の例, 反射的空間]
+  - id: baire-theorems
+    title: Baire の定理の帰結
+    sections: [一様有界性原理, 開写像定理, 閉グラフ定理, 応用]
+  - id: weak-topologies
+    title: 弱位相
+    sections: [弱位相と汎弱位相, Banach–Alaoglu の定理, 弱収束]
+  - id: compact-operators
+    title: コンパクト作用素
+    sections: [コンパクト作用素, Fredholm の択一定理, コンパクト自己共役作用素のスペクトル定理, Hilbert–Schmidt 作用素]
+  - id: spectral-theory
+    title: 有界作用素のスペクトル理論
+    sections: [スペクトルとレゾルベント, 連続関数カルキュラス, 射影値測度, 有界自己共役作用素のスペクトル定理]
+  - id: unbounded-operators
+    title: 非有界作用素
+    sections: [閉作用素と共役作用素, 対称作用素と自己共役作用素, 自己共役性の判定, 非有界自己共役作用素のスペクトル定理, Stone の定理]
+  - id: sobolev-spaces
+    title: Sobolev 空間入門
+    sections: [弱微分, Sobolev 空間, 埋め込み定理の概観, 楕円型方程式の弱解]

@@ -1,0 +1,35 @@
+id: standard-model
+prefix: sm
+title: ゲージ理論と標準模型
+title_en: Gauge Theories and the Standard Model
+area: physics
+level: graduate
+order: 180
+description: >-
+  素粒子の分類と対称性、量子色力学（QCD）、電弱統一理論と Higgs 機構、フレーバー物理と CKM 行列、ニュートリノ振動、標準模型を超える物理の概観を扱う。
+prerequisites: [quantum-field-theory, lie-groups]
+conventions:
+  - 自然単位系 ℏ = c = 1、計量 (+,−,−,−) を用いる。
+references: [peskin-schroeder, halzen-martin, burgess-moore, schwartz-qft]
+chapters:
+  - id: particles-symmetries
+    title: 素粒子と対称性
+    sections: [レプトンとクォーク, アイソスピンと SU(3) フレーバー, クォーク模型]
+  - id: qcd
+    title: 量子色力学
+    sections: [カラー SU(3) ゲージ理論, 漸近的自由性, クォークの閉じ込め, 深非弾性散乱とパートン模型]
+  - id: electroweak
+    title: 電弱統一理論
+    sections: [弱い相互作用と V−A 構造, SU(2)×U(1) ゲージ理論, Higgs 機構と W・Z ボソンの質量, 中性カレント]
+  - id: fermion-masses
+    title: フェルミオンの質量とフレーバー
+    sections: [湯川結合, CKM 行列, CP 対称性の破れ, GIM 機構]
+  - id: neutrinos
+    title: ニュートリノ
+    sections: [ニュートリノ振動, PMNS 行列, Dirac 質量と Majorana 質量]
+  - id: anomalies
+    title: アノマリー
+    sections: [カイラルアノマリー, ゲージアノマリーの相殺]
+  - id: beyond-sm
+    title: 標準模型を超えて
+    sections: [大統一理論, 超対称性の概観, 暗黒物質]

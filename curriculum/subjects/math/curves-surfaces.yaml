@@ -1,0 +1,33 @@
+id: curves-surfaces
+prefix: cs
+title: 曲線と曲面の微分幾何
+title_en: Differential Geometry of Curves and Surfaces
+area: math
+level: undergrad-advanced
+order: 130
+description: >-
+  平面曲線と空間曲線の曲率・捩率と Frenet–Serret の公式、曲面の第一・第二基本形式、Gauss 曲率と平均曲率、Gauss の驚異の定理、測地線、Gauss–Bonnet の定理を扱う。
+prerequisites: [analysis, linear-algebra]
+references: [kobayashi-curves, docarmo-curves]
+chapters:
+  - id: plane-curves
+    title: 平面曲線
+    sections: [正則曲線と弧長, 曲率, 回転数, 等周不等式]
+  - id: space-curves
+    title: 空間曲線
+    sections: [曲率と捩率, Frenet–Serret の公式, 曲線論の基本定理]
+  - id: surfaces
+    title: 曲面と第一基本形式
+    sections: [正則曲面, 接平面, 第一基本形式, 面積]
+  - id: curvature
+    title: 第二基本形式と曲率
+    sections: [Gauss 写像, 第二基本形式, 主曲率, Gauss 曲率と平均曲率]
+  - id: theorema-egregium
+    title: Gauss の驚異の定理
+    sections: [Christoffel 記号, Gauss と Codazzi–Mainardi の方程式, 驚異の定理, 曲面論の基本定理]
+  - id: geodesics
+    title: 測地線
+    sections: [共変微分, 測地的曲率, 測地線の方程式, 指数写像]
+  - id: gauss-bonnet
+    title: Gauss–Bonnet の定理
+    sections: [局所 Gauss–Bonnet の定理, Euler 標数, 大域 Gauss–Bonnet の定理]

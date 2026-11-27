@@ -1,0 +1,33 @@
+id: riemannian-geometry
+prefix: rg
+title: Riemann 幾何
+title_en: Riemannian Geometry
+area: math
+level: graduate
+order: 150
+description: >-
+  Riemann 計量、Levi-Civita 接続、測地線と指数写像、曲率テンソル、Jacobi 場、比較定理、Hopf–Rinow の定理、Bonnet–Myers の定理などの大域的結果を扱う。
+prerequisites: [manifolds, curves-surfaces]
+references: [docarmo-riemannian, lee-riemannian]
+chapters:
+  - id: metrics
+    title: Riemann 計量
+    sections: [Riemann 計量の定義と例, 長さと距離, 等長写像, 体積形式]
+  - id: connections
+    title: Levi-Civita 接続
+    sections: [アフィン接続, 平行移動, Levi-Civita 接続の存在と一意性, Christoffel 記号]
+  - id: geodesics
+    title: 測地線と指数写像
+    sections: [測地線方程式, 指数写像, Gauss の補題, 正規座標, 測地線の極小性]
+  - id: curvature
+    title: 曲率
+    sections: [Riemann 曲率テンソル, 断面曲率, Ricci 曲率とスカラー曲率, 定曲率空間]
+  - id: jacobi-fields
+    title: Jacobi 場
+    sections: [Jacobi 方程式, 共役点, 第二変分公式]
+  - id: completeness
+    title: 完備性
+    sections: [Hopf–Rinow の定理, Cartan–Hadamard の定理]
+  - id: comparison
+    title: 比較定理
+    sections: [Rauch の比較定理, Bonnet–Myers の定理, Synge の定理]

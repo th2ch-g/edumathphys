@@ -1,0 +1,36 @@
+id: mathematical-physics
+prefix: mp
+title: 物理数学
+title_en: Mathematical Methods for Physics
+area: physics
+level: undergrad-advanced
+order: 90
+description: >-
+  物理学で頻出する数学的手法。曲線座標とテンソル、複素積分の応用、Fourier・Laplace 変換、特殊関数（Legendre・Bessel・Hermite など）、Green 関数法、変分法、群論の物理への応用を扱う。
+prerequisites: [complex-analysis, ode, linear-algebra]
+references: [arfken-math, morse-feshbach, hassani-math]
+chapters:
+  - id: curvilinear-tensors
+    title: 曲線座標とテンソル
+    sections: [直交曲線座標, 勾配・発散・回転・Laplacian の曲線座標表示, テンソルと添字記法, Levi-Civita 記号]
+  - id: complex-methods
+    title: 複素積分の応用
+    sections: [留数による定積分, 分岐切断と多価関数, 鞍点法, 分散関係と Kramers–Kronig の関係]
+  - id: integral-transforms
+    title: 積分変換
+    sections: [Fourier 変換の応用, Laplace 変換, デルタ関数と超関数]
+  - id: special-functions
+    title: 特殊関数
+    sections: [ガンマ関数, Legendre 多項式と陪 Legendre 関数, 球面調和関数, Bessel 関数, Hermite・Laguerre 多項式, 超幾何関数]
+  - id: sturm-liouville
+    title: Sturm–Liouville 理論と固有関数展開
+    sections: [自己共役微分作用素, 直交多項式, 完全性と固有関数展開]
+  - id: green-functions
+    title: Green 関数
+    sections: [常微分方程式の Green 関数, Poisson 方程式の Green 関数, 波動方程式の遅延 Green 関数, 拡散方程式の Green 関数]
+  - id: variational-methods
+    title: 変分法
+    sections: [Euler–Lagrange 方程式の一般化, 拘束付き変分, Rayleigh–Ritz 法]
+  - id: group-theory-physics
+    title: 物理における群論
+    sections: [対称性と群, 表現と既約分解, 点群と分子振動, 回転群と SU(2), Wigner–Eckart の定理]

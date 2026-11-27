@@ -1,0 +1,39 @@
+id: commutative-algebra
+prefix: comm
+title: 可換環論
+title_en: Commutative Algebra
+area: math
+level: graduate
+order: 190
+description: >-
+  素イデアルと準素分解、局所化、Noether 環と Artin 環、整拡大と Going-up、Hilbert の零点定理、次元論、離散付値環と Dedekind 整域、完備化を扱う。
+prerequisites: [rings-modules]
+references: [atiyah-macdonald, matsumura-crt]
+chapters:
+  - id: prime-ideals
+    title: 素イデアルとスペクトル
+    sections: [根基とニルラジカル, Jacobson 根基, 素スペクトルと Zariski 位相]
+  - id: localization
+    title: 局所化
+    sections: [環と加群の局所化, 局所的性質, 局所化とイデアルの対応]
+  - id: primary-decomposition
+    title: 準素分解
+    sections: [準素イデアル, Lasker–Noether の定理, 随伴素イデアル]
+  - id: noetherian-artinian
+    title: Noether 環と Artin 環
+    sections: [鎖条件, Noether 環, Artin 環の構造, Krull の交叉定理]
+  - id: integral-extensions
+    title: 整拡大
+    sections: [整元と整閉包, Lying-over と Going-up, Going-down, Noether 正規化]
+  - id: nullstellensatz
+    title: Hilbert の零点定理
+    sections: [弱形, 強形, 代数的集合との対応]
+  - id: dimension
+    title: 次元論
+    sections: [Krull 次元, 高さと単項イデアル定理, 正則局所環]
+  - id: dedekind
+    title: 離散付値環と Dedekind 整域
+    sections: [付値環, 離散付値環, Dedekind 整域, 分数イデアルとイデアル類群]
+  - id: completion
+    title: 完備化
+    sections: [I 進位相, 完備化, Artin–Rees の補題, Hensel の補題]

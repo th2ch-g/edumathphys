@@ -1,0 +1,33 @@
+id: pde
+prefix: pde
+title: 偏微分方程式
+title_en: Partial Differential Equations
+area: math
+level: undergrad-advanced
+order: 120
+description: >-
+  1 階方程式と特性曲線法、Laplace 方程式・熱方程式・波動方程式の古典理論、最大値原理とエネルギー法、Sobolev 空間による弱解の理論と楕円型方程式の正則性を扱う。
+prerequisites: [fourier-analysis, functional-analysis]
+references: [evans-pde, john-pde]
+chapters:
+  - id: first-order
+    title: 1 階偏微分方程式
+    sections: [線形方程式と特性曲線, 準線形方程式, 保存則と衝撃波, Hamilton–Jacobi 方程式]
+  - id: laplace
+    title: Laplace 方程式
+    sections: [基本解, 平均値の性質, 最大値原理, Green 関数, Dirichlet 問題]
+  - id: heat
+    title: 熱方程式
+    sections: [熱核, 初期値問題, 最大値原理と一意性, 有界領域での固有関数展開]
+  - id: wave
+    title: 波動方程式
+    sections: [d'Alembert の公式, 球面平均と Kirchhoff の公式, エネルギー保存と依存領域, Huygens の原理]
+  - id: classification
+    title: 2 階線形方程式の分類
+    sections: [楕円型・放物型・双曲型, 標準形, 特性曲面, Cauchy–Kovalevskaya の定理]
+  - id: weak-solutions
+    title: 弱解と楕円型方程式
+    sections: [Sobolev 空間, Lax–Milgram の定理, 楕円型境界値問題の弱解, 正則性]
+  - id: evolution
+    title: 発展方程式
+    sections: [Galerkin 法, 放物型方程式の弱解, 双曲型方程式の弱解, 半群理論の概観]

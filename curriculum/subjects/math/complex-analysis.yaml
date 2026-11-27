@@ -1,0 +1,39 @@
+id: complex-analysis
+prefix: cpx
+title: 複素解析
+title_en: Complex Analysis
+area: math
+level: undergrad-advanced
+order: 70
+description: >-
+  正則関数の理論。Cauchy–Riemann 方程式、Cauchy の積分定理と積分公式、べき級数展開、Laurent 展開と留数定理、等角写像、解析接続、Riemann 面入門までを扱う。
+prerequisites: [analysis, topology]
+references: [ahlfors-complex, takagi-kaiseki, sugiura-analysis]
+chapters:
+  - id: holomorphic
+    title: 複素数と正則関数
+    sections: [複素平面とリーマン球面, 複素微分と Cauchy–Riemann 方程式, 調和関数, 初等関数（exp・log・べき）]
+  - id: power-series
+    title: べき級数と解析関数
+    sections: [複素べき級数, 収束半径, 項別微分, 一致の定理]
+  - id: cauchy-theorem
+    title: Cauchy の積分定理
+    sections: [複素線積分, Goursat の定理, 単連結領域での Cauchy の定理, ホモトピー形の Cauchy の定理]
+  - id: cauchy-formula
+    title: Cauchy の積分公式とその帰結
+    sections: [Cauchy の積分公式, 正則関数のべき級数展開, Liouville の定理と代数学の基本定理, 最大値原理, Morera の定理]
+  - id: laurent-residues
+    title: Laurent 展開と留数定理
+    sections: [Laurent 展開, 孤立特異点の分類, 留数定理, 実積分の計算, 偏角の原理と Rouché の定理]
+  - id: conformal-maps
+    title: 等角写像
+    sections: [等角性, 一次分数変換, Schwarz の補題, Riemann の写像定理]
+  - id: analytic-continuation
+    title: 解析接続
+    sections: [解析接続と一致の定理, 鏡像の原理, 多価関数と分枝, ガンマ関数とゼータ関数の解析接続]
+  - id: entire-meromorphic
+    title: 整関数と有理型関数
+    sections: [Weierstrass の因数分解定理, Mittag-Leffler の定理, 無限積, 楕円関数入門]
+  - id: riemann-surfaces
+    title: Riemann 面入門
+    sections: [Riemann 面の定義, 代数関数の Riemann 面, 被覆と一意化定理の概観]

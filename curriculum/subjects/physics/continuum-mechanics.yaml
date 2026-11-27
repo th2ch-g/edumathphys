@@ -1,0 +1,36 @@
+id: continuum-mechanics
+prefix: cont
+title: 連続体力学・流体力学
+title_en: Continuum and Fluid Mechanics
+area: physics
+level: undergrad-advanced
+order: 110
+description: >-
+  変形とひずみ・応力テンソル、弾性体の構成方程式と弾性波、流体の基礎方程式（Euler・Navier–Stokes）、渦と完全流体、粘性流と境界層、乱流の基礎を扱う。
+prerequisites: [analytical-mechanics, mathematical-physics]
+references: [landau-fluid, landau-elasticity, imai-fluid]
+chapters:
+  - id: kinematics
+    title: 連続体の運動学
+    sections: [Lagrange 記述と Euler 記述, 物質微分, 変形勾配とひずみテンソル, 連続の方程式]
+  - id: stress
+    title: 応力
+    sections: [Cauchy の応力原理, 応力テンソルの対称性, 運動方程式]
+  - id: elasticity
+    title: 弾性体
+    sections: [Hooke の法則と弾性定数, 等方弾性体, 弾性波, 梁と板の変形]
+  - id: ideal-fluids
+    title: 完全流体
+    sections: [Euler 方程式, Bernoulli の定理, Kelvin の循環定理, ポテンシャル流と複素速度ポテンシャル]
+  - id: viscous-fluids
+    title: 粘性流体
+    sections: [Navier–Stokes 方程式, Reynolds 数と相似則, Poiseuille 流と Couette 流, Stokes 流れ]
+  - id: vorticity-boundary-layers
+    title: 渦と境界層
+    sections: [渦度方程式, 渦糸と渦輪, 境界層理論, 剥離]
+  - id: waves-instability
+    title: 流体の波と不安定性
+    sections: [表面重力波, 音波と圧縮性流体, 衝撃波, Kelvin–Helmholtz 不安定性, Rayleigh–Bénard 対流]
+  - id: turbulence
+    title: 乱流
+    sections: [乱流の統計的記述, Reynolds 応力, Kolmogorov の理論]

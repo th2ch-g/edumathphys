@@ -1,0 +1,55 @@
+id: quantum-mechanics
+prefix: qm
+title: 量子力学（基礎）
+title_en: Quantum Mechanics I
+area: physics
+level: undergrad-advanced
+order: 70
+description: >-
+  量子力学の実験的基礎と数学的枠組み（Hilbert 空間・Dirac 記法）、公理と不確定性関係、時間発展、1 次元問題、調和振動子、角運動量、水素原子、スピン、摂動論と近似法、同種粒子までを扱う。
+prerequisites: [linear-algebra, analytical-mechanics, vibrations-waves]
+conventions:
+  - ℏ は明示する。状態ベクトルは Dirac 記法 |ψ⟩ で表し、内積 ⟨φ|ψ⟩ は第 2 引数（ケット）について線形、第 1 引数について共役線形とする（数学科目の内積と逆なので注意）。
+  - 演算子にはハットを付けないことを原則とし、古典量と区別が必要な場合のみ Â と書く。
+references: [sakurai-qm, shimizu-qm, griffiths-qm, cohen-tannoudji-qm, dirac-principles]
+chapters:
+  - id: experimental-foundations
+    title: 量子論の実験的基礎
+    sections: [黒体放射と Planck の量子仮説, 光電効果と Compton 散乱, 原子の安定性と Bohr 模型, 物質波と電子線回折, Stern–Gerlach の実験]
+  - id: hilbert-space
+    title: Hilbert 空間と Dirac 記法
+    prerequisites: [linear-algebra/spectral-theorem]
+    sections: [状態空間としての Hilbert 空間, ブラとケット, 線形演算子とエルミート共役, エルミート演算子の固有値問題とスペクトル分解, 連続スペクトルと位置・運動量表示]
+  - id: postulates
+    title: 量子力学の公理と不確定性関係
+    sections: [状態と物理量, 測定と Born の規則, 期待値と分散, 交換関係と同時固有状態, Robertson の不確定性関係]
+  - id: time-evolution
+    title: 時間発展と描像
+    sections: [Schrödinger 方程式, 時間発展演算子, 定常状態, Heisenberg 描像, Ehrenfest の定理]
+  - id: one-dimensional
+    title: 1 次元の問題
+    sections: [自由粒子と波束, 無限井戸型ポテンシャル, 有限井戸型ポテンシャルと束縛状態, 階段ポテンシャルと障壁透過（トンネル効果）, デルタ関数ポテンシャル, 1 次元束縛状態の一般的性質]
+  - id: harmonic-oscillator
+    title: 調和振動子
+    sections: [生成・消滅演算子, エネルギー固有値と固有状態, 座標表示と Hermite 多項式, コヒーレント状態]
+  - id: angular-momentum
+    title: 角運動量
+    sections: [軌道角運動量と交換関係, 角運動量の固有値問題（代数的解法）, 球面調和関数, 回転と角運動量]
+  - id: hydrogen-atom
+    title: 中心力ポテンシャルと水素原子
+    sections: [3 次元 Schrödinger 方程式の変数分離, 動径方程式, 水素原子のエネルギー準位と波動関数, 縮退と隠れた対称性]
+  - id: spin
+    title: スピンと角運動量の合成
+    sections: [スピン 1/2 と Pauli 行列, 磁場中のスピンと歳差運動, 角運動量の合成と Clebsch–Gordan 係数, スピン軌道相互作用]
+  - id: stationary-perturbation
+    title: 時間に依存しない摂動論
+    sections: [縮退のない場合, 縮退のある場合, Stark 効果, 水素原子の微細構造, Zeeman 効果]
+  - id: variational-wkb
+    title: 変分法と WKB 近似
+    sections: [変分原理, ヘリウム原子の基底状態, WKB 近似, 接続公式と Bohr–Sommerfeld 量子化条件, トンネル確率]
+  - id: time-dependent-perturbation
+    title: 時間に依存する摂動論
+    sections: [相互作用描像, 1 次の遷移振幅, 周期的摂動と Fermi の黄金律, 電磁場による遷移と選択則]
+  - id: identical-particles
+    title: 同種粒子
+    sections: [交換対称性, ボソンとフェルミオン, Pauli の排他原理と Slater 行列式, ヘリウム原子と交換相互作用]

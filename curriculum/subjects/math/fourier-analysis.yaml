@@ -1,0 +1,27 @@
+id: fourier-analysis
+prefix: four
+title: Fourier 解析
+title_en: Fourier Analysis
+area: math
+level: undergrad-advanced
+order: 100
+description: >-
+  Fourier 級数の収束理論、Fourier 変換と Plancherel の定理、超関数と緩増加超関数の Fourier 変換、Poisson 和公式、偏微分方程式への応用を扱う。
+prerequisites: [measure-integration]
+references: [stein-shakarchi-fourier, folland-real]
+chapters:
+  - id: fourier-series
+    title: Fourier 級数
+    sections: [三角級数と Fourier 係数, Riemann–Lebesgue の補題, Dirichlet 核と各点収束, Fejér 核と Cesàro 和, L² 理論と Parseval の等式]
+  - id: fourier-transform
+    title: Fourier 変換
+    sections: [L¹ 上の Fourier 変換, Schwartz 空間, 反転公式, Plancherel の定理, 畳み込みと Fourier 変換]
+  - id: distributions
+    title: 超関数
+    sections: [試験関数と超関数, 超関数の微分, 緩増加超関数, 超関数の Fourier 変換]
+  - id: poisson-summation
+    title: Poisson の和公式と応用
+    sections: [Poisson の和公式, テータ関数, 標本化定理, 不確定性原理]
+  - id: applications-pde
+    title: 偏微分方程式への応用
+    sections: [熱方程式, 波動方程式, Laplace 方程式と Poisson 核]

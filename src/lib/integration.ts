@@ -4,9 +4,12 @@ import { buildDocIndex, invalidateDocIndex } from './doc-index.ts';
 
 export function collectErrors(): string[] {
   const cur = loadCurriculum({ fresh: true });
-  const { errors: refErrors } = loadReferences();
+  const { refs, errors: refErrors } = loadReferences({ fresh: true });
   const index = buildDocIndex({ fresh: true });
-  return [...cur.errors, ...refErrors, ...index.errors];
+  const subjectRefErrors = cur.subjects.flatMap((s) =>
+    s.references.filter((k) => !refs.has(k)).map((k) => `${s.sourceFile}: unknown reference key "${k}"`),
+  );
+  return [...cur.errors, ...refErrors, ...subjectRefErrors, ...index.errors];
 }
 
 /** Validates the curriculum and content index before building, and refreshes it in dev. */

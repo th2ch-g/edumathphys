@@ -1,0 +1,51 @@
+id: analytical-mechanics
+prefix: am
+title: 解析力学
+title_en: Analytical Mechanics
+area: physics
+level: undergrad-basic
+order: 20
+description: >-
+  変分原理に基づく古典力学の再定式化。Lagrange 形式と Noether の定理、中心力と微小振動、剛体、Hamilton 形式、正準変換、Hamilton–Jacobi 理論、可積分系とカオス、場の解析力学までを扱い、量子力学・統計力学・場の理論への橋渡しとする。
+prerequisites: [mechanics, analysis, linear-algebra]
+conventions:
+  - 一般化座標を q = (q¹, …, qⁿ)、一般化運動量を p で表す。和の規約は用いず、和は明示する。
+  - 時間微分はドット（q̇）で表す。単位は SI 系。
+references: [goldstein-cm, landau-mechanics, arnold-mmcm, onuki-am, yamamoto-nakamura-am]
+chapters:
+  - id: constraints
+    title: Newton 力学と拘束・一般化座標
+    sections: [質点系の Newton 方程式, 拘束条件の分類, 一般化座標と配位空間, 仮想変位と仮想仕事の原理]
+  - id: calculus-of-variations
+    title: 変分法
+    sections: [汎関数と変分, Euler–Lagrange 方程式, 最速降下線と懸垂線, 拘束条件付き変分問題]
+  - id: lagrangian
+    title: Lagrange 形式
+    sections: [d'Alembert の原理から Lagrange 方程式へ, Hamilton の原理, Lagrangian の任意性, 電磁場中の荷電粒子, 散逸と Rayleigh 散逸関数]
+  - id: symmetries
+    title: 対称性と保存則
+    sections: [循環座標と一般化運動量, エネルギー関数とその保存, Noether の定理, 空間の一様性・等方性と保存則]
+  - id: central-force
+    title: 中心力問題と Kepler 問題
+    sections: [二体問題の換算, 有効ポテンシャルと軌道の分類, Kepler 問題の厳密解, Runge–Lenz ベクトル, 散乱断面積]
+  - id: small-oscillations
+    title: 微小振動
+    sections: [平衡点まわりの展開, 基準振動と基準座標, 連成振動の例, 一般固有値問題としての定式化]
+  - id: rigid-body
+    title: 剛体の運動
+    sections: [剛体の自由度と運動の分解, 慣性テンソルと主軸, Euler 角, Euler の運動方程式, 自由な対称こまと重いこま]
+  - id: hamiltonian
+    title: Hamilton 形式
+    sections: [Legendre 変換, Hamilton の正準方程式, 相空間と相流, 修正された Hamilton の原理, Liouville の定理]
+  - id: canonical-transformations
+    title: Poisson 括弧と正準変換
+    sections: [Poisson 括弧と保存量, 正準変換と母関数, シンプレクティック条件, 無限小正準変換と対称性]
+  - id: hamilton-jacobi
+    title: Hamilton–Jacobi 理論
+    sections: [Hamilton–Jacobi 方程式, 変数分離, 作用角変数, 断熱不変量, 光学と力学の対応]
+  - id: integrability-chaos
+    title: 可積分系とカオス入門
+    sections: [Liouville–Arnold の定理, 不変トーラスと準周期運動, 摂動と KAM 理論の概観, Poincaré 断面とカオス]
+  - id: field-mechanics
+    title: 連続体と場の解析力学
+    sections: [弦の振動の Lagrangian, 場の Euler–Lagrange 方程式, 場の Noether の定理, エネルギー運動量テンソル, 場の Hamilton 形式]

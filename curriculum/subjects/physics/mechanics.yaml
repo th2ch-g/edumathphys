@@ -1,0 +1,41 @@
+id: mechanics
+prefix: mech
+title: 力学
+title_en: Classical Mechanics (Newtonian)
+area: physics
+level: undergrad-basic
+order: 10
+description: >-
+  Newton の運動法則に基づく質点・質点系・剛体の力学。運動方程式の解法、仕事とエネルギー、運動量と角運動量、中心力、非慣性系、剛体の基礎を扱う。
+prerequisites: [analysis]
+conventions:
+  - 単位は SI 系を用いる。ベクトルは太字（例：𝒓）、時間微分はドット（例：ṙ）で表す。
+references: [goldstein-cm, landau-mechanics, kittel-mechanics]
+chapters:
+  - id: kinematics
+    title: 運動の記述
+    sections: [位置・速度・加速度, 極座標と円筒座標, 曲線運動と接線・法線成分]
+  - id: newton-laws
+    title: Newton の運動法則
+    sections: [慣性の法則と慣性系, 運動方程式, 作用反作用の法則, 力の例（重力・弾性力・摩擦力・抵抗力）]
+  - id: solving-eom
+    title: 運動方程式の解法
+    sections: [1 次元運動, 単振動, 減衰振動と強制振動, 放物運動と空気抵抗]
+  - id: work-energy
+    title: 仕事とエネルギー
+    sections: [仕事と運動エネルギー, 保存力とポテンシャル, 力学的エネルギー保存則, ポテンシャルによる運動の定性的理解]
+  - id: momentum
+    title: 運動量と質点系
+    sections: [運動量と力積, 重心と重心運動, 運動量保存則, 衝突, 変質量系（ロケット）]
+  - id: angular-momentum
+    title: 角運動量
+    sections: [力のモーメントと角運動量, 角運動量保存則, 質点系の角運動量]
+  - id: central-forces
+    title: 中心力と惑星の運動
+    sections: [中心力と面積速度一定, 有効ポテンシャル, Kepler の法則の導出, 散乱と Rutherford 散乱]
+  - id: non-inertial
+    title: 非慣性系
+    sections: [並進加速度系と慣性力, 回転座標系, Coriolis 力と遠心力, Foucault の振り子]
+  - id: rigid-bodies
+    title: 剛体の力学入門
+    sections: [剛体のつりあい, 固定軸まわりの回転と慣性モーメント, 平行軸の定理, 剛体の平面運動]

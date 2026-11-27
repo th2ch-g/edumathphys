@@ -1,0 +1,33 @@
+id: amo-quantum-optics
+prefix: amo
+title: 原子分子光物理・量子光学
+title_en: Atomic, Molecular and Optical Physics; Quantum Optics
+area: physics
+level: graduate
+order: 200
+description: >-
+  多電子原子と分子の構造、光と原子の相互作用、二準位系と Rabi 振動、光の量子状態、Jaynes–Cummings 模型、レーザー冷却と原子トラップを扱う。
+prerequisites: [advanced-quantum-mechanics]
+references: [foot-atomic, scully-zubairy, gerry-knight]
+chapters:
+  - id: atomic-structure
+    title: 多電子原子
+    sections: [中心場近似, LS 結合と jj 結合, Hund の規則, 超微細構造]
+  - id: molecules
+    title: 分子
+    sections: [Born–Oppenheimer 近似, 水素分子イオンと化学結合, 分子の振動と回転]
+  - id: light-matter
+    title: 光と原子の相互作用
+    sections: [双極子近似, 二準位系と Rabi 振動, 光学 Bloch 方程式, 自然放出と線幅]
+  - id: quantum-light
+    title: 光の量子状態
+    sections: [光子数状態, コヒーレント状態, スクイーズド状態, 光子統計と Hanbury Brown–Twiss 効果]
+  - id: cavity-qed
+    title: 共振器量子電磁力学
+    sections: [Jaynes–Cummings 模型, 真空 Rabi 分裂, Purcell 効果]
+  - id: laser
+    title: レーザー
+    sections: [誘導放出と反転分布, レーザーの発振条件, レーザー光のコヒーレンス]
+  - id: cold-atoms
+    title: レーザー冷却と冷却原子
+    sections: [ドップラー冷却, 磁気光学トラップ, 光格子, Bose–Einstein 凝縮の実現]

@@ -226,8 +226,8 @@ export type Reference = z.infer<typeof referenceSchema> & { key: string };
 
 let cachedRefs: { refs: Map<string, Reference>; errors: string[] } | undefined;
 
-export function loadReferences(): { refs: Map<string, Reference>; errors: string[] } {
-  if (cachedRefs) return cachedRefs;
+export function loadReferences(opts: { fresh?: boolean } = {}): { refs: Map<string, Reference>; errors: string[] } {
+  if (cachedRefs && !opts.fresh) return cachedRefs;
   const errors: string[] = [];
   const refs = new Map<string, Reference>();
   const file = join(CURRICULUM_DIR, 'references.yaml');

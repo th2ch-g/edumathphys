@@ -1,0 +1,38 @@
+id: general-relativity
+prefix: gr
+title: 一般相対論
+title_en: General Relativity
+area: physics
+level: graduate
+order: 120
+description: >-
+  等価原理から出発し、曲がった時空の微分幾何、Einstein 方程式、Schwarzschild 解と古典的検証、ブラックホール、重力波、相対論的宇宙論までを扱う。
+prerequisites: [special-relativity, manifolds, electromagnetism]
+conventions:
+  - 計量の符号は (−,+,+,+)、曲率の符号は Misner–Thorne–Wheeler の規約に従う。特に断らない限り c = 1 とし、G は明示する。
+references: [carroll-gr, schutz-gr, wald-gr, mtw-gravitation]
+chapters:
+  - id: equivalence-principle
+    title: 等価原理と重力
+    sections: [弱い等価原理と強い等価原理, 局所慣性系, 重力赤方偏移]
+  - id: manifolds-tensors
+    title: 時空の幾何学
+    sections: [多様体とテンソル場, 計量, 共変微分と接続, 平行移動と測地線]
+  - id: curvature
+    title: 曲率
+    sections: [Riemann テンソル, Bianchi 恒等式, Ricci テンソルと Einstein テンソル, 測地線偏差]
+  - id: einstein-equations
+    title: Einstein 方程式
+    sections: [エネルギー運動量テンソル, Einstein 方程式の導出, Einstein–Hilbert 作用, Newton 極限]
+  - id: schwarzschild
+    title: Schwarzschild 解
+    sections: [球対称真空解, Birkhoff の定理, 測地線と軌道, 近日点移動と光の湾曲, Shapiro 遅延]
+  - id: black-holes
+    title: ブラックホール
+    sections: [事象の地平線と Kruskal 座標, 重力崩壊, Reissner–Nordström 解と Kerr 解, ブラックホール熱力学と Hawking 放射の概観]
+  - id: gravitational-waves
+    title: 重力波
+    sections: [線形化重力, ゲージの選択, 重力波の偏光, 四重極公式, 連星からの重力波と検出]
+  - id: cosmology
+    title: 相対論的宇宙論
+    sections: [宇宙原理と Robertson–Walker 計量, Friedmann 方程式, 宇宙の膨張と赤方偏移, 宇宙モデル]

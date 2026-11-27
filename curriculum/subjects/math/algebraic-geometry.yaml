@@ -1,0 +1,33 @@
+id: algebraic-geometry
+prefix: ag
+title: 代数幾何入門
+title_en: Introduction to Algebraic Geometry
+area: math
+level: graduate
+order: 210
+description: >-
+  アフィン代数多様体と射影多様体、正則関数と有理写像、次元、非特異性、代数曲線と Riemann–Roch の定理、スキームと層の入門を扱う。
+prerequisites: [commutative-algebra]
+references: [hartshorne-ag, shafarevich-bag]
+chapters:
+  - id: affine-varieties
+    title: アフィン代数多様体
+    sections: [代数的集合, Zariski 位相, 既約性, 座標環]
+  - id: projective-varieties
+    title: 射影多様体
+    sections: [射影空間, 斉次イデアル, 射影閉包]
+  - id: morphisms
+    title: 射と有理写像
+    sections: [正則関数, 多様体の射, 有理写像と双有理同値]
+  - id: dimension-smoothness
+    title: 次元と非特異性
+    sections: [次元, 接空間, 非特異点, ブローアップ]
+  - id: curves
+    title: 代数曲線
+    sections: [因子, 線形系, Riemann–Roch の定理, 種数と楕円曲線]
+  - id: sheaves
+    title: 層
+    sections: [前層と層, 茎, 層の射, 構造層]
+  - id: schemes
+    title: スキーム入門
+    sections: [アフィンスキーム, スキームの定義, 射と性質, 例]

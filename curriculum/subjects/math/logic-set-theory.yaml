@@ -1,0 +1,33 @@
+id: logic-set-theory
+prefix: logic
+title: 数理論理学と公理的集合論
+title_en: Mathematical Logic and Axiomatic Set Theory
+area: math
+level: graduate
+order: 270
+description: >-
+  一階述語論理の構文論と意味論、完全性定理とコンパクト性定理、計算可能性、Gödel の不完全性定理、ZFC 公理系、順序数と基数、構成可能集合と強制法の概観を扱う。
+prerequisites: [sets-logic]
+references: [arai-logic, enderton-logic, kunen-set]
+chapters:
+  - id: propositional-logic
+    title: 命題論理
+    sections: [論理式と真理値割り当て, 証明体系, 健全性と完全性]
+  - id: first-order-logic
+    title: 一階述語論理
+    sections: [言語と論理式, 構造と充足関係, 形式的証明]
+  - id: completeness
+    title: 完全性定理とコンパクト性定理
+    sections: [Gödel の完全性定理, コンパクト性定理, Löwenheim–Skolem の定理, 超準モデル]
+  - id: computability
+    title: 計算可能性
+    sections: [帰納的関数, Turing 機械, Church–Turing の提唱, 停止問題]
+  - id: incompleteness
+    title: 不完全性定理
+    sections: [算術の形式化, Gödel 数化と表現可能性, 第一不完全性定理, 第二不完全性定理]
+  - id: zfc
+    title: ZFC 公理系
+    sections: [公理の一覧, 順序数, 超限帰納法と超限再帰, 基数と基数演算]
+  - id: independence
+    title: 独立性証明の概観
+    sections: [構成可能集合 L, 選択公理と一般連続体仮説の無矛盾性, 強制法の考え方]

@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: tikz-${{ hashFiles('src/content/**/*.md') }}
+          restore-keys: tikz-
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build

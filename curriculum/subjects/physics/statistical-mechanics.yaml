@@ -1,0 +1,41 @@
+id: statistical-mechanics
+prefix: stm
+title: 統計力学
+title_en: Statistical Mechanics
+area: physics
+level: undergrad-advanced
+order: 80
+description: >-
+  ミクロな力学から熱力学を導く統計力学。ミクロカノニカル・カノニカル・グランドカノニカル分布、理想気体と調和振動子系、量子統計（Fermi 気体・Bose 気体）、相互作用系と相転移の入門を扱う。
+prerequisites: [thermodynamics, quantum-mechanics, analytical-mechanics]
+conventions:
+  - Boltzmann 定数 k_B を明示し、β = 1/(k_B T) とする。
+references: [tasaki-stat, kubo-stat, huang-stat, pathria-stat]
+chapters:
+  - id: foundations
+    title: 統計力学の基礎
+    sections: [ミクロ状態とマクロ状態, 等重率の原理, 状態数と状態密度, Boltzmann のエントロピー]
+  - id: microcanonical
+    title: ミクロカノニカル分布
+    sections: [ミクロカノニカル集団, 温度・圧力の統計力学的定義, 理想気体, 二準位系と負温度]
+  - id: canonical
+    title: カノニカル分布
+    sections: [熱浴と接触した系, 分配関数と自由エネルギー, エネルギーゆらぎ, 等分配則, アンサンブルの等価性]
+  - id: applications-classical
+    title: 古典系への応用
+    sections: [理想気体と Gibbs のパラドックス, 調和振動子系と固体比熱, 常磁性体, 実在気体とビリアル展開]
+  - id: grand-canonical
+    title: グランドカノニカル分布
+    sections: [粒子浴と化学ポテンシャル, 大分配関数, 粒子数ゆらぎ, 吸着]
+  - id: quantum-statistics
+    title: 量子統計
+    sections: [密度行列と量子統計力学, Fermi–Dirac 分布と Bose–Einstein 分布, 古典極限]
+  - id: fermi-gas
+    title: 理想 Fermi 気体
+    sections: [Fermi エネルギーと縮退, Sommerfeld 展開, 金属電子の比熱, 白色矮星]
+  - id: bose-gas
+    title: 理想 Bose 気体
+    sections: [Bose–Einstein 凝縮, 黒体放射, 固体の Debye 模型, フォノンと光子の統計]
+  - id: interacting-systems
+    title: 相互作用系と相転移入門
+    sections: [Ising 模型, 1 次元 Ising 模型の厳密解, 平均場近似, Landau 理論, 臨界指数]

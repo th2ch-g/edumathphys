@@ -13,7 +13,7 @@ conventions:
   - 係数体 K は実数体 ℝ または複素数体 ℂ とする（特に断らない限り一般の体でも成り立つ命題はその旨を記す）。
   - ベクトルは列ベクトルで表し、転置を A^⊤、随伴（共役転置）を A^* で表す。
   - 複素内積 ⟨x, y⟩ は第1引数について線形、第2引数について共役線形とする（量子力学の Dirac 記法とは逆なので注意）。
-references: [saito-linalg, sato-linalg, axler-ladr, halmos-fdvs, horn-johnson]
+references: [saito-linalg, satake-linalg, axler-ladr, halmos-fdvs, horn-johnson]
 chapters:
   - id: linear-equations
     title: 連立一次方程式と行列

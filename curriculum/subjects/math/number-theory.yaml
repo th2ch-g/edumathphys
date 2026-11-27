@@ -1,0 +1,36 @@
+id: number-theory
+prefix: nt
+title: 数論
+title_en: Number Theory
+area: math
+level: undergrad-advanced
+order: 200
+description: >-
+  初等整数論（整除・合同式・平方剰余の相互法則）から、代数体の整数環・イデアルの素因数分解・類数・Dirichlet の単数定理、ゼータ関数と素数定理の概観までを扱う。
+prerequisites: [rings-modules, fields-galois]
+references: [takagi-shoto, ireland-rosen, neukirch-ant]
+chapters:
+  - id: divisibility
+    title: 整除と素数
+    sections: [Euclid の互除法, 素因数分解の一意性, 素数の無限性, 一次不定方程式]
+  - id: congruences
+    title: 合同式
+    sections: [剰余環 ℤ/nℤ, Fermat の小定理と Euler の定理, 中国式剰余定理, 原始根]
+  - id: quadratic-reciprocity
+    title: 平方剰余の相互法則
+    sections: [平方剰余と Legendre 記号, Euler の規準, Gauss の補題, 相互法則の証明, Jacobi 記号]
+  - id: diophantine
+    title: Diophantus 方程式
+    sections: [Pythagoras 数, 二平方和定理, Pell 方程式と連分数, Fermat の最終定理（n=4）]
+  - id: algebraic-integers
+    title: 代数的整数
+    sections: [代数体と整数環, 判別式, 整数基底, 二次体の整数環]
+  - id: ideal-factorization
+    title: イデアルの素因数分解
+    sections: [Dedekind 整域としての整数環, 素イデアルの分解, 分岐, ノルム]
+  - id: class-group-units
+    title: イデアル類群と単数群
+    sections: [Minkowski の定理, 類数の有限性, Dirichlet の単数定理]
+  - id: zeta-functions
+    title: ゼータ関数と L 関数
+    sections: [Riemann ゼータ関数, Euler 積, Dirichlet の算術級数定理, 素数定理の概観]

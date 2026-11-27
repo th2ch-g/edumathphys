@@ -1,0 +1,33 @@
+id: nuclear-physics
+prefix: nuc
+title: 原子核物理
+title_en: Nuclear Physics
+area: physics
+level: undergrad-advanced
+order: 190
+description: >-
+  原子核の基本的性質、核力と重陽子、殻模型と集団運動、α・β・γ 崩壊、核反応、核分裂と核融合、元素合成を扱う。
+prerequisites: [quantum-mechanics]
+references: [krane-nuclear, bohr-mottelson]
+chapters:
+  - id: nuclear-properties
+    title: 原子核の基本的性質
+    sections: [原子核の大きさと形, 質量と結合エネルギー, Weizsäcker の質量公式, スピンとモーメント]
+  - id: nuclear-force
+    title: 核力と二核子系
+    sections: [重陽子, 核子-核子散乱, 湯川理論, 核力の性質]
+  - id: shell-model
+    title: 殻模型
+    sections: [魔法数, 平均場ポテンシャル, スピン軌道結合と殻構造]
+  - id: collective-model
+    title: 集団運動
+    sections: [変形核, 回転と振動, 巨大共鳴]
+  - id: decays
+    title: 原子核の崩壊
+    sections: [α 崩壊とトンネル効果, β 崩壊と Fermi 理論, γ 遷移]
+  - id: reactions
+    title: 核反応
+    sections: [反応断面積, 複合核と直接反応, 核分裂, 核融合]
+  - id: nucleosynthesis
+    title: 元素合成
+    sections: [ビッグバン元素合成, 恒星内元素合成, s 過程と r 過程]

@@ -1,0 +1,30 @@
+id: critical-phenomena
+prefix: crit
+title: 相転移と臨界現象・くりこみ群
+title_en: Phase Transitions, Critical Phenomena and the Renormalization Group
+area: physics
+level: graduate
+order: 150
+description: >-
+  臨界現象の現象論とスケーリング則、2 次元 Ising 模型の厳密解、Landau–Ginzburg–Wilson 理論、くりこみ群と ε 展開、普遍性、Kosterlitz–Thouless 転移を扱う。
+prerequisites: [statistical-mechanics, quantum-field-theory]
+references: [goldenfeld-lectures, cardy-scaling, nishimori-ortiz]
+chapters:
+  - id: phenomenology
+    title: 臨界現象の現象論
+    sections: [秩序変数と臨界指数, スケーリング仮説, 相関関数と相関長, 普遍性]
+  - id: exact-solutions
+    title: 厳密に解ける模型
+    sections: [転送行列法, 2 次元 Ising 模型の Onsager 解, 双対性]
+  - id: mean-field
+    title: 平均場理論と Landau 理論
+    sections: [Bragg–Williams 近似, Landau の自由エネルギー, Ginzburg の判定条件, 三重臨界点]
+  - id: renormalization-group
+    title: くりこみ群
+    sections: [Kadanoff のブロックスピン, 実空間くりこみ群, 固定点と臨界指数, 関連・無関連演算子]
+  - id: field-theoretic-rg
+    title: 場の理論的くりこみ群
+    sections: [Landau–Ginzburg–Wilson ハミルトニアン, 運動量殻くりこみ群, ε 展開, Wilson–Fisher 固定点]
+  - id: kt-transition
+    title: Kosterlitz–Thouless 転移
+    sections: [2 次元 XY 模型, Mermin–Wagner の定理, 渦とトポロジカル相転移]

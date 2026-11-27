@@ -1,0 +1,33 @@
+id: special-relativity
+prefix: sr
+title: 特殊相対論
+title_en: Special Relativity
+area: physics
+level: undergrad-basic
+order: 50
+description: >-
+  光速不変の原理と Lorentz 変換、Minkowski 時空と 4 元ベクトル、相対論的運動学と力学、テンソル解析の初歩を扱う。
+prerequisites: [mechanics, linear-algebra]
+conventions:
+  - 計量は η = diag(−1, +1, +1, +1)（一般相対論と共通）を用い、x⁰ = ct とする。場の量子論の章では (+,−,−,−) を用いるので注意。
+  - 繰り返し現れる上下の添字には Einstein の和の規約を適用する。
+references: [taylor-wheeler, schutz-gr, uchiyama-relativity]
+chapters:
+  - id: principles
+    title: 相対性原理と光速不変
+    sections: [Galilei 変換とその限界, Michelson–Morley の実験, Einstein の二つの原理]
+  - id: lorentz-transformations
+    title: Lorentz 変換
+    sections: [Lorentz 変換の導出, 同時性の相対性, 時間の遅れと長さの収縮, 速度の合成則]
+  - id: minkowski-spacetime
+    title: Minkowski 時空
+    sections: [時空図と光円錐, 世界間隔と因果構造, 固有時, 双子のパラドックス]
+  - id: four-vectors
+    title: 4 元ベクトルとテンソル
+    sections: [4 元速度と 4 元加速度, 共変ベクトルと反変ベクトル, テンソル, Lorentz 群]
+  - id: relativistic-dynamics
+    title: 相対論的力学
+    sections: [4 元運動量とエネルギー, 質量とエネルギーの等価性, 衝突と崩壊, 4 元力]
+  - id: relativistic-lagrangian
+    title: 相対論的解析力学
+    sections: [自由粒子の作用, 電磁場中の粒子, 一様加速度運動]

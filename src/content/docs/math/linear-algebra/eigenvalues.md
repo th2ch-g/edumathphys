@@ -57,3 +57,9 @@ $2\times 2$ 行列 $A$ の固有値の和に等しいのはどれか。
 ::::quiz{answer="3"}
 上の演習の行列の最大固有値はいくつか。
 ::::
+
+::interactive[行列の作用]{name="matrix-action"}
+
+::::quiz{answer="1"}
+ダミー
+::::
