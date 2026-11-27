@@ -27,31 +27,41 @@ chapters:
     sections: [関数の極限（ε-δ）, 連続関数, 中間値の定理, 最大値・最小値の定理, 一様連続性, 単調関数と逆関数]
   - id: differentiation
     title: 1 変数関数の微分
+    status: reviewed
     sections: [微分可能性と導関数, 平均値の定理, Taylor の定理, l'Hôpital の定理, 凸関数, 極値問題]
   - id: riemann-integral
     title: Riemann 積分
+    status: reviewed
     sections: [Darboux 和と Riemann 積分, 可積分条件, 連続関数の可積分性, 積分の性質, 微分積分学の基本定理, 置換積分と部分積分]
   - id: uniform-convergence
     title: 関数列と一様収束
+    status: reviewed
     sections: [各点収束と一様収束, 一様収束と連続性・積分・微分, 関数項級数と Weierstrass の M 判定法, べき級数と収束半径, 解析関数, Weierstrass の近似定理]
   - id: elementary-functions
     title: 初等関数の厳密な構成
+    status: reviewed
     sections: [指数関数, 対数関数, 三角関数と円周率, 逆三角関数, 双曲線関数]
   - id: euclidean-space
     title: ℝⁿ の位相と多変数関数の連続性
+    status: reviewed
     sections: [ℝⁿ の距離とノルム, 開集合と閉集合, 点列の収束と完備性, コンパクト集合と Heine–Borel の定理, 連結性, 多変数関数の連続性]
   - id: multivariable-differentiation
     title: 多変数関数の微分
+    status: reviewed
     sections: [偏微分と方向微分, 全微分可能性, 連鎖律, 高階偏導関数と Schwarz の定理, 多変数の Taylor の定理, 極値と Hesse 行列]
   - id: implicit-function
     title: 逆関数定理と陰関数定理
+    status: reviewed
     sections: [縮小写像の原理, 逆関数定理, 陰関数定理, 曲面と接空間, Lagrange の未定乗数法]
   - id: multiple-integral
     title: 重積分
+    status: reviewed
     sections: [長方形上の積分, Jordan 可測集合, 累次積分と Fubini の定理, 変数変換公式, 極座標・球座標]
   - id: improper-integral
     title: 広義積分とガンマ関数・ベータ関数
+    status: reviewed
     sections: [1 変数の広義積分, 多変数の広義積分, Gauss 積分, パラメータを含む積分, ガンマ関数とベータ関数, Stirling の公式]
   - id: vector-calculus
     title: 線積分・面積分とベクトル解析
+    status: reviewed
     sections: [曲線と線積分, 勾配・発散・回転, Green の定理, 曲面と面積分, Gauss の発散定理, Stokes の定理]
