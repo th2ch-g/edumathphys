@@ -21,6 +21,7 @@ chapters:
     sections: [行列とその演算, 基本変形と行階段形, 連立一次方程式の解法, 階数と解の構造, 正則行列と逆行列]
   - id: vector-spaces
     title: ベクトル空間・基底・次元
+    status: reviewed
     sections: [体とベクトル空間の公理, 部分空間, 一次独立と生成系, 基底と次元, 和空間と直和]
   - id: linear-maps
     title: 線形写像と表現行列
