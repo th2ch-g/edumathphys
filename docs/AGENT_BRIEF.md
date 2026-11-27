@@ -34,7 +34,7 @@ Work autonomously until the assignment is complete. Never stop to ask questions:
 - Figures: optional ```` ```tikz ```` / ```` ```tikzcd ```` code fences (plain TikZ; libraries: arrows.meta, calc, positioning, decorations.pathmorphing, decorations.markings, shapes.geometric). Keep them simple. Do not create interactive figures.
 - Verify every non-trivial computation, every exercise answer and every numeric quiz answer with sympy: put throwaway scripts in `.cache/scratch/` and run `uv run --with sympy python .cache/scratch/<file>.py`. Delete your scripts when finished.
 - In your subject YAML add the line `    status: draft` directly after the `title:` line of each chapter you created (before any `prerequisites:` line of that chapter). Change nothing else.
-- Run `npm run check` after each chapter. It validates the whole site: fix every error that mentions your files and ignore errors in other subjects' files.
+- Do not run `npm run check` (or any other `npm`/`node` site tooling): it validates the whole site and is too heavy with many agents in parallel. The orchestrator runs it centrally and sends you the errors that mention your files.
 
 ## Do not
 

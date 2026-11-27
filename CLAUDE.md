@@ -30,7 +30,7 @@ Follow `docs/STYLE.md`. Writing priority (continue from the first subject with s
 3. all remaining subjects
 
 Workflow (Claude token use is kept minimal; Codex does the heavy work):
-1. Codex subagents draft chapters in parallel (one subject per agent, `status: draft`, brief in `docs/AGENT_BRIEF.md`); drafts under ~50 KB get a Codex expansion pass.
+1. Codex subagents draft chapters in parallel (one subject per agent, `status: draft`, brief in `docs/AGENT_BRIEF.md`); drafts under ~50 KB get a Codex expansion pass. Codex agents never run `npm`/`node` (too heavy in parallel): Claude runs `npm run check` centrally after the jobs finish and sends the errors back to Codex fix jobs.
 2. A separate Codex instance reviews and fixes them adversarially (`docs/REVIEW_BRIEF.md`).
 3. Claude acts only as the final gate: `node scripts/stage-chapters.mjs <subject>/<chapter> ...` (check + build in a clean worktree with only those chapters), a light spot check, then commit and push.
 
@@ -43,10 +43,12 @@ Workflow (Claude token use is kept minimal; Codex does the heavy work):
 
 ## Resuming work (state at the last stop)
 
-Unreviewed drafts live on the `drafts` branch (not published). To resume: `git checkout drafts -- src/content/docs curriculum/subjects` on top of main, then continue the workflow above.
+Unreviewed drafts live on the `drafts` branch (not published). To resume: `git checkout drafts -- src/content/docs curriculum/subjects` on top of main, then `git reset -q` (checkout also stages the drafts; `stage-chapters.mjs` must start from a clean index), then continue the workflow above.
 
-- Written and expanded, waiting for Codex review: analysis ch4–13, analytical-mechanics ch4–12, quantum-mechanics (all 13).
-- Written, not yet expanded or reviewed: complex-analysis, sets-logic, special-relativity, statistical-mechanics.
+- Every chapter of every subject now exists at least as a draft.
+- First drafts, need an expansion pass (most chapters are 12–30 KB) and then review: all 46 subjects that were stubs before (algebraic-geometry … vibrations-waves).
+- Expanded, waiting for Codex review: complex-analysis, sets-logic, special-relativity, statistical-mechanics.
+- Upgraded, waiting for Codex review: linear-algebra ch1–2 (published; the upgraded text is on `drafts` only).
 - Reviewed but held: electromagnetism/relativistic-em (waits for special-relativity to be published).
-- Linear algebra ch1–2 predate the current quality bar (ch2 has only 6 exercises): needs an upgrade pass.
-- References softened to plain links by `scripts/soften-refs.mjs` (restore as `:ref` once the target is published): electromagnetism/electrostatics (thm-anl-divergence), mechanics/kinematics, measure-integration/lebesgue-measure, measure-integration/differentiation. Find them with `grep -rn '](/math/\|](/physics/' src/content/docs` and compare with the labels in published chapters.
+- Known `npm run check` errors in drafts: riemannian-geometry/curvature (`\owedge`), nuclear-physics/mesons-quarks (`\slashed`), plasma-physics/magnetized-kinetics (`\rhosim`). Undefined KaTeX macros: rewrite with supported commands (no `\newcommand`).
+- References softened to plain links by `scripts/soften-refs.mjs` (restore as `:ref` once the target is published): electromagnetism/electrostatics (thm-anl-divergence), mechanics/kinematics, measure-integration/lebesgue-measure, measure-integration/differentiation, analysis/euclidean-space (thm-sets-demorgan), analysis/multiple-integral (prop-sets-characteristic). Find them with `grep -rn '](/math/\|](/physics/' src/content/docs` and compare with the labels in published chapters.

@@ -23,8 +23,8 @@ Work autonomously until all assigned chapters are done; never stop to ask questi
 ## Fix
 
 - Edit the chapter files directly. Make the minimal correct fix; rewrite a proof or section entirely when it is wrong or incomplete. Keep labels stable unless a label is wrong (then update every `:ref` to it).
-- Run `npm run check` after editing; fix errors that mention your files, ignore others.
-- Do not run `npm run build` or git, do not change `status` lines or any file other than the assigned chapters.
+- Do not run `npm run check` (or any other `npm`/`node` site tooling); the orchestrator runs it centrally and sends you the errors that mention your files.
+- Do not run git, do not change `status` lines or any file other than the assigned chapters.
 - Unresolved `:ref` errors that point to labels a sibling chapter of your assignment should define: define them there (with correct content), or change the reference.
 
 ## Report
