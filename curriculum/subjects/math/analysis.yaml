@@ -15,12 +15,15 @@ references: [sugiura-analysis, takagi-kaiseki, rudin-pma, apostol-analysis, koba
 chapters:
   - id: real-numbers
     title: 実数の連続性
+    status: reviewed
     sections: [実数の公理, 上限と下限, 実数の連続性の諸形式, Archimedes の性質, 有理数の稠密性]
   - id: sequences-series
     title: 数列と級数
+    status: reviewed
     sections: [数列の極限, 単調収束定理, Bolzano–Weierstrass の定理, Cauchy 列と完備性, 上極限と下極限, 級数の収束と判定法, 絶対収束と条件収束・再配列]
   - id: continuity
     title: 関数の極限と連続性
+    status: reviewed
     sections: [関数の極限（ε-δ）, 連続関数, 中間値の定理, 最大値・最小値の定理, 一様連続性, 単調関数と逆関数]
   - id: differentiation
     title: 1 変数関数の微分
