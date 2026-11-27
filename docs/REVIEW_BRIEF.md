@@ -1,6 +1,8 @@
 # Brief for chapter-review agents
 
-You review draft chapters of EduMathPhys (Japanese self-study site for university mathematics and physics) that were written by another model. Your job is to find and fix errors so that the chapters can be published. Other agents work in parallel on other subjects in the same working tree.
+You review draft chapters of EduMathPhys (Japanese self-study site for university mathematics and physics) that were written by another agent. Be adversarial: assume there are errors and gaps, find them, and fix them so that the chapters can be published. Other agents work in parallel on other subjects in the same working tree.
+
+Work autonomously until all assigned chapters are done; never stop to ask questions. Chapters below the size bar of `docs/AGENT_BRIEF.md` (60–100 KB) must be expanded by you as part of the review.
 
 ## Read first
 
@@ -23,6 +25,7 @@ You review draft chapters of EduMathPhys (Japanese self-study site for universit
 - Edit the chapter files directly. Make the minimal correct fix; rewrite a proof or section entirely when it is wrong or incomplete. Keep labels stable unless a label is wrong (then update every `:ref` to it).
 - Run `npm run check` after editing; fix errors that mention your files, ignore others.
 - Do not run `npm run build` or git, do not change `status` lines or any file other than the assigned chapters.
+- Unresolved `:ref` errors that point to labels a sibling chapter of your assignment should define: define them there (with correct content), or change the reference.
 
 ## Report
 
