@@ -29,7 +29,6 @@ chapters:
     sections: [置換と符号, 多重線形交代形式としての行列式, 行列式の基本性質, 余因子展開と逆行列, Cramer の公式]
   - id: eigenvalues
     title: 固有値と対角化
-    status: draft
     sections: [固有値と固有ベクトル, 特性多項式, 対角化可能性の判定, Cayley–Hamilton の定理, 三角化]
   - id: inner-product-spaces
     title: 内積空間
