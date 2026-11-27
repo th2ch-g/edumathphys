@@ -16,54 +16,69 @@ references: [tasaki-stat, kubo-stat, kubo-statmech, huang-stat, pathria-stat, la
 chapters:
   - id: foundations
     title: 統計力学の基礎
+    status: reviewed
     prerequisites: [analytical-mechanics/hamiltonian, quantum-mechanics/postulates]
     sections: [マクロな系とミクロ状態, 古典系の位相空間と Liouville の定理, 量子系のエネルギー固有状態と状態数, 確率論の初歩と大数の法則, 等重率の原理とエルゴード仮説, 状態数と状態密度, Boltzmann のエントロピー]
   - id: microcanonical
     title: ミクロカノニカル分布
+    status: reviewed
     prerequisites: [thermodynamics/entropy]
     sections: [ミクロカノニカル集団, 状態数の計算例（理想気体・調和振動子・スピン系）, 温度の統計力学的定義と熱平衡, 圧力と化学ポテンシャルの統計力学的表現, 熱力学関数の導出と示量性, 二準位系と負温度]
   - id: canonical
     title: カノニカル分布
+    status: reviewed
     prerequisites: [thermodynamics/potentials]
     sections: [熱浴と接触した系とカノニカル分布の導出, 分配関数と Helmholtz 自由エネルギー, エネルギーゆらぎと比熱, アンサンブルの等価性, 独立な部分系と分配関数の因子化, 等分配則とビリアル定理, Gibbs のエントロピー公式と最大エントロピー原理]
   - id: applications-classical
     title: 古典系への応用
+    status: reviewed
     sections: [古典理想気体と Maxwell 速度分布, Gibbs のパラドックスと粒子の同一性, 重力場中の気体と気圧公式, 調和振動子系と固体比熱（Dulong–Petit 則・Einstein 模型）, 古典的常磁性と Langevin 関数, 量子的常磁性と Curie 則, Schottky 比熱]
   - id: grand-canonical
     title: グランドカノニカル分布
+    status: reviewed
     sections: [粒子浴と化学ポテンシャル, 大分配関数とグランドポテンシャル, 粒子数ゆらぎと等温圧縮率, 吸着と Langmuir の等温式, T–p 分布と一般化されたアンサンブル, アンサンブル間の Legendre 変換と熱力学極限]
   - id: fluctuations
     title: ゆらぎの理論
+    status: reviewed
     prerequisites: [thermodynamics/stability]
     sections: [熱力学的ゆらぎと Einstein の公式, ゆらぎと応答関数（比熱・感受率・圧縮率）, 熱力学的安定性とゆらぎの正値性, 空間相関関数と構造因子, 密度ゆらぎと臨界タンパク光の概観, 大偏差原理とエントロピー]
   - id: quantum-statistics
     title: 量子統計
+    status: reviewed
     prerequisites: [quantum-mechanics/identical-particles]
     sections: [密度行列と量子統計力学の定式化, 量子系のカノニカル分布と分配関数, 同種粒子と占有数表示, Fermi–Dirac 分布と Bose–Einstein 分布, 理想量子気体の状態方程式と状態密度, 古典極限と熱的 de Broglie 波長, Nernst の定理の統計力学的理解]
   - id: molecular-gases
     title: 多原子分子気体と化学平衡
+    status: reviewed
     prerequisites: [quantum-mechanics/angular-momentum, thermodynamics/mixtures]
     sections: [並進・回転・振動・電子自由度の分離, 回転の分配関数と高温・低温極限, 核スピン統計とオルト水素・パラ水素, 振動の分配関数と比熱, 化学平衡と質量作用の法則, Saha の電離公式]
   - id: fermi-gas
     title: 理想 Fermi 気体
+    status: reviewed
     sections: [Fermi エネルギーと縮退, Sommerfeld 展開, 金属電子の比熱, Pauli 常磁性, Landau 反磁性と Landau 準位, 熱電子放出, 白色矮星と Chandrasekhar 限界]
   - id: bose-gas
     title: 理想 Bose 気体
+    status: reviewed
     sections: [理想 Bose 気体の状態方程式, Bose–Einstein 凝縮の発生条件と転移温度, 凝縮相の熱力学と比熱の振る舞い, 調和トラップ中の Bose–Einstein 凝縮, 低次元系での凝縮の不在, 液体ヘリウムと λ 転移の概観]
   - id: photons-phonons
     title: 光子気体とフォノン
+    status: reviewed
     prerequisites: [electromagnetism/em-waves, analytical-mechanics/small-oscillations]
     sections: [空洞放射のモードと Planck 分布, Stefan–Boltzmann 則と Wien の変位則, 光子気体の熱力学と放射圧, 格子振動の量子化とフォノン, 固体比熱の Debye 模型と T³ 則, 化学ポテンシャルがゼロの Bose 粒子の統計]
   - id: interacting-gases
     title: 相互作用する古典気体
+    status: reviewed
     sections: [配置積分と Mayer 関数, クラスター展開, ビリアル係数と状態方程式, van der Waals 状態方程式の統計力学的導出, 動径分布関数と液体の構造, Debye–Hückel 理論と遮蔽]
   - id: interacting-systems
     title: 相互作用系と相転移入門
+    status: reviewed
     prerequisites: [thermodynamics/phase-transitions]
     sections: [相転移と自由エネルギーの非解析性, Ising 模型と格子気体・二元合金, 1 次元 Ising 模型の転送行列による厳密解, Peierls の議論と 2 次元での長距離秩序, 2 次元 Ising 模型の厳密解の概観, 臨界指数と普遍性の導入]
   - id: mean-field
     title: 平均場近似と Landau 理論
+    status: reviewed
     sections: [Weiss の分子場近似, Bragg–Williams 近似と変分原理, Bethe 近似, 平均場理論での臨界指数, 液相–気相転移と van der Waals 理論の臨界点, Landau 理論と 1 次転移, 平均場理論の限界]
   - id: kinetic-intro
     title: 気体分子運動論と輸送現象の初歩
+    status: reviewed
     sections: [分子の衝突頻度と平均自由行程, 粘性・熱伝導・拡散の初等理論, 輸送係数の温度依存性, Brownian 運動と Einstein の関係, 時間相関関数と揺動散逸定理の概観]
