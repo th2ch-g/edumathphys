@@ -15,41 +15,54 @@ references: [sakurai-qm, shimizu-qm, griffiths-qm, cohen-tannoudji-qm, dirac-pri
 chapters:
   - id: experimental-foundations
     title: 量子論の実験的基礎
+    status: reviewed
     sections: [黒体放射と Planck の量子仮説, 光電効果と Compton 散乱, 原子の安定性と Bohr 模型, 物質波と電子線回折, Stern–Gerlach の実験]
   - id: hilbert-space
     title: Hilbert 空間と Dirac 記法
+    status: reviewed
     prerequisites: [linear-algebra/spectral-theorem]
     sections: [状態空間としての Hilbert 空間, ブラとケット, 線形演算子とエルミート共役, エルミート演算子の固有値問題とスペクトル分解, 連続スペクトルと位置・運動量表示]
   - id: postulates
     title: 量子力学の公理と不確定性関係
+    status: reviewed
     sections: [状態と物理量, 測定と Born の規則, 期待値と分散, 交換関係と同時固有状態, Robertson の不確定性関係]
   - id: time-evolution
     title: 時間発展と描像
+    status: reviewed
     sections: [Schrödinger 方程式, 時間発展演算子, 定常状態, Heisenberg 描像, Ehrenfest の定理]
   - id: one-dimensional
     title: 1 次元の問題
+    status: reviewed
     sections: [自由粒子と波束, 無限井戸型ポテンシャル, 有限井戸型ポテンシャルと束縛状態, 階段ポテンシャルと障壁透過（トンネル効果）, デルタ関数ポテンシャル, 1 次元束縛状態の一般的性質]
   - id: harmonic-oscillator
     title: 調和振動子
+    status: reviewed
     sections: [生成・消滅演算子, エネルギー固有値と固有状態, 座標表示と Hermite 多項式, コヒーレント状態]
   - id: angular-momentum
     title: 角運動量
+    status: reviewed
     sections: [軌道角運動量と交換関係, 角運動量の固有値問題（代数的解法）, 球面調和関数, 回転と角運動量]
   - id: hydrogen-atom
     title: 中心力ポテンシャルと水素原子
+    status: reviewed
     sections: [3 次元 Schrödinger 方程式の変数分離, 動径方程式, 水素原子のエネルギー準位と波動関数, 縮退と隠れた対称性]
   - id: spin
     title: スピンと角運動量の合成
+    status: reviewed
     sections: [スピン 1/2 と Pauli 行列, 磁場中のスピンと歳差運動, 角運動量の合成と Clebsch–Gordan 係数, スピン軌道相互作用]
   - id: stationary-perturbation
     title: 時間に依存しない摂動論
+    status: reviewed
     sections: [縮退のない場合, 縮退のある場合, Stark 効果, 水素原子の微細構造, Zeeman 効果]
   - id: variational-wkb
     title: 変分法と WKB 近似
+    status: reviewed
     sections: [変分原理, ヘリウム原子の基底状態, WKB 近似, 接続公式と Bohr–Sommerfeld 量子化条件, トンネル確率]
   - id: time-dependent-perturbation
     title: 時間に依存する摂動論
+    status: reviewed
     sections: [相互作用描像, 1 次の遷移振幅, 周期的摂動と Fermi の黄金律, 電磁場による遷移と選択則]
   - id: identical-particles
     title: 同種粒子
+    status: reviewed
     sections: [交換対称性, ボソンとフェルミオン, Pauli の排他原理と Slater 行列式, ヘリウム原子と交換相互作用]
