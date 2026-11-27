@@ -6,25 +6,69 @@ area: physics
 level: undergrad-advanced
 order: 240
 description: >-
-  物理学における数値計算手法。常微分方程式の数値積分と分子動力学法、モンテカルロ法、偏微分方程式の差分解法、固有値問題と量子系の数値解法、厳密対角化、データ解析を扱う。
+  物理学における数値計算手法。運動方程式の数値積分とシンプレクティック積分、非線形力学とカオスの数値解析、Fourier 解析と信号処理、分子動力学法、
+  モンテカルロ法と格子模型のシミュレーション、自由エネルギー計算、偏微分方程式の差分法・スペクトル法・有限要素法、1 粒子量子系の数値解法、
+  電子状態計算、厳密対角化とテンソルネットワーク、量子モンテカルロ法、格子場の理論、データ解析を扱う。
 prerequisites: [numerical-analysis, statistical-mechanics, quantum-mechanics]
-references: [landau-paez-cp, newman-cp, thijssen-cp]
+references: [landau-paez-cp, newman-cp, thijssen-cp, numerical-recipes, frenkel-smit, landau-binder, martin-es]
 chapters:
   - id: ode-integration
     title: 運動方程式の数値積分
-    sections: [Euler 法と Runge–Kutta 法, Verlet 法とシンプレクティック性, 誤差とエネルギー保存]
+    prerequisites: [numerical-analysis/ode-numerics, analytical-mechanics/hamiltonian]
+    sections: [Euler 法と Runge–Kutta 法, 適応刻み幅制御, Verlet 法と leapfrog 法, シンプレクティック積分法と修正 Hamiltonian, 硬い方程式と陰的解法, 重力多体問題と軌道計算]
+  - id: nonlinear-chaos
+    title: 非線形力学系とカオスの数値解析
+    prerequisites: [analytical-mechanics/integrability-chaos, dynamical-systems/chaos]
+    sections: [Poincaré 断面, Lyapunov 指数の計算, ロジスティック写像と分岐図, フラクタル次元の計算, 二重振り子と Lorenz 系]
+  - id: fourier-methods
+    title: Fourier 解析と信号処理
+    prerequisites: [mathematical-physics/integral-transforms]
+    sections: [離散 Fourier 変換, 高速 Fourier 変換（FFT）, 標本化定理とエイリアシング, 窓関数とパワースペクトル推定, 畳み込みと相関の計算, ウェーブレット解析の概観]
   - id: molecular-dynamics
     title: 分子動力学法
-    sections: [Lennard-Jones 系, 周期境界条件, 温度制御と圧力制御, 物理量の測定]
+    prerequisites: [statistical-mechanics/canonical]
+    sections: [Lennard-Jones 系とポテンシャルの打ち切り, 周期境界条件と最小像規約, 近接リストとセル分割法, 初期条件と平衡化, 温度制御（Nosé–Hoover 熱浴）と圧力制御, 動径分布関数と拡散係数の測定, 長距離力と Ewald 和]
   - id: monte-carlo
-    title: モンテカルロ法
-    sections: [乱数と重点サンプリング, Metropolis 法, Ising 模型のシミュレーション, 誤差評価と自己相関]
+    title: モンテカルロ法の基礎
+    prerequisites: [probability/markov-chains]
+    sections: [擬似乱数の生成と検定, モンテカルロ積分と分散低減, 重点サンプリング, Markov 連鎖と詳細つり合い, Metropolis 法, 誤差評価と自己相関時間・ブロッキング法]
+  - id: lattice-monte-carlo
+    title: 格子模型のモンテカルロ・シミュレーション
+    prerequisites: [critical-phenomena/phenomenology]
+    sections: [Ising 模型の Metropolis シミュレーション, 臨界緩和とクラスター・アルゴリズム（Swendsen–Wang 法と Wolff 法）, ヒストグラム法と再重み付け, レプリカ交換法とマルチカノニカル法, 有限サイズスケーリングによる臨界指数の決定]
+  - id: free-energy
+    title: 自由エネルギー計算と稀な事象のサンプリング
+    prerequisites: [nonequilibrium/fluctuation-theorems]
+    sections: [熱力学積分, 自由エネルギー摂動法, Widom の粒子挿入法, アンブレラ・サンプリング, 非平衡仕事による自由エネルギー推定, 遷移経路サンプリング]
   - id: pde-solvers
-    title: 偏微分方程式の数値解法
-    sections: [拡散方程式の差分法, 波動方程式, Poisson 方程式と緩和法, スペクトル法]
+    title: 偏微分方程式の差分法
+    prerequisites: [numerical-analysis/pde-numerics]
+    sections: [拡散方程式の陽解法と陰解法, von Neumann の安定性解析, 波動方程式と CFL 条件, 移流方程式と風上差分, Poisson 方程式と緩和法（Jacobi 法・Gauss–Seidel 法・SOR 法）, 多重格子法]
+  - id: spectral-fem
+    title: スペクトル法と有限要素法
+    prerequisites: [continuum-mechanics/viscous-fluids]
+    sections: [Fourier スペクトル法, Chebyshev スペクトル法, 擬スペクトル法と非線形項（KdV 方程式）, 有限要素法の弱形式と基底関数, 流体方程式の数値計算入門]
   - id: quantum-numerics
-    title: 量子系の数値解法
-    sections: [Schrödinger 方程式の数値解法, 時間発展（Crank–Nicolson 法）, 厳密対角化と Lanczos 法]
+    title: 1 粒子量子系の数値解法
+    prerequisites: [quantum-mechanics/one-dimensional]
+    sections: [Numerov 法と束縛状態のシューティング法, 散乱問題と位相のずれの計算, 変分法と基底関数展開, 時間依存 Schrödinger 方程式（Crank–Nicolson 法と split-operator 法）, 周期系のバンド計算（平面波展開）]
+  - id: electronic-structure
+    title: 電子状態計算
+    prerequisites: [solid-state/band-calculation]
+    sections: [Hartree–Fock 法と Roothaan 方程式, Gauss 型基底関数, 密度汎関数理論と Kohn–Sham 方程式, 交換相関汎関数（LDA と GGA）, 擬ポテンシャルと平面波法, 第一原理分子動力学（Car–Parrinello 法）]
+  - id: exact-diagonalization
+    title: 量子多体系の厳密対角化とテンソルネットワーク
+    prerequisites: [many-body/strong-correlation]
+    sections: [多体 Hilbert 空間と対称性による簡約, Lanczos 法, スピン鎖の基底状態と励起ギャップ, 密度行列くりこみ群（DMRG）, 行列積状態とテンソルネットワークの概観]
+  - id: quantum-monte-carlo
+    title: 量子モンテカルロ法
+    prerequisites: [advanced-quantum-mechanics/path-integrals]
+    sections: [変分モンテカルロ法, 拡散モンテカルロ法, 経路積分モンテカルロ法, 世界線法と確率級数展開法, 負符号問題]
+  - id: lattice-field-theory
+    title: 格子場の理論の数値計算
+    prerequisites: [quantum-field-theory/gauge-theories]
+    sections: [スカラー場の格子化, 格子ゲージ理論と Wilson 作用, ハイブリッド・モンテカルロ法, 格子上のフェルミオン, 連続極限とスケーリング]
   - id: data-analysis
     title: データ解析
-    sections: [最小二乗フィッティング, ブートストラップ法, 有限サイズスケーリング]
+    prerequisites: [statistics/point-estimation]
+    sections: [最小二乗フィッティングと χ² 検定, 非線形フィッティング（Levenberg–Marquardt 法）, 誤差伝播と共分散, ブートストラップ法とジャックナイフ法, Bayes 推定とマルコフ連鎖モンテカルロ, 機械学習の物理への応用の概観]

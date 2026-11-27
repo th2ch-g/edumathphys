@@ -4,33 +4,62 @@ title: Lie 群と表現論
 title_en: Lie Groups and Representation Theory
 area: math
 level: graduate
-order: 180
+order: 145
 description: >-
-  有限群の表現と指標理論から始め、Lie 群と Lie 代数、SU(2) と SO(3) の表現、半単純 Lie 代数の構造（ルート系・Dynkin 図形）、最高ウェイト理論、コンパクト Lie 群の表現（Peter–Weyl の定理）を扱う。
-prerequisites: [group-theory, manifolds]
-references: [hall-lie, fulton-harris, humphreys-lie]
+  位相群の表現の一般論から始め、古典群と行列 Lie 群、Lie 群と Lie 代数の対応、SU(2)・SO(3) と sl₂(ℂ) の表現、コンパクト群の表現と Peter–Weyl の定理、
+  半単純 Lie 代数の構造（Cartan の判定法・Weyl の完全可約性・ルート空間分解）、ルート系と Dynkin 図形による分類、普遍包絡環と Serre の定理、
+  最高ウェイト理論と Weyl の指標公式、古典 Lie 代数の表現と Schur–Weyl 双対性、極大トーラスと Weyl の積分公式、コンパクト Lie 群の構造、実半単純 Lie 群の構造までを扱う。
+prerequisites: [group-theory, manifolds, representation-theory]
+references: [hall-lie, fulton-harris, humphreys-lie, knapp-lie, bump-lie, sugiura-lie, kobayashi-oshima-lie, warner-manifolds]
 chapters:
   - id: finite-representations
-    title: 有限群の表現
-    sections: [表現と部分表現, Maschke の定理, Schur の補題, 正則表現]
-  - id: characters
-    title: 指標理論
-    sections: [指標, 直交関係, 指標表, 誘導表現と Frobenius の相互律]
+    title: 群の表現の一般的枠組み
+    prerequisites: [representation-theory/characters]
+    sections: [表現・部分表現・表現の準同型, 既約性と完全可約性, Schur の補題と中心の作用, 表現のテンソル積・双対・Hom 表現, 位相群と連続表現, ユニタリ表現と Weyl のユニタリ・トリック, 有限群の表現論との対応]
   - id: matrix-lie-groups
-    title: 行列 Lie 群と Lie 代数
-    sections: [行列 Lie 群, 行列の指数関数, Lie 代数, Baker–Campbell–Hausdorff の公式]
+    title: 古典群と行列 Lie 群
+    prerequisites: [manifolds/lie-groups-intro, linear-algebra/matrix-analysis]
+    sections: [古典群（GL・SL・O・SO・U・SU・Sp）とその Lie 代数, 行列の指数関数と対数, 1 パラメータ部分群と Lie 代数の特徴付け, 連結性・コンパクト性・単連結性, 極分解と古典群の位相, 四元数とコンパクトシンプレクティック群, 例：Heisenberg 群・Euclid 群・Lorentz 群]
+  - id: lie-correspondence
+    title: Lie 群と Lie 代数の対応
+    prerequisites: [algebraic-topology/covering-spaces, manifolds/distributions]
+    sections: [Baker–Campbell–Hausdorff の公式, Lie 代数準同型の持ち上げ, Lie 部分代数と連結 Lie 部分群, 単連結群と普遍被覆群, Lie の第三定理と Ado の定理, 例：SL₂(ℝ) の普遍被覆は行列群でない]
   - id: su2-so3
-    title: SU(2) と SO(3) の表現
-    sections: [SU(2) から SO(3) への二重被覆, sl(2, ℂ) の既約表現, SU(2) の既約表現, Clebsch–Gordan 分解]
+    title: SU(2)・SO(3) と sl₂(ℂ) の表現
+    sections: [SU(2) から SO(3) への二重被覆, sl₂(ℂ) の有限次元既約表現, SU(2) と SO(3) の既約表現, 球面調和関数と SO(3) の表現, Clebsch–Gordan 分解, Lorentz 群と SL₂(ℂ)]
+  - id: characters
+    title: コンパクト群の表現と指標
+    prerequisites: [measure-integration/haar-measure]
+    sections: [Haar 測度の存在と一意性, コンパクト群の表現の完全可約性, Schur の直交関係, 指標と類関数, 既約指標の正規直交性, 例：U(1) と SU(2) の指標]
+  - id: compact-groups
+    title: Peter–Weyl の定理とコンパクト群上の調和解析
+    prerequisites: [functional-analysis/compact-hilbert]
+    sections: [行列成分と L² 空間, Peter–Weyl の定理, 類関数と指標の完全性, Fourier 級数の一般化と Plancherel の公式, コンパクト Lie 群の忠実な有限次元表現の存在, 誘導表現と Frobenius の相互律]
   - id: semisimple
-    title: 半単純 Lie 代数
-    sections: [可解・冪零 Lie 代数, Killing 形式と Cartan の判定法, Cartan 部分代数, ルート空間分解]
+    title: 半単純 Lie 代数と Cartan の判定法
+    sections: [Lie 代数の基本概念（イデアル・商・中心・導来列）, 可解 Lie 代数と Lie の定理, 冪零 Lie 代数と Engel の定理, Killing 形式と Cartan の判定法, 半単純性と単純イデアルへの分解, 抽象 Jordan 分解, Weyl の完全可約性定理]
+  - id: cartan-subalgebras
+    title: Cartan 部分代数とルート空間分解
+    sections: [トーラス部分代数と Cartan 部分代数, ルート空間分解, ルートの性質と sl₂ 三つ組, ルートの有理性と内積, 古典 Lie 代数のルート系（A_n・B_n・C_n・D_n）, Cartan 部分代数の共役性]
   - id: root-systems
     title: ルート系と Dynkin 図形
-    sections: [ルート系の公理, Weyl 群, 単純ルートと Cartan 行列, Dynkin 図形による分類]
+    sections: [ルート系の公理, Weyl 群と Weyl の部屋, 単純ルートと正ルート, Cartan 行列と Dynkin 図形, 既約ルート系の分類, 例外型ルート系（G₂・F₄・E₆・E₇・E₈）, 半単純 Lie 代数の同型定理]
+  - id: universal-enveloping
+    title: 普遍包絡環と半単純 Lie 代数の存在定理
+    sections: [テンソル代数と普遍包絡環, Poincaré–Birkhoff–Witt の定理, 自由 Lie 代数と生成元・関係式, Serre の定理と半単純 Lie 代数の存在, Casimir 元, Harish-Chandra 準同型と中心の構造]
   - id: highest-weight
     title: 最高ウェイト理論
-    sections: [ウェイトと最高ウェイト, Verma 加群, 有限次元既約表現の分類, Weyl の指標公式]
-  - id: compact-groups
-    title: コンパクト Lie 群の表現
-    sections: [Haar 測度, Peter–Weyl の定理, 極大トーラス]
+    sections: [ウェイトとウェイト格子, 最高ウェイト加群と Verma 加群, 有限次元既約表現の分類（最高ウェイト定理）, 支配的整ウェイトと基本表現, Weyl の指標公式, Weyl の次元公式, Kostant の重複度公式と Freudenthal の公式]
+  - id: classical-representations
+    title: 古典 Lie 代数の表現
+    prerequisites: [representation-theory/symmetric-group, representation-theory/symmetric-functions]
+    sections: [sl_n(ℂ) の表現と Young 図形, Schur–Weyl 双対性, Schur 関手, 直交 Lie 代数とシンプレクティック Lie 代数の表現, Clifford 代数とスピン表現, テンソル積の分解と Littlewood–Richardson 則]
+  - id: maximal-tori
+    title: 極大トーラスと Weyl の積分公式
+    sections: [トーラスとその表現, 極大トーラスの共役性（Cartan の定理）, 解析的 Weyl 群, Weyl の積分公式, コンパクト群に対する Weyl の指標公式, 例：U(n)・SU(n)・SO(n)・Sp(n) の極大トーラス]
+  - id: compact-structure
+    title: コンパクト Lie 群の構造と分類
+    sections: [コンパクト Lie 群の Lie 代数の簡約性, 複素化とコンパクト実形の存在, 最高ウェイト定理（コンパクト群版）, 基本群・中心とルート格子・ウェイト格子, 単連結コンパクト Lie 群の分類, Borel–Weil の定理の概観]
+  - id: real-semisimple
+    title: 実半単純 Lie 群
+    sections: [実形と複素化, Cartan 対合と Cartan 分解, Iwasawa 分解, 極大コンパクト部分群の共役性, 実単純 Lie 代数の分類（佐武図形の概観）, 例：SL₂(ℝ) の既約ユニタリ表現の概観]

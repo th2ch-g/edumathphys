@@ -41,7 +41,7 @@ notation:
 ## 3. Language
 
 - である調 (plain form). No casual tone.
-- Use standard Japanese mathematical/physical terminology (文部省『学術用語集』準拠). Names of people stay in Latin script: Cauchy, Hilbert, Schrödinger.
+- Use standard Japanese mathematical/physical terminology (文部省『学術用語集』準拠). Names of people stay in Latin script (Cauchy, Hilbert, Schrödinger), except Japanese names, which are written in kanji as is customary (米田の補題, 伊藤の公式, 高木の存在定理).
 - On first definition, introduce terms with `:term[固有値]{en="eigenvalue" yomi="こゆうち"}`. `yomi` must be kana. This feeds the glossary.
 - Full-width punctuation 「、」「。」 in prose; ASCII inside math.
 

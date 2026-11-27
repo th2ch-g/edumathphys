@@ -6,28 +6,48 @@ area: math
 level: undergrad-basic
 order: 80
 description: >-
-  求積法から始め、解の存在と一意性、線形微分方程式系、定数係数系と行列指数関数、級数解法と特殊関数、境界値問題と Sturm–Liouville 理論、安定性理論を扱う。
+  求積法から始め、解の存在と一意性、初期値とパラメータへの依存性、線形微分方程式系と行列指数関数、Floquet 理論、級数解法と特殊関数、
+  複素領域の Fuchs 型方程式と超幾何微分方程式、Sturm の比較定理、境界値問題と Sturm–Liouville 理論、Lyapunov の安定性理論、
+  平面力学系と Poincaré–Bendixson の定理までを扱う。
 prerequisites: [analysis, linear-algebra]
-references: [takahashi-ode, hirsch-smale-devaney, coddington-levinson]
+references: [takahashi-ode, hirsch-smale-devaney, coddington-levinson, arnold-ode, hartman-ode, teschl-ode]
 chapters:
   - id: elementary-methods
     title: 求積法
-    sections: [変数分離形, 1 階線形方程式, 完全微分方程式と積分因子, Bernoulli 型・Riccati 型]
+    sections: [微分方程式と解の概念・方向場, 変数分離形と同次形, 1 階線形方程式, 完全微分方程式と積分因子, Bernoulli 型と Riccati 型, Clairaut 型と特異解, 階数低下法と自励系の求積]
   - id: existence-uniqueness
     title: 解の存在と一意性
-    sections: [Lipschitz 条件, Picard の逐次近似, Peano の存在定理, 解の延長, 初期値への連続依存性]
+    prerequisites: [topology/complete-metric, analysis/uniform-convergence]
+    sections: [Lipschitz 条件と Gronwall の不等式, Picard の逐次近似と縮小写像の原理, 一意性と非一意性の例, Peano の存在定理, 解の延長と爆発, 最大解と大域的存在の条件]
+  - id: dependence
+    title: 初期値とパラメータへの依存性
+    sections: [初期値への連続依存性, 微分不等式と比較定理, 初期値に関する微分可能性と変分方程式, パラメータへの依存性, 流れと自励系, 第一積分と保存量]
   - id: linear-systems
     title: 線形微分方程式系
-    sections: [解空間の構造, 基本行列と Wronskian, 定数変化法, 高階線形方程式]
+    sections: [線形系の解の存在と解空間の構造, 基本行列と Liouville の公式, 定数変化法と Duhamel の原理, 高階線形方程式と Wronskian, 随伴方程式と Lagrange の恒等式, 2 階線形方程式の階数低下と d'Alembert の方法]
   - id: constant-coefficients
     title: 定数係数線形系
-    sections: [行列指数関数による解法, Jordan 標準形と解の構造, 特性方程式, 非斉次方程式]
+    prerequisites: [linear-algebra/jordan-form, linear-algebra/matrix-analysis]
+    sections: [行列指数関数による解法, Jordan 標準形と解の構造, 平面線形系の相図の分類, 高階定数係数方程式と特性方程式, 未定係数法と共鳴, Laplace 変換による解法, 例：減衰振動と強制振動]
+  - id: periodic-coefficients
+    title: 周期係数線形系と Floquet 理論
+    sections: [Floquet の定理, 特性乗数と Floquet 指数, 周期解の存在と安定性, Hill 方程式と Mathieu 方程式, パラメータ共鳴と安定領域]
   - id: series-solutions
     title: 級数解法と特殊関数
-    sections: [正則点でのべき級数解, 確定特異点と Frobenius 法, Bessel 方程式, Legendre 方程式, 超幾何微分方程式]
+    sections: [正則点におけるべき級数解, 確定特異点と Frobenius の方法, 決定方程式の根の差が整数の場合, Bessel 方程式と Bessel 関数, Legendre 方程式と Legendre 多項式, Hermite 方程式と Laguerre 方程式, 不確定特異点と漸近展開（概観）]
+  - id: complex-domain
+    title: 複素領域の線形微分方程式
+    prerequisites: [complex-analysis/analytic-continuation]
+    sections: [複素領域における解の存在と解析接続, 確定特異点と Fuchs 型方程式, 局所モノドロミーと特性指数, Riemann の P 関数, Gauss の超幾何微分方程式と超幾何関数, Kummer の解と接続公式, 合流型超幾何関数]
+  - id: sturm-comparison
+    title: Sturm の比較定理と振動理論
+    sections: [Sturm の分離定理, Sturm の比較定理, Prüfer 変換, 解の零点と振動性, 例：Bessel 関数の零点]
   - id: boundary-value
     title: 境界値問題と Sturm–Liouville 理論
-    sections: [境界値問題, Green 関数, Sturm–Liouville 固有値問題, 固有関数展開]
+    sections: [2 点境界値問題, Green 関数の構成, Sturm–Liouville 固有値問題, 固有値の性質と Rayleigh 商, 固有関数展開と完全性, 非斉次問題と Fredholm の択一性]
   - id: stability
     title: 安定性理論
-    sections: [平衡点と線形化, 相図, Lyapunov 関数, 周期解と Poincaré–Bendixson の定理]
+    sections: [平衡点の安定性と漸近安定性, 線形化による安定性の判定, Lyapunov 関数と Lyapunov の安定性定理, LaSalle の不変性原理, 勾配系と Hamilton 系, Hartman–Grobman の定理と安定多様体（概観）]
+  - id: phase-plane
+    title: 平面力学系と Poincaré–Bendixson の定理
+    sections: [相平面と軌道, ω 極限集合と α 極限集合, Poincaré–Bendixson の定理, 極限周期軌道と Liénard 方程式, ベクトル場の指数, 例：Lotka–Volterra 方程式と van der Pol 方程式]

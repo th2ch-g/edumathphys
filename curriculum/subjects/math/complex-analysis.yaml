@@ -6,34 +6,59 @@ area: math
 level: undergrad-advanced
 order: 70
 description: >-
-  正則関数の理論。Cauchy–Riemann 方程式、Cauchy の積分定理と積分公式、べき級数展開、Laurent 展開と留数定理、等角写像、解析接続、Riemann 面入門までを扱う。
+  1 複素変数の正則関数の理論。Cauchy–Riemann 方程式と初等関数、Cauchy の積分定理（ホモトピー形・ホモロジー形）と積分公式、Laurent 展開と留数解析、
+  最大値原理と偏角の原理、調和関数と Dirichlet 問題、等角写像と Riemann の写像定理、解析接続とモノドロミー定理、無限積と Weierstrass・Mittag-Leffler の定理、
+  有限位数の整関数と Picard の定理、ガンマ関数と Riemann ゼータ関数、楕円関数、Riemann 面入門までを扱う。
 prerequisites: [analysis, topology]
-references: [ahlfors-complex, takagi-kaiseki, sugiura-analysis]
+references: [ahlfors-complex, stein-shakarchi-complex, conway-complex, kodaira-complex, takagi-kaiseki, sugiura-analysis]
 chapters:
   - id: holomorphic
     title: 複素数と正則関数
-    sections: [複素平面とリーマン球面, 複素微分と Cauchy–Riemann 方程式, 調和関数, 初等関数（exp・log・べき）]
+    sections: [複素数体と複素平面, Riemann 球面と立体射影, 複素関数の極限と連続性, 複素微分と Cauchy–Riemann 方程式, 正則関数と調和関数, Wirtinger の微分作用素]
   - id: power-series
-    title: べき級数と解析関数
-    sections: [複素べき級数, 収束半径, 項別微分, 一致の定理]
+    title: べき級数と初等関数
+    sections: [複素べき級数と Cauchy–Hadamard の公式, Abel の連続性定理, 項別微分と解析関数の正則性, 指数関数と三角関数, 対数関数と偏角の分枝, 一般のべき関数, 双曲線関数と逆三角関数]
   - id: cauchy-theorem
-    title: Cauchy の積分定理
-    sections: [複素線積分, Goursat の定理, 単連結領域での Cauchy の定理, ホモトピー形の Cauchy の定理]
+    title: 複素線積分と Cauchy の積分定理
+    prerequisites: [analysis/vector-calculus]
+    sections: [複素線積分と長さの評価, 原始関数と線積分, Goursat の定理, 円板における Cauchy の定理, 閉曲線の回転数, ホモトピー形の Cauchy の定理, ホモロジー形の Cauchy の定理（Dixon の証明）]
   - id: cauchy-formula
     title: Cauchy の積分公式とその帰結
-    sections: [Cauchy の積分公式, 正則関数のべき級数展開, Liouville の定理と代数学の基本定理, 最大値原理, Morera の定理]
+    sections: [Cauchy の積分公式, 高階導関数と Cauchy の評価式, 正則関数のべき級数展開, Liouville の定理と代数学の基本定理, 一致の定理と零点の孤立性, Morera の定理, 正則関数列の広義一様収束と積分で定義される正則関数]
   - id: laurent-residues
     title: Laurent 展開と留数定理
-    sections: [Laurent 展開, 孤立特異点の分類, 留数定理, 実積分の計算, 偏角の原理と Rouché の定理]
+    sections: [Laurent 展開, 孤立特異点の分類, Riemann の除去可能特異点定理と Casorati–Weierstrass の定理, 無限遠点の近傍での振る舞い, 留数と留数定理, Riemann 球面上の有理型関数]
+  - id: residue-calculus
+    title: 留数解析と定積分の計算
+    sections: [三角関数の有理式の積分, 有理関数の広義積分, Jordan の補題と Fourier 型積分, 多価関数を含む積分と鍵穴型積分路, Cauchy の主値積分, 留数による級数の和の計算, 例：Fresnel 積分と Dirichlet 積分]
+  - id: local-behavior
+    title: 最大値原理と偏角の原理
+    sections: [局所写像定理と開写像定理, 最大値原理, Schwarz の補題と Schwarz–Pick の定理, Hadamard の三円定理と Phragmén–Lindelöf の原理, 偏角の原理, Rouché の定理と Hurwitz の定理, 逆関数の積分表示と Lagrange の反転公式]
+  - id: harmonic-functions
+    title: 調和関数と Dirichlet 問題
+    sections: [調和関数の平均値性質と最大値原理, Poisson 積分公式と Schwarz の積分公式, Harnack の不等式と Harnack の原理, Schwarz の鏡像原理, 劣調和関数, Perron の方法と Dirichlet 問題]
   - id: conformal-maps
-    title: 等角写像
-    sections: [等角性, 一次分数変換, Schwarz の補題, Riemann の写像定理]
+    title: 等角写像と一次分数変換
+    sections: [正則関数の等角性, 一次分数変換と複比, 円円対応と対称点, 円板と上半平面の自己同型群, 初等関数による等角写像, Joukowski 変換と流体への応用]
+  - id: riemann-mapping
+    title: 正規族と Riemann の写像定理
+    prerequisites: [topology/compactness]
+    sections: [Arzelà–Ascoli の定理, 正規族と Montel の定理, Riemann の写像定理, 境界の対応と Carathéodory の定理, Schwarz–Christoffel の公式, 多重連結領域の標準写像（概観）]
   - id: analytic-continuation
     title: 解析接続
-    sections: [解析接続と一致の定理, 鏡像の原理, 多価関数と分枝, ガンマ関数とゼータ関数の解析接続]
+    sections: [関数要素と直接解析接続, 曲線に沿った解析接続, モノドロミー定理, 芽の層と大域解析関数, 多価関数と分枝点, 自然境界と Hadamard の空隙定理]
   - id: entire-meromorphic
-    title: 整関数と有理型関数
-    sections: [Weierstrass の因数分解定理, Mittag-Leffler の定理, 無限積, 楕円関数入門]
+    title: 無限積と整関数・有理型関数
+    sections: [無限積の収束, Weierstrass の因数分解定理, Mittag-Leffler の定理, sin πz の無限積表示と cot πz の部分分数展開, 一般の領域における Weierstrass と Mittag-Leffler の定理, Runge の近似定理]
+  - id: entire-order
+    title: 有限位数の整関数と Picard の定理
+    sections: [Jensen の公式, 整関数の位数と型, 標準乗積と Hadamard の因数分解定理, Bloch の定理と Landau の定理, Picard の小定理, Schottky の定理と Picard の大定理]
+  - id: gamma-zeta
+    title: ガンマ関数とゼータ関数
+    sections: [ガンマ関数の解析接続と無限積表示, 相補公式と Legendre の倍数公式, Stirling の公式, ベータ関数, Riemann ゼータ関数の解析接続と関数等式, Euler 積と自明な零点, Hadamard 積と非自明零点の分布]
+  - id: elliptic-functions
+    title: 楕円関数
+    sections: [二重周期関数と周期格子, Liouville の諸定理, Weierstrass の ℘ 関数, ℘ の満たす微分方程式と加法定理, Weierstrass の ζ 関数と σ 関数, Eisenstein 級数とモジュラー関数, 楕円積分と Jacobi の楕円関数, テータ関数と Jacobi の三重積公式]
   - id: riemann-surfaces
     title: Riemann 面入門
-    sections: [Riemann 面の定義, 代数関数の Riemann 面, 被覆と一意化定理の概観]
+    sections: [Riemann 面の定義と例, Riemann 面の間の正則写像, 代数関数の Riemann 面, 分岐被覆としての Riemann 面, 一意化定理の概観]

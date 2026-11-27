@@ -6,31 +6,60 @@ area: math
 level: undergrad-advanced
 order: 240
 description: >-
-  統計的推測の数理。標本分布、十分統計量、点推定と最尤法・Cramér–Rao の不等式、区間推定、仮説検定と Neyman–Pearson の補題、線形モデル、漸近理論、Bayes 推測を扱う。
+  統計的推測の数理。統計的モデルと決定理論、標本分布、十分性と完備性、不偏推定と情報不等式、推定量の構成法、許容性とミニマックス性、仮説検定と区間推定、
+  漸近理論と尤度に基づく検定、線形モデルと一般化線形モデル、多変量解析、ノンパラメトリック法とブートストラップ、Bayes 推測を扱う。
 prerequisites: [probability, linear-algebra]
-references: [takeuchi-stat, casella-berger, lehmann-tpe]
+references: [takeuchi-stat, casella-berger, lehmann-tpe, lehmann-romano, vandervaart-as]
 chapters:
+  - id: statistical-models
+    title: 統計的モデルと決定理論
+    sections: [統計的モデルとパラメータの識別可能性, 指数型分布族, 位置尺度族と群変換, 損失関数とリスク関数, 決定関数と許容性, 統計量による情報の縮約]
   - id: sampling
     title: 標本と標本分布
-    sections: [母集団と標本, 正規分布と χ²・t・F 分布, 順序統計量]
+    prerequisites: [linear-algebra/spectral-theorem]
+    sections: [無作為標本と統計量, 正規標本における標本平均と標本分散の独立性, χ²・t・F 分布, 二次形式の分布と Cochran の定理, 順序統計量の分布, 標本分布の近似と Monte Carlo 法]
   - id: sufficiency
     title: 十分統計量
-    sections: [十分性, 因子分解定理, 完備性, 指数型分布族]
+    prerequisites: [probability/conditional-expectation]
+    sections: [十分性の定義, Fisher–Neyman の因子分解定理, 最小十分統計量, 補助統計量と Basu の定理, 完備性, 指数型分布族における十分性と完備性, 尤度原理]
   - id: point-estimation
-    title: 点推定
-    sections: [不偏推定量, Cramér–Rao の不等式, Rao–Blackwell の定理, 最尤推定量]
-  - id: interval-estimation
-    title: 区間推定
-    sections: [信頼区間, 枢軸量, 漸近的信頼区間]
+    title: 不偏推定と情報不等式
+    sections: [推定量の評価と平均二乗誤差, 不偏推定量, Rao–Blackwell の定理, Lehmann–Scheffé の定理と一様最小分散不偏推定量, Fisher 情報量, Cramér–Rao の不等式, 多パラメータの情報不等式]
+  - id: estimation-methods
+    title: 推定量の構成法
+    sections: [モーメント法, 最尤法と最尤推定量の不変性, Newton–Raphson 法とスコア法, EM アルゴリズム, M 推定量と頑健推定, 同変推定量と Pitman 推定量]
+  - id: admissibility-minimax
+    title: 許容性とミニマックス性
+    sections: [Bayes リスクとミニマックスリスク, 最小最大推定量の構成, Bayes 推定量の許容性, Stein の現象と James–Stein 推定量, 経験 Bayes 法, 縮小推定と正則化]
   - id: hypothesis-testing
     title: 仮説検定
-    sections: [検定の枠組み, Neyman–Pearson の補題, 一様最強力検定, 尤度比検定]
-  - id: linear-models
-    title: 線形モデル
-    sections: [最小二乗法, Gauss–Markov の定理, 分散分析]
+    sections: [検定の枠組みと二種の誤り, 検出力関数と p 値, Neyman–Pearson の基本補題, 単調尤度比と一様最強力検定, 不偏検定と相似検定, 指数型分布族における条件付き検定, 不変検定]
+  - id: interval-estimation
+    title: 区間推定
+    sections: [信頼区間と被覆確率, 枢軸量による構成, 検定の反転と信頼集合, 一様最精密信頼区間, 漸近的信頼区間, Bayes 信用区間との比較]
   - id: asymptotics
     title: 漸近理論
-    sections: [一致性, 漸近正規性, Fisher 情報量と有効性]
+    prerequisites: [probability/central-limit]
+    sections: [確率収束と分布収束の計算と Slutsky の補題, デルタ法, 最尤推定量の一致性, 最尤推定量の漸近正規性, M 推定量と Z 推定量の漸近論, 漸近有効性と超有効性, 局所漸近正規性と Le Cam の第三補題]
+  - id: likelihood-tests
+    title: 尤度に基づく漸近的検定
+    sections: [尤度比検定, Wilks の定理, Wald 検定とスコア検定, Pearson の χ² 適合度検定, 分割表の独立性検定, 多重検定と偽発見率]
+  - id: linear-models
+    title: 線形モデル
+    prerequisites: [linear-algebra/inner-product-spaces]
+    sections: [線形回帰モデルと最小二乗推定, Gauss–Markov の定理, 正規線形モデルの分布論, 一般線形仮説と F 検定, 一元配置と二元配置の分散分析, 一般化最小二乗法, 回帰診断, モデル選択と情報量規準（AIC・BIC）]
+  - id: generalized-linear-models
+    title: 一般化線形モデル
+    sections: [指数型分散モデル, リンク関数と正準リンク, ロジスティック回帰, Poisson 回帰と対数線形モデル, 反復重み付き最小二乗法, 逸脱度と尤度比検定]
+  - id: multivariate
+    title: 多変量解析
+    prerequisites: [linear-algebra/matrix-analysis]
+    sections: [多変量正規分布の推測, Wishart 分布, Hotelling の T² 検定, 主成分分析, 正準相関分析, 判別分析]
+  - id: nonparametric
+    title: ノンパラメトリック法とリサンプリング
+    prerequisites: [probability/invariance-principle]
+    sections: [符号検定と Wilcoxon の順位和検定, 経験分布関数と Kolmogorov–Smirnov 検定, U 統計量と Hoeffding の分解, カーネル密度推定, ブートストラップ法, 置換検定]
   - id: bayesian
     title: Bayes 推測
-    sections: [事前分布と事後分布, 共役事前分布, Bayes 推定量, 階層モデル]
+    prerequisites: [probability/markov-chains]
+    sections: [事前分布と事後分布, 共役事前分布, Bayes 推定量と Bayes 検定, 無情報事前分布と Jeffreys 事前分布, 階層モデル, Bernstein–von Mises の定理, Markov 連鎖 Monte Carlo 法（Metropolis–Hastings 法・Gibbs サンプラー）]

@@ -6,31 +6,87 @@ area: physics
 level: graduate
 order: 170
 description: >-
-  第二量子化に基づく量子多体系の理論。Green 関数法、有限温度の松原形式、Feynman ダイアグラムと Dyson 方程式、Fermi 液体論、電子ガスの遮蔽とプラズモン、超伝導の BCS 理論、Bose 系を扱う。
+  第二量子化と汎関数積分に基づく量子多体系の理論。ゼロ温度と有限温度（松原形式）の Green 関数、Feynman ダイアグラムと Dyson 方程式、線形応答、
+  電子ガスの遮蔽とプラズモン、Fermi 液体論、電子-フォノン相互作用、不純物散乱と局在、BCS 理論と超伝導の発展的話題、Bose 系と超流動、
+  強相関電子系と Kondo 効果、対称性の破れの場の理論、くりこみ群と量子臨界現象、1 次元系と朝永–Luttinger 液体、分数量子 Hall 効果、
+  Keldysh の非平衡 Green 関数までを扱う。
 prerequisites: [advanced-quantum-mechanics, statistical-mechanics, solid-state]
-references: [fetter-walecka, mahan-many, altland-simons, abrikosov-agd]
+conventions:
+  - 特に断らない限り ℏ = k_B = 1 とする単位系を用い、物理的な次元が必要な箇所では明示的に復元する。
+  - Fourier 変換は f(t) = ∫ dω/(2π) e^{−iωt} f(ω) の規約に従う。
+references: [fetter-walecka, mahan-many, altland-simons, abrikosov-agd, negele-orland, bruus-flensberg, coleman-many, giamarchi-1d, nagaosa-qft-cm, takahashi-qft-cm]
 chapters:
   - id: second-quantization-review
     title: 第二量子化と多体 Hamiltonian
-    sections: [Fock 空間, 一体演算子と二体演算子, Hartree–Fock 近似]
+    prerequisites: [advanced-quantum-mechanics/second-quantization]
+    sections: [Fock 空間と生成消滅演算子の復習, 一体演算子と二体演算子, 格子模型（強束縛模型と Hubbard 模型）, 電子-フォノン系の Hamiltonian, 平均場近似と Hartree–Fock 近似, 演算子形式の Wick の定理]
   - id: green-functions
-    title: Green 関数
-    sections: [1 粒子 Green 関数, スペクトル関数と Lehmann 表示, 準粒子]
+    title: ゼロ温度の Green 関数
+    sections: [Heisenberg 描像と時間順序積, 1 粒子 Green 関数と物理量, Lehmann 表示とスペクトル関数, 遅延・先進 Green 関数と解析的性質, 準粒子と寿命, 自由粒子系の Green 関数]
   - id: matsubara
-    title: 有限温度 Green 関数
-    sections: [虚時間形式, 松原周波数と松原和, 解析接続]
+    title: 有限温度 Green 関数と松原形式
+    prerequisites: [statistical-mechanics/quantum-statistics]
+    sections: [虚時間発展と温度 Green 関数, 周期性・反周期性と松原周波数, 松原和の計算法, 解析接続と遅延 Green 関数, スペクトル表示と総和則, 有限温度の Wick の定理]
   - id: diagrams
     title: Feynman ダイアグラムと Dyson 方程式
-    sections: [摂動展開と Wick の定理, ダイアグラム則, 自己エネルギーと Dyson 方程式]
+    sections: [相互作用表示と S 行列展開, Wick の定理による摂動展開, 連結ダイアグラム定理, 運動量空間のダイアグラム則, 自己エネルギーと Dyson 方程式, 頂点関数と Bethe–Salpeter 方程式, Luttinger–Ward 汎関数と保存近似]
+  - id: coherent-path-integral
+    title: コヒーレント状態と汎関数積分
+    prerequisites: [advanced-quantum-mechanics/path-integrals, quantum-field-theory/path-integral]
+    sections: [ボソンのコヒーレント状態, Grassmann 数とフェルミオンのコヒーレント状態, 分配関数の汎関数積分表示, Gauss 積分と自由場の相関関数, 汎関数積分による摂動展開, Hubbard–Stratonovich 変換]
+  - id: response-functions
+    title: 線形応答と相関関数
+    prerequisites: [nonequilibrium/linear-response]
+    sections: [久保公式と遅延相関関数, 松原形式による応答関数の計算, 密度応答と動的構造因子, 電流応答と電気伝導度の久保公式, 光学伝導度と f 総和則, ゲージ不変性と Ward 恒等式]
   - id: electron-gas
     title: 電子ガス
-    sections: [Jellium 模型, RPA と遮蔽, プラズモン]
+    prerequisites: [solid-state/band-calculation]
+    sections: [Jellium 模型, Hartree–Fock 近似と交換エネルギー, Lindhard 関数, 乱雑位相近似（RPA）と誘電関数, 遮蔽と Friedel 振動, プラズモン, 相関エネルギーと Gell-Mann–Brueckner の結果]
   - id: fermi-liquid
     title: Fermi 液体論
-    sections: [Landau の Fermi 液体論, 準粒子の寿命, Luttinger の定理]
+    sections: [Landau の Fermi 液体論の仮定, 準粒子相互作用と Landau パラメータ, 比熱・圧縮率・スピン磁化率, Landau の運動論的方程式とゼロ音, 準粒子の寿命と位相空間, 微視的基礎付けと Ward 恒等式, Luttinger の定理]
+  - id: electron-phonon
+    title: 電子-フォノン相互作用
+    prerequisites: [solid-state/phonons]
+    sections: [電子-フォノン結合の導出と Fröhlich 模型, フォノン Green 関数, Migdal の定理, 電子の質量くりこみ, フォノンを介した電子間引力, ポーラロン]
+  - id: impurity-transport
+    title: 不純物散乱と量子輸送
+    prerequisites: [solid-state/transport]
+    sections: [不純物平均とダイアグラム, Born 近似と自己エネルギー, 電気伝導度のダイアグラム計算と頂点補正, 弱局在と量子干渉, Anderson 局在とスケーリング理論, Landauer 公式とメゾスコピック輸送]
   - id: bcs
     title: 超伝導の微視的理論
-    sections: [Cooper 不安定性, BCS 理論, Bogoliubov 変換, ギャップ方程式]
+    prerequisites: [solid-state/superconductivity]
+    sections: [Cooper 不安定性, BCS 波動関数と変分計算, Bogoliubov–de Gennes 変換, ギャップ方程式と転移温度, 超伝導状態の熱力学, Nambu–Gor'kov Green 関数, 電磁応答と Meissner 効果]
+  - id: superconductivity-advanced
+    title: 超伝導の発展的話題
+    sections: [Ginzburg–Landau 理論の微視的導出, Eliashberg 理論と強結合超伝導, 非従来型超伝導と異方的ギャップ, Andreev 反射, Josephson 効果の微視的理論, Kitaev 鎖と Majorana 束縛状態]
   - id: bose-systems
-    title: 相互作用する Bose 系
-    sections: [Bogoliubov 理論, 超流動, Gross–Pitaevskii 方程式]
+    title: 相互作用する Bose 系と超流動
+    prerequisites: [statistical-mechanics/bose-gas]
+    sections: [弱く相互作用する Bose 気体, Bogoliubov 理論, Gross–Pitaevskii 方程式, 超流動と Landau の判定条件, 量子渦と循環の量子化, ⁴He の超流動と Feynman の理論]
+  - id: strong-correlation
+    title: 強相関電子系と量子磁性
+    prerequisites: [solid-state/magnetic-order]
+    sections: [Hubbard 模型と Mott 絶縁体, 強結合展開と超交換相互作用, スピン波理論（Holstein–Primakoff 変換）, 遍歴磁性と RPA 感受率, Lieb–Schultz–Mattis の定理, スレーブ粒子法と量子スピン液体の概観]
+  - id: kondo
+    title: 不純物問題と Kondo 効果
+    sections: [Anderson 不純物模型, Schrieffer–Wolff 変換と Kondo 模型, 摂動計算と抵抗極小, Anderson の poor man's scaling, Kondo 温度と強結合固定点, 重い電子系の概観]
+  - id: broken-symmetry
+    title: 対称性の破れと集団励起の場の理論
+    prerequisites: [quantum-field-theory/symmetry-breaking]
+    sections: [平均場理論の汎関数積分表現, Goldstone モード, 超伝導の有効作用と Anderson–Higgs 機構, 非線形 σ 模型, 位相的項（θ 項と Wess–Zumino 項）]
+  - id: many-body-rg
+    title: 多体系のくりこみ群と量子相転移
+    prerequisites: [critical-phenomena/renormalization-group, critical-phenomena/kt-transition, critical-phenomena/quantum-phase-transitions]
+    sections: [汎関数積分による Wilson のくりこみ群, Fermi 面のくりこみ群, 量子相転移と動的臨界指数, 横磁場 Ising 模型, 量子臨界現象と Hertz–Millis 理論]
+  - id: one-dimension
+    title: 1 次元量子系と朝永–Luttinger 液体
+    sections: [1 次元電子系の特異性, ボソン化, 朝永–Luttinger 模型の厳密解, Luttinger 液体の相関関数, スピン-電荷分離, sine-Gordon 模型とくりこみ群, Bethe 仮説の概観]
+  - id: quantum-hall
+    title: 量子 Hall 効果の多体理論
+    prerequisites: [solid-state/topological]
+    sections: [Landau 準位と多体問題, Laughlin 波動関数, 分数電荷と分数統計, Chern–Simons 理論, エッジ状態とカイラル Luttinger 液体]
+  - id: keldysh
+    title: 非平衡 Green 関数
+    prerequisites: [nonequilibrium/boltzmann-equation]
+    sections: [Keldysh 経路と経路順序積, Keldysh Green 関数と Langreth 則, Kadanoff–Baym 方程式, 量子運動論方程式と Boltzmann 方程式の導出, 量子ドットの非平衡輸送]

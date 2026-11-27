@@ -6,34 +6,59 @@ area: math
 level: undergrad-advanced
 order: 90
 description: >-
-  σ-加法族と測度、外測度と Carathéodory の拡張定理、Lebesgue 測度、可測関数と積分、収束定理、直積測度と Fubini の定理、Lᵖ 空間、Radon–Nikodym の定理を扱う。
+  σ-加法族と測度、外測度と Carathéodory–Hopf の拡張定理、Lebesgue 測度と Lebesgue–Stieltjes 測度、可測関数と積分、収束定理、
+  直積測度と Fubini の定理、変数変換公式、Lᵖ 空間と畳み込み・補間定理、符号付き測度と Radon–Nikodym の定理、Lebesgue の微分定理と有界変動関数、
+  Radon 測度と Riesz の表現定理、Hausdorff 測度、位相群上の Haar 測度を扱う。
 prerequisites: [analysis, topology]
-references: [ito-lebesgue, folland-real, rudin-rca]
+references: [ito-lebesgue, folland-real, rudin-rca, stein-shakarchi-real]
 chapters:
   - id: sigma-algebras
     title: σ-加法族と測度
-    sections: [Riemann 積分の限界, σ-加法族, 測度の定義と性質, Borel 集合族]
+    sections: [Riemann 積分の限界と Lebesgue の着想, σ-加法族と生成される σ-加法族, Borel 集合族, 測度の定義と基本性質, 測度の連続性, 完備測度と完備化]
   - id: outer-measure
     title: 外測度と測度の拡張
-    sections: [外測度, Carathéodory の可測性, 拡張定理, 測度の一意性と π-λ 定理]
+    sections: [外測度, Carathéodory の可測性条件, 半集合代数と前測度, Carathéodory–Hopf の拡張定理, Dynkin の π-λ 定理と測度の一意性, 単調族定理]
   - id: lebesgue-measure
     title: Lebesgue 測度
-    sections: [ℝⁿ 上の Lebesgue 測度, 正則性, 平行移動不変性, 非可測集合, Cantor 集合]
+    prerequisites: [sets-logic/choice]
+    sections: [ℝⁿ 上の Lebesgue 測度の構成, 正則性と近似定理, 平行移動不変性と線形変換に関する変換則, Lebesgue–Stieltjes 測度と分布関数, Cantor 集合と Cantor 関数, Vitali の非可測集合, Lebesgue 可測だが Borel 集合でない集合]
   - id: measurable-functions
     title: 可測関数
-    sections: [可測関数の定義, 単関数近似, ほとんど至るところ, Egorov の定理と Lusin の定理]
+    sections: [可測写像と可測関数, 可測関数の演算と極限, 単関数近似, ほとんど至るところ成り立つ性質, 測度収束と概収束, Egorov の定理, Lusin の定理]
   - id: integration
     title: Lebesgue 積分
-    sections: [非負関数の積分, 単調収束定理, Fatou の補題, 可積分関数, 優収束定理, Riemann 積分との関係]
+    sections: [非負単関数の積分, 非負可測関数の積分と単調収束定理, Fatou の補題, 可積分関数と積分の線形性, Lebesgue の優収束定理, パラメータを含む積分の連続性と微分可能性, Riemann 積分および広義積分との関係]
   - id: product-measures
     title: 直積測度と Fubini の定理
-    sections: [直積 σ-加法族, 直積測度, Fubini–Tonelli の定理, ℝⁿ における変数変換]
+    sections: [直積 σ-加法族と切り口, 直積測度の構成, Tonelli の定理と Fubini の定理, 完備化された直積測度, ℝⁿ の Lebesgue 測度の直積構造, 反例：Fubini の定理の仮定を外した場合]
+  - id: change-of-variables
+    title: ℝⁿ における変数変換公式
+    prerequisites: [analysis/implicit-function]
+    sections: [線形変換と Lebesgue 測度, 微分同相写像による変数変換公式, 像測度と抽象的変数変換, 極座標と球面上の測度, 例：Gauss 積分と単位球の体積, 分布関数と層別積分公式]
   - id: lp-spaces
     title: Lᵖ 空間
-    sections: [Hölder と Minkowski の不等式, Lᵖ の完備性（Riesz–Fischer）, 稠密な部分空間, 畳み込み]
+    prerequisites: [topology/complete-metric]
+    sections: [凸関数と Jensen の不等式, Hölder と Minkowski の不等式, Lᵖ の完備性と Riesz–Fischer の定理, L^∞ と本質的上限, 稠密な部分空間と可分性, Lᵖ 空間の包含関係, 弱 Lᵖ 空間と Chebyshev の不等式]
+  - id: convolution
+    title: 畳み込みと補間定理
+    sections: [畳み込みと Young の不等式, Minkowski の積分不等式, 近似単位元と軟化子, Cc^∞ の Lᵖ における稠密性, Lᵖ における平行移動の連続性, Riesz–Thorin の補間定理, Marcinkiewicz の補間定理]
   - id: radon-nikodym
     title: 符号付き測度と Radon–Nikodym の定理
-    sections: [符号付き測度と Hahn 分解, 絶対連続性, Radon–Nikodym の定理, Lebesgue 分解]
+    sections: [符号付き測度, Hahn 分解と Jordan 分解, 複素測度と全変動, 絶対連続性と特異性, Lebesgue–Radon–Nikodym の定理, Lᵖ の双対空間]
   - id: differentiation
-    title: 微分定理
-    sections: [Vitali の被覆補題, Lebesgue の微分定理, 有界変動関数, 絶対連続関数]
+    title: Lebesgue の微分定理
+    sections: [Vitali の被覆補題, Hardy–Littlewood の極大関数, Lebesgue の微分定理と Lebesgue 点, 測度の微分と Radon–Nikodym 導関数, 正則な集合族と密度点]
+  - id: bounded-variation
+    title: 有界変動関数と絶対連続関数
+    sections: [単調関数の微分可能性, 有界変動関数と Jordan 分解, 絶対連続関数, Lebesgue 積分に対する微積分学の基本定理, Lebesgue–Stieltjes 積分と部分積分, 曲線の長さと有界変動]
+  - id: riesz-representation
+    title: Radon 測度と Riesz の表現定理
+    prerequisites: [topology/separation, topology/compactness]
+    sections: [局所コンパクト Hausdorff 空間と Urysohn の補題, Riesz–Markov–Kakutani の表現定理, Radon 測度の正則性, C₀(X) の双対空間と複素 Radon 測度, Radon 測度の直積, 測度の漠収束]
+  - id: hausdorff-measure
+    title: Hausdorff 測度と次元
+    sections: [距離外測度と Borel 正則性, Hausdorff 測度, Hausdorff 次元, 自己相似集合と Cantor 集合の次元, Hausdorff 測度と Lebesgue 測度の一致, Brunn–Minkowski の不等式と等周不等式]
+  - id: haar-measure
+    title: 位相群上の Haar 測度
+    prerequisites: [group-theory/groups]
+    sections: [位相群と局所コンパクト群, Haar 測度の存在, Haar 測度の一意性, モジュラー関数とユニモジュラー群, 例：ℝⁿ・円周・行列群の Haar 測度]

@@ -6,34 +6,62 @@ area: physics
 level: undergrad-advanced
 order: 130
 description: >-
-  結晶構造と逆格子、格子振動とフォノン、自由電子模型、Bloch の定理とバンド理論、半導体、磁性、超伝導、トポロジカル物質入門を扱う。
+  結晶構造と逆格子・回折、結晶の結合と格子欠陥、格子振動とフォノンの熱的性質、自由電子模型、Bloch の定理とバンド理論・バンド計算法、
+  結晶中の電子の半古典的運動と輸送現象、半導体と半導体素子、誘電性と光学的性質、磁性と磁気秩序、超伝導の現象論、トポロジカル物質入門までを扱う。
 prerequisites: [quantum-mechanics, statistical-mechanics, electromagnetism]
-references: [kittel-ssp, ashcroft-mermin, simon-oxford]
+references: [kittel-ssp, ashcroft-mermin, simon-oxford, ziman-solids, marder-cmp, bernevig-hughes, tinkham-sc, chaikin-lubensky]
 chapters:
   - id: crystal-structure
-    title: 結晶構造
-    sections: [Bravais 格子, 単位胞と基本構造, 逆格子と Brillouin ゾーン, X 線回折と Bragg 条件]
+    title: 結晶構造と逆格子
+    prerequisites: [group-theory/group-actions]
+    sections: [Bravais 格子と基本並進ベクトル, 単位胞・Wigner–Seitz 胞と代表的な結晶構造, 結晶の対称性（点群と空間群）, Miller 指数と格子面, 逆格子と Brillouin ゾーン, Bragg 条件と Laue 条件, 構造因子・原子形状因子と回折実験（X 線・電子線・中性子）]
+  - id: crystal-binding
+    title: 結晶の結合・弾性と格子欠陥
+    sections: [van der Waals 結合と Lennard-Jones ポテンシャル, イオン結合と Madelung 定数, 共有結合と金属結合, 凝集エネルギー, 弾性定数と弾性波, 点欠陥と拡散, 転位と塑性変形]
   - id: phonons
     title: 格子振動とフォノン
-    sections: [1 次元格子の振動, 音響モードと光学モード, フォノンの量子化, 比熱（Einstein と Debye）, 非調和効果と熱伝導]
+    prerequisites: [analytical-mechanics/small-oscillations, quantum-mechanics/harmonic-oscillator, statistical-mechanics/bose-gas]
+    sections: [調和近似と格子の運動方程式, 1 次元単原子鎖と二原子鎖, 3 次元格子の基準振動と音響モード・光学モード, フォノンの量子化, 中性子非弾性散乱によるフォノン分散の測定, 格子比熱（Einstein 模型と Debye 模型）, 非調和効果と熱膨張・Grüneisen パラメータ, フォノン熱伝導と Umklapp 過程]
   - id: free-electrons
     title: 自由電子模型
-    sections: [Drude 模型, Sommerfeld 模型, 状態密度と Fermi 面, 電子比熱]
+    prerequisites: [statistical-mechanics/fermi-gas]
+    sections: [Drude 模型と直流・交流伝導度, Hall 効果と磁気抵抗, Sommerfeld 模型, 状態密度と Fermi 面, 電子比熱と Wiedemann–Franz 則, 仕事関数と熱電子放出, 自由電子模型の限界]
   - id: band-theory
     title: Bloch の定理とバンド理論
-    sections: [周期ポテンシャルと Bloch の定理, ほとんど自由な電子の近似, 強束縛近似, 金属・絶縁体・半導体]
+    sections: [周期ポテンシャルと Bloch の定理, 結晶運動量と還元ゾーン表示, ほとんど自由な電子の近似とバンドギャップ, 強束縛近似, Wannier 関数, 状態密度と van Hove 特異点, 金属・絶縁体・半導体の分類]
+  - id: band-calculation
+    title: バンド計算の方法と電子間相互作用
+    prerequisites: [advanced-quantum-mechanics/second-quantization]
+    sections: [平面波展開と直交化平面波法, 擬ポテンシャル法, APW 法と KKR 法の概観, Hartree 近似と Hartree–Fock 近似, Thomas–Fermi 遮蔽と Lindhard 関数, 密度汎関数理論と Kohn–Sham 方程式の概観]
   - id: electron-dynamics
     title: 結晶中の電子の運動
-    sections: [半古典的運動方程式, 有効質量とホール, Boltzmann 輸送方程式, 磁場中の電子と Landau 準位]
+    sections: [半古典的運動方程式, 有効質量テンソルとホール, 一様電場中の Bloch 振動, 磁場中の半古典運動とサイクロトロン共鳴, Landau 準位, de Haas–van Alphen 効果と Fermi 面の測定]
+  - id: transport
+    title: 輸送現象
+    sections: [Boltzmann 輸送方程式と緩和時間近似, 電気伝導度と熱伝導度, 熱電効果（Seebeck 効果・Peltier 効果）, 不純物散乱とフォノン散乱, Matthiessen 則と Bloch–Grüneisen 則, 磁気抵抗と Hall 係数]
   - id: semiconductors
     title: 半導体
-    sections: [真性半導体と不純物半導体, キャリア統計, pn 接合, 量子井戸]
+    sections: [半導体のバンド構造と直接・間接遷移, 真性半導体のキャリア統計, 不純物準位とドナー・アクセプター, 不純物半導体のキャリア密度, 移動度とドリフト・拡散, Einstein の関係と再結合過程]
+  - id: semiconductor-devices
+    title: 不均一な半導体と半導体素子
+    sections: [pn 接合と空乏層, 整流特性と Shockley の式, 金属-半導体接触と Schottky 障壁, MOS 構造と反転層, ヘテロ構造と量子井戸, 2 次元電子系と部分バンド]
+  - id: optical-dielectric
+    title: 誘電性と光学的性質
+    prerequisites: [electromagnetism/dielectrics, electromagnetism/em-waves]
+    sections: [誘電関数と局所場（Clausius–Mossotti の式）, 光学定数と Kramers–Kronig の関係, 金属の光学応答とプラズマ振動, フォノンポラリトンと Lyddane–Sachs–Teller の関係, バンド間遷移と吸収端, 励起子, 強誘電体とソフトモード]
   - id: magnetism
-    title: 磁性
-    sections: [反磁性と常磁性, 交換相互作用, 強磁性と反強磁性, スピン波]
+    title: 磁性の基礎
+    prerequisites: [quantum-mechanics/spin, electromagnetism/magnetic-materials]
+    sections: [原子の磁気モーメントと Hund の規則, Larmor 反磁性, 常磁性と Curie 則・Brillouin 関数, 伝導電子の Pauli 常磁性と Landau 反磁性, 結晶場と軌道角運動量の消失, 交換相互作用と Heisenberg 模型]
+  - id: magnetic-order
+    title: 磁気秩序
+    prerequisites: [statistical-mechanics/interacting-systems]
+    sections: [強磁性の平均場理論（Weiss 理論）, 反強磁性とフェリ磁性, スピン波とマグノン, Bloch の 3/2 乗則, 遍歴電子強磁性と Stoner 条件, 磁気異方性・磁区と磁壁, 磁気共鳴（NMR と ESR）]
   - id: superconductivity
     title: 超伝導
-    sections: [超伝導の現象論, London 方程式, Ginzburg–Landau 理論, BCS 理論の概観, Josephson 効果]
+    prerequisites: [thermodynamics/phase-transitions]
+    sections: [超伝導の実験事実, London 方程式と Meissner 効果, 超伝導の熱力学と臨界磁場, Ginzburg–Landau 理論, 磁束の量子化と第二種超伝導体, BCS 理論の概観, Josephson 効果と SQUID]
   - id: topological
     title: トポロジカル物質入門
-    sections: [Berry 位相とバンド, 量子 Hall 効果と Chern 数, トポロジカル絶縁体, SSH 模型]
+    prerequisites: [advanced-quantum-mechanics/berry-phase]
+    sections: [Bloch 電子の Berry 位相と Berry 曲率, 異常速度と異常 Hall 効果, 整数量子 Hall 効果と TKNN 公式, SSH 模型と端状態, Haldane 模型と Chern 絶縁体, 時間反転対称性と Z2 トポロジカル絶縁体, バルク-エッジ対応]

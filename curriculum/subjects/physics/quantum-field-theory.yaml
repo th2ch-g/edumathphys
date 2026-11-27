@@ -6,36 +6,86 @@ area: physics
 level: graduate
 order: 140
 description: >-
-  古典場の理論と自由場の正準量子化、相互作用と摂動論・Feynman 則、量子電磁力学の基本過程、経路積分による定式化、くりこみ、非可換ゲージ理論の量子化までを扱う。
+  古典場の理論と Poincaré 群の表現から始め、スカラー場・Dirac 場・ベクトル場の正準量子化、離散対称性と CPT 定理、摂動論と Feynman 則、
+  S 行列と LSZ 簡約公式、量子電磁力学の基本過程と輻射補正、経路積分、くりこみと有効作用、くりこみ群、非可換ゲージ理論とその量子化（BRST 対称性・漸近的自由性）、
+  対称性の自発的破れと Higgs 機構、アノマリー、演算子積展開、インスタントンなどの非摂動的手法、超対称性入門までを扱う。
 prerequisites: [advanced-quantum-mechanics, special-relativity, electromagnetism]
 conventions:
   - 自然単位系 ℏ = c = 1 を用いる。計量は η = diag(+1, −1, −1, −1)（素粒子物理の慣習）とし、相対論や一般相対論の章と符号が逆である点に注意する。
-references: [peskin-schroeder, srednicki-qft, weinberg-qft1, schwartz-qft]
+references: [peskin-schroeder, srednicki-qft, weinberg-qft1, weinberg-qft2, schwartz-qft, itzykson-zuber, coleman-aspects, zee-nutshell, kugo-gauge]
 chapters:
   - id: classical-fields
     title: 古典場の理論
-    sections: [場の作用と Euler–Lagrange 方程式, Noether の定理と保存カレント, Lorentz 対称性, スカラー場・Dirac 場・電磁場の作用]
+    prerequisites: [analytical-mechanics/field-mechanics, special-relativity/four-vectors]
+    sections: [場の Lagrangian 形式と作用原理, Euler–Lagrange 方程式と場の Hamilton 形式, Noether の定理と保存カレント, エネルギー運動量テンソルと Belinfante テンソル, 内部対称性と U(1) カレント, 自然単位系と次元解析]
+  - id: lorentz-poincare
+    title: Lorentz 群と Poincaré 群の表現
+    prerequisites: [lie-groups/su2-so3, advanced-quantum-mechanics/symmetry]
+    sections: [Lorentz 群とその Lie 代数, 有限次元既約表現の分類, Weyl スピノル・Dirac スピノル・ベクトル表現, Poincaré 群と Casimir 演算子, Wigner の小群と 1 粒子状態の分類, 質量ゼロ粒子とヘリシティ]
   - id: scalar-quantization
     title: スカラー場の正準量子化
-    sections: [Klein–Gordon 場の量子化, Fock 空間と粒子解釈, 因果律, Feynman 伝播関数]
+    sections: [Klein–Gordon 場の正準量子化, 生成消滅演算子と Fock 空間, 粒子解釈とエネルギー運動量演算子, 正規順序と零点エネルギー, 複素スカラー場と反粒子, 因果律と微視的因果性, Feynman 伝播関数と遅延 Green 関数]
   - id: dirac-field
     title: Dirac 場の量子化
-    sections: [Lorentz 群のスピノル表現, Dirac 場の量子化と反交換関係, スピンと統計, 離散対称性 C, P, T]
+    prerequisites: [advanced-quantum-mechanics/dirac-equation]
+    sections: [Dirac 方程式とその Lagrangian, 自由粒子解とスピン和, Dirac 行列と双一次形式, Dirac 場の量子化と反交換関係, スピンと統計の関係, Dirac 伝播関数, Weyl 場と Majorana 場]
+  - id: discrete-symmetries
+    title: 離散対称性と CPT 定理
+    sections: [パリティ, 荷電共役, 時間反転, スカラー場・Dirac 場・ベクトル場の C・P・T 変換, 双一次形式の変換性, CPT 定理]
+  - id: vector-fields
+    title: ベクトル場と電磁場の量子化
+    prerequisites: [electromagnetism/potentials-gauge]
+    sections: [Maxwell 場の正準量子化と Coulomb ゲージ, 共変量子化と Gupta–Bleuler 法, 光子の伝播関数とゲージ依存性, 質量のあるベクトル場（Proca 場）, 偏極ベクトルと偏極和]
   - id: interacting-fields
     title: 相互作用と摂動論
-    sections: [相互作用描像と Dyson 級数, Wick の定理, Feynman ダイアグラム, S 行列と断面積, LSZ 簡約公式]
+    sections: [相互作用描像と Dyson 級数, Gell-Mann–Low の定理と相関関数, Wick の定理, Feynman ダイアグラムと位置空間の Feynman 則, 運動量空間の Feynman 則, 真空泡と連結ダイアグラム, 対称因子]
+  - id: s-matrix
+    title: S 行列と散乱断面積
+    prerequisites: [advanced-quantum-mechanics/scattering]
+    sections: [漸近状態と S 行列, 断面積と崩壊率の公式, 相対論的位相空間積分, LSZ 簡約公式, Källén–Lehmann スペクトル表示, ユニタリ性と光学定理・Cutkosky 則, クラスター分解原理]
+  - id: fermion-feynman-rules
+    title: フェルミオンを含む Feynman 則
+    sections: [フェルミオンに対する Wick の定理と符号, Yukawa 理論の Feynman 則, 非相対論的極限と湯川ポテンシャル, γ 行列のトレース公式とスピン和, 外部場中の散乱と Mott 散乱, Mandelstam 変数と交差対称性]
   - id: qed
     title: 量子電磁力学
-    sections: [電磁場の量子化とゲージ固定, QED の Feynman 則, 基本過程（e⁺e⁻→μ⁺μ⁻・Compton 散乱）, Ward 恒等式]
+    sections: [QED の Lagrangian とゲージ不変性, QED の Feynman 則, e⁺e⁻→μ⁺μ⁻ 散乱, ヘリシティ構造と角分布, Compton 散乱と Klein–Nishina 公式, Bhabha 散乱と Møller 散乱, 束縛状態とポジトロニウム, スカラー QED, Ward 恒等式]
+  - id: radiative-corrections
+    title: 輻射補正入門
+    sections: [1 ループ積分と Feynman パラメータ, Wick 回転と次元正則化・Pauli–Villars 正則化, 電子の頂点補正と異常磁気モーメント, 真空偏極と電荷のくりこみ, 電子の自己エネルギーと質量くりこみ, 赤外発散と軟光子放射（Bloch–Nordsieck の定理）, Lamb シフトの計算]
   - id: path-integral
     title: 経路積分による定式化
-    sections: [場の経路積分, 生成汎関数, Grassmann 数とフェルミオンの経路積分, 有効作用]
+    prerequisites: [advanced-quantum-mechanics/path-integrals]
+    sections: [量子力学の経路積分の復習, スカラー場の経路積分と生成汎関数, 自由場の生成汎関数と摂動展開, Grassmann 数とフェルミオンの経路積分, 電磁場の経路積分量子化, Schwinger–Dyson 方程式, Euclid 化と統計力学との対応]
   - id: renormalization
     title: くりこみ
-    sections: [1 ループ発散と正則化, くりこみ可能性と次元解析, φ⁴ 理論のくりこみ, くりこみ群方程式とランニング結合定数, QED の 1 ループ補正]
+    sections: [表面的発散次数とくりこみ可能性の分類, くりこまれた摂動論と counterterm, φ⁴ 理論の 1 ループくりこみ, QED のくりこみと Ward–Takahashi 恒等式, 重なった発散と 2 ループの例, BPHZ 定理と一般のくりこみ可能性, くりこみ不可能な理論と有効場理論]
+  - id: effective-action
+    title: 有効作用と生成汎関数
+    sections: [連結 Green 関数の生成汎関数, Legendre 変換と 1PI 有効作用, ループ展開と 1 ループ有効作用, 有効ポテンシャルと Coleman–Weinberg 機構, 対称性と Ward–Takahashi 恒等式の汎関数的導出, 背景場の方法]
+  - id: renormalization-group
+    title: くりこみ群
+    sections: [Wilson のくりこみ群と有効作用, Callan–Symanzik 方程式, β 関数と異常次元, ランニング結合定数と固定点, 合成演算子のくりこみと演算子混合, 質量パラメータの発展と重い粒子の decoupling, 関連・周辺・無関連演算子]
   - id: gauge-theories
     title: 非可換ゲージ理論
-    sections: [Yang–Mills 理論, Faddeev–Popov の方法とゴースト, BRST 対称性, 漸近的自由性]
+    prerequisites: [lie-groups/matrix-lie-groups]
+    sections: [ゲージ不変性と共変微分, Lie 代数と表現の基本事項, Yang–Mills Lagrangian と場の強さ, Wilson 線と Wilson ループ, 物質場との結合とゲージ群の表現, 古典的 Yang–Mills 理論の相互作用頂点]
+  - id: gauge-quantization
+    title: 非可換ゲージ理論の量子化
+    sections: [Faddeev–Popov の方法, ゴースト場とその Feynman 則, BRST 対称性と物理的状態, Slavnov–Taylor 恒等式, 1 ループ発散とくりこみ, 背景場法による β 関数の計算, 漸近的自由性]
   - id: symmetry-breaking
     title: 対称性の自発的破れ
-    sections: [自発的対称性の破れと Goldstone の定理, Higgs 機構, 有効ポテンシャル]
+    sections: [自発的対称性の破れと真空の縮退, 線形 σ 模型, Goldstone の定理, 有効ポテンシャルによる解析, Higgs 機構, R_ξ ゲージと Goldstone ボソン等価定理, 自発的に破れたゲージ理論のくりこみ可能性]
+  - id: anomalies
+    title: アノマリー
+    prerequisites: [differential-topology/chern-weil]
+    sections: [カイラル対称性と軸性カレント, 三角ダイアグラムと Adler–Bell–Jackiw アノマリー, Fujikawa の経路積分による導出, 2 次元のアノマリーと Schwinger 模型, 非可換ゲージ理論のアノマリーと Wess–Zumino の無矛盾条件, トレースアノマリー]
+  - id: operator-product-expansion
+    title: 演算子積展開
+    sections: [演算子積展開の考え方, Wilson 係数とくりこみ群, 自由場における演算子積展開, e⁺e⁻→ハドロンの全断面積, 深非弾性散乱への応用, 有効頂点と低エネルギー有効理論]
+  - id: nonperturbative
+    title: 非摂動的手法
+    prerequisites: [algebraic-topology/homotopy]
+    sections: [ソリトンとキンク, Euclid 化とインスタントン, θ 真空, 大 N 展開, 格子ゲージ理論の基礎と強結合展開, 閉じ込めと Wilson ループの面積則]
+  - id: supersymmetry
+    title: 超対称性入門
+    sections: [超対称性代数と Coleman–Mandula の定理, 超空間と超場, Wess–Zumino 模型, 超対称ゲージ理論, 非くりこみ定理, 超対称性の自発的破れ]

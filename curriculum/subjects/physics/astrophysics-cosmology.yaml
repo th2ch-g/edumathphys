@@ -6,31 +6,93 @@ area: physics
 level: graduate
 order: 210
 description: >-
-  恒星の構造と進化、コンパクト天体、膨張宇宙と熱史、宇宙背景放射、インフレーション、構造形成、暗黒物質と暗黒エネルギーを扱う。
+  放射過程と輻射輸送、恒星の構造・エネルギー生成・形成と進化、超新星、白色矮星・中性子星・ブラックホールと降着現象、銀河の力学を扱い、
+  続いて一様等方宇宙と宇宙論的距離、宇宙の熱史とビッグバン元素合成、初期宇宙の素粒子論的過程、インフレーションと原始ゆらぎ、宇宙論的摂動論と Boltzmann 方程式、
+  宇宙マイクロ波背景放射、構造形成、暗黒物質と暗黒エネルギーまでを扱う。
 prerequisites: [general-relativity, statistical-mechanics]
-references: [weinberg-cosmology, dodelson-cosmology, kippenhahn-stellar]
+conventions:
+  - 計量の符号は一般相対論と同じく (−,+,+,+) とする。
+  - 宇宙論の章では特に断らない限り c = ℏ = k_B = 1 の自然単位系を用い、観測量との比較では単位を復元する。
+references: [weinberg-cosmology, dodelson-cosmology, kippenhahn-stellar, peebles-cosmology, mukhanov-cosmology, kolb-turner, shapiro-teukolsky, rybicki-lightman, binney-tremaine]
 chapters:
+  - id: radiative-processes
+    title: 放射過程と輻射輸送
+    prerequisites: [electromagnetism/radiation]
+    sections: [輻射場の記述（比強度とフラックス）, 輻射輸送方程式と光学的厚さ, 黒体放射と Kirchhoff の法則, 制動放射, シンクロトロン放射, Compton 散乱と逆 Compton 散乱, スペクトル線の形成]
   - id: stellar-structure
-    title: 恒星の構造
-    sections: [静水圧平衡, エネルギー輸送, 核融合反応, 主系列星]
+    title: 恒星構造の基礎方程式
+    prerequisites: [statistical-mechanics/fermi-gas]
+    sections: [静水圧平衡とビリアル定理, 質量保存とエネルギー保存, 恒星内部の状態方程式（理想気体・輻射・縮退）, 輻射によるエネルギー輸送と不透明度, 対流と Schwarzschild の判定条件, 混合距離理論]
+  - id: stellar-models
+    title: 恒星モデル
+    sections: [ポリトロープと Lane–Emden 方程式, 相似則と質量光度関係, Eddington 限界, 恒星構造方程式の数値解法（Henyey 法）, 標準太陽モデルと日震学]
+  - id: stellar-energy
+    title: 恒星内のエネルギー生成
+    prerequisites: [nuclear-physics/nucleosynthesis]
+    sections: [熱核反応率と Gamow ピーク, 水素燃焼と主系列星のエネルギー源, ヘリウム燃焼以降の燃焼段階, ニュートリノによるエネルギー損失, 太陽ニュートリノ問題とニュートリノ振動]
+  - id: star-formation
+    title: 星間物質と星形成
+    prerequisites: [plasma-physics/fluid-mhd]
+    sections: [星間物質の諸相, Jeans 不安定性, 分子雲の重力収縮, 原始星と林フェーズ, 降着円盤と原始惑星系円盤]
   - id: stellar-evolution
     title: 恒星の進化
-    sections: [HR 図, 巨星への進化, 超新星]
+    sections: [HR 図と主系列, 主系列後の進化と赤色巨星, ヘリウムフラッシュと水平分枝, 漸近巨星分枝と惑星状星雲, 大質量星の進化と質量放出, 連星の進化と質量輸送]
+  - id: supernovae
+    title: 超新星と重力崩壊
+    sections: [鉄コアの重力崩壊, ニュートリノ閉じ込めと衝撃波, 重力崩壊型超新星の爆発機構, Ia 型超新星と標準光源, 超新星残骸, 超新星 1987A とニュートリノ観測]
   - id: compact-objects
-    title: コンパクト天体
-    sections: [白色矮星と Chandrasekhar 限界, 中性子星, ブラックホール天体]
+    title: 白色矮星と中性子星
+    prerequisites: [general-relativity/schwarzschild]
+    sections: [縮退圧と白色矮星, Chandrasekhar 限界, 中性子星物質の状態方程式, Tolman–Oppenheimer–Volkoff 方程式, パルサーと磁気双極子放射, 中性子星の冷却]
+  - id: black-hole-astrophysics
+    title: ブラックホールと降着現象
+    prerequisites: [general-relativity/black-holes, general-relativity/gravitational-waves]
+    sections: [Eddington 光度と降着, 球対称降着（Bondi 降着）, 標準降着円盤（Shakura–Sunyaev 模型）, X 線連星, 活動銀河核とジェット, コンパクト連星の合体と重力波]
+  - id: galaxies
+    title: 銀河の力学
+    prerequisites: [nonequilibrium/kinetic-theory]
+    sections: [ポテンシャル理論と質量分布, 銀河内の星の軌道, 無衝突 Boltzmann 方程式と Jeans 方程式, 緩和時間と力学的摩擦, 回転曲線と暗黒物質の証拠, 渦状構造と密度波理論]
   - id: expanding-universe
-    title: 膨張宇宙
-    sections: [Hubble の法則, Friedmann 方程式と宇宙パラメータ, 宇宙論的距離]
+    title: 一様等方宇宙
+    prerequisites: [general-relativity/cosmology]
+    sections: [宇宙原理と Robertson–Walker 計量, Hubble–Lemaître の法則と赤方偏移, Friedmann 方程式, 宇宙の構成要素と状態方程式, 宇宙パラメータとモデル宇宙, 宇宙年齢]
+  - id: cosmological-distances
+    title: 宇宙論的距離と観測
+    sections: [共動距離と粒子的地平線, 光度距離と角径距離, 距離はしご（Cepheid と Ia 型超新星）, 加速膨張の発見, 重力レンズ]
   - id: thermal-history
     title: 宇宙の熱史
-    sections: [放射優勢期, ニュートリノの脱結合, ビッグバン元素合成, 再結合]
-  - id: cmb
-    title: 宇宙マイクロ波背景放射
-    sections: [黒体スペクトル, 温度ゆらぎ, 音響振動]
+    prerequisites: [statistical-mechanics/quantum-statistics]
+    sections: [熱平衡の統計力学と有効自由度, エントロピー保存と温度-赤方偏移関係, ニュートリノの脱結合と宇宙ニュートリノ背景, 電子陽電子対消滅, 再結合と Saha 方程式, 光子の脱結合と最終散乱面]
+  - id: bbn
+    title: ビッグバン元素合成
+    prerequisites: [nuclear-physics/nucleosynthesis]
+    sections: [中性子陽子比の凍結, 重水素ボトルネック, 軽元素量の予言, バリオン光子比の決定, ニュートリノ世代数への制限, リチウム問題]
+  - id: early-universe
+    title: 初期宇宙の素粒子論的過程
+    prerequisites: [standard-model]
+    sections: [Boltzmann 方程式による粒子の凍結, 暗黒物質の残存量（WIMP とアクシオン）, バリオン数生成と Sakharov 条件, 宇宙論的相転移, 位相欠陥]
   - id: inflation
     title: インフレーション
-    sections: [地平線問題と平坦性問題, スローロール・インフレーション, 原始ゆらぎ]
+    prerequisites: [quantum-field-theory/classical-fields]
+    sections: [地平線問題と平坦性問題, インフラトン場のダイナミクス, スローロール近似, 再加熱, インフレーション模型の分類]
+  - id: perturbations
+    title: 宇宙論的摂動論
+    prerequisites: [general-relativity/einstein-equations]
+    sections: [計量摂動のスカラー・ベクトル・テンソル分解, ゲージ自由度とゲージ不変変数, Einstein 方程式の摂動, 流体成分の摂動方程式, 曲率摂動の保存]
+  - id: primordial-fluctuations
+    title: インフレーションによる原始ゆらぎ
+    prerequisites: [quantum-field-theory/scalar-quantization]
+    sections: [de Sitter 時空中の量子場, Mukhanov–Sasaki 方程式, スカラー型スペクトルとスペクトル指数, 原始重力波とテンソル・スカラー比, 非 Gauss 性の概観]
+  - id: cosmological-boltzmann
+    title: 宇宙論的 Boltzmann 方程式
+    prerequisites: [nonequilibrium/boltzmann-equation]
+    sections: [光子の Boltzmann 方程式, Thomson 散乱による衝突項, バリオンと暗黒物質の方程式, ニュートリノの方程式, 断熱的初期条件]
+  - id: cmb
+    title: 宇宙マイクロ波背景放射
+    sections: [黒体スペクトルとスペクトル歪み, Sachs–Wolfe 効果, 音響振動とタイトカップリング近似, 拡散減衰（Silk 減衰）, 角度パワースペクトル, 偏光と宇宙論パラメータの決定]
   - id: structure-formation
-    title: 構造形成と暗黒成分
-    sections: [線形摂動論, 暗黒物質, 暗黒エネルギーと宇宙の加速膨張]
+    title: 構造形成
+    sections: [Jeans 不安定性と線形成長, 物質パワースペクトルと転送関数, 成長因子, 球対称崩壊と非線形構造, Press–Schechter 理論と質量関数, バリオン音響振動と銀河分布]
+  - id: dark-sector
+    title: 暗黒物質と暗黒エネルギー
+    sections: [暗黒物質の観測的証拠, 暗黒物質の候補と検出実験, 宇宙定数問題, 動的暗黒エネルギー（クインテッセンス）, 宇宙論パラメータの現状と未解決問題]

@@ -4,30 +4,45 @@ title: 特殊相対論
 title_en: Special Relativity
 area: physics
 level: undergrad-basic
-order: 50
+order: 35
 description: >-
-  光速不変の原理と Lorentz 変換、Minkowski 時空と 4 元ベクトル、相対論的運動学と力学、テンソル解析の初歩を扱う。
+  光速不変の原理と Lorentz 変換、Minkowski 時空と因果構造、4 元ベクトルとテンソル・Lorentz 群、光の相対論的効果、相対論的力学と衝突・崩壊の運動学、
+  加速度系と Thomas 歳差、相対論的解析力学、エネルギー運動量テンソルと完全流体までを扱い、一般相対論・場の理論への基礎を与える。
 prerequisites: [mechanics, linear-algebra]
 conventions:
   - 計量は η = diag(−1, +1, +1, +1)（一般相対論と共通）を用い、x⁰ = ct とする。場の量子論の章では (+,−,−,−) を用いるので注意。
   - 繰り返し現れる上下の添字には Einstein の和の規約を適用する。
-references: [taylor-wheeler, schutz-gr, uchiyama-relativity]
+references: [taylor-wheeler, schutz-gr, rindler-relativity, uchiyama-relativity, landau-fields]
 chapters:
   - id: principles
     title: 相対性原理と光速不変
-    sections: [Galilei 変換とその限界, Michelson–Morley の実験, Einstein の二つの原理]
+    sections: [Galilei 変換と Newton 力学の相対性, Maxwell 方程式と Galilei 不変性の破れ, エーテル仮説と Michelson–Morley の実験, 光行差と Fizeau の実験, Einstein の二つの原理, 時計の同期と慣性座標系の構成]
   - id: lorentz-transformations
     title: Lorentz 変換
-    sections: [Lorentz 変換の導出, 同時性の相対性, 時間の遅れと長さの収縮, 速度の合成則]
+    sections: [Lorentz 変換の導出, 同時性の相対性, 時間の遅れと長さの収縮, 速度の合成則, ラピディティ, 一般方向のブーストと Wigner 回転, 実験的検証（μ 粒子の寿命・Ives–Stilwell の実験）]
   - id: minkowski-spacetime
     title: Minkowski 時空
-    sections: [時空図と光円錐, 世界間隔と因果構造, 固有時, 双子のパラドックス]
+    sections: [時空図と光円錐, 世界間隔の不変性と因果構造, 世界線と固有時, 双子のパラドックス, 棒と納屋のパラドックス, 双曲幾何としての Minkowski 時空]
   - id: four-vectors
     title: 4 元ベクトルとテンソル
-    sections: [4 元速度と 4 元加速度, 共変ベクトルと反変ベクトル, テンソル, Lorentz 群]
+    prerequisites: [linear-algebra/tensor-products]
+    sections: [4 元ベクトルと Minkowski 計量, 反変ベクトルと共変ベクトル・添字の上げ下げ, 4 元速度と 4 元加速度, テンソルとテンソル場, 4 元勾配と微分演算子, Lorentz 群とその連結成分, Poincaré 群と無限小生成子]
+  - id: relativistic-optics
+    title: 光の相対論的効果
+    sections: [光の 4 元波数ベクトル, 相対論的 Doppler 効果, 光行差の相対論的公式, 運動する物体の見え方（Terrell 回転）, 放射の前方集中（ビーミング）, 見かけの超光速運動]
   - id: relativistic-dynamics
     title: 相対論的力学
-    sections: [4 元運動量とエネルギー, 質量とエネルギーの等価性, 衝突と崩壊, 4 元力]
+    sections: [4 元運動量と相対論的エネルギー, 質量とエネルギーの等価性, 質量ゼロの粒子と光子, 4 元力と相対論的運動方程式, 一定の力による運動, 相対論的な角運動量テンソル]
+  - id: collisions-decays
+    title: 衝突と崩壊の運動学
+    sections: [不変質量と重心系, 2 体崩壊の運動学, 3 体崩壊と Dalitz 図, 閾値エネルギーと粒子生成, Compton 散乱, 弾性散乱と Mandelstam 変数]
+  - id: accelerated-frames
+    title: 加速度系と相対論的回転
+    sections: [一様加速度運動と双曲線運動, Rindler 座標と地平線, Bell の宇宙船のパラドックス, Born 剛性と剛体の不可能性, 回転系と Sagnac 効果, Thomas 歳差]
   - id: relativistic-lagrangian
     title: 相対論的解析力学
-    sections: [自由粒子の作用, 電磁場中の粒子, 一様加速度運動]
+    prerequisites: [analytical-mechanics/hamiltonian]
+    sections: [自由粒子の作用と Lagrangian, 相対論的 Hamiltonian, 電磁場中の荷電粒子の作用, 一様電場・一様磁場中の運動, 共変な運動方程式と固有時による定式化]
+  - id: continuous-media
+    title: エネルギー運動量テンソルと連続体
+    sections: [数流束 4 元ベクトルと粒子数保存, 塵のエネルギー運動量テンソル, 完全流体のエネルギー運動量テンソル, 保存則と相対論的 Euler 方程式, 角運動量テンソルと重心の定義, 相対論的気体と状態方程式]

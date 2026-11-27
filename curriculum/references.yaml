@@ -34,6 +34,37 @@ tasaki-stat: { author: 田崎晴明, title: 統計力学 I・II, publisher: 培�
 kubo-stat: { author: 久保亮五 編, title: 大学演習 熱学・統計力学, publisher: 裳華房, lang: ja }
 shimizu-qm: { author: 清水明, title: 新版 量子論の基礎, publisher: サイエンス社, lang: ja }
 imai-fluid: { author: 今井功, title: 流体力学（前編）, publisher: 裳華房, lang: ja }
+matsuzaka-algebra: { author: 松坂和夫, title: 代数系入門, publisher: 岩波書店, lang: ja }
+hotta-algebra: { author: 堀田良之, title: 代数入門 —群と加群—, publisher: 裳華房, lang: ja }
+nagata-comm: { author: 永田雅宜, title: 可換環論, publisher: 紀伊國屋書店, lang: ja }
+shiho-sheaves: { author: 志甫淳, title: 層とホモロジー代数, publisher: 共立出版, lang: ja }
+ueno-ag: { author: 上野健爾, title: 代数幾何, publisher: 岩波書店, lang: ja }
+kato-kurokawa-saito: { author: 加藤和也・黒川信重・斎藤毅, title: 数論 I —Fermat の夢と類体論—, publisher: 岩波書店, lang: ja }
+kodaira-complex: { author: 小平邦彦, title: 複素解析, publisher: 岩波書店, lang: ja }
+mizohata-pde: { author: 溝畑茂, title: 偏微分方程式論, publisher: 岩波書店, lang: ja }
+takesaki-structure: { author: 竹崎正道, title: 作用素環の構造, publisher: 岩波書店, lang: ja }
+matsumoto-manifolds: { author: 松本幸夫, title: 多様体の基礎, publisher: 東京大学出版会, lang: ja }
+tsuboi-manifolds: { author: 坪井俊, title: 幾何学 I 多様体入門, publisher: 東京大学出版会, lang: ja }
+morita-forms: { author: 森田茂之, title: 微分形式の幾何学, publisher: 岩波書店, lang: ja }
+sakai-riemannian: { author: 酒井隆, title: リーマン幾何学, publisher: 裳華房, lang: ja }
+kobayashi-gauge: { author: 小林昭七, title: 接続の微分幾何とゲージ理論, publisher: 裳華房, lang: ja }
+sugiura-lie: { author: 杉浦光夫, title: リー群論, publisher: 共立出版, lang: ja }
+kobayashi-oshima-lie: { author: 小林俊行・大島利雄, title: リー群と表現論, publisher: 岩波書店, lang: ja }
+ito-prob: { author: 伊藤清, title: 確率論, publisher: 岩波書店, lang: ja }
+funaki-sde: { author: 舟木直久, title: 確率微分方程式, publisher: 岩波書店, lang: ja }
+mori-numerical: { author: 森正武, title: 数値解析, publisher: 共立出版, lang: ja }
+terasawa-math: { author: 寺沢寛一, title: 自然科学者のための数学概論, publisher: 岩波書店, lang: ja }
+kubo-statmech: { author: 久保亮五, title: 統計力学, publisher: 共立出版, lang: ja }
+nishimori-phase: { author: 西森秀稔, title: 相転移・臨界現象の統計物理学, publisher: 培風館, lang: ja }
+tasaki-hara: { author: 田崎晴明・原隆, title: 相転移と臨界現象の数理, publisher: 共立出版, lang: ja }
+sasa-noneq: { author: 佐々真一, title: 非平衡統計力学, publisher: 共立出版, lang: ja }
+kugo-gauge: { author: 九後汰一郎, title: ゲージ場の量子論 I・II, publisher: 培風館, lang: ja }
+nagaosa-qft-cm: { author: 永長直人, title: 物性論における場の量子論, publisher: 岩波書店, lang: ja }
+takahashi-qft-cm: { author: 高橋康, title: 物性研究者のための場の量子論 I・II, publisher: 培風館, lang: ja }
+sudo-gr: { author: 須藤靖, title: 一般相対論入門, publisher: 日本評論社, lang: ja }
+yagi-nuclear: { author: 八木浩輔, title: 原子核物理学, publisher: 朝倉書店, lang: ja }
+ishizaka-qi: { author: 石坂智・小川朋宏・河内亮周・木村元・林正人, title: 量子情報科学入門, publisher: 共立出版, lang: ja }
+tatsumi-fluid: { author: 巽友正, title: 流体力学, publisher: 培風館, lang: ja }
 
 # --- English: mathematics ---
 axler-ladr: { author: Sheldon Axler, title: Linear Algebra Done Right, publisher: Springer, lang: en }
@@ -88,6 +119,79 @@ enderton-logic: { author: Herbert B. Enderton, title: A Mathematical Introductio
 kunen-set: { author: Kenneth Kunen, title: 'Set Theory: An Introduction to Independence Proofs', publisher: North-Holland, lang: en }
 stanley-ec1: { author: Richard P. Stanley, title: 'Enumerative Combinatorics, Volume 1', publisher: Cambridge University Press, lang: en }
 diestel-graph: { author: Reinhard Diestel, title: Graph Theory, publisher: Springer, lang: en }
+lang-algebra: { author: Serge Lang, title: Algebra, publisher: Springer, lang: en }
+serre-linrep: { author: Jean-Pierre Serre, title: Linear Representations of Finite Groups, publisher: Springer, lang: en }
+james-liebeck: { author: Gordon James and Martin Liebeck, title: Representations and Characters of Groups, publisher: Cambridge University Press, lang: en }
+stein-shakarchi-complex: { author: Elias M. Stein and Rami Shakarchi, title: Complex Analysis, publisher: Princeton University Press, lang: en }
+conway-complex: { author: John B. Conway, title: Functions of One Complex Variable I, publisher: Springer, lang: en }
+stein-shakarchi-real: { author: Elias M. Stein and Rami Shakarchi, title: 'Real Analysis: Measure Theory, Integration, and Hilbert Spaces', publisher: Princeton University Press, lang: en }
+rudin-fa: { author: Walter Rudin, title: Functional Analysis, publisher: McGraw-Hill, lang: en }
+conway-fa: { author: John B. Conway, title: A Course in Functional Analysis, publisher: Springer, lang: en }
+yosida-fa: { author: Kôsaku Yosida, title: Functional Analysis, publisher: Springer, lang: en }
+murphy-cstar: { author: Gerard J. Murphy, title: C*-Algebras and Operator Theory, publisher: Academic Press, lang: en }
+takesaki-oa1: { author: Masamichi Takesaki, title: Theory of Operator Algebras I, publisher: Springer, lang: en }
+davidson-cstar: { author: Kenneth R. Davidson, title: C*-Algebras by Example, publisher: American Mathematical Society, lang: en }
+grafakos-classical: { author: Loukas Grafakos, title: Classical Fourier Analysis, publisher: Springer, lang: en }
+stein-singular: { author: Elias M. Stein, title: Singular Integrals and Differentiability Properties of Functions, publisher: Princeton University Press, lang: en }
+katznelson-harmonic: { author: Yitzhak Katznelson, title: An Introduction to Harmonic Analysis, publisher: Cambridge University Press, lang: en }
+gilbarg-trudinger: { author: David Gilbarg and Neil S. Trudinger, title: Elliptic Partial Differential Equations of Second Order, publisher: Springer, lang: en }
+arnold-ode: { author: V. I. Arnold, title: Ordinary Differential Equations, publisher: Springer, lang: en }
+hartman-ode: { author: Philip Hartman, title: Ordinary Differential Equations, publisher: Wiley, lang: en }
+teschl-ode: { author: Gerald Teschl, title: Ordinary Differential Equations and Dynamical Systems, publisher: American Mathematical Society, lang: en }
+bredon-topgeo: { author: Glen E. Bredon, title: Topology and Geometry, publisher: Springer, lang: en }
+may-concise: { author: J. P. May, title: A Concise Course in Algebraic Topology, publisher: University of Chicago Press, lang: en }
+munkres-eat: { author: James R. Munkres, title: Elements of Algebraic Topology, publisher: Addison-Wesley, lang: en }
+bott-tu: { author: Raoul Bott and Loring W. Tu, title: Differential Forms in Algebraic Topology, publisher: Springer, lang: en }
+milnor-stasheff: { author: John W. Milnor and James D. Stasheff, title: Characteristic Classes, publisher: Princeton University Press, lang: en }
+milnor-morse: { author: John Milnor, title: Morse Theory, publisher: Princeton University Press, lang: en }
+milnor-tdv: { author: John W. Milnor, title: Topology from the Differentiable Viewpoint, publisher: Princeton University Press, lang: en }
+guillemin-pollack: { author: Victor Guillemin and Alan Pollack, title: Differential Topology, publisher: Prentice-Hall, lang: en }
+hirsch-dt: { author: Morris W. Hirsch, title: Differential Topology, publisher: Springer, lang: en }
+warner-manifolds: { author: Frank W. Warner, title: Foundations of Differentiable Manifolds and Lie Groups, publisher: Springer, lang: en }
+pressley-dg: { author: Andrew Pressley, title: Elementary Differential Geometry, publisher: Springer, lang: en }
+petersen-riemannian: { author: Peter Petersen, title: Riemannian Geometry, publisher: Springer, lang: en }
+kobayashi-nomizu: { author: Shoshichi Kobayashi and Katsumi Nomizu, title: 'Foundations of Differential Geometry, Volume I', publisher: Wiley, lang: en }
+knapp-lie: { author: Anthony W. Knapp, title: Lie Groups Beyond an Introduction, publisher: Birkhäuser, lang: en }
+bump-lie: { author: Daniel Bump, title: Lie Groups, publisher: Springer, lang: en }
+huybrechts-cg: { author: Daniel Huybrechts, title: 'Complex Geometry: An Introduction', publisher: Springer, lang: en }
+griffiths-harris: { author: Phillip Griffiths and Joseph Harris, title: Principles of Algebraic Geometry, publisher: Wiley, lang: en }
+forster-riemann: { author: Otto Forster, title: Lectures on Riemann Surfaces, publisher: Springer, lang: en }
+wells-complex: { author: Raymond O. Wells, title: Differential Analysis on Complex Manifolds, publisher: Springer, lang: en }
+eisenbud-ca: { author: David Eisenbud, title: Commutative Algebra with a View Toward Algebraic Geometry, publisher: Springer, lang: en }
+kashiwara-schapira: { author: Masaki Kashiwara and Pierre Schapira, title: Categories and Sheaves, publisher: Springer, lang: en }
+gelfand-manin: { author: Sergei I. Gelfand and Yuri I. Manin, title: Methods of Homological Algebra, publisher: Springer, lang: en }
+mumford-red: { author: David Mumford, title: The Red Book of Varieties and Schemes, publisher: Springer, lang: en }
+liu-ag: { author: Qing Liu, title: Algebraic Geometry and Arithmetic Curves, publisher: Oxford University Press, lang: en }
+silverman-aec: { author: Joseph H. Silverman, title: The Arithmetic of Elliptic Curves, publisher: Springer, lang: en }
+serre-arithmetic: { author: Jean-Pierre Serre, title: A Course in Arithmetic, publisher: Springer, lang: en }
+hardy-wright: { author: G. H. Hardy and E. M. Wright, title: An Introduction to the Theory of Numbers, publisher: Oxford University Press, lang: en }
+apostol-ant: { author: Tom M. Apostol, title: Introduction to Analytic Number Theory, publisher: Springer, lang: en }
+marcus-nf: { author: Daniel A. Marcus, title: Number Fields, publisher: Springer, lang: en }
+serre-local: { author: Jean-Pierre Serre, title: Local Fields, publisher: Springer, lang: en }
+cassels-frohlich: { author: J. W. S. Cassels and A. Fröhlich (eds.), title: Algebraic Number Theory, publisher: Academic Press, lang: en }
+billingsley-pm: { author: Patrick Billingsley, title: Probability and Measure, publisher: Wiley, lang: en }
+kallenberg-fmp: { author: Olav Kallenberg, title: Foundations of Modern Probability, publisher: Springer, lang: en }
+revuz-yor: { author: Daniel Revuz and Marc Yor, title: Continuous Martingales and Brownian Motion, publisher: Springer, lang: en }
+ikeda-watanabe: { author: Nobuyuki Ikeda and Shinzo Watanabe, title: Stochastic Differential Equations and Diffusion Processes, publisher: North-Holland, lang: en }
+legall-bm: { author: Jean-François Le Gall, title: 'Brownian Motion, Martingales, and Stochastic Calculus', publisher: Springer, lang: en }
+lehmann-romano: { author: E. L. Lehmann and Joseph P. Romano, title: Testing Statistical Hypotheses, publisher: Springer, lang: en }
+vandervaart-as: { author: A. W. van der Vaart, title: Asymptotic Statistics, publisher: Cambridge University Press, lang: en }
+walters-ergodic: { author: Peter Walters, title: An Introduction to Ergodic Theory, publisher: Springer, lang: en }
+golub-vanloan: { author: Gene H. Golub and Charles F. Van Loan, title: Matrix Computations, publisher: Johns Hopkins University Press, lang: en }
+hairer-ode1: { author: 'Ernst Hairer, Syvert P. Nørsett and Gerhard Wanner', title: 'Solving Ordinary Differential Equations I: Nonstiff Problems', publisher: Springer, lang: en }
+suli-mayers: { author: Endre Süli and David F. Mayers, title: An Introduction to Numerical Analysis, publisher: Cambridge University Press, lang: en }
+jech-set: { author: Thomas Jech, title: Set Theory, publisher: Springer, lang: en }
+shoenfield-logic: { author: Joseph R. Shoenfield, title: Mathematical Logic, publisher: Addison-Wesley, lang: en }
+vanlint-wilson: { author: J. H. van Lint and R. M. Wilson, title: A Course in Combinatorics, publisher: Cambridge University Press, lang: en }
+bollobas-mgt: { author: Béla Bollobás, title: Modern Graph Theory, publisher: Springer, lang: en }
+alon-spencer: { author: Noga Alon and Joel H. Spencer, title: The Probabilistic Method, publisher: Wiley, lang: en }
+hairer-lubich-wanner: { author: 'Ernst Hairer, Christian Lubich and Gerhard Wanner', title: Geometric Numerical Integration, publisher: Springer, lang: en }
+ciarlet-fem: { author: Philippe G. Ciarlet, title: The Finite Element Method for Elliptic Problems, publisher: North-Holland, lang: en }
+brenner-scott: { author: Susanne C. Brenner and L. Ridgway Scott, title: The Mathematical Theory of Finite Element Methods, publisher: Springer, lang: en }
+nocedal-wright: { author: Jorge Nocedal and Stephen J. Wright, title: Numerical Optimization, publisher: Springer, lang: en }
+dembo-zeitouni: { author: Amir Dembo and Ofer Zeitouni, title: Large Deviations Techniques and Applications, publisher: Springer, lang: en }
+nualart-malliavin: { author: David Nualart, title: The Malliavin Calculus and Related Topics, publisher: Springer, lang: en }
+kuznetsov-bifurcation: { author: Yuri A. Kuznetsov, title: Elements of Applied Bifurcation Theory, publisher: Springer, lang: en }
 
 # --- English: physics ---
 goldstein-cm: { author: 'Herbert Goldstein, Charles Poole and John Safko', title: Classical Mechanics, publisher: Addison-Wesley, lang: en }
@@ -155,3 +259,77 @@ nicholson-plasma: { author: Dwight R. Nicholson, title: Introduction to Plasma T
 landau-paez-cp: { author: 'Rubin H. Landau, Manuel J. Páez and Cristian C. Bordeianu', title: Computational Physics, publisher: Wiley-VCH, lang: en }
 newman-cp: { author: Mark Newman, title: Computational Physics, publisher: CreateSpace, lang: en }
 thijssen-cp: { author: Jos Thijssen, title: Computational Physics, publisher: Cambridge University Press, lang: en }
+kleppner-kolenkow: { author: Daniel Kleppner and Robert Kolenkow, title: An Introduction to Mechanics, publisher: Cambridge University Press, lang: en }
+taylor-cm: { author: John R. Taylor, title: Classical Mechanics, publisher: University Science Books, lang: en }
+french-vibrations: { author: A. P. French, title: Vibrations and Waves, publisher: W. W. Norton, lang: en }
+rindler-relativity: { author: Wolfgang Rindler, title: 'Relativity: Special, General, and Cosmological', publisher: Oxford University Press, lang: en }
+landau-fields: { author: L. D. Landau and E. M. Lifshitz, title: The Classical Theory of Fields, publisher: Pergamon Press, lang: en }
+landau-statphys: { author: L. D. Landau and E. M. Lifshitz, title: 'Statistical Physics, Part 1', publisher: Pergamon Press, lang: en }
+landau-qm: { author: L. D. Landau and E. M. Lifshitz, title: 'Quantum Mechanics: Non-Relativistic Theory', publisher: Pergamon Press, lang: en }
+kardar-particles: { author: Mehran Kardar, title: Statistical Physics of Particles, publisher: Cambridge University Press, lang: en }
+kardar-fields: { author: Mehran Kardar, title: Statistical Physics of Fields, publisher: Cambridge University Press, lang: en }
+courant-hilbert: { author: Richard Courant and David Hilbert, title: Methods of Mathematical Physics, publisher: Wiley, lang: en }
+riley-hobson-bence: { author: 'K. F. Riley, M. P. Hobson and S. J. Bence', title: Mathematical Methods for Physics and Engineering, publisher: Cambridge University Press, lang: en }
+stone-goldbart: { author: Michael Stone and Paul Goldbart, title: 'Mathematics for Physics: A Guided Tour for Graduate Students', publisher: Cambridge University Press, lang: en }
+nakahara-gtp: { author: Mikio Nakahara, title: 'Geometry, Topology and Physics', publisher: Institute of Physics Publishing, lang: en }
+tung-group: { author: Wu-Ki Tung, title: Group Theory in Physics, publisher: World Scientific, lang: en }
+hecht-optics: { author: Eugene Hecht, title: Optics, publisher: Addison-Wesley, lang: en }
+born-wolf: { author: Max Born and Emil Wolf, title: Principles of Optics, publisher: Cambridge University Press, lang: en }
+saleh-teich: { author: Bahaa E. A. Saleh and Malvin Carl Teich, title: Fundamentals of Photonics, publisher: Wiley, lang: en }
+siegman-lasers: { author: Anthony E. Siegman, title: Lasers, publisher: University Science Books, lang: en }
+sakurai-aqm: { author: J. J. Sakurai, title: Advanced Quantum Mechanics, publisher: Addison-Wesley, lang: en }
+bjorken-drell: { author: James D. Bjorken and Sidney D. Drell, title: Relativistic Quantum Mechanics, publisher: McGraw-Hill, lang: en }
+taylor-scattering: { author: John R. Taylor, title: 'Scattering Theory: The Quantum Theory of Nonrelativistic Collisions', publisher: Wiley, lang: en }
+batchelor-fluid: { author: G. K. Batchelor, title: An Introduction to Fluid Dynamics, publisher: Cambridge University Press, lang: en }
+chandrasekhar-stability: { author: S. Chandrasekhar, title: Hydrodynamic and Hydromagnetic Stability, publisher: Oxford University Press, lang: en }
+weinberg-gc: { author: Steven Weinberg, title: 'Gravitation and Cosmology: Principles and Applications of the General Theory of Relativity', publisher: Wiley, lang: en }
+hawking-ellis: { author: S. W. Hawking and G. F. R. Ellis, title: The Large Scale Structure of Space-Time, publisher: Cambridge University Press, lang: en }
+poisson-toolkit: { author: Eric Poisson, title: "A Relativist's Toolkit: The Mathematics of Black-Hole Mechanics", publisher: Cambridge University Press, lang: en }
+ziman-solids: { author: J. M. Ziman, title: Principles of the Theory of Solids, publisher: Cambridge University Press, lang: en }
+marder-cmp: { author: Michael P. Marder, title: Condensed Matter Physics, publisher: Wiley, lang: en }
+chaikin-lubensky: { author: P. M. Chaikin and T. C. Lubensky, title: Principles of Condensed Matter Physics, publisher: Cambridge University Press, lang: en }
+bernevig-hughes: { author: B. Andrei Bernevig and Taylor L. Hughes, title: Topological Insulators and Topological Superconductors, publisher: Princeton University Press, lang: en }
+weinberg-qft2: { author: Steven Weinberg, title: 'The Quantum Theory of Fields, Volume II: Modern Applications', publisher: Cambridge University Press, lang: en }
+itzykson-zuber: { author: Claude Itzykson and Jean-Bernard Zuber, title: Quantum Field Theory, publisher: McGraw-Hill, lang: en }
+coleman-aspects: { author: Sidney Coleman, title: Aspects of Symmetry, publisher: Cambridge University Press, lang: en }
+zee-nutshell: { author: A. Zee, title: Quantum Field Theory in a Nutshell, publisher: Princeton University Press, lang: en }
+zinn-justin-qft: { author: Jean Zinn-Justin, title: Quantum Field Theory and Critical Phenomena, publisher: Oxford University Press, lang: en }
+difrancesco-cft: { author: 'Philippe Di Francesco, Pierre Mathieu and David Sénéchal', title: Conformal Field Theory, publisher: Springer, lang: en }
+baxter-exactly: { author: Rodney J. Baxter, title: Exactly Solved Models in Statistical Mechanics, publisher: Academic Press, lang: en }
+risken-fp: { author: Hannes Risken, title: 'The Fokker–Planck Equation: Methods of Solution and Applications', publisher: Springer, lang: en }
+vankampen-stochastic: { author: N. G. van Kampen, title: Stochastic Processes in Physics and Chemistry, publisher: North-Holland, lang: en }
+degroot-mazur: { author: S. R. de Groot and P. Mazur, title: Non-Equilibrium Thermodynamics, publisher: North-Holland, lang: en }
+negele-orland: { author: John W. Negele and Henri Orland, title: Quantum Many-Particle Systems, publisher: Addison-Wesley, lang: en }
+bruus-flensberg: { author: Henrik Bruus and Karsten Flensberg, title: 'Many-Body Quantum Theory in Condensed Matter Physics: An Introduction', publisher: Oxford University Press, lang: en }
+coleman-many: { author: Piers Coleman, title: Introduction to Many-Body Physics, publisher: Cambridge University Press, lang: en }
+giamarchi-1d: { author: Thierry Giamarchi, title: Quantum Physics in One Dimension, publisher: Oxford University Press, lang: en }
+tinkham-sc: { author: Michael Tinkham, title: Introduction to Superconductivity, publisher: McGraw-Hill, lang: en }
+cheng-li: { author: Ta-Pei Cheng and Ling-Fong Li, title: Gauge Theory of Elementary Particle Physics, publisher: Oxford University Press, lang: en }
+donoghue-dsm: { author: 'John F. Donoghue, Eugene Golowich and Barry R. Holstein', title: Dynamics of the Standard Model, publisher: Cambridge University Press, lang: en }
+griffiths-particles: { author: David Griffiths, title: Introduction to Elementary Particles, publisher: Wiley, lang: en }
+zwiebach-string: { author: Barton Zwiebach, title: A First Course in String Theory, publisher: Cambridge University Press, lang: en }
+polchinski-1: { author: Joseph Polchinski, title: 'String Theory, Volume 1: An Introduction to the Bosonic String', publisher: Cambridge University Press, lang: en }
+polchinski-2: { author: Joseph Polchinski, title: 'String Theory, Volume 2: Superstring Theory and Beyond', publisher: Cambridge University Press, lang: en }
+gsw-1: { author: 'Michael B. Green, John H. Schwarz and Edward Witten', title: 'Superstring Theory, Volume 1: Introduction', publisher: Cambridge University Press, lang: en }
+bbs-string: { author: 'Katrin Becker, Melanie Becker and John H. Schwarz', title: 'String Theory and M-Theory: A Modern Introduction', publisher: Cambridge University Press, lang: en }
+ring-schuck: { author: Peter Ring and Peter Schuck, title: The Nuclear Many-Body Problem, publisher: Springer, lang: en }
+blatt-weisskopf: { author: John M. Blatt and Victor F. Weisskopf, title: Theoretical Nuclear Physics, publisher: Wiley, lang: en }
+walls-milburn: { author: D. F. Walls and Gerard J. Milburn, title: Quantum Optics, publisher: Springer, lang: en }
+loudon-light: { author: Rodney Loudon, title: The Quantum Theory of Light, publisher: Oxford University Press, lang: en }
+cohen-tannoudji-api: { author: 'Claude Cohen-Tannoudji, Jacques Dupont-Roc and Gilbert Grynberg', title: 'Atom-Photon Interactions: Basic Processes and Applications', publisher: Wiley, lang: en }
+pethick-smith: { author: C. J. Pethick and H. Smith, title: Bose–Einstein Condensation in Dilute Gases, publisher: Cambridge University Press, lang: en }
+peebles-cosmology: { author: P. J. E. Peebles, title: Principles of Physical Cosmology, publisher: Princeton University Press, lang: en }
+mukhanov-cosmology: { author: Viatcheslav Mukhanov, title: Physical Foundations of Cosmology, publisher: Cambridge University Press, lang: en }
+kolb-turner: { author: Edward W. Kolb and Michael S. Turner, title: The Early Universe, publisher: Addison-Wesley, lang: en }
+shapiro-teukolsky: { author: Stuart L. Shapiro and Saul A. Teukolsky, title: 'Black Holes, White Dwarfs, and Neutron Stars: The Physics of Compact Objects', publisher: Wiley, lang: en }
+rybicki-lightman: { author: George B. Rybicki and Alan P. Lightman, title: Radiative Processes in Astrophysics, publisher: Wiley, lang: en }
+binney-tremaine: { author: James Binney and Scott Tremaine, title: Galactic Dynamics, publisher: Princeton University Press, lang: en }
+watrous-tqi: { author: John Watrous, title: The Theory of Quantum Information, publisher: Cambridge University Press, lang: en }
+krall-trivelpiece: { author: Nicholas A. Krall and Alvin W. Trivelpiece, title: Principles of Plasma Physics, publisher: McGraw-Hill, lang: en }
+stix-waves: { author: Thomas H. Stix, title: Waves in Plasmas, publisher: American Institute of Physics, lang: en }
+bellan-plasma: { author: Paul M. Bellan, title: Fundamentals of Plasma Physics, publisher: Cambridge University Press, lang: en }
+goldston-rutherford: { author: R. J. Goldston and P. H. Rutherford, title: Introduction to Plasma Physics, publisher: Institute of Physics Publishing, lang: en }
+numerical-recipes: { author: 'William H. Press, Saul A. Teukolsky, William T. Vetterling and Brian P. Flannery', title: 'Numerical Recipes: The Art of Scientific Computing', publisher: Cambridge University Press, lang: en }
+frenkel-smit: { author: Daan Frenkel and Berend Smit, title: 'Understanding Molecular Simulation: From Algorithms to Applications', publisher: Academic Press, lang: en }
+landau-binder: { author: David P. Landau and Kurt Binder, title: A Guide to Monte Carlo Simulations in Statistical Physics, publisher: Cambridge University Press, lang: en }
+martin-es: { author: Richard M. Martin, title: 'Electronic Structure: Basic Theory and Practical Methods', publisher: Cambridge University Press, lang: en }

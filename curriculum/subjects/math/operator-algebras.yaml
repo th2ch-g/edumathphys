@@ -1,0 +1,72 @@
+id: operator-algebras
+prefix: oa
+title: 作用素環
+title_en: Operator Algebras
+area: math
+level: graduate
+order: 115
+description: >-
+  Hilbert 空間上の作用素のなす *-代数の理論。C*-環の基礎と Gelfand–Naimark の定理、正元と近似単位元、状態と GNS 表現、C*-環の表現論、
+  作用素位相と von Neumann の二重可換子定理、射影の比較と型分類、トレースと因子環、完全正写像、テンソル積と核型 C*-環、Tomita–Takesaki 理論、
+  群作用と接合積、AF 環、C*-環の K 理論、Toeplitz 環と Cuntz 環、量子統計力学への応用を扱う。
+prerequisites: [functional-analysis]
+conventions:
+  - 複素内積 ⟨x, y⟩ は第1引数について線形、第2引数について共役線形とする（関数解析と同じ。量子力学の Dirac 記法とは逆なので注意）。
+  - Hilbert 空間は特に断らない限り複素 Hilbert 空間とし、その上の有界線形作用素全体を B(H) で表す。
+references: [murphy-cstar, takesaki-oa1, davidson-cstar, takesaki-structure, conway-fa]
+chapters:
+  - id: cstar-basics
+    title: C*-環の基礎
+    prerequisites: [functional-analysis/banach-algebras]
+    sections: [Banach *-環と C*-条件, C*-環の例, 単位元の付加, C*-環におけるスペクトルとノルム, 正規元の連続関数カルキュラス, C*-環の間の *-準同型]
+  - id: commutative-cstar
+    title: 可換 C*-環と Gelfand–Naimark の定理
+    sections: [指標空間と Gelfand 変換, 可換 Gelfand–Naimark の定理, スペクトル写像定理, 局所コンパクト空間と可換 C*-環の対応, 例：C*(ℤ) と円周上の連続関数環]
+  - id: positivity-ideals
+    title: 正元・近似単位元・イデアル
+    sections: [正元と順序構造, 近似単位元, 閉イデアルと商 C*-環, 遺伝的 C*-部分環, 極分解と Murray–von Neumann 同値]
+  - id: states-gns
+    title: 状態と GNS 表現
+    sections: [正値線形汎関数と状態, 正値汎関数に対する Cauchy–Schwarz の不等式, GNS 構成, 純粋状態と既約表現, Gelfand–Naimark の表現定理, 状態空間と Krein–Milman の定理]
+  - id: representations
+    title: C*-環の表現論
+    sections: [既約表現と Kadison の推移性定理, Schur の補題と可換子, コンパクト作用素の環とその表現, 原始イデアルとスペクトル, Glimm の定理と I 型 C*-環（概観）]
+  - id: operator-topologies
+    title: 作用素位相と二重可換子定理
+    sections: [B(H) 上の弱作用素位相と強作用素位相, σ 弱位相と前双対, von Neumann の二重可換子定理, Kaplansky の稠密性定理, von Neumann 環の例, 正規汎関数と Sakai の特徴付け]
+  - id: abelian-vn
+    title: 可換 von Neumann 環
+    prerequisites: [functional-analysis/spectral-theory]
+    sections: [極大可換 von Neumann 環, L^∞ 空間による実現, スペクトル定理の von Neumann 環による定式化, 巡回ベクトルと分離ベクトル, 直積分分解（概観）]
+  - id: projections-types
+    title: 射影の比較と型の分類
+    sections: [射影束と Murray–von Neumann 同値, 比較定理, 有限射影と無限射影, 因子環と中心, I 型・II 型・III 型, 中心分解と型分解]
+  - id: traces-factors
+    title: トレースと因子環の例
+    sections: [正規トレースと半有限トレース, II₁ 因子環のトレースの存在と一意性, 群 von Neumann 環と ICC 群, 超有限 II₁ 因子環, 次元関数, 自由群因子環（概観）]
+  - id: cp-maps
+    title: 完全正写像
+    sections: [作用素系と完全正写像, Stinespring の膨張定理, Choi の定理と Choi 行列, Arveson の拡張定理, 条件付き期待値と Tomiyama の定理]
+  - id: tensor-products
+    title: テンソル積と核型 C*-環
+    sections: [Hilbert 空間のテンソル積, von Neumann 環のテンソル積と可換子定理, C*-環の代数的テンソル積と C*-ノルム, 最小テンソル積と最大テンソル積, 核型 C*-環と単射的 von Neumann 環, Connes の分類定理（概観）]
+  - id: tomita-takesaki
+    title: Tomita–Takesaki 理論
+    sections: [巡回分離ベクトルと標準形, モジュラー作用素とモジュラー共役, Tomita の基本定理, モジュラー自己同型群, KMS 条件, Connes のコサイクル定理と III 型因子環の分類（概観）]
+  - id: crossed-products
+    title: 群作用と接合積
+    prerequisites: [measure-integration/haar-measure]
+    sections: [C*-力学系, 群 C*-環と被約群 C*-環, 接合積の構成, 例：無理回転環, 従順群と被約接合積, von Neumann 環の接合積と双対定理（概観）]
+  - id: af-algebras
+    title: 帰納極限と AF 環
+    sections: [C*-環の帰納極限, 有限次元 C*-環の構造, Bratteli 図形, UHF 環と CAR 環, Glimm の分類と Elliott の分類定理]
+  - id: k-theory
+    title: C*-環の K 理論
+    sections: [射影の同値と K₀ 群, ユニタリと K₁ 群, 半完全性と六項完全系列, Bott 周期性, 例：AF 環と無理回転環の K 群]
+  - id: toeplitz-cuntz
+    title: Toeplitz 環と Cuntz 環
+    prerequisites: [functional-analysis/compact-operators]
+    sections: [片側シフトと Toeplitz 環, Toeplitz 作用素の指数定理, Calkin 環と本質スペクトル, Cuntz 環とその単純性, 拡大と Brown–Douglas–Fillmore 理論（概観）]
+  - id: quantum-statistical
+    title: 量子統計力学への応用
+    sections: [CCR 環と Weyl 関係, Stone–von Neumann の一意性定理, CAR 環と Fock 表現, 準局所環と量子スピン系, KMS 状態と平衡状態, 時間発展と Lieb–Robinson 評価（概観）]

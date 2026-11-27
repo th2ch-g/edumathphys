@@ -6,28 +6,53 @@ area: math
 level: undergrad-advanced
 order: 55
 description: >-
-  環とイデアル、剰余環、整域と体、単項イデアル整域と一意分解整域、多項式環、加群の基礎、単項イデアル整域上の有限生成加群の構造定理とその応用を扱う。
+  環とイデアル、素イデアルと中国式剰余定理、分数環、Euclid 整域・単項イデアル整域・一意分解整域、多項式環と既約性判定、
+  Noether 環と Gröbner 基底、加群の基礎、単項イデアル整域上の有限生成加群の構造定理と標準形への応用、完全列とテンソル積、
+  射影・入射・平坦加群、多元環、組成列と Krull–Schmidt の定理、半単純環と Wedderburn–Artin の定理を扱う。
 prerequisites: [group-theory]
-references: [yukie-algebra2, katsurada-algebra, dummit-foote, atiyah-macdonald]
+references: [yukie-algebra2, katsurada-algebra, matsuzaka-algebra, hotta-algebra, dummit-foote, lang-algebra, atiyah-macdonald]
 chapters:
   - id: rings
     title: 環とイデアル
-    sections: [環の定義と例, 部分環とイデアル, 剰余環, 環準同型と同型定理, 素イデアルと極大イデアル]
+    prerequisites: [group-theory/homomorphisms]
+    sections: [環の定義と例（行列環・多項式環・群環・関数環）, 単元・零因子・冪零元, 部分環とイデアル, イデアルの和・積・共通部分・商, 剰余環, 環準同型と同型定理]
+  - id: chinese-remainder
+    title: 素イデアル・極大イデアルと中国式剰余定理
+    prerequisites: [sets-logic/choice]
+    sections: [素イデアルと極大イデアル, 剰余環による特徴付け, Zorn の補題による極大イデアルの存在, 冪零根基と素イデアルの共通部分, 互いに素なイデアルと中国式剰余定理, 応用（連立合同式と Euler 関数の乗法性）]
   - id: domains
-    title: 整域と分数体
-    sections: [整域, 分数体, Euclid 整域, 単項イデアル整域, 一意分解整域]
+    title: 整域と分数環
+    sections: [整域と体, 分数体の構成と普遍性, 積閉集合による分数環, 素イデアルでの局所化と局所環, 分数環のイデアルと素イデアルの対応]
+  - id: factorization
+    title: Euclid 整域・単項イデアル整域・一意分解整域
+    sections: [整除・既約元・素元, Euclid 整域, 単項イデアル整域, 一意分解整域, ED ⊂ PID ⊂ UFD と真の包含の例, 'Gauss 整数環 ℤ[i] と二平方和定理', '二次整数環 ℤ[√−5] における分解の非一意性']
   - id: polynomial-rings
     title: 多項式環
-    sections: [多項式環, Gauss の補題, 既約性判定（Eisenstein の判定法）, 多変数多項式環, Hilbert の基底定理]
-  - id: chinese-remainder
-    title: 中国式剰余定理と局所化
-    sections: [中国式剰余定理, 局所化, 局所環]
+    sections: [一変数多項式環と除法の定理, 体上の多項式環は単項イデアル整域, 多項式の根・重根と形式微分, Gauss の補題と多項式環の一意分解性, 既約性判定（Eisenstein の判定法と還元法）, 有理根定理と既約性の判定例, 多変数多項式環と対称式の基本定理]
+  - id: noetherian
+    title: Noether 環と Gröbner 基底
+    sections: [昇鎖条件と Noether 環, Hilbert の基底定理, 単項式順序と多変数の割り算, Gröbner 基底と Buchberger のアルゴリズム, 消去理論と連立代数方程式への応用]
   - id: modules
     title: 加群
-    sections: [加群の定義と例, 部分加群と剰余加群, 準同型と同型定理, 直和と直積, 自由加群]
+    prerequisites: [linear-algebra/vector-spaces]
+    sections: [加群の定義と例, 部分加群と剰余加群, 加群の準同型と同型定理, 生成系と有限生成加群, 直和と直積, 自由加群と基底, 自由加群の階数の一意性]
   - id: pid-modules
     title: 単項イデアル整域上の有限生成加群
-    sections: [行列の単因子, 構造定理, 有限生成 Abel 群への応用, Jordan 標準形への応用]
+    prerequisites: [group-theory/products-abelian, linear-algebra/jordan-form]
+    sections: [ねじれ加群と自由加群, PID 上の行列の Smith 標準形（単因子）, 構造定理（単因子形と準素分解形）, 有限生成 Abel 群の基本定理, 有理標準形（Frobenius 標準形）, Jordan 標準形の加群論的証明, 行列の相似の判定と単因子]
   - id: exact-sequences
     title: 完全列とテンソル積
-    sections: [完全列, Hom 関手, 加群のテンソル積, 平坦性と射影加群・入射加群]
+    sections: [完全列と分裂完全列, 五項補題と蛇の補題, Hom 関手と左完全性, テンソル積の構成と普遍性, テンソル積の右完全性と計算例, 係数拡大と係数制限]
+  - id: projective-injective
+    title: 射影加群・入射加群・平坦加群
+    sections: [射影加群とその特徴付け, 入射加群と Baer の判定法, 可除加群と入射包絡, 平坦加群, Hom とテンソル積の随伴]
+  - id: algebras
+    title: 多元環
+    prerequisites: [linear-algebra/tensor-products]
+    sections: [多元環の定義と例, 群環と行列環, テンソル代数と対称代数, 外積代数と行列式, 四元数体と斜体, Frobenius の定理（実斜体の分類）]
+  - id: composition-series
+    title: 組成列と直既約分解
+    sections: [Artin 加群と Noether 加群, 組成列と Jordan–Hölder の定理, 加群の長さ, Fitting の補題, 直既約分解と Krull–Schmidt の定理]
+  - id: semisimple
+    title: 半単純環と Wedderburn–Artin の定理
+    sections: [単純加群と Schur の補題, 半単純加群の特徴付け, 半単純環, Wedderburn–Artin の構造定理, Jacobson 根基と Nakayama の補題, Jacobson の稠密性定理]

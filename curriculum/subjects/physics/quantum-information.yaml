@@ -6,28 +6,63 @@ area: physics
 level: graduate
 order: 220
 description: >-
-  量子ビットと量子回路、量子もつれと非局所性、量子テレポーテーション、量子アルゴリズム（Shor・Grover）、量子チャネルとエントロピー、量子誤り訂正を扱う。
+  量子ビットと密度行列・一般化測定、量子状態の距離と識別、量子もつれと非局所性、量子回路と量子計算量、量子アルゴリズム（Shor・Grover・量子シミュレーション）、
+  量子チャネル、量子エントロピー、量子情報源符号化と通信路容量、もつれの理論、量子暗号、量子誤り訂正とスタビライザー形式、誤り耐性量子計算、
+  量子計算の物理実装までを扱う。
 prerequisites: [quantum-mechanics, linear-algebra]
-references: [nielsen-chuang, wilde-qit, preskill-notes]
+references: [nielsen-chuang, wilde-qit, preskill-notes, watrous-tqi, ishizaka-qi]
 chapters:
   - id: qubits
-    title: 量子ビット
-    sections: [量子ビットと Bloch 球, 多量子ビット系, 密度行列]
+    title: 量子ビットと量子状態
+    prerequisites: [linear-algebra/tensor-products, advanced-quantum-mechanics/measurement]
+    sections: [量子ビットと Bloch 球, 多量子ビット系とテンソル積, 密度行列と混合状態, 部分トレースと縮約密度行列, 純粋化, 一般化測定（POVM）と Naimark の拡張定理]
+  - id: distance-measures
+    title: 量子状態の距離と識別
+    sections: [トレース距離と Helstrom 測定, 忠実度と Uhlmann の定理, 非直交状態の識別と複製不可能定理, ダイヤモンドノルムとチャネルの距離, 量子状態トモグラフィー]
   - id: entanglement
-    title: 量子もつれ
-    sections: [もつれ状態, Schmidt 分解, Bell の不等式と CHSH 不等式, もつれの測度]
+    title: 量子もつれと非局所性
+    sections: [もつれ状態と分離可能状態, Schmidt 分解, Bell の不等式と CHSH 不等式, Tsirelson 限界, Kochen–Specker の定理と文脈依存性, 正値部分転置（PPT）判定条件と Horodecki の定理]
   - id: circuits
     title: 量子回路
-    sections: [量子ゲート, 普遍ゲート集合, 量子テレポーテーション, 超密度符号化]
+    sections: [1 量子ビットゲートと Bloch 球上の回転, 制御ゲートと多量子ビットゲート, 普遍ゲート集合と Solovay–Kitaev の定理, 量子テレポーテーション, 超密度符号化, 測定型量子計算の概観]
+  - id: complexity
+    title: 計算量理論と量子計算
+    sections: [Turing 機械と計算量クラス, 可逆計算, 量子回路族と BQP, オラクル模型と問い合わせ計算量, 量子計算の限界と BBBV 下界]
   - id: algorithms
-    title: 量子アルゴリズム
-    sections: [Deutsch–Jozsa のアルゴリズム, 量子 Fourier 変換, Shor のアルゴリズム, Grover のアルゴリズム]
+    title: 量子 Fourier 変換と Shor のアルゴリズム
+    sections: [Deutsch–Jozsa と Bernstein–Vazirani のアルゴリズム, Simon のアルゴリズム, 量子 Fourier 変換, 位相推定, 位数発見と Shor の素因数分解アルゴリズム, 隠れ部分群問題]
+  - id: search-simulation
+    title: 量子探索と量子シミュレーション
+    sections: [Grover のアルゴリズム, 振幅増幅, Grover のアルゴリズムの最適性, 量子シミュレーションと Trotter 分解, 線形方程式の量子アルゴリズム（HHL）の概観, 変分量子アルゴリズムの概観]
   - id: channels
     title: 量子チャネル
-    sections: [CPTP 写像, Kraus 表示, Stinespring 表現, 代表的なチャネル]
+    prerequisites: [advanced-quantum-mechanics/open-systems, operator-algebras/cp-maps]
+    sections: [完全正値写像と CPTP 写像, Kraus 表示, Stinespring 表現, Choi–Jamiołkowski 同型, 代表的なチャネル（脱分極・位相緩和・振幅減衰）, ユニタルチャネルと多数化]
   - id: entropy
     title: 量子エントロピーと情報
-    sections: [von Neumann エントロピー, 相対エントロピー, Holevo 限界, 量子通信路容量の概観]
+    sections: [Shannon エントロピーと古典情報理論の復習, von Neumann エントロピー, 相対エントロピーと Klein の不等式, 強劣加法性, 条件付きエントロピーと相互情報量, データ処理不等式]
+  - id: source-coding
+    title: 情報源符号化と Holevo 限界
+    sections: [典型系列と漸近等分割性, Shannon の情報源符号化定理, Schumacher 圧縮, Holevo 限界とアクセス可能情報量, 古典-量子状態と Holevo 量]
+  - id: channel-capacity
+    title: 量子通信路容量
+    sections: [Shannon の通信路符号化定理, Holevo–Schumacher–Westmoreland の定理, エンタングルメント支援古典容量, 量子容量とコヒーレント情報, 秘密容量, 容量の超加法性]
+  - id: entanglement-theory
+    title: もつれの理論
+    sections: [LOCC と Nielsen の多数化定理, もつれの蒸留と濃縮, もつれのエントロピーともつれのコスト, もつれ測度（共起・負値性・squashed entanglement）, 多体もつれと GHZ 状態・W 状態, もつれの一夫一妻性]
+  - id: qkd
+    title: 量子暗号
+    sections: [BB84 プロトコル, もつれに基づく鍵配送（E91 と BBM92）, 情報調整と秘匿性増強, 安全性証明の概観, デバイス独立量子鍵配送]
   - id: error-correction
     title: 量子誤り訂正
-    sections: [3 量子ビット符号, Shor 符号, スタビライザー符号, 誤り耐性量子計算の概観]
+    sections: [3 量子ビット符号とビット反転・位相反転, Shor の 9 量子ビット符号, Knill–Laflamme の誤り訂正条件, 誤りの離散化, CSS 符号, 量子 Hamming 限界と量子 Singleton 限界]
+  - id: stabilizer
+    title: スタビライザー形式とトポロジカル符号
+    sections: [Pauli 群とスタビライザー群, スタビライザー符号と論理演算子, Clifford 群と Gottesman–Knill の定理, トーリック符号と表面符号, トポロジカル量子計算の概観]
+  - id: fault-tolerance
+    title: 誤り耐性量子計算
+    sections: [誤り耐性の定義と横断的ゲート, 魔法状態蒸留, 連接符号としきい値定理, 表面符号の復号, 誤り抑制と誤り緩和]
+  - id: physical-implementations
+    title: 量子計算の物理実装
+    prerequisites: [amo-quantum-optics/ion-traps-interferometry, amo-quantum-optics/cavity-qed]
+    sections: [DiVincenzo の基準, イオントラップ量子計算, 超伝導量子ビット, 光量子計算, 中性原子と半導体スピン量子ビット, NMR 量子計算]

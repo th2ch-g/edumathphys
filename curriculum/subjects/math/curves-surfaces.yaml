@@ -6,28 +6,47 @@ area: math
 level: undergrad-advanced
 order: 130
 description: >-
-  平面曲線と空間曲線の曲率・捩率と Frenet–Serret の公式、曲面の第一・第二基本形式、Gauss 曲率と平均曲率、Gauss の驚異の定理、測地線、Gauss–Bonnet の定理を扱う。
+  平面曲線と空間曲線の曲率・捩率と Frenet–Serret の公式、回転数定理・四頂点定理・等周不等式・Fáry–Milnor の定理などの曲線の大域的性質、
+  正則曲面の第一・第二基本形式、Gauss 写像と主曲率、極小曲面と線織面、Gauss の驚異の定理と曲面論の基本定理、共変微分と測地線、
+  Gauss–Bonnet の定理、完備曲面と Hilbert の定理などの大域的結果、抽象曲面と双曲平面までを扱う。
 prerequisites: [analysis, linear-algebra]
-references: [kobayashi-curves, docarmo-curves]
+references: [kobayashi-curves, docarmo-curves, pressley-dg]
 chapters:
   - id: plane-curves
     title: 平面曲線
-    sections: [正則曲線と弧長, 曲率, 回転数, 等周不等式]
+    prerequisites: [analysis/vector-calculus]
+    sections: [正則曲線と弧長パラメータ, 符号付き曲率と Frenet 標構, 曲率による平面曲線の決定, 回転数と Hopf の接線回転定理, 凸曲線と四頂点定理, 等周不等式]
   - id: space-curves
     title: 空間曲線
-    sections: [曲率と捩率, Frenet–Serret の公式, 曲線論の基本定理]
+    sections: [曲率と捩率, Frenet–Serret の公式, 曲線論の基本定理, 局所標準形, 螺旋と一般螺旋（Lancret の定理）, 球面曲線と接触球]
+  - id: global-curves
+    title: 曲線の大域的性質
+    sections: [Cauchy–Crofton の公式と積分幾何, 空間閉曲線の全曲率と Fenchel の定理, Fáry–Milnor の定理, 主法線の球面像と Jacobi の定理, 定幅曲線と Barbier の定理]
   - id: surfaces
-    title: 曲面と第一基本形式
-    sections: [正則曲面, 接平面, 第一基本形式, 面積]
+    title: 正則曲面と第一基本形式
+    prerequisites: [analysis/implicit-function]
+    sections: [正則曲面と局所パラメータ表示, 正則値の逆像としての曲面, パラメータ変換と曲面上の可微分関数, 接平面と写像の微分, 第一基本形式, 面積と面積要素, 向き付け可能性]
   - id: curvature
-    title: 第二基本形式と曲率
-    sections: [Gauss 写像, 第二基本形式, 主曲率, Gauss 曲率と平均曲率]
+    title: Gauss 写像と第二基本形式
+    prerequisites: [linear-algebra/spectral-theorem]
+    sections: [Gauss 写像と形作用素, 第二基本形式と法曲率, Meusnier の定理と Euler の公式, 主曲率と主方向, Gauss 曲率と平均曲率, 局所座標による曲率の計算, 臍点・曲率線・漸近線]
+  - id: special-surfaces
+    title: 回転面・線織面・極小曲面
+    sections: [回転面とその曲率, 線織面と可展面, 極小曲面と面積の第一変分, 極小曲面の例（懸垂面・螺旋面・Enneper 曲面）, 等温座標と Weierstrass 表現, 平行曲面と管状曲面]
   - id: theorema-egregium
-    title: Gauss の驚異の定理
-    sections: [Christoffel 記号, Gauss と Codazzi–Mainardi の方程式, 驚異の定理, 曲面論の基本定理]
+    title: Gauss の驚異の定理と曲面論の基本定理
+    sections: [等長写像と共形写像, Christoffel 記号, Gauss 方程式と Codazzi–Mainardi 方程式, Gauss の驚異の定理, 曲面論の基本定理（Bonnet の定理）, 等温座標と直交座標による Gauss 曲率の公式]
   - id: geodesics
-    title: 測地線
-    sections: [共変微分, 測地的曲率, 測地線の方程式, 指数写像]
+    title: 共変微分と測地線
+    prerequisites: [ode/existence-uniqueness]
+    sections: [ベクトル場の共変微分, 平行移動, 測地的曲率と Liouville の公式, 測地線の方程式, 回転面の測地線と Clairaut の関係式, 指数写像と測地極座標, 測地線の局所極小性と凸近傍]
   - id: gauss-bonnet
     title: Gauss–Bonnet の定理
-    sections: [局所 Gauss–Bonnet の定理, Euler 標数, 大域 Gauss–Bonnet の定理]
+    sections: [区分的に滑らかな単純閉曲線と回転数定理, 局所 Gauss–Bonnet の定理, 三角形分割と Euler 標数, 大域 Gauss–Bonnet の定理, 測地三角形の内角和と全曲率, ベクトル場の指数と曲面上の Poincaré–Hopf の定理]
+  - id: global-surfaces
+    title: 曲面の大域的微分幾何
+    prerequisites: [algebraic-topology/covering-spaces]
+    sections: [球面の剛性定理（Liebmann の定理）, 完備曲面と Hopf–Rinow の定理, 弧長の第一変分と第二変分, Jacobi 場と共役点, Bonnet の定理, Hadamard の定理, Hilbert の定理（双曲平面の非埋め込み）]
+  - id: abstract-surfaces
+    title: 抽象曲面と双曲平面
+    sections: [抽象曲面と Riemann 計量, 双曲平面の上半平面模型と Poincaré 円板模型, 双曲平面の等長変換群と測地線, 定曲率曲面の局所等長性（Minding の定理）, 双曲三角形と Gauss–Bonnet, 閉曲面の分類と一様化の概観]

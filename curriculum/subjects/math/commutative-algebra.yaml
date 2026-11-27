@@ -6,34 +6,72 @@ area: math
 level: graduate
 order: 190
 description: >-
-  素イデアルと準素分解、局所化、Noether 環と Artin 環、整拡大と Going-up、Hilbert の零点定理、次元論、離散付値環と Dedekind 整域、完備化を扱う。
+  素イデアルとスペクトル、局所化、準素分解、Noether 環と Artin 環、整拡大、Hilbert の零点定理、付値環と Dedekind 整域、
+  完備化、次数付き環と Hilbert 関数、次元論、平坦性、深さと Cohen–Macaulay 環、正則局所環、正規環と Krull 整域、
+  入射加群と Gorenstein 環、微分加群と平滑性、Gröbner 基底までを扱い、代数幾何学と代数的整数論の基礎を与える。
 prerequisites: [rings-modules]
-references: [atiyah-macdonald, matsumura-crt]
+conventions:
+  - 環は単位元 1 をもつ可換環とし、環準同型は 1 を 1 に写すものとする。
+  - 局所環 (A, 𝔪, k) は唯一の極大イデアル 𝔪 と剰余体 k = A/𝔪 をもつ環を表す（Noether 性は仮定しない）。
+references: [atiyah-macdonald, matsumura-crt, eisenbud-ca, nagata-comm]
 chapters:
   - id: prime-ideals
     title: 素イデアルとスペクトル
-    sections: [根基とニルラジカル, Jacobson 根基, 素スペクトルと Zariski 位相]
+    prerequisites: [rings-modules/rings]
+    sections: [イデアルの演算と商環, 極大イデアルの存在と素イデアル, ニルラジカルと Jacobson 根基, 中山の補題, イデアルの拡大と縮約, 素スペクトルと Zariski 位相, Spec の関手性と準コンパクト性]
   - id: localization
     title: 局所化
-    sections: [環と加群の局所化, 局所的性質, 局所化とイデアルの対応]
+    prerequisites: [rings-modules/chinese-remainder]
+    sections: [環の局所化と普遍性, 加群の局所化と完全性, 局所的性質, 局所化における素イデアルの対応, 局所環と剰余体, 主開集合 D(f) と局所化 A_f]
   - id: primary-decomposition
     title: 準素分解
-    sections: [準素イデアル, Lasker–Noether の定理, 随伴素イデアル]
+    sections: [準素イデアル, Noether 環における準素分解の存在, 第一一意性定理と随伴素イデアル, 第二一意性定理と孤立成分, 加群の随伴素イデアル Ass(M), 支持集合 Supp(M) と Ass(M) の関係, 局所化と準素分解]
   - id: noetherian-artinian
     title: Noether 環と Artin 環
-    sections: [鎖条件, Noether 環, Artin 環の構造, Krull の交叉定理]
+    prerequisites: [rings-modules/noetherian]
+    sections: [鎖条件と組成列, 加群の長さ, Noether 環と Hilbert の基底定理, Noether 環の極小素イデアル, Artin 環の構造定理, Artin 局所環]
   - id: integral-extensions
     title: 整拡大
-    sections: [整元と整閉包, Lying-over と Going-up, Going-down, Noether 正規化]
+    sections: [整元と整閉包, 整拡大と有限性, Lying-over と Going-up, 正規整域と Going-down, Noether 正規化定理, 有限生成代数の整閉包の有限性]
   - id: nullstellensatz
     title: Hilbert の零点定理
-    sections: [弱形, 強形, 代数的集合との対応]
-  - id: dimension
-    title: 次元論
-    sections: [Krull 次元, 高さと単項イデアル定理, 正則局所環]
+    sections: [Zariski の補題, 弱零点定理, 強零点定理と Rabinowitsch の方法, Jacobson 環, 有限生成代数の極大イデアル, 代数的集合とイデアルの対応]
+  - id: valuation-rings
+    title: 付値環
+    sections: [付値環の定義と同値条件, 付値と値群, 付値環の延長定理（Chevalley）, 整閉包の付値環による特徴付け, 付値環の次元とランク, 例：関数体の付値]
   - id: dedekind
     title: 離散付値環と Dedekind 整域
-    sections: [付値環, 離散付値環, Dedekind 整域, 分数イデアルとイデアル類群]
+    sections: [離散付値環の特徴付け, Dedekind 整域の同値条件, イデアルの素因数分解の一意性, 分数イデアルと可逆イデアル, イデアル類群と Picard 群, Dedekind 整域上の有限生成加群, 有限次分離拡大における整閉包]
   - id: completion
     title: 完備化
-    sections: [I 進位相, 完備化, Artin–Rees の補題, Hensel の補題]
+    sections: [位相環と I 進位相, 逆極限と完備化, Artin–Rees の補題, 完備化の完全性と平坦性, Krull の交叉定理, Hensel の補題, Cohen の構造定理]
+  - id: graded-rings
+    title: 次数付き環と Hilbert 関数
+    sections: [次数付き環と次数付き加群, 随伴次数付き環, Hilbert–Serre の定理, Hilbert 多項式, Hilbert–Samuel 関数, 重複度]
+  - id: dimension
+    title: 次元論
+    sections: [Krull 次元と高さ, Krull の単項イデアル定理と高さ定理, 次元定理 dim = d = δ, 巴系とパラメータイデアル, 有限生成代数の次元と超越次数, 鎖状環と次元公式, 平坦拡大と次元]
+  - id: flatness
+    title: 平坦性
+    prerequisites: [category-homological/ext-tor]
+    sections: [平坦加群と忠実平坦性, Tor による平坦性の判定, 平坦性の局所的性質, 平坦射と Going-down, 局所平坦性判定法, 忠実平坦降下, 一般自由性定理]
+  - id: depth-cohen-macaulay
+    title: 深さと Cohen–Macaulay 環
+    prerequisites: [category-homological/ext-tor]
+    sections: [正則列, Koszul 複体, 深さと Ext による特徴付け, Auslander–Buchsbaum の公式, Cohen–Macaulay 環と加群, 非混合性定理, 完全交叉]
+  - id: regular-local-rings
+    title: 正則局所環
+    sections: [正則局所環とその基本性質, 正則局所環は整域であること, Serre の定理（大域次元による特徴付け）, 正則性の局所化, 正則局所環は UFD であること, Jacobian 判定法]
+  - id: normal-rings
+    title: 正規環と Krull 整域
+    sections: [正規環, Serre の正規性判定法（R1 と S2）, Krull 整域, 因子類群, UFD と因子類群, 正規化の有限性と永田環]
+  - id: gorenstein
+    title: 入射加群と Gorenstein 環
+    prerequisites: [category-homological/derived-functors]
+    sections: [入射加群と入射包絡, Matlis 双対性, 入射次元, Gorenstein 環, 標準加群, 局所コホモロジー入門と局所双対性]
+  - id: differentials
+    title: 微分加群と平滑性
+    sections: [導分と Kähler 微分加群, 第一基本完全列と第二基本完全列, 体の拡大の微分加群と分離性, 形式的平滑性・不分岐性・エタール性, 平滑代数の構造, 平滑性と正則性の関係]
+  - id: groebner-bases
+    title: Gröbner 基底
+    sections: [単項式順序と割り算アルゴリズム, Gröbner 基底と Buchberger の判定法, Buchberger のアルゴリズム, 消去理論, Hilbert 関数の計算, 自由分解と Hilbert の syzygy 定理]

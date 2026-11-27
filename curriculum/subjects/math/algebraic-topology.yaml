@@ -4,33 +4,60 @@ title: 代数的位相幾何
 title_en: Algebraic Topology
 area: math
 level: undergrad-advanced
-order: 160
+order: 125
 description: >-
-  ホモトピーと基本群、被覆空間、単体複体と特異ホモロジー、Mayer–Vietoris 完全列、CW 複体と胞体ホモロジー、コホモロジーとカップ積、Poincaré 双対性を扱う。
+  ホモトピーと CW 複体、基本群と Seifert–van Kampen の定理、被覆空間の分類、単体的・特異・胞体ホモロジーとその古典的応用（写像度・Jordan–Brouwer の分離定理・領域不変性・Lefschetz の不動点定理）、
+  コホモロジーと普遍係数定理、カップ積と Künneth の公式、Poincaré 双対性、高次ホモトピー群と Hurewicz の定理、ファイブレーション、Eilenberg–MacLane 空間と障害理論、Serre スペクトル系列までを扱う。
 prerequisites: [topology, group-theory]
-references: [hatcher-at, tamura-topology]
+references: [hatcher-at, tamura-topology, bredon-topgeo, may-concise, munkres-eat]
 chapters:
   - id: homotopy
-    title: ホモトピー
-    sections: [ホモトピーとホモトピー同値, 可縮空間, 変位レトラクト]
+    title: ホモトピーと CW 複体
+    prerequisites: [topology/constructions]
+    sections: [ホモトピーとホモトピー同値, 可縮空間と変位レトラクト, 胞体の接着と CW 複体, 空間の基本操作（積・商・懸垂・結・ウェッジ和・スマッシュ積）, ホモトピー拡張性質とその帰結, 写像柱・写像錐と基点付き空間]
   - id: fundamental-group
     title: 基本群
-    sections: [道とループ, 基本群の定義, 円周の基本群, Brouwer の不動点定理（2 次元）, Seifert–van Kampen の定理]
+    prerequisites: [topology/connectedness]
+    sections: [道とそのホモトピー, 基本群の定義と基点の取り替え, 誘導準同型と関手性, 円周の基本群, 代数学の基本定理と 2 次元 Brouwer の不動点定理, 2 次元 Borsuk–Ulam の定理, 積空間の基本群とホモトピー不変性]
+  - id: van-kampen
+    title: Seifert–van Kampen の定理
+    prerequisites: [group-theory/free-groups]
+    sections: [群の自由積と融合積, Seifert–van Kampen の定理とその証明, ウェッジ和とグラフの基本群, 胞体の接着と基本群, 閉曲面と射影平面の基本群, 結び目群と群の表示の位相的実現]
   - id: covering-spaces
     title: 被覆空間
-    sections: [被覆写像, 持ち上げ定理, 普遍被覆, 被覆変換群と Galois 対応]
+    prerequisites: [group-theory/group-actions]
+    sections: [被覆写像と例, 道とホモトピーの持ち上げ, 一般の持ち上げ判定法, 普遍被覆の構成, 被覆空間の分類と部分群との Galois 対応, 被覆変換群と正規被覆, 真性不連続な群作用と商空間, グラフの被覆と Nielsen–Schreier の定理]
   - id: simplicial-homology
     title: 単体的ホモロジー
-    sections: [単体複体, 鎖複体とホモロジー, 計算例, Euler 標数]
+    prerequisites: [rings-modules/pid-modules]
+    sections: [Δ 複体と単体複体, 鎖複体とホモロジー群, 計算例（球面・トーラス・射影平面・Klein の壺）, 有限生成 Abel 群とホモロジーの階数・ねじれ, Euler 標数と Euler–Poincaré の公式, 単体近似定理]
   - id: singular-homology
     title: 特異ホモロジー
-    sections: [特異鎖複体, ホモトピー不変性, 相対ホモロジーと長完全列, 切除定理, Mayer–Vietoris 完全列]
+    sections: [特異鎖複体と特異ホモロジー, 被約ホモロジーと 0 次ホモロジー, ホモトピー不変性, 鎖複体の短完全列とジグザグ補題, 相対ホモロジーと対の長完全列, 切除定理と重心細分, Mayer–Vietoris 完全列, 単体的ホモロジーと特異ホモロジーの同値性]
+  - id: homology-applications
+    title: 写像度とホモロジーの古典的応用
+    sections: [球面の写像度とその性質, 毛玉の定理と球面上のベクトル場, Brouwer の不動点定理と非レトラクト定理, Jordan–Brouwer の分離定理, 領域不変性定理, 奇写像の写像度と Borsuk–Ulam の定理, 1 次ホモロジーと基本群の可換化]
   - id: cw-complexes
     title: CW 複体と胞体ホモロジー
-    sections: [CW 複体, 胞体ホモロジー, 写像度, 応用]
+    sections: [CW 複体の位相と部分複体, 胞体鎖複体と胞体ホモロジー, 胞体境界公式と局所写像度, 計算例（実・複素射影空間とレンズ空間・閉曲面）, 係数付きホモロジー, Euler 標数の胞体的計算, Eilenberg–Steenrod の公理とホモロジー理論の一意性, Lefschetz の不動点定理]
   - id: cohomology
     title: コホモロジー
-    sections: [コホモロジー群, 普遍係数定理, カップ積とコホモロジー環, Künneth の公式]
+    sections: [コチェイン複体とコホモロジー群, Hom と Ext, コホモロジーの普遍係数定理, 相対コホモロジー・長完全列・Mayer–Vietoris 完全列, 胞体コホモロジー, Tor とホモロジーの普遍係数定理]
+  - id: cup-product
+    title: カップ積とコホモロジー環
+    sections: [カップ積の定義と基本性質, 次数付き可換性, 射影空間と閉曲面のコホモロジー環, Künneth の公式, 多項式コホモロジー環を持つ空間, H 空間と Hopf 代数, Lie 群 U(n) と SO(n) のコホモロジー]
   - id: poincare-duality
     title: Poincaré 双対性
-    sections: [向き付けと基本類, キャップ積, Poincaré 双対定理, 応用]
+    sections: [位相多様体の局所向きと向き付け可能性, 基本類の存在, キャップ積, Poincaré 双対定理, カップ積の非退化性と交叉形式, 符号数と応用, Alexander 双対性と Lefschetz 双対性]
+  - id: homotopy-groups
+    title: 高次ホモトピー群
+    sections: [ホモトピー群の定義と可換性, 相対ホモトピー群と対の長完全列, 胞体近似定理と CW 近似, Whitehead の定理, ホモトピー切除定理と Freudenthal の懸垂定理, Hurewicz の定理, 球面のホモトピー群の計算例と安定ホモトピー群]
+  - id: fibrations
+    title: ファイバー束とファイブレーション
+    sections: [ファイバー束と局所自明性, Hopf ファイブレーション, ホモトピー持ち上げ性質と Serre ファイブレーション, ファイブレーションのホモトピー長完全列, 道空間ファイブレーションとループ空間, 主束と分類空間の概観]
+  - id: eilenberg-maclane
+    title: Eilenberg–MacLane 空間と障害理論
+    sections: [Eilenberg–MacLane 空間の存在と一意性, 非球面空間と群のコホモロジー, コホモロジーの表現可能性, Postnikov 塔, 障害理論, Steenrod 平方と Adem 関係式, Hopf 不変量と Hopf 不変量 1 問題]
+  - id: spectral-sequences
+    title: Serre スペクトル系列
+    sections: [フィルター付き複体とスペクトル系列, Leray–Serre スペクトル系列, Gysin 完全列と Wang 完全列, ループ空間のホモロジーと乗法構造, Serre 類と一般化された Hurewicz の定理, 球面のホモトピー群の有限性]

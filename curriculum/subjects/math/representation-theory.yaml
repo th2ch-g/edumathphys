@@ -1,0 +1,63 @@
+id: representation-theory
+prefix: rep
+title: 有限群の表現論
+title_en: Representation Theory of Finite Groups
+area: math
+level: undergrad-advanced
+order: 65
+description: >-
+  有限群の複素線形表現の理論。完全可約性と Schur の補題、指標の直交関係と指標表、有限 Abel 群の Fourier 解析、群環の構造、誘導表現と Frobenius の相互律、
+  Clifford 理論と射影表現、Burnside の定理などの群論への応用、実表現と Frobenius–Schur の指示数、対称群の表現と対称関数、
+  Artin・Brauer の誘導定理と有理性、モジュラー表現論入門を扱う。
+prerequisites: [group-theory, linear-algebra, rings-modules]
+references: [serre-linrep, james-liebeck, fulton-harris]
+chapters:
+  - id: basics
+    title: 表現の基礎
+    prerequisites: [group-theory/group-actions, linear-algebra/tensor-products]
+    sections: [群の表現と表現空間, 部分表現と既約表現, 表現の直和・テンソル積・双対表現, 表現の準同型と同値, 置換表現と正則表現, 1 次元表現と交換子群]
+  - id: complete-reducibility
+    title: 完全可約性と Schur の補題
+    sections: [Maschke の定理, 不変内積とユニタリ表現, Schur の補題, 既約分解と等型成分, 群環上の加群としての表現]
+  - id: characters
+    title: 指標と直交関係
+    sections: [指標の定義と基本性質, 類関数と内積, 指標の第一直交関係, 既約性の判定と重複度, 正則表現の分解と次元の二乗和公式, 指標の第二直交関係]
+  - id: character-tables
+    title: 指標表
+    sections: [既約指標は類関数の基底をなす, 既約表現の個数と共役類の個数, 指標表の構成法, 例（巡回群・二面体群・四元数群）, 例（対称群 S₄・交代群 A₄・A₅）, 指標表から読み取れる正規部分群と中心]
+  - id: abelian-fourier
+    title: 有限 Abel 群の双対と Fourier 変換
+    prerequisites: [group-theory/products-abelian]
+    sections: [双対群と双対性, 有限 Fourier 変換と Plancherel の公式, 畳み込みと Fourier 変換, Dirichlet 指標, 高速 Fourier 変換, 非可換群上の Fourier 変換]
+  - id: group-algebra
+    title: 群環の構造
+    prerequisites: [rings-modules/semisimple]
+    sections: [群環の Wedderburn 分解, 群環の中心と中心的冪等元, 等型成分への射影公式, 代数的整数と指標値の整数性, 既約表現の次元は群の位数を割り切る]
+  - id: induced
+    title: 誘導表現
+    sections: [誘導表現の定義と構成, Frobenius の相互律, 誘導指標の公式, Mackey の分解公式と既約性判定, 正規部分群への制限と Clifford の定理, 半直積の表現と Wigner–Mackey の小群の方法]
+  - id: projective
+    title: 射影表現
+    sections: [射影表現と 2-コサイクル, Schur 乗法因子, 中心拡大と表現の持ち上げ, 二面体群と交代群の射影表現, Clifford 理論における射影表現]
+  - id: applications-groups
+    title: 群論への応用
+    prerequisites: [group-theory/solvable-nilpotent]
+    sections: [Burnside の pᵃqᵇ 定理, Frobenius 群と Frobenius 核の存在, 指標による正規部分群の決定, 単項表現と超可解群, 単純群の判定への応用]
+  - id: real-representations
+    title: 実表現と四元数型表現
+    sections: [実型・複素型・四元数型, Frobenius–Schur の指示数, 実表現と実指標, 対称 2 階テンソルと交代 2 階テンソルの指標, 例（四元数群と二面体群）]
+  - id: symmetric-group
+    title: 対称群の表現
+    prerequisites: [group-theory/symmetric-groups]
+    sections: [分割と Young 図形, Young 盤と Young 対称子, Specht 加群, 既約表現の分類, 鉤長公式, Frobenius の指標公式, 分岐則と Young 格子]
+  - id: symmetric-functions
+    title: 対称関数と Schur–Weyl の双対性
+    sections: [対称関数環とその基底, Schur 関数, Frobenius 特性写像, Littlewood–Richardson 規則, 一般線形群の多項式表現, Schur–Weyl の双対性]
+  - id: induction-theorems
+    title: Artin・Brauer の誘導定理と有理性
+    prerequisites: [fields-galois/cyclotomic]
+    sections: [Artin の誘導定理, 基本群と Brauer の誘導定理, Brauer の定理の応用（分裂体の存在）, 表現の実現体と指標体, Schur 指数]
+  - id: modular
+    title: モジュラー表現論入門
+    prerequisites: [rings-modules/composition-series, rings-modules/projective-injective]
+    sections: [正標数の表現と Maschke の定理の破綻, 直既約射影加群と射影被覆, Brauer 指標, 分解行列と Cartan 行列, ブロックと不足群, 例（巡回群と S₃ の法 2・法 3 表現）]

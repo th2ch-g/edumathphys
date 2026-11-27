@@ -6,31 +6,79 @@ area: physics
 level: undergrad-advanced
 order: 90
 description: >-
-  物理学で頻出する数学的手法。曲線座標とテンソル、複素積分の応用、Fourier・Laplace 変換、特殊関数（Legendre・Bessel・Hermite など）、Green 関数法、変分法、群論の物理への応用を扱う。
+  物理学で頻出する数学的手法。曲線座標とテンソル・微分形式、複素積分の応用と漸近展開、Fourier・Laplace 変換と超関数、常微分方程式の級数解法、
+  特殊関数（ガンマ関数・直交多項式・Legendre・Bessel・超幾何関数）、Sturm–Liouville 理論、偏微分方程式の解法、Green 関数、積分方程式、変分法、
+  有限群・連続群の表現論の物理への応用を扱う。
 prerequisites: [complex-analysis, ode, linear-algebra]
-references: [arfken-math, morse-feshbach, hassani-math]
+conventions:
+  - 特殊関数の定義と規格化は DLMF（NIST Digital Library of Mathematical Functions）に従う。異なる流儀（Condon–Shortley 位相など）を用いる場合は明記する。
+  - Fourier 変換は f̂(k) = ∫ f(x) e^{−ikx} dx、逆変換は f(x) = (1/2π) ∫ f̂(k) e^{ikx} dk とする。
+references: [arfken-math, riley-hobson-bence, hassani-math, morse-feshbach, courant-hilbert, stone-goldbart, terasawa-math, tung-group, nakahara-gtp]
 chapters:
   - id: curvilinear-tensors
     title: 曲線座標とテンソル
-    sections: [直交曲線座標, 勾配・発散・回転・Laplacian の曲線座標表示, テンソルと添字記法, Levi-Civita 記号]
+    prerequisites: [analysis/vector-calculus, linear-algebra/tensor-products]
+    sections: [直交曲線座標と尺度因子, 勾配・発散・回転・Laplacian の曲線座標表示, 一般曲線座標と計量テンソル, テンソルの変換則と添字記法, Christoffel 記号と共変微分, Levi-Civita 記号と ε–δ 恒等式, 擬テンソルとテンソル密度]
+  - id: differential-forms-physics
+    title: 微分形式と物理
+    prerequisites: [manifolds/differential-forms]
+    sections: [外積代数と微分形式, 外微分と Poincaré の補題, Hodge 双対と余微分・Laplacian, 一般化された Stokes の定理, ベクトル解析の公式の微分形式表示, Maxwell 方程式の微分形式表示, 熱力学と微分形式（Carathéodory の定理）]
   - id: complex-methods
     title: 複素積分の応用
-    sections: [留数による定積分, 分岐切断と多価関数, 鞍点法, 分散関係と Kramers–Kronig の関係]
+    prerequisites: [complex-analysis/laurent-residues]
+    sections: [留数による定積分（三角関数・有理関数・Fourier 型積分）, 主値積分と Sokhotski–Plemelj の公式, 分岐切断と多価関数の積分, 解析接続と Mittag-Leffler 展開, 分散関係と Kramers–Kronig の関係, 等角写像と 2 次元ポテンシャル問題]
+  - id: asymptotics
+    title: 漸近展開と級数
+    sections: [漸近級数の定義と性質, Laplace の方法と Stirling の公式, Watson の補題, 停留位相法, 鞍点法（最急降下法）, Euler–Maclaurin の公式と Bernoulli 数, 発散級数の和と Borel 和]
   - id: integral-transforms
     title: 積分変換
-    sections: [Fourier 変換の応用, Laplace 変換, デルタ関数と超関数]
+    prerequisites: [fourier-analysis/fourier-transform]
+    sections: [Fourier 級数と Gibbs 現象, Fourier 変換の性質と畳み込み, Parseval–Plancherel の等式, Laplace 変換と Bromwich 積分, Laplace 変換による常微分方程式の解法, Mellin 変換と Hankel 変換, 離散 Fourier 変換と標本化定理]
+  - id: distributions
+    title: デルタ関数と超関数
+    prerequisites: [fourier-analysis/distributions, fourier-analysis/tempered-distributions]
+    sections: [デルタ関数の物理的導入と近似関数列, 試験関数と超関数, 超関数の微分と階段関数, 緩増加超関数の Fourier 変換, 主値と有限部分, 多次元のデルタ関数と座標変換, 超関数としての Green 関数]
+  - id: ode-series
+    title: 常微分方程式の級数解法
+    prerequisites: [ode/series-solutions]
+    sections: [正則点と冪級数解, 確定特異点と Frobenius の方法, 決定方程式の根が整数差の場合と第 2 解, Fuchs 型方程式と Riemann の P 記号, 不確定特異点と漸近解, Wronskian と Abel の公式]
   - id: special-functions
-    title: 特殊関数
-    sections: [ガンマ関数, Legendre 多項式と陪 Legendre 関数, 球面調和関数, Bessel 関数, Hermite・Laguerre 多項式, 超幾何関数]
+    title: ガンマ関数と直交多項式
+    sections: [ガンマ関数とベータ関数, ディガンマ関数と Riemann ゼータ関数, 直交多項式の一般論（三項漸化式と零点）, 母関数と Rodrigues の公式, Hermite 多項式, Laguerre 多項式と陪 Laguerre 多項式, Chebyshev 多項式と Gauss 求積]
+  - id: legendre-harmonics
+    title: Legendre 関数と球面調和関数
+    sections: [Legendre 方程式と Legendre 多項式, 母関数と多重極展開, 陪 Legendre 関数, 球面調和関数とその完全性, 球面調和関数の加法定理, 第 2 種 Legendre 関数, 球座標での Laplace 方程式の解]
+  - id: bessel-functions
+    title: Bessel 関数
+    sections: [Bessel 方程式と第 1 種・第 2 種 Bessel 関数, 母関数・漸化式と積分表示, Hankel 関数と変形 Bessel 関数, 球 Bessel 関数, 漸近形と零点, Fourier–Bessel 展開と Hankel 変換]
+  - id: hypergeometric
+    title: 超幾何関数とその他の特殊関数
+    prerequisites: [ode/complex-domain]
+    sections: [Gauss の超幾何関数と超幾何級数, 超幾何関数の接続公式, 合流型超幾何関数（Kummer 関数）, Whittaker 関数と放物柱関数, Airy 関数, 楕円積分と Jacobi の楕円関数, Mathieu 関数]
   - id: sturm-liouville
     title: Sturm–Liouville 理論と固有関数展開
-    sections: [自己共役微分作用素, 直交多項式, 完全性と固有関数展開]
+    prerequisites: [ode/boundary-value]
+    sections: [自己共役微分作用素と境界条件, 固有値の実数性と固有関数の直交性, 振動定理と比較定理, 完全性と固有関数展開, Rayleigh 商と固有値の変分特性付け, 特異 Sturm–Liouville 問題と連続スペクトル]
+  - id: pde-methods
+    title: 偏微分方程式の解法
+    sections: [2 階線形偏微分方程式の分類と境界条件, 変数分離法（直交座標・円筒座標・球座標）, 固有関数展開による非斉次問題, 積分変換による解法, 特性曲線法と 1 階偏微分方程式, Helmholtz 方程式と散乱問題]
   - id: green-functions
     title: Green 関数
-    sections: [常微分方程式の Green 関数, Poisson 方程式の Green 関数, 波動方程式の遅延 Green 関数, 拡散方程式の Green 関数]
+    prerequisites: [pde/potential-theory]
+    sections: [常微分方程式の Green 関数の構成, 固有関数展開による Green 関数, Poisson 方程式の Green 関数と鏡像法, Helmholtz 方程式の Green 関数と放射条件, 波動方程式の遅延・先進 Green 関数, 拡散方程式の Green 関数, Green 関数による摂動展開と Dyson 方程式]
+  - id: integral-equations
+    title: 積分方程式
+    prerequisites: [functional-analysis/compact-operators]
+    sections: [Fredholm 型と Volterra 型の積分方程式, 分離核の積分方程式, Neumann 級数, Fredholm の交代定理, Hilbert–Schmidt 理論, Abel の積分方程式, 微分方程式から積分方程式への変換]
   - id: variational-methods
     title: 変分法
-    sections: [Euler–Lagrange 方程式の一般化, 拘束付き変分, Rayleigh–Ritz 法]
+    prerequisites: [analytical-mechanics/calculus-of-variations]
+    sections: [多重積分の変分問題, 高階導関数を含む変分問題, 等周問題と拘束付き変分, 自然境界条件と横断条件, 第 2 変分と Legendre 条件, 固有値問題の変分原理と Rayleigh–Ritz 法]
   - id: group-theory-physics
-    title: 物理における群論
-    sections: [対称性と群, 表現と既約分解, 点群と分子振動, 回転群と SU(2), Wigner–Eckart の定理]
+    title: 有限群の表現と物理
+    prerequisites: [representation-theory/characters]
+    sections: [対称性と群, 表現と指標による既約分解, 点群と結晶点群, 分子振動の基準モードの分類, 対称性による選択則と行列要素, 結晶場分裂と縮退, 時間反転対称性と Kramers 縮退]
+  - id: lie-groups-physics
+    title: 連続群と物理
+    prerequisites: [lie-groups/su2-so3]
+    sections: [Lie 群と Lie 代数の入門, 回転群 SO(3) と SU(2), SO(3) の既約表現と球面調和関数, 表現のテンソル積と Clebsch–Gordan 係数, テンソル演算子と Wigner–Eckart の定理, SU(3) と Young 図形, Lorentz 群とその有限次元表現]

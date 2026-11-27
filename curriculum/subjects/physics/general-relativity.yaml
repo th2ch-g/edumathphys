@@ -6,33 +6,76 @@ area: physics
 level: graduate
 order: 120
 description: >-
-  等価原理から出発し、曲がった時空の微分幾何、Einstein 方程式、Schwarzschild 解と古典的検証、ブラックホール、重力波、相対論的宇宙論までを扱う。
+  等価原理から出発し、曲がった時空の微分幾何（接続・測地線・曲率・Killing ベクトル）、Einstein 方程式と作用原理・3+1 分解、Schwarzschild 解と
+  太陽系での検証、相対論的星、ブラックホール（Schwarzschild・Reissner–Nordström・Kerr）、重力波の伝播と発生、相対論的宇宙論、因果構造と特異点定理、
+  漸近的平坦性と質量、ブラックホール熱力学、曲がった時空の場の量子論入門までを扱う。
 prerequisites: [special-relativity, manifolds, electromagnetism]
 conventions:
   - 計量の符号は (−,+,+,+)、曲率の符号は Misner–Thorne–Wheeler の規約に従う。特に断らない限り c = 1 とし、G は明示する。
-references: [carroll-gr, schutz-gr, wald-gr, mtw-gravitation]
+references: [carroll-gr, schutz-gr, wald-gr, mtw-gravitation, weinberg-gc, hawking-ellis, poisson-toolkit, landau-fields, sudo-gr]
 chapters:
   - id: equivalence-principle
     title: 等価原理と重力
-    sections: [弱い等価原理と強い等価原理, 局所慣性系, 重力赤方偏移]
+    prerequisites: [special-relativity/accelerated-frames]
+    sections: [Newton 重力と特殊相対論の矛盾, 弱い等価原理と Eötvös 型実験, Einstein の等価原理と強い等価原理, 局所慣性系, 重力赤方偏移と Pound–Rebka の実験, 一般共変性の原理, 重力の計量理論]
   - id: manifolds-tensors
     title: 時空の幾何学
-    sections: [多様体とテンソル場, 計量, 共変微分と接続, 平行移動と測地線]
+    prerequisites: [manifolds/tangent-spaces, special-relativity/four-vectors]
+    sections: [多様体と座標変換, 接ベクトルと余接ベクトル, テンソル場と抽象添字記法, 計量と Lorentz 署名, 写像の引き戻しと押し出し, 微分形式と体積要素]
+  - id: connections-geodesics
+    title: 共変微分と測地線
+    prerequisites: [riemannian-geometry/connections]
+    sections: [共変微分と接続係数, Levi-Civita 接続と Christoffel 記号, 平行移動, 測地線方程式と変分原理, 固有時の極値性と自由落下, Riemann 正規座標, Fermi–Walker 輸送と加速度観測者]
   - id: curvature
     title: 曲率
-    sections: [Riemann テンソル, Bianchi 恒等式, Ricci テンソルと Einstein テンソル, 測地線偏差]
+    sections: [Riemann テンソルの定義と幾何学的意味, Riemann テンソルの対称性と独立成分の数, Bianchi 恒等式, Ricci テンソル・スカラー曲率・Einstein テンソル, Weyl テンソルと共形変換, 測地線偏差と潮汐力, 正規直交枠と Cartan の構造方程式]
+  - id: symmetries-killing
+    title: 対称性と Killing ベクトル
+    sections: [Lie 微分, Killing ベクトルと等長変換, Killing ベクトルと保存量, Killing テンソルと隠れた対称性, 最大対称空間, 定常時空と静的時空]
   - id: einstein-equations
     title: Einstein 方程式
-    sections: [エネルギー運動量テンソル, Einstein 方程式の導出, Einstein–Hilbert 作用, Newton 極限]
+    prerequisites: [special-relativity/continuous-media, electromagnetism/relativistic-em]
+    sections: [エネルギー運動量テンソル（塵・完全流体・電磁場）, 曲がった時空での物理法則と最小結合, Einstein 方程式の導出, 宇宙項, Newton 極限, エネルギー条件, Einstein 方程式の自由度とゲージ]
   - id: schwarzschild
     title: Schwarzschild 解
-    sections: [球対称真空解, Birkhoff の定理, 測地線と軌道, 近日点移動と光の湾曲, Shapiro 遅延]
+    sections: [静的球対称計量の一般形, Schwarzschild 解の導出, Birkhoff の定理, Schwarzschild 時空の測地線と有効ポテンシャル, 最内安定円軌道, 光子球と光線の軌道]
+  - id: solar-system-tests
+    title: 一般相対論の検証
+    sections: [水星の近日点移動, 光の湾曲と重力レンズ, Shapiro 遅延, 測地歳差と Lense–Thirring 効果, 重力赤方偏移と GPS, パラメータ化 post-Newton 形式]
+  - id: relativistic-stars
+    title: 相対論的星
+    prerequisites: [statistical-mechanics/fermi-gas]
+    sections: [静的球対称な完全流体, Tolman–Oppenheimer–Volkoff 方程式, 一様密度星と Buchdahl の限界, 白色矮星と Chandrasekhar 質量, 中性子星と質量の上限, 重力崩壊と Oppenheimer–Snyder 解]
   - id: black-holes
-    title: ブラックホール
-    sections: [事象の地平線と Kruskal 座標, 重力崩壊, Reissner–Nordström 解と Kerr 解, ブラックホール熱力学と Hawking 放射の概観]
+    title: Schwarzschild ブラックホール
+    sections: [Schwarzschild 半径と座標特異点, Eddington–Finkelstein 座標と事象の地平線, Kruskal–Szekeres 座標と最大拡張, 共形図（Penrose 図）, Einstein–Rosen 橋とワームホール, 地平線への落下と潮汐効果]
+  - id: charged-rotating-bh
+    title: 荷電ブラックホールと回転ブラックホール
+    sections: [Reissner–Nordström 解と内部地平線, Kerr 解とその構造, エルゴ領域と Penrose 過程, Kerr 時空の測地線と Carter 定数, Kerr–Newman 解, 無毛定理]
   - id: gravitational-waves
-    title: 重力波
-    sections: [線形化重力, ゲージの選択, 重力波の偏光, 四重極公式, 連星からの重力波と検出]
+    title: 線形化重力と重力波
+    sections: [線形化 Einstein 方程式, ゲージ変換と Lorenz ゲージ, TT ゲージと重力波の偏光, 重力波が自由粒子に及ぼす効果, 重力波のエネルギー運動量（Isaacson テンソル）, 曲がった背景時空上の摂動]
+  - id: gw-sources
+    title: 重力波の発生と観測
+    prerequisites: [electromagnetism/radiation]
+    sections: [四重極公式の導出, 連星の重力波放射と軌道の減衰, Hulse–Taylor 連星パルサー, チャープ信号と波形, レーザー干渉計型検出器と雑音, ブラックホール連星の合体とリングダウン]
   - id: cosmology
     title: 相対論的宇宙論
-    sections: [宇宙原理と Robertson–Walker 計量, Friedmann 方程式, 宇宙の膨張と赤方偏移, 宇宙モデル]
+    sections: [宇宙原理と Robertson–Walker 計量, Friedmann 方程式, 宇宙論的赤方偏移と Hubble の法則, 宇宙論における距離（光度距離・角径距離）, 物質・放射・宇宙項が支配する宇宙モデル, de Sitter 時空と反 de Sitter 時空, 粒子の地平線と事象の地平線]
+  - id: action-formulation
+    title: 作用原理と Hamilton 形式
+    prerequisites: [analytical-mechanics/field-mechanics]
+    sections: [超曲面と誘導計量・外的曲率, Gauss–Codazzi 方程式, Einstein–Hilbert 作用と変分原理, Gibbons–Hawking–York 境界項, Palatini 形式, 3+1 分解と ADM 形式, 拘束方程式と初期値問題]
+  - id: causal-structure
+    title: 因果構造と特異点定理
+    sections: [時間的曲線・因果的曲線と因果関係, 大域的双曲性と Cauchy 面, 測地線の束と Raychaudhuri 方程式, 共役点と焦点, Penrose の特異点定理, Hawking の特異点定理, 宇宙検閲仮説]
+  - id: asymptotic-flatness
+    title: 漸近的平坦性と質量
+    sections: [共形コンパクト化と無限遠, 漸近的平坦な時空, Komar 積分, ADM 質量と Bondi 質量, 正エネルギー定理, 漸近対称性と BMS 群の概観]
+  - id: bh-thermodynamics
+    title: ブラックホール熱力学
+    sections: [Killing 地平線と表面重力, Hawking の面積定理, ブラックホール力学の 4 法則, Bekenstein–Hawking エントロピー, Hawking 温度と熱力学との対応, 情報喪失問題の概観]
+  - id: qft-curved
+    title: 曲がった時空の場の量子論入門
+    prerequisites: [advanced-quantum-mechanics/second-quantization]
+    sections: [曲がった時空のスカラー場とモード展開, Bogoliubov 変換と粒子の定義, Unruh 効果, Hawking 放射の導出, 膨張宇宙での粒子生成, 発散の処理とエネルギー運動量テンソルのくりこみの概観]

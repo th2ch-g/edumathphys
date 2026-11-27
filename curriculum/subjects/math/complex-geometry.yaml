@@ -1,0 +1,69 @@
+id: complex-geometry
+prefix: cg
+title: 複素幾何
+title_en: Complex Geometry
+area: math
+level: graduate
+order: 215
+description: >-
+  Riemann 面の理論（解析接続と被覆、微分形式と Dolbeault の補題、層係数コホモロジー、Riemann–Roch の定理と Serre 双対性、Abel–Jacobi の定理、一様化定理）から始め、
+  多変数関数論の基礎、複素多様体、正則ベクトル束と因子・直線束、層係数コホモロジー、Hermite 束と Chern 接続、Kähler 多様体、
+  コンパクト Kähler 多様体の Hodge 理論と Lefschetz の定理、Kodaira の消滅定理と埋め込み定理、複素構造の変形と Calabi–Yau 多様体までを扱う。
+prerequisites: [complex-analysis, manifolds, differential-topology, category-homological]
+references: [forster-riemann, huybrechts-cg, griffiths-harris, wells-complex, kodaira-complex]
+chapters:
+  - id: riemann-surfaces
+    title: Riemann 面の間の正則写像
+    prerequisites: [complex-analysis/riemann-surfaces]
+    sections: [正則写像の局所標準形と恒等定理, 有理型関数と Riemann 球面への正則写像, 複素トーラスの間の正則写像, 分岐被覆と写像の次数, Riemann–Hurwitz の公式, 平面代数曲線の Riemann 面と種数公式]
+  - id: analytic-continuation
+    title: 被覆空間と解析接続
+    prerequisites: [algebraic-topology/covering-spaces]
+    sections: [Riemann 面の被覆と持ち上げ, 解析接続と正則関数の芽の層, 芽の層の連結成分としての Riemann 面, 代数関数の Riemann 面の構成, 普遍被覆と被覆変換群]
+  - id: forms-riemann-surfaces
+    title: Riemann 面上の微分形式と Dolbeault の補題
+    sections: [複素構造による微分形式の型分解, 正則 1 形式と有理型微分, 線積分と留数定理, Dolbeault の補題, 調和関数と Weyl の補題]
+  - id: cohomology-riemann-surfaces
+    title: Riemann 面の層係数コホモロジー
+    prerequisites: [category-homological/sheaves]
+    sections: [層と前層, 1 次 Čech コホモロジー, Dolbeault 同型と de Rham 同型, 構造層のコホモロジーの有限次元性, 層の完全列とコホモロジー長完全列]
+  - id: riemann-roch
+    title: Riemann–Roch の定理と Serre 双対性
+    sections: [因子と直線束, 因子に付随する層, Riemann–Roch の定理, Serre 双対性, 種数の諸定義の一致, 応用：種数 0 と種数 1 の Riemann 面の分類, 射影空間への埋め込み]
+  - id: abel-jacobi
+    title: Abel–Jacobi の定理と Weierstrass 点
+    sections: [周期と正規化された正則微分, Riemann の双線形関係式, Abel の定理, Jacobi の逆問題, Jacobi 多様体, Weierstrass 点と超楕円曲線, 楕円曲線と Weierstrass の ℘ 関数]
+  - id: uniformization
+    title: 一様化定理
+    prerequisites: [complex-analysis/harmonic-functions, pde/potential-theory]
+    sections: [Dirichlet 問題と Perron の方法, Green 関数, 単連結 Riemann 面の一様化定理, Riemann 面の分類（楕円型・放物型・双曲型）, Fuchs 群と双曲 Riemann 面]
+  - id: several-variables
+    title: 多変数関数論の基礎
+    sections: [多変数正則関数と Cauchy の積分公式, Hartogs の拡張定理, Weierstrass の予備定理と割り算定理, 正則関数の芽の環の性質, 解析的集合の局所構造, Dolbeault–Grothendieck の補題]
+  - id: complex-manifolds
+    title: 複素多様体
+    sections: [複素多様体の定義と例, 複素射影空間と Grassmann 多様体, 複素トーラス, 概複素構造と可積分性（Newlander–Nirenberg の定理の主張）, 複素部分多様体と解析的部分集合, ブローアップ, 正則写像と有理型関数]
+  - id: holomorphic-bundles
+    title: 正則ベクトル束と直線束
+    sections: [正則ベクトル束と例（接束・標準束）, 因子と直線束, Picard 群, 射影空間上の直線束, 直線束の切断と射影空間への写像, 随伴公式]
+  - id: sheaf-cohomology
+    title: 複素多様体上の層係数コホモロジー
+    prerequisites: [category-homological/sheaves]
+    sections: [連接層の概観, Čech コホモロジーと Dolbeault 同型, 指数完全列と第一 Chern 類, Stein 多様体と Cartan の定理 A・B の主張, Serre 双対性, Hirzebruch–Riemann–Roch の定理の概観]
+  - id: hermitian-bundles
+    title: Hermite 束と Chern 接続
+    prerequisites: [riemannian-geometry/vector-bundle-connections, differential-topology/chern-weil]
+    sections: [Hermite 計量, Chern 接続, 曲率と第一 Chern 類, Chern 類の微分形式による表示, 正直線束, Hermite–Einstein 計量の概観]
+  - id: kahler
+    title: Kähler 多様体
+    sections: [Kähler 計量と Kähler 形式, 例：Fubini–Study 計量, Kähler ポテンシャルと局所的特徴付け, Hermite 線形代数と Lefschetz 作用素, Kähler 恒等式, Kähler 多様体の曲率]
+  - id: hodge-theory
+    title: コンパクト Kähler 多様体の Hodge 理論
+    prerequisites: [riemannian-geometry/hodge-bochner, pde/elliptic-regularity]
+    sections: [Hodge 分解定理, ∂∂̄ 補題, Hodge 対称性と Hodge 数, 強 Lefschetz 定理, Hodge 指数定理, Hodge 構造と Hodge 予想の概観]
+  - id: vanishing-embedding
+    title: Kodaira の消滅定理と埋め込み定理
+    sections: [Bochner–Kodaira–Nakano の公式, Kodaira の消滅定理, Lefschetz の超平面定理, Kodaira の埋め込み定理, Chow の定理と GAGA の概観]
+  - id: deformations
+    title: 複素構造の変形と Calabi–Yau 多様体
+    sections: [複素構造の変形と Kodaira–Spencer 写像, 障害と倉西族の概観, Calabi–Yau 多様体と Calabi 予想, Yau の定理の主張, 例：K3 曲面と五次超曲面]

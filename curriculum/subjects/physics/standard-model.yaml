@@ -6,30 +6,59 @@ area: physics
 level: graduate
 order: 180
 description: >-
-  素粒子の分類と対称性、量子色力学（QCD）、電弱統一理論と Higgs 機構、フレーバー物理と CKM 行列、ニュートリノ振動、標準模型を超える物理の概観を扱う。
+  素粒子の分類と対称性、クォーク模型、弱い相互作用と電弱統一理論（Higgs 機構・精密検証）、電子散乱とハドロンの構造、量子色力学（漸近的自由性・ジェット・パートン分布の発展）、
+  カイラル対称性の破れとカイラル摂動論、フレーバー物理と CKM 行列・CP 対称性の破れ、ニュートリノ振動、標準模型のアノマリー、標準模型を超える物理の概観を扱う。
 prerequisites: [quantum-field-theory, lie-groups]
 conventions:
   - 自然単位系 ℏ = c = 1、計量 (+,−,−,−) を用いる。
-references: [peskin-schroeder, halzen-martin, burgess-moore, schwartz-qft]
+references: [peskin-schroeder, halzen-martin, burgess-moore, schwartz-qft, cheng-li, donoghue-dsm, griffiths-particles, kugo-gauge]
 chapters:
   - id: particles-symmetries
     title: 素粒子と対称性
-    sections: [レプトンとクォーク, アイソスピンと SU(3) フレーバー, クォーク模型]
-  - id: qcd
-    title: 量子色力学
-    sections: [カラー SU(3) ゲージ理論, 漸近的自由性, クォークの閉じ込め, 深非弾性散乱とパートン模型]
+    prerequisites: [lie-groups/highest-weight]
+    sections: [素粒子の分類と基本相互作用, 相対論的運動学と不変質量, 保存量と選択則（バリオン数・レプトン数・ストレンジネス）, アイソスピンと SU(2) 対称性, SU(3) フレーバー対称性と Gell-Mann–Okubo の質量公式, 粒子の崩壊と寿命・崩壊幅]
+  - id: quark-model
+    title: クォーク模型
+    sections: [メソンとバリオンのクォーク構成, スピン・フレーバー波動関数と SU(6), カラー自由度の導入, ハドロンの磁気モーメント, ハドロン質量の超微細分裂, 重いクォークとクォーコニウム]
+  - id: weak-interactions
+    title: 弱い相互作用
+    sections: [β 崩壊と Fermi 理論, パリティの破れと V−A 構造, μ 粒子の崩壊, π 中間子の崩壊とヘリシティ抑制, ニュートリノ–電子散乱, Fermi 理論のユニタリ性の破綻]
   - id: electroweak
     title: 電弱統一理論
-    sections: [弱い相互作用と V−A 構造, SU(2)×U(1) ゲージ理論, Higgs 機構と W・Z ボソンの質量, 中性カレント]
+    prerequisites: [quantum-field-theory/symmetry-breaking]
+    sections: [SU(2)×U(1) ゲージ理論の構造, Higgs 機構と W・Z ボソンの質量, Weinberg 角と中性カレント, フェルミオンの電弱量子数, Higgs 粒子の結合と崩壊, Goldstone ボソン等価定理とユニタリ性]
+  - id: electroweak-phenomenology
+    title: 電弱理論の検証
+    sections: [Z ポールの物理, 前後非対称性と偏極非対称性, W ボソンの生成と崩壊, ρ パラメータと輻射補正, 斜め補正と S・T・U パラメータ, Higgs 粒子の発見と性質の測定]
+  - id: hadron-structure
+    title: 電子散乱とハドロンの構造
+    sections: [電子–核子弾性散乱と Rosenbluth 公式, 電磁形状因子と電荷半径, 深非弾性散乱と構造関数, Bjorken スケーリング, Callan–Gross 関係とクォークのスピン, パートン模型と和則]
+  - id: qcd
+    title: 量子色力学
+    prerequisites: [quantum-field-theory/gauge-quantization]
+    sections: [カラー SU(3) ゲージ理論と QCD の Lagrangian, 走る結合定数と Λ_QCD, クォークの閉じ込めと弦の描像, e⁺e⁻→ハドロンと R 比, ジェットと赤外安全性, 格子 QCD の概観]
+  - id: parton-evolution
+    title: パートン分布とスケーリングの破れ
+    prerequisites: [quantum-field-theory/operator-product-expansion]
+    sections: [QCD で改良されたパートン模型, 分裂関数と DGLAP 方程式, 因子化定理, Drell–Yan 過程, ハドロン衝突型加速器の物理, パートンシャワーとハドロン化]
+  - id: chiral-symmetry
+    title: カイラル対称性とその破れ
+    prerequisites: [quantum-field-theory/anomalies]
+    sections: [QCD のカイラル対称性, クォーク凝縮とカイラル対称性の自発的破れ, π 中間子と擬 Goldstone ボソン, Gell-Mann–Oakes–Renner 関係, 非線形 σ 模型とカイラル摂動論, U(1)_A 問題と η′ 中間子]
   - id: fermion-masses
     title: フェルミオンの質量とフレーバー
-    sections: [湯川結合, CKM 行列, CP 対称性の破れ, GIM 機構]
+    sections: [湯川結合とフェルミオンの質量, CKM 行列とそのパラメータ化, GIM 機構, フレーバーを変える中性カレントの抑制, ユニタリティ三角形]
+  - id: cp-violation
+    title: CP 対称性の破れと K・B 中間子
+    sections: [中性 K 中間子の混合と CP の破れ, ε と ε′ パラメータ, B 中間子の混合と振動, B 中間子崩壊における CP の破れ, 重いクォーク有効理論の概観, 強い CP 問題とアクシオン]
   - id: neutrinos
     title: ニュートリノ
-    sections: [ニュートリノ振動, PMNS 行列, Dirac 質量と Majorana 質量]
+    sections: [ニュートリノの性質と検出, 真空中のニュートリノ振動, PMNS 行列, 物質中の振動と MSW 効果, Dirac 質量と Majorana 質量, シーソー機構, ニュートリノを放出しない二重 β 崩壊]
   - id: anomalies
     title: アノマリー
-    sections: [カイラルアノマリー, ゲージアノマリーの相殺]
+    prerequisites: [quantum-field-theory/anomalies]
+    sections: [標準模型におけるゲージアノマリーの相殺, π⁰→γγ 崩壊とカラーの数, 重力アノマリーと大域的アノマリー, バリオン数の破れとスファレロン, アノマリー整合条件]
   - id: beyond-sm
     title: 標準模型を超えて
-    sections: [大統一理論, 超対称性の概観, 暗黒物質]
+    prerequisites: [quantum-field-theory/supersymmetry]
+    sections: [標準模型の問題点と階層性問題, 大統一理論（SU(5) と SO(10)）, 陽子崩壊, 超対称標準模型の概観, 暗黒物質の候補, 宇宙のバリオン数生成]

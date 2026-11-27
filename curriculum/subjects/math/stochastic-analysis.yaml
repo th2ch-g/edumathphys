@@ -6,25 +6,69 @@ area: math
 level: graduate
 order: 230
 description: >-
-  連続時間マルチンゲール、確率積分と伊藤の公式、確率微分方程式、Girsanov の定理、拡散過程と偏微分方程式（Feynman–Kac の公式）を扱う。
+  連続時間確率過程とマルチンゲール、確率積分と伊藤の公式、マルチンゲール表現定理、Girsanov の定理、局所時間、確率微分方程式の強解・弱解とマルチンゲール問題、
+  拡散過程と偏微分方程式、Brown 運動とポテンシャル論、Bessel 過程と遊歩理論、Lévy 過程、Malliavin 解析、多様体上の拡散、数値解法、フィルタリング・確率制御・数理ファイナンスへの応用を扱う。
 prerequisites: [probability, pde]
-references: [karatzas-shreve, oksendal-sde]
+references: [karatzas-shreve, oksendal-sde, revuz-yor, ikeda-watanabe, legall-bm, funaki-sde, nualart-malliavin]
 chapters:
+  - id: stochastic-processes
+    title: 連続時間確率過程の一般論
+    prerequisites: [probability/brownian-motion]
+    sections: [確率過程と有限次元分布, 修正と区別不能性, 可測性と発展的可測性, フィルトレーションと通常の条件, 停止時刻と停止 σ-加法族, 到達時刻の可測性]
   - id: continuous-martingales
     title: 連続時間マルチンゲール
-    sections: [フィルトレーションと停止時刻, 連続マルチンゲール, 二次変分]
+    prerequisites: [probability/martingales]
+    sections: [連続時間マルチンゲールと右連続修正, Doob の不等式と収束定理, 連続時間の任意停止定理, Doob–Meyer 分解, 二次変分と二次共変分, 局所マルチンゲールとセミマルチンゲール, 連続 L² マルチンゲールの空間の完備性]
   - id: stochastic-integral
     title: 確率積分
-    sections: [単純過程の積分, 伊藤積分の構成, 伊藤の等長性, 局所マルチンゲール]
+    sections: [単純過程の確率積分, 伊藤の等長性と L² 拡張, 連続 L² マルチンゲールに関する確率積分, 局所マルチンゲールへの拡張, セミマルチンゲールに関する確率積分, Riemann 和による近似, Stratonovich 積分]
   - id: ito-formula
     title: 伊藤の公式
-    sections: [伊藤の公式, 多次元版, Lévy の特徴付け, 応用]
-  - id: sde
-    title: 確率微分方程式
-    sections: [強解の存在と一意性, 弱解, 線形 SDE, 数値解法]
+    sections: [1 次元の伊藤の公式, 多次元の伊藤の公式, 指数マルチンゲール, Lévy による Brown 運動の特徴付け, Burkholder–Davis–Gundy の不等式, Dambis–Dubins–Schwarz の時間変更定理, Knight の定理]
+  - id: martingale-representation
+    title: マルチンゲール表現定理と Wiener カオス
+    sections: [Brown フィルトレーションに関する伊藤の表現定理, 多重伊藤積分, Wiener–伊藤のカオス展開, Hermite 多項式と指数マルチンゲール, 表現定理の応用]
   - id: girsanov
     title: Girsanov の定理
-    sections: [測度変換, Girsanov の定理, Novikov の条件]
+    sections: [同値な測度変換と密度過程, Girsanov の定理, Novikov の条件と Kazamaki の条件, Cameron–Martin の定理, ドリフト付き Brown 運動の到達時刻, 弱解の構成への応用]
+  - id: local-time
+    title: 局所時間
+    sections: [Tanaka の公式, 局所時間の存在と連続性, 凸関数に対する伊藤–Tanaka の公式, 占有時間公式, 反射 Brown 運動と最大値過程に関する Lévy の定理, Ray–Knight の定理]
+  - id: sde
+    title: 確率微分方程式と強解
+    sections: [強解の定義, Lipschitz 条件下の存在と一意性, 解のモーメント評価, 線形 SDE と Ornstein–Uhlenbeck 過程, 幾何 Brown 運動, 山田–渡辺の道ごとの一意性定理, 比較定理, 初期値に関する連続性と確率流]
+  - id: weak-solutions
+    title: 弱解とマルチンゲール問題
+    sections: [弱解と法則の一意性, 山田–渡辺の定理（弱存在と道ごとの一意性から強解へ）, Girsanov 変換による弱解の構成, Stroock–Varadhan のマルチンゲール問題, 時間変更による 1 次元 SDE の解, 1 次元拡散の尺度関数と速度測度, Feller の境界分類]
   - id: diffusions-pde
     title: 拡散過程と偏微分方程式
-    sections: [生成作用素, Kolmogorov 方程式, Feynman–Kac の公式, Dirichlet 問題の確率論的表現]
+    prerequisites: [pde/heat, functional-analysis/semigroups]
+    sections: [Markov 過程と推移半群, 生成作用素と Dynkin の公式, Kolmogorov の後ろ向き方程式, Fokker–Planck 方程式, Feynman–Kac の公式, 退出時刻と境界値問題, 不変測度とエルゴード性, 小雑音極限と Freidlin–Wentzell の大偏差]
+  - id: brownian-potential
+    title: Brown 運動とポテンシャル論
+    prerequisites: [pde/laplace]
+    sections: [多次元 Brown 運動の再帰性と過渡性, 調和関数と平均値性, Dirichlet 問題の確率論的解法, 正則点と Wiener の判定法, Green 関数と占有測度, 容量と極集合]
+  - id: bessel-excursions
+    title: Bessel 過程と遊歩理論
+    sections: [2 乗 Bessel 過程とその加法性, Bessel 過程の次元と原点への到達, Poisson 点過程, 伊藤の遊歩理論, 逆局所時間と安定従属過程, Williams の路分解]
+  - id: levy-processes
+    title: Lévy 過程と跳躍型確率積分
+    prerequisites: [probability/infinitely-divisible]
+    sections: [Lévy 過程の定義と例, Poisson ランダム測度と補償, Lévy–伊藤分解, 跳躍を持つ確率積分, 跳躍を持つ伊藤の公式, Lévy 過程で駆動される SDE]
+  - id: malliavin-calculus
+    title: Malliavin 解析入門
+    prerequisites: [functional-analysis/hilbert-spaces]
+    sections: [Wiener 空間と Cameron–Martin 空間, Malliavin 微分, Skorokhod 積分と発散作用素, Clark–Ocone の公式, Ornstein–Uhlenbeck 作用素, 確率変数の密度の存在と滑らかさ, Hörmander 条件と確率論的証明の概略]
+  - id: manifold-diffusions
+    title: 多様体上の拡散過程
+    prerequisites: [riemannian-geometry]
+    sections: [Stratonovich 型 SDE と座標変換, 多様体上の確率微分方程式, Riemann 多様体上の Brown 運動, 確率的平行移動と Eells–Elworthy–Malliavin の構成, 熱核の短時間漸近]
+  - id: sde-numerics
+    title: 確率微分方程式の数値解法
+    sections: [Euler–丸山法, 強収束と弱収束, 伊藤–Taylor 展開, Milstein 法, 弱近似の高次スキームと外挿, Monte Carlo 法と分散減少法]
+  - id: filtering-control
+    title: フィルタリングと確率制御
+    sections: [線形フィルタリング問題, Kalman–Bucy フィルタ, 非線形フィルタリングと Zakai 方程式, 最適停止と自由境界問題, 確率制御と動的計画原理, Hamilton–Jacobi–Bellman 方程式と検証定理]
+  - id: mathematical-finance
+    title: 数理ファイナンスへの応用
+    sections: [市場モデルと自己資金調達戦略, 無裁定とリスク中立測度, 複製可能性と市場の完備性, Black–Scholes 方程式と公式, アメリカ型オプションと最適停止, 金利モデルの例]

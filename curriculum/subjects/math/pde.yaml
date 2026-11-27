@@ -6,28 +6,58 @@ area: math
 level: undergrad-advanced
 order: 120
 description: >-
-  1 階方程式と特性曲線法、Laplace 方程式・熱方程式・波動方程式の古典理論、最大値原理とエネルギー法、Sobolev 空間による弱解の理論と楕円型方程式の正則性を扱う。
+  1 階方程式と特性曲線法、Hamilton–Jacobi 方程式と粘性解、保存則と衝撃波、Laplace 方程式・ポテンシャル論・熱方程式・波動方程式の古典理論、
+  2 階方程式の分類と Cauchy–Kovalevskaya の定理、Sobolev 空間による楕円型方程式の弱解と正則性・最大値原理、放物型・双曲型方程式の弱解、
+  変分法と非線形偏微分方程式の手法を扱う。
 prerequisites: [fourier-analysis, functional-analysis]
-references: [evans-pde, john-pde]
+conventions:
+  - Fourier 変換の規約は Fourier 解析に従う。
+references: [evans-pde, john-pde, gilbarg-trudinger, mizohata-pde]
 chapters:
   - id: first-order
-    title: 1 階偏微分方程式
-    sections: [線形方程式と特性曲線, 準線形方程式, 保存則と衝撃波, Hamilton–Jacobi 方程式]
+    title: 1 階線形・準線形偏微分方程式
+    sections: [輸送方程式, 線形方程式と特性曲線, 準線形方程式の Cauchy 問題と特性曲線法, 非特性条件と局所解の存在, 例：Burgers 方程式と解の破綻]
+  - id: nonlinear-first-order
+    title: 一般の 1 階偏微分方程式と Hamilton–Jacobi 方程式
+    sections: [完全積分と包絡線, 特性帯の方法, Hamilton–Jacobi 方程式と Hamilton 方程式, Hopf–Lax の公式, 粘性解の定義と一意性, 最適制御と動的計画法]
+  - id: conservation-laws
+    title: 保存則と衝撃波
+    sections: [スカラー保存則と弱解, Rankine–Hugoniot 条件, エントロピー条件と Lax–Oleinik の公式, Riemann 問題と希薄波, Kruzhkov のエントロピー解, 保存則系の Riemann 問題（概観）]
   - id: laplace
-    title: Laplace 方程式
-    sections: [基本解, 平均値の性質, 最大値原理, Green 関数, Dirichlet 問題]
+    title: Laplace 方程式と調和関数
+    prerequisites: [analysis/vector-calculus]
+    sections: [基本解と Newton ポテンシャル, 平均値の性質, 最大値原理と一意性, 調和関数の正則性と導関数の評価, Liouville の定理と Harnack の不等式, Green 関数と Poisson 積分, エネルギー法と Dirichlet の原理]
+  - id: potential-theory
+    title: ポテンシャル論と Dirichlet 問題
+    sections: [Poisson 方程式と Hölder 連続性, 劣調和関数と Perron の方法, 障壁と正則境界点, 一重層ポテンシャルと二重層ポテンシャル, 積分方程式による境界値問題の解法, Neumann 問題]
   - id: heat
     title: 熱方程式
-    sections: [熱核, 初期値問題, 最大値原理と一意性, 有界領域での固有関数展開]
+    sections: [基本解と熱核, 初期値問題の解の表示, 平均値公式, 最大値原理と一意性, Tychonoff の非一意性の例, 有界領域における固有関数展開, エネルギー法と後退一意性]
   - id: wave
     title: 波動方程式
-    sections: [d'Alembert の公式, 球面平均と Kirchhoff の公式, エネルギー保存と依存領域, Huygens の原理]
+    sections: [d'Alembert の公式と反射法, 球面平均と Kirchhoff の公式, Hadamard の降下法と Poisson の公式, Huygens の原理, エネルギー保存と依存領域, 非斉次方程式と Duhamel の原理, 有界領域における固有関数展開]
+  - id: solution-methods
+    title: 解の表示のための諸方法
+    sections: [変数分離法, 相似解と進行波解, Fourier 変換と Laplace 変換による解法, Cole–Hopf 変換と Legendre 変換, 漸近解析と幾何光学近似, 均質化法（概観）]
   - id: classification
-    title: 2 階線形方程式の分類
-    sections: [楕円型・放物型・双曲型, 標準形, 特性曲面, Cauchy–Kovalevskaya の定理]
+    title: 2 階線形方程式の分類と Cauchy 問題
+    sections: [楕円型・放物型・双曲型, 2 変数方程式の標準形, 特性曲面, Cauchy–Kovalevskaya の定理, Holmgren の一意性定理, Hadamard の適切性と Lewy の反例]
   - id: weak-solutions
-    title: 弱解と楕円型方程式
-    sections: [Sobolev 空間, Lax–Milgram の定理, 楕円型境界値問題の弱解, 正則性]
+    title: 楕円型方程式の弱解
+    prerequisites: [functional-analysis/sobolev-spaces]
+    sections: [2 階楕円型作用素と弱解, Lax–Milgram の定理による存在, エネルギー評価, 弱解に対する Fredholm の択一定理, 固有値問題と固有関数, Rayleigh 商と min-max 原理, Weyl の漸近公式（概観）]
+  - id: elliptic-regularity
+    title: 楕円型方程式の正則性と最大値原理
+    sections: [差分商と内部正則性, 境界までの正則性, 弱最大値原理, Hopf の補題と強最大値原理, Harnack の不等式, Schauder 評価, De Giorgi–Nash–Moser の理論（概観）]
   - id: evolution
-    title: 発展方程式
-    sections: [Galerkin 法, 放物型方程式の弱解, 双曲型方程式の弱解, 半群理論の概観]
+    title: 放物型方程式
+    sections: [Bochner 空間と時間依存の Sobolev 空間, Galerkin 近似, 弱解の存在と一意性, 正則性, 放物型方程式の最大値原理, 半群理論による定式化]
+  - id: hyperbolic
+    title: 双曲型方程式
+    sections: [2 階双曲型方程式の弱解, エネルギー評価と一意性, 擾乱の有限伝播速度, 対称双曲型系, 定数係数双曲型系と Fourier 解析]
+  - id: variational
+    title: 変分法
+    sections: [第一変分と Euler–Lagrange 方程式, 第二変分, 凸性と直接法による最小化元の存在, 最小化元の正則性, 拘束条件と Lagrange 乗数, 峠の補題と臨界点理論, Noether の定理]
+  - id: nonlinear-methods
+    title: 非線形偏微分方程式の手法
+    sections: [単調作用素の方法, 不動点定理による存在証明, 優解と劣解の方法, 解の爆発と非存在, 移動平面法と解の対称性, 勾配流]

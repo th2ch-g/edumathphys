@@ -6,28 +6,60 @@ area: math
 level: graduate
 order: 150
 description: >-
-  Riemann 計量、Levi-Civita 接続、測地線と指数写像、曲率テンソル、Jacobi 場、比較定理、Hopf–Rinow の定理、Bonnet–Myers の定理などの大域的結果を扱う。
+  Riemann 計量と距離、アフィン接続と Levi-Civita 接続、測地線と指数写像、曲率テンソル、Riemann 部分多様体、Jacobi 場と変分公式、
+  Hopf–Rinow の定理と Cartan–Hadamard の定理、空間形、Rauch・Hessian・Bishop–Gromov・Toponogov の比較定理、Bonnet–Myers の定理などの曲率と位相の関係、
+  Morse の指数定理と切断跡、等質空間と対称空間、Hodge 理論と Bochner の方法、ベクトル束と主束の接続を扱う。
 prerequisites: [manifolds, curves-surfaces]
-references: [docarmo-riemannian, lee-riemannian]
+references: [docarmo-riemannian, lee-riemannian, petersen-riemannian, sakai-riemannian, kobayashi-nomizu, kobayashi-gauge]
 chapters:
   - id: metrics
     title: Riemann 計量
-    sections: [Riemann 計量の定義と例, 長さと距離, 等長写像, 体積形式]
+    prerequisites: [manifolds/tensor-fields]
+    sections: [Riemann 計量の定義と存在, 例（Euclid 空間・球面・双曲空間・積計量・誘導計量）, 曲線の長さと Riemann 距離関数, 等長写像と局所等長写像, 体積形式と積分, 計量の共形変化, 勾配・発散・Laplacian]
   - id: connections
-    title: Levi-Civita 接続
-    sections: [アフィン接続, 平行移動, Levi-Civita 接続の存在と一意性, Christoffel 記号]
+    title: アフィン接続と Levi-Civita 接続
+    sections: [アフィン接続と共変微分, 曲線に沿う共変微分と平行移動, 捩率テンソル, 計量と両立する接続, Levi-Civita 接続の存在と一意性（Koszul の公式）, Christoffel 記号の座標計算, テンソル場の共変微分]
   - id: geodesics
     title: 測地線と指数写像
-    sections: [測地線方程式, 指数写像, Gauss の補題, 正規座標, 測地線の極小性]
+    sections: [測地線方程式と測地流, 指数写像, Gauss の補題, 正規座標と正規近傍, 測地線の局所極小性, 凸近傍の存在（Whitehead の定理）, 距離関数と距離球]
   - id: curvature
     title: 曲率
-    sections: [Riemann 曲率テンソル, 断面曲率, Ricci 曲率とスカラー曲率, 定曲率空間]
+    sections: [Riemann 曲率テンソルとその対称性, 平坦性と曲率, 断面曲率, Ricci 曲率とスカラー曲率, Einstein 計量, Weyl テンソルと共形平坦性, 曲率の座標計算と例]
+  - id: submanifolds
+    title: Riemann 部分多様体と等長はめ込み
+    prerequisites: [curves-surfaces/theorema-egregium]
+    sections: [第二基本形式と形作用素, Gauss の公式と Weingarten の公式, Gauss・Codazzi・Ricci の方程式, 全測地的部分多様体, 平均曲率と極小部分多様体, 超曲面と主曲率]
   - id: jacobi-fields
-    title: Jacobi 場
-    sections: [Jacobi 方程式, 共役点, 第二変分公式]
+    title: Jacobi 場と変分公式
+    sections: [Jacobi 方程式, 指数写像の微分と Jacobi 場, 共役点, 定曲率空間の Jacobi 場, 弧長とエネルギーの第一変分公式, 第二変分公式と指数形式]
   - id: completeness
-    title: 完備性
-    sections: [Hopf–Rinow の定理, Cartan–Hadamard の定理]
+    title: 完備性と Hopf–Rinow の定理
+    prerequisites: [algebraic-topology/covering-spaces]
+    sections: [測地的完備性と距離完備性, Hopf–Rinow の定理, 最短測地線の存在, Cartan–Hadamard の定理, 局所等長写像と被覆, 非正曲率多様体の基本群（Cartan の定理と Preissman の定理）]
+  - id: space-forms
+    title: 空間形
+    sections: [定曲率空間の例（球面・Euclid 空間・双曲空間）, 双曲空間の模型と等長変換群, Cartan の定理（曲率による局所等長性の判定）, 空間形の分類（Killing–Hopf の定理）, 球面空間形とレンズ空間, 双曲多様体の例]
   - id: comparison
     title: 比較定理
-    sections: [Rauch の比較定理, Bonnet–Myers の定理, Synge の定理]
+    sections: [Riccati 方程式と距離関数の Hessian, Rauch の比較定理, Hessian 比較定理と Laplacian 比較定理, Bishop–Gromov の体積比較定理, Günther–Bishop の定理, Toponogov の比較定理]
+  - id: curvature-topology
+    title: 曲率と位相
+    sections: [Bonnet–Myers の定理, Synge の定理と Weinstein の定理, 負曲率多様体の基本群の成長, Cheeger–Gromoll の分解定理, 1/4 ピンチ球面定理の概観]
+  - id: index-cut-locus
+    title: Morse の指数定理と切断跡
+    sections: [指数形式と Morse の指数定理, 切断点と切断跡, 単射半径, Klingenberg の補題, 閉測地線の存在の概観]
+  - id: homogeneous-spaces
+    title: 等質空間と対称空間
+    prerequisites: [lie-groups/compact-structure]
+    sections: [Killing ベクトル場と等長変換群（Myers–Steenrod の定理）, Lie 群の両側不変計量, Riemann 沈め込みと O'Neill の公式, 等質 Riemann 空間, Riemann 対称空間と Cartan 対合, 対称空間の曲率と階数, 例：射影空間と Grassmann 多様体]
+  - id: hodge-bochner
+    title: Hodge 理論と Bochner の方法
+    prerequisites: [manifolds/de-rham, pde/elliptic-regularity]
+    sections: [Hodge スター作用素と余微分, Hodge–Laplacian, Hodge の分解定理, 調和形式と de Rham コホモロジー, Bochner の公式と Weitzenböck の公式, Bochner の消滅定理, Laplacian の固有値と Lichnerowicz の評価]
+  - id: vector-bundle-connections
+    title: ベクトル束の接続と曲率
+    prerequisites: [manifolds/vector-bundles]
+    sections: [ベクトル束の接続, 接続形式と構造方程式, 曲率形式と Bianchi 恒等式, 平行移動とホロノミー群, 平坦接続と基本群の表現, 計量接続と Hermite 束, 例：直線束と Dirac モノポール]
+  - id: principal-bundles
+    title: 主束の接続とゲージ理論
+    sections: [主束と同伴ベクトル束, 主束の接続形式と水平分布, 曲率形式と構造方程式, ゲージ変換, ホロノミー定理（Ambrose–Singer の定理）, Yang–Mills 汎関数と Yang–Mills 方程式, 枠束による Riemann 幾何の再定式化]

@@ -6,31 +6,51 @@ area: math
 level: undergrad-advanced
 order: 60
 description: >-
-  体の拡大、代数拡大と分解体、分離拡大と正規拡大、Galois の基本定理、有限体、円分体、方程式の可解性、作図問題を扱う。
+  体の拡大、分解体と代数閉包、分離拡大と正規拡大、Galois の基本定理と Galois 群の計算、有限体、円分体、ノルム・トレースと Hilbert の定理 90、
+  巡回拡大と Kummer 理論、方程式の可解性、作図問題、超越拡大、無限次 Galois 理論を扱う。
 prerequisites: [rings-modules]
-references: [fujisaki-galois, artin-galois, dummit-foote]
+references: [fujisaki-galois, yukie-algebra2, artin-galois, dummit-foote, lang-algebra]
 chapters:
   - id: field-extensions
     title: 体の拡大
-    sections: [拡大次数, 代数的元と最小多項式, 代数拡大, 単拡大]
+    sections: [体の標数と素体, 拡大体と拡大次数, 次数の乗法性（塔法則）, 代数的元と最小多項式, 単拡大の構造, 代数拡大と有限生成拡大, 代数的元全体のなす中間体]
   - id: splitting-fields
     title: 分解体と代数閉包
-    sections: [分解体の存在と一意性, 代数閉包, 体の同型の延長]
+    prerequisites: [sets-logic/choice]
+    sections: [体の埋め込みと共役, 分解体の存在, 同型の延長と分解体の一意性, 代数閉体と代数閉包の存在, 代数閉包の一意性]
   - id: separable-normal
     title: 分離拡大と正規拡大
-    sections: [分離多項式, 分離拡大, 正規拡大, 原始元定理]
+    sections: [正規拡大と分解体, 分離多項式と形式微分, 分離拡大と分離次数, 完全体, 純非分離拡大, 原始元定理]
   - id: galois-correspondence
     title: Galois の基本定理
-    sections: [Galois 拡大, Galois 群, 基本定理, 例]
+    sections: [体の自己同型群と固定体, 指標の一次独立性と Artin の定理, Galois 拡大の同値な特徴付け, Galois の基本定理, 中間体の共役と正規部分群, 合成体と Galois 群の制限, 応用（代数学の基本定理の代数的証明）]
+  - id: galois-group-computation
+    title: Galois 群の計算
+    prerequisites: [group-theory/symmetric-groups]
+    sections: [Galois 群の置換表現と推移性, 判別式と交代群, 3 次多項式の Galois 群, 4 次多項式と 3 次分解式, 素数次既約多項式と対称群, Dedekind の定理（素数を法とする還元）, Galois の逆問題と一般多項式]
   - id: finite-fields
     title: 有限体
-    sections: [有限体の存在と一意性, Frobenius 写像, 有限体の Galois 群]
+    sections: [有限体の位数, 有限体の存在と一意性, 乗法群の巡回性, Frobenius 写像と有限体の Galois 群, 有限体上の既約多項式の個数と Möbius 反転, 有限体上の多項式の因数分解]
   - id: cyclotomic
-    title: 円分体と巡回拡大
-    sections: [円分多項式, 円分体の Galois 群, Kummer 拡大]
+    title: 円分体
+    sections: [1 の冪根と円分多項式, 有理数体上の円分多項式の既約性, 円分体の Galois 群, 円分体の部分体と Gauss 周期, 二次体の円分体への埋め込みと Gauss 和, Kronecker–Weber の定理（主張）]
+  - id: norm-trace
+    title: ノルム・トレースと Hilbert の定理 90
+    sections: [ノルムとトレース, トレース形式と判別式, 加法的・乗法的 Hilbert の定理 90, 正規基底定理, 有限体におけるノルムとトレースの全射性]
+  - id: kummer
+    title: 巡回拡大と Kummer 理論
+    sections: [巡回拡大の特徴付け, Kummer 拡大, Kummer 理論と双対性, Artin–Schreier 拡大, Lagrange の分解式]
   - id: solvability
     title: 方程式の可解性
-    sections: [冪根拡大, 可解性と可解群, 5 次方程式の非可解性]
+    prerequisites: [group-theory/solvable-nilpotent]
+    sections: [冪根拡大と冪根による可解性, 冪根で解ける方程式の Galois 群は可解群, 可解な Galois 群をもつ方程式の冪根による解法, 3 次・4 次方程式の解の公式の Galois 理論的導出, 一般 n 次方程式と対称式, 5 次以上の一般方程式の非可解性, 冪根で解けない具体的な 5 次方程式]
   - id: constructions
     title: 作図問題
-    sections: [定規とコンパスによる作図, 作図可能数, 古典的作図問題, 正多角形の作図]
+    sections: [定規とコンパスによる作図の定式化, 作図可能数の体, 作図可能性と 2 冪次拡大, 古典的三大作図問題, 正多角形の作図と Fermat 素数]
+  - id: transcendental
+    title: 超越拡大
+    sections: [代数的独立性, 超越基底と超越次数, 超越次数の一意性, 純超越拡大と Lüroth の定理, 分離生成拡大, e と π の超越性]
+  - id: infinite-galois
+    title: 無限次 Galois 理論
+    prerequisites: [topology/compactness]
+    sections: [射影極限と副有限群, Krull 位相, 無限次 Galois 拡大の基本定理, 有限体の代数閉包と副有限完備化 Ẑ, 絶対 Galois 群, 円分拡大の塔と p 進整数]

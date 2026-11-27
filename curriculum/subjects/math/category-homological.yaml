@@ -6,28 +6,73 @@ area: math
 level: graduate
 order: 170
 description: >-
-  圏・関手・自然変換、普遍性と極限、随伴関手、米田の補題、Abel 圏、導来関手（Ext と Tor）、スペクトル系列入門を扱う。
+  圏・関手・自然変換、普遍性と極限、米田の補題、随伴関手、Kan 拡張、モナド、モノイダル圏からなる圏論の基礎と、
+  Abel 圏、鎖複体、導来関手（Ext と Tor）、群・Lie 環・結合代数のホモロジー、スペクトル系列、三角圏と導来圏、
+  層とその導来圏・Verdier 双対性、Grothendieck 位相とトポスまでのホモロジー代数を扱う。
 prerequisites: [rings-modules, algebraic-topology]
-references: [maclane-cwm, weibel-homological, riehl-context]
+conventions:
+  - 集合論的な大きさの問題は Grothendieck 宇宙を一つ固定して扱い、宇宙に属する集合を小さい集合と呼ぶ。圏は特に断らない限り局所的に小さいとする。
+  - 環は単位元をもつ（必ずしも可換でない）環とし、加群は特に断らない限り左加群とする。
+references: [maclane-cwm, riehl-context, weibel-homological, kashiwara-schapira, gelfand-manin, shiho-sheaves]
 chapters:
   - id: categories
     title: 圏と関手
-    sections: [圏の定義と例, 関手, 自然変換, 圏同値]
+    sections: [圏の定義と例, 双対圏・積圏・コンマ圏, 関手と充満忠実性, 自然変換と関手圏, 圏同値と骨格, 例：群・前順序集合・行列の圏]
   - id: universal-properties
     title: 普遍性と極限
-    sections: [始対象と終対象, 積と余積, 極限と余極限, 引き戻しと押し出し]
+    sections: [普遍射と普遍性, 始対象と終対象, 積と余積, イコライザとコイコライザ, 引き戻しと押し出し, 極限と余極限の一般論, 積とイコライザによる極限の構成, フィルター余極限と有限極限の交換]
   - id: yoneda
     title: 米田の補題
-    sections: [表現可能関手, 米田の補題, 米田埋め込み]
+    sections: [表現可能関手, 米田の補題, 米田埋め込み, 普遍元による表現の特徴付け, 前層は表現可能関手の余極限であること, 応用：普遍性による構成の一意性]
   - id: adjunctions
     title: 随伴関手
-    sections: [随伴の定義, 単位と余単位, 随伴と極限の保存, 例]
+    sections: [随伴の定義と Hom 集合による特徴付け, 単位・余単位と三角恒等式, 右随伴は極限を保つこと, Freyd の随伴関手定理, 反射部分圏と局所化, 例：自由関手と忘却関手・テンソルと Hom, 随伴同値と圏同値]
+  - id: kan-extensions
+    title: Kan 拡張と end・coend
+    sections: [左 Kan 拡張と右 Kan 拡張, 各点 Kan 拡張と極限公式, end と coend, end による自然変換と米田の補題の表示, 随伴と Kan 拡張, 例：前層圏の普遍性と幾何学的実現]
+  - id: monads
+    title: モナドと代数
+    sections: [モナドと随伴, Eilenberg–Moore 圏と Kleisli 圏, モナド的関手, Beck のモナド性定理, 例：群・環・コンパクト Hausdorff 空間のモナド性, 余モナドと降下理論への応用]
+  - id: monoidal-categories
+    title: モノイダル圏と豊穣圏
+    sections: [モノイダル圏と Mac Lane の coherence 定理, 組紐モノイダル圏と対称モノイダル圏, 閉モノイダル圏とカルテシアン閉圏, モノイド対象と加群対象, 豊穣圏入門, 2-圏と擬関手入門]
   - id: abelian-categories
     title: Abel 圏
-    sections: [加法圏, Abel 圏, 完全関手, 蛇の補題と五項補題]
+    sections: [前加法圏と加法圏, 核・余核・像, Abel 圏の定義と例, 完全列と完全関手, 蛇の補題と五項補題, Freyd–Mitchell の埋め込み定理, Grothendieck 圏と入射的対象の存在]
+  - id: chain-complexes
+    title: 鎖複体とホモロジー
+    sections: [鎖複体と鎖写像, ホモロジー長完全列と連結準同型, 鎖ホモトピー, 写像錐と写像柱, 二重複体と全複体, Hom 複体とテンソル積複体]
   - id: derived-functors
     title: 導来関手
-    sections: [射影分解と入射分解, 左導来関手と右導来関手, Ext と Tor, 群のコホモロジー入門]
+    prerequisites: [rings-modules/projective-injective]
+    sections: [射影的対象・入射的対象と分解, 比較定理と馬蹄補題, 左導来関手と右導来関手, δ 関手とその普遍性, 非輪状分解による計算, 次元シフトと導来関手の消滅]
+  - id: ext-tor
+    title: Ext と Tor
+    sections: [Tor の定義と平衡性, Tor と平坦性, Ext と拡大の Yoneda 解釈, 射影次元・入射次元・大域次元, 普遍係数定理と Künneth 公式, 例：PID 上の加群と Abel 群の計算, 多項式環の大域次元と Hilbert の syzygy 定理]
+  - id: group-cohomology
+    title: 群のホモロジーとコホモロジー
+    prerequisites: [group-theory/group-actions]
+    sections: [G 加群と群のホモロジー・コホモロジー, bar 分解と標準複体, 低次コホモロジーの解釈（交差準同型と群の拡大）, 制限・余制限・インフレーション, Shapiro の補題と誘導加群, 有限群のコホモロジーの消滅と転送, カップ積]
+  - id: algebra-homology
+    title: Lie 環と結合代数のホモロジー
+    prerequisites: [lie-groups/semisimple]
+    sections: [Lie 環のホモロジーとコホモロジー, Chevalley–Eilenberg 複体, Whitehead の補題と Weyl の完全可約性定理, Hochschild ホモロジーとコホモロジー, Hochschild コホモロジーと変形理論, 巡回ホモロジー入門]
   - id: spectral-sequences
-    title: スペクトル系列入門
-    sections: [フィルター付き複体, 二重複体のスペクトル系列, 応用例]
+    title: スペクトル系列
+    sections: [スペクトル系列の定義と収束, フィルター付き複体のスペクトル系列, 二重複体の二つのスペクトル系列, Cartan–Eilenberg 分解と超ホモロジー, Grothendieck スペクトル系列, Lyndon–Hochschild–Serre スペクトル系列, 応用：Künneth 公式と基底変換]
+  - id: triangulated-categories
+    title: 三角圏
+    sections: [複体のホモトピー圏, 三角圏の公理, 完全三角形と長完全列, 八面体公理, 三角関手, Verdier 商]
+  - id: derived-categories
+    title: 導来圏
+    sections: [擬同型による局所化, 導来圏の構成と有界性条件, 全導来関手と RHom, 導来テンソル積, 導来関手の合成, t 構造と心臓, 例：遺伝的 Abel 圏の導来圏]
+  - id: sheaves
+    title: 層と層係数コホモロジー
+    prerequisites: [algebraic-topology/cohomology]
+    sections: [前層と層, 茎と層化, 層の順像・逆像・制限, 層の Abel 圏, 脆弱層・軟層・細層, 層係数コホモロジー, Čech コホモロジーと Leray の定理, 抽象 de Rham の定理と特異コホモロジーとの比較]
+  - id: sheaf-operations
+    title: 層の導来圏と Verdier 双対性
+    sections: [層の導来順像と逆像, 固有台つき順像, 固有基底変換定理, 例外逆像と Verdier 双対性, Poincaré 双対性と Alexander 双対性の層理論的証明, 構成可能層入門]
+  - id: sites-topoi
+    title: Grothendieck 位相とトポス
+    sections: [篩と Grothendieck 位相, サイト上の層と層化, Grothendieck トポス, 幾何学的射, 例：エタール位相と fpqc 位相, 降下理論入門]

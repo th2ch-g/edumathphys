@@ -6,31 +6,60 @@ area: physics
 level: undergrad-advanced
 order: 110
 description: >-
-  変形とひずみ・応力テンソル、弾性体の構成方程式と弾性波、流体の基礎方程式（Euler・Navier–Stokes）、渦と完全流体、粘性流と境界層、乱流の基礎を扱う。
+  連続体の運動学（変形とひずみ）、応力と保存則・構成方程式、弾性体の基礎方程式・棒と板・弾性波、完全流体とポテンシャル流・翼理論、渦運動、
+  粘性流体と Navier–Stokes 方程式の厳密解、境界層、熱伝導と対流、表面波、圧縮性流体と衝撃波、流体の不安定性、乱流の基礎を扱う。
 prerequisites: [analytical-mechanics, mathematical-physics]
-references: [landau-fluid, landau-elasticity, imai-fluid]
+conventions:
+  - 単位は SI 系を用いる。テンソルの成分はデカルト座標で表し、繰り返し添字には和の規約を適用する。
+references: [landau-fluid, landau-elasticity, batchelor-fluid, imai-fluid, tatsumi-fluid, chandrasekhar-stability]
 chapters:
   - id: kinematics
     title: 連続体の運動学
-    sections: [Lagrange 記述と Euler 記述, 物質微分, 変形勾配とひずみテンソル, 連続の方程式]
+    prerequisites: [analysis/vector-calculus]
+    sections: [Lagrange 記述と Euler 記述, 物質微分と流線・流跡線・流脈線, 変形勾配と有限ひずみテンソル, 微小ひずみテンソルと局所回転, 速度勾配テンソル（変形速度と渦度）, Reynolds の輸送定理と連続の方程式]
   - id: stress
-    title: 応力
-    sections: [Cauchy の応力原理, 応力テンソルの対称性, 運動方程式]
+    title: 応力と保存則
+    prerequisites: [thermodynamics/entropy]
+    sections: [Cauchy の応力原理と応力テンソル, 応力テンソルの対称性と主応力, 運動量・角運動量の保存則と Cauchy の運動方程式, エネルギー保存則, エントロピー生成と Clausius–Duhem 不等式, 構成方程式の一般原理（客観性）, 粘弾性体のモデル（Maxwell 模型・Kelvin–Voigt 模型）]
   - id: elasticity
-    title: 弾性体
-    sections: [Hooke の法則と弾性定数, 等方弾性体, 弾性波, 梁と板の変形]
+    title: 弾性体の基礎方程式
+    sections: [Hooke の法則と弾性定数テンソル, 等方弾性体と Lamé 定数, Young 率・Poisson 比・体積弾性率, 弾性エネルギーと熱力学, Navier の方程式, 平衡問題の例（一様圧縮・球殻・円柱のねじり）, 適合条件と Saint-Venant の原理]
+  - id: rods-plates
+    title: 棒と板の弾性
+    sections: [板の曲げと平衡方程式, 棒の曲げと Euler–Bernoulli 梁, 棒のねじり, Euler の座屈, 棒と板の振動, 大変形と弾性曲線（エラスティカ）]
+  - id: elastic-waves
+    title: 弾性波
+    sections: [縦波と横波（P 波と S 波）, 境界での反射・屈折とモード変換, Rayleigh 表面波, Love 波, 異方性結晶中の弾性波, 地震波と地球内部構造]
   - id: ideal-fluids
     title: 完全流体
-    sections: [Euler 方程式, Bernoulli の定理, Kelvin の循環定理, ポテンシャル流と複素速度ポテンシャル]
+    sections: [静水力学と浮力, Euler 方程式, Bernoulli の定理, Kelvin の循環定理, 渦なし流と速度ポテンシャル, 運動量の流れと運動量定理]
+  - id: potential-flow
+    title: ポテンシャル流と翼理論
+    prerequisites: [mathematical-physics/complex-methods]
+    sections: [2 次元ポテンシャル流と流れ関数, 複素速度ポテンシャル（湧き出し・渦・二重湧き出し）, 円柱を過ぎる流れと d'Alembert のパラドックス, Blasius の公式と Kutta–Joukowski の定理, 等角写像と Joukowski 翼, 3 次元ポテンシャル流と付加質量]
+  - id: vorticity
+    title: 渦運動
+    sections: [渦度方程式と渦の伸張, Helmholtz の渦定理, Biot–Savart 則と渦糸, 渦輪と Kármán 渦列, 点渦系の力学, 回転流体と Taylor–Proudman の定理]
   - id: viscous-fluids
     title: 粘性流体
-    sections: [Navier–Stokes 方程式, Reynolds 数と相似則, Poiseuille 流と Couette 流, Stokes 流れ]
+    sections: [Navier–Stokes 方程式, エネルギー散逸, Reynolds 数と相似則, 厳密解（Poiseuille 流・Couette 流・Stokes の第 1 問題と第 2 問題）, 低 Reynolds 数流れと Stokes 抵抗, Oseen 近似, 潤滑理論]
   - id: vorticity-boundary-layers
-    title: 渦と境界層
-    sections: [渦度方程式, 渦糸と渦輪, 境界層理論, 剥離]
+    title: 境界層と剥離
+    sections: [Prandtl の境界層方程式, 平板境界層と Blasius 解, Falkner–Skan 解と圧力勾配, 運動量積分方程式, 剥離と後流, 抗力と揚力, 噴流と後流の相似解]
+  - id: heat-convection
+    title: 熱伝導と対流
+    prerequisites: [thermodynamics/potentials]
+    sections: [流体中の熱伝導方程式, 粘性散逸と熱の発生, 自然対流と Boussinesq 近似, 強制対流と Nusselt 数, 熱境界層, 拡散と混合物の流体力学]
+  - id: surface-waves
+    title: 表面波
+    sections: [表面重力波の分散関係, 深水波と浅水波, 毛管波と表面張力, 波のエネルギーと群速度, 浅水方程式と長波, KdV 方程式と孤立波]
+  - id: compressible-flow
+    title: 圧縮性流体と衝撃波
+    sections: [音波と音速, 音の放射とエネルギー, 1 次元等エントロピー流と特性曲線, Riemann 不変量と単純波, 衝撃波と Rankine–Hugoniot 条件, ノズル流と超音速流, 斜め衝撃波と膨張波]
   - id: waves-instability
-    title: 流体の波と不安定性
-    sections: [表面重力波, 音波と圧縮性流体, 衝撃波, Kelvin–Helmholtz 不安定性, Rayleigh–Bénard 対流]
+    title: 流体の不安定性
+    sections: [線形安定性解析の方法, Kelvin–Helmholtz 不安定性, Rayleigh–Taylor 不安定性, Rayleigh–Bénard 対流, Taylor–Couette 流の不安定性, 平行流の安定性（Orr–Sommerfeld 方程式と Rayleigh の変曲点定理）, 弱非線形理論と振幅方程式]
   - id: turbulence
     title: 乱流
-    sections: [乱流の統計的記述, Reynolds 応力, Kolmogorov の理論]
+    prerequisites: [probability]
+    sections: [乱流への遷移, Reynolds 平均と Reynolds 応力, 混合距離理論, 壁乱流と対数則, エネルギーカスケードと Kolmogorov の理論, 2 次元乱流, 乱流の統計理論の概観]
