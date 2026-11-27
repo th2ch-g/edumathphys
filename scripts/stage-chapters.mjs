@@ -10,7 +10,7 @@
  *    and marks the chapters as reviewed in the working-tree registry too.
  */
 import { execFileSync } from 'node:child_process';
-import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { cpSync, existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
@@ -85,15 +85,20 @@ try {
   git('worktree', 'add', '--detach', wt, 'HEAD');
   for (const f of chapterFiles) cpSync(join(root, f), join(wt, f));
   for (const [p, text] of yamlPub) writeFileSync(join(wt, p), text);
-  symlinkSync(join(root, 'node_modules'), join(wt, 'node_modules'));
+  // Astro cannot build through a symlinked node_modules; use a copy-on-write clone where available.
+  try {
+    execFileSync('cp', ['-Rc', join(root, 'node_modules'), join(wt, 'node_modules')]);
+  } catch {
+    execFileSync('cp', ['-R', '--reflink=auto', join(root, 'node_modules'), join(wt, 'node_modules')]);
+  }
   if (existsSync(join(root, '.cache', 'tikz'))) cpSync(join(root, '.cache', 'tikz'), join(wt, '.cache', 'tikz'), { recursive: true });
   for (const cmd of [['run', 'check'], ['run', 'build']]) {
     try {
       execFileSync('npm', cmd, { cwd: wt, encoding: 'utf8', stdio: ['ignore', 'pipe', 'pipe'] });
     } catch (e) {
       const out = `${e.stdout ?? ''}\n${e.stderr ?? ''}`;
-      const lines = out.split('\n').filter((l) => /error|Error|ERROR|unresolved|unknown|invalid|✗/.test(l));
-      console.error(`npm ${cmd.join(' ')} failed:\n${lines.slice(0, 60).join('\n')}`);
+      const lines = out.split('\n').filter((l) => l.trim() && !/^\s+at /.test(l));
+      console.error(`npm ${cmd.join(' ')} failed:\n${lines.slice(-60).join('\n')}`);
       throw new Error('verification failed');
     }
   }

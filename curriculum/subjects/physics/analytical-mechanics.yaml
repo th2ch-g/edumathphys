@@ -15,12 +15,15 @@ references: [goldstein-cm, landau-mechanics, arnold-mmcm, onuki-am, yamamoto-nak
 chapters:
   - id: constraints
     title: Newton 力学と拘束・一般化座標
+    status: reviewed
     sections: [質点系の Newton 方程式, 拘束条件の分類, 一般化座標と配位空間, 仮想変位と仮想仕事の原理]
   - id: calculus-of-variations
     title: 変分法
+    status: reviewed
     sections: [汎関数と変分, Euler–Lagrange 方程式, 最速降下線と懸垂線, 拘束条件付き変分問題]
   - id: lagrangian
     title: Lagrange 形式
+    status: reviewed
     sections: [d'Alembert の原理から Lagrange 方程式へ, Hamilton の原理, Lagrangian の任意性, 電磁場中の荷電粒子, 散逸と Rayleigh 散逸関数]
   - id: symmetries
     title: 対称性と保存則

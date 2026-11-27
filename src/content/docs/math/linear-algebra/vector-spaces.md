@@ -332,7 +332,7 @@ $W$ の基底 $(w_1,\dots,w_k)$ を $V$ の基底 $(w_1,\dots,w_k,v_{k+1},\dots,
 :::
 
 :::remark
-補空間は一意ではない。例えば $\R^2$ において $W=\langle e_1\rangle$ の補空間は、$e_1$ に平行でない任意の直線 $\langle v\rangle$ である。「直交補空間」という特別な選び方は、内積を導入する第 6 章で扱う。
+補空間は一意ではない。例えば $\R^2$ において $W=\langle e_1\rangle$ の補空間は、$e_1$ に平行でない任意の直線 $\langle v\rangle$ である。「直交補空間」という特別な選び方は、内積を導入する [内積空間](/math/linear-algebra/inner-product-spaces/) の章で扱う。
 :::
 
 ## 演習問題

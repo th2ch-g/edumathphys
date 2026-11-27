@@ -25,12 +25,15 @@ chapters:
     sections: [体とベクトル空間の公理, 部分空間, 一次独立と生成系, 基底と次元, 和空間と直和]
   - id: linear-maps
     title: 線形写像と表現行列
+    status: reviewed
     sections: [線形写像の定義と例, 核と像, 次元定理, 表現行列, 基底変換と行列の相似]
   - id: determinants
     title: 行列式
+    status: reviewed
     sections: [置換と符号, 多重線形交代形式としての行列式, 行列式の基本性質, 余因子展開と逆行列, Cramer の公式]
   - id: eigenvalues
     title: 固有値と対角化
+    status: reviewed
     sections: [固有値と固有ベクトル, 特性多項式, 対角化可能性の判定, Cayley–Hamilton の定理, 三角化]
   - id: inner-product-spaces
     title: 内積空間

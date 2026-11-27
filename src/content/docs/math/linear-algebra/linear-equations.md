@@ -348,7 +348,7 @@ $$
 行列 $A$ の簡約行階段形の零でない行の個数（すなわち主成分の個数）を $A$ の :term[階数]{en="rank" yomi="かいすう"} といい、$\rank A$ で表す。
 :::
 
-:ref[thm-linalg-rref-unique] によって簡約行階段形は一意なので、階数は well-defined である。また行同値な行列は同じ簡約行階段形をもつから、同じ階数をもつ。$A\in M_{m,n}(K)$ ならば明らかに $\rank A\le\min\{m,n\}$ である。階数のより概念的な意味（列ベクトルの張る空間の次元）は第 3 章で明らかになる。
+:ref[thm-linalg-rref-unique] によって簡約行階段形は一意なので、階数は well-defined である。また行同値な行列は同じ簡約行階段形をもつから、同じ階数をもつ。$A\in M_{m,n}(K)$ ならば明らかに $\rank A\le\min\{m,n\}$ である。階数のより概念的な意味（列ベクトルの張る空間の次元）は :ref[thm-linalg-row-column-rank] で明らかになる。
 
 :::theorem[解の存在と自由度]{#thm-linalg-rank-criterion}
 $A\in M_{m,n}(K)$, $b\in K^m$ とする。
@@ -591,7 +591,7 @@ $$
 
 2. 存在したとすると、1 より $\tr(AB-BA)=\tr(AB)-\tr(BA)=0$ だが $\tr I_n = n\ne 0$ であり矛盾する（$\R$, $\C$ では $n\ne 0$ である。標数 $p$ の体では $p\mid n$ のとき反例がある）。
 
-3. $BA=I_n$, $AC=I_m$ とすると $B = B(AC) = (BA)C = C$ である。1 より $n=\tr I_n=\tr(BA)=\tr(AB)=\tr(AC)=\tr I_m=m$ となり、$m\ne n$ に反する（ここでも $K=\R,\C$ を仮定した。一般の体では第 3 章の次元論を用いて示せる）。
+3. $BA=I_n$, $AC=I_m$ とすると $B = B(AC) = (BA)C = C$ である。1 より $n=\tr I_n=\tr(BA)=\tr(AB)=\tr(AC)=\tr I_m=m$ となり、$m\ne n$ に反する（ここでも $K=\R,\C$ を仮定した。一般の体では [線形写像と表現行列](/math/linear-algebra/linear-maps/) の章の次元論を用いて示せる）。
 :::
 ::::
 
