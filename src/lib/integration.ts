@@ -28,10 +28,14 @@ export function edumathIntegration(opts: { watch: string[] }): AstroIntegration 
         logger.warn(msg);
       },
       'astro:build:done': async ({ dir }) => {
-        // Raster icon for platforms that do not support SVG favicons.
+        // Raster icons for platforms that do not support SVG favicons.
         const { default: sharp } = await import('sharp');
         const svg = readFileSync(join(process.cwd(), 'public', 'favicon.svg'));
-        await sharp(svg, { density: 300 }).resize(180, 180).png().toFile(join(fileURLToPath(dir), 'apple-touch-icon.png'));
+        const out = fileURLToPath(dir);
+        await sharp(svg, { density: 300 }).resize(180, 180).png().toFile(join(out, 'apple-touch-icon.png'));
+        await sharp(svg, { density: 300 }).resize(32, 32).png().toFile(join(out, 'favicon-32.png'));
+        // Browsers accept PNG data served as /favicon.ico (requested implicitly by some clients).
+        await sharp(svg, { density: 300 }).resize(32, 32).png().toFile(join(out, 'favicon.ico'));
       },
       'astro:server:setup': ({ server, logger }) => {
         const onChange = (file: string) => {

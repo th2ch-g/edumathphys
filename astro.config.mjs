@@ -43,6 +43,7 @@ export default defineConfig({
       logo: { src: './src/assets/logo.svg', alt: '' },
       favicon: '/favicon.svg',
       head: [
+        { tag: 'link', attrs: { rel: 'icon', type: 'image/png', sizes: '32x32', href: `${base.replace(/\/?$/, '/')}favicon-32.png` } },
         { tag: 'link', attrs: { rel: 'apple-touch-icon', href: `${base.replace(/\/?$/, '/')}apple-touch-icon.png` } },
         { tag: 'meta', attrs: { name: 'theme-color', content: '#1e3a8a' } },
       ],
