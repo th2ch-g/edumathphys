@@ -8,7 +8,7 @@ The site must make standard university and graduate textbooks unnecessary: a rea
 
 - Every definition, theorem and technique that the standard textbooks of the subject treat in the corresponding sections must appear, with complete proofs or derivations. Do not omit proofs as "standard" or "left to the reader"; the only acceptable omissions are results from a different subject (link to it) or results whose proof is genuinely far beyond the level (state it precisely, explain why the proof is omitted, and cite).
 - Explain motivation and intuition before formal statements, add remarks on typical pitfalls and on how results are used later, and give several worked examples per section.
-- Length follows content: typically 800–1500 lines per chapter. Split long proofs into lemmas.
+- Length follows content: typically 800–1500 lines, i.e. about 60–100 KB of Markdown per chapter; a chapter under 50 KB is almost certainly incomplete. Check with `wc -c` before finishing. Split long proofs into lemmas.
 - At least 8 exercises per chapter (basic and advanced, including proof problems and computations), all with complete solutions.
 
 Work autonomously until the assignment is complete. Never stop to ask questions: when instructions conflict, the registry YAML wins (e.g. chapter titles exactly as written there, including spaces), then this brief, then STYLE.md; otherwise make the most reasonable decision and mention it in the final report.
