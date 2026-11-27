@@ -41,5 +41,10 @@
     "@types/node": "^26.6.11",
     "mdast-util-directive": "^3.2.1",
     "typescript": "^6.0.3"
+  },
+  "overrides": {
+    "rehype-katex": {
+      "katex": "$katex"
+    }
   }
 }

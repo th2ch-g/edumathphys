@@ -1,6 +1,8 @@
 name: Deploy to GitHub Pages
 
 on:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -23,6 +25,11 @@ jobs:
           cache: npm
       - uses: actions/configure-pages@v5
         id: pages
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: tikz-${{ hashFiles('src/content/**/*.md') }}
+          restore-keys: tikz-
       - run: npm ci
       - run: npm run build
         env:

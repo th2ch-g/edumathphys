@@ -4,7 +4,9 @@ import { createRequire } from 'node:module';
 import { join } from 'node:path';
 
 const CACHE_DIR = join(process.cwd(), '.cache', 'tikz');
-const RENDER_VERSION = '1';
+const RENDER_VERSION = '2';
+// TeX points are small next to body text; enlarge so diagram labels match the surrounding font size.
+const SCALE = 1.6;
 
 const PACKAGES = { amsmath: '', amssymb: '', 'tikz-cd': '' };
 const LIBRARIES = 'arrows.meta,calc,positioning,decorations.pathmorphing,decorations.markings,shapes.geometric';
@@ -31,7 +33,10 @@ export function wrapTikz(lang: 'tikz' | 'tikzcd', code: string): string {
 function themeable(svg: string): string {
   return svg
     .replace(/(stroke|fill)="#000(?:000)?"/g, '$1="currentColor"')
-    .replace(/<svg /, '<svg fill="currentColor" role="img" ');
+    .replace(/<svg ([^>]*)>/, (_m, attrs: string) => {
+      const scaled = attrs.replace(/\b(width|height)="([\d.]+)"/g, (_a, k: string, v: string) => `${k}="${(Number(v) * SCALE).toFixed(2)}"`);
+      return `<svg fill="currentColor" role="img" ${scaled}>`;
+    });
 }
 
 /** Renders TikZ to SVG with a content-addressed cache. Calls are serialized (node-tikzjax is not reentrant). */
