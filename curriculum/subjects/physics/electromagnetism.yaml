@@ -14,33 +14,43 @@ references: [sunakawa-em, griffiths-em, jackson-em, purcell-em]
 chapters:
   - id: electrostatics
     title: 静電場
+    status: reviewed
     sections: [Coulomb の法則と電場, Gauss の法則, 電位, Poisson 方程式と Laplace 方程式]
   - id: conductors
     title: 導体と境界値問題
+    status: reviewed
     sections: [導体の性質, 鏡像法, 一意性定理, 変数分離による解法, 静電容量]
   - id: dielectrics
     title: 誘電体
+    status: reviewed
     sections: [分極と電気双極子, 電束密度, 境界条件, 静電エネルギー]
   - id: current-magnetostatics
     title: 電流と静磁場
+    status: reviewed
     sections: [電流と電荷保存則, Biot–Savart の法則, Ampère の法則, ベクトルポテンシャル, 磁気双極子]
   - id: magnetic-materials
     title: 磁性体
+    status: reviewed
     sections: [磁化, 磁場 H, 常磁性・反磁性・強磁性, 境界条件]
   - id: induction
     title: 電磁誘導
+    status: reviewed
     sections: [Faraday の法則, インダクタンス, 磁場のエネルギー, 回路方程式]
   - id: maxwell-equations
     title: Maxwell 方程式
+    status: reviewed
     sections: [変位電流, Maxwell 方程式, 電磁場のエネルギーと Poynting ベクトル, 電磁場の運動量と Maxwell 応力テンソル]
   - id: potentials-gauge
     title: ポテンシャルとゲージ変換
+    status: reviewed
     sections: [スカラーポテンシャルとベクトルポテンシャル, ゲージ変換, Coulomb ゲージと Lorenz ゲージ, 遅延ポテンシャル]
   - id: em-waves
     title: 電磁波
+    status: reviewed
     sections: [真空中の平面波, 偏光, 物質中の電磁波と分散, 境界での反射と屈折（Fresnel の式）, 導波管]
   - id: radiation
     title: 電磁放射
+    status: reviewed
     sections: [Liénard–Wiechert ポテンシャル, 双極子放射, Larmor の公式, 散乱]
   - id: relativistic-em
     title: 電磁気学と特殊相対論
