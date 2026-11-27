@@ -12,28 +12,37 @@ references: [yukie-algebra1, katsurada-algebra, dummit-foote, artin-algebra]
 chapters:
   - id: groups
     title: 群の定義と例
+    status: reviewed
     sections: [群の公理, 対称群と二面体群, 行列群, 部分群, 巡回群と元の位数]
   - id: cosets
     title: 剰余類と Lagrange の定理
+    status: reviewed
     sections: [左剰余類と右剰余類, Lagrange の定理, 正規部分群, 剰余群]
   - id: homomorphisms
     title: 準同型と同型定理
+    status: reviewed
     sections: [準同型写像, 核と像, 第一同型定理, 第二・第三同型定理, 対応定理]
   - id: group-actions
     title: 群の作用
+    status: reviewed
     sections: [作用の定義, 軌道と固定部分群, 軌道・固定群定理, 類等式, Burnside の補題]
   - id: sylow
     title: Sylow の定理
+    status: reviewed
     sections: [p 群, Sylow の第一定理, Sylow の第二・第三定理, 小さい位数の群の分類]
   - id: products-abelian
     title: 直積・半直積と有限 Abel 群
+    status: reviewed
     sections: [直積, 半直積, 有限生成 Abel 群の基本定理, 有限 Abel 群の分類]
   - id: symmetric-groups
     title: 対称群
+    status: reviewed
     sections: [巡回置換分解, 共役類, 交代群, 交代群の単純性]
   - id: solvable-nilpotent
     title: 可解群と冪零群
+    status: reviewed
     sections: [組成列と Jordan–Hölder の定理, 交換子群, 可解群, 冪零群]
   - id: free-groups
     title: 自由群と群の表示
+    status: reviewed
     sections: [自由群, 生成元と関係式, Tietze 変換, 例]
