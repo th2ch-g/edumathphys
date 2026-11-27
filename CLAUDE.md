@@ -40,3 +40,13 @@ Workflow (Claude token use is kept minimal; Codex does the heavy work):
 - Generated artifacts (`dist/`, `.astro/`, `.cache/`) are gitignored.
 - Never hard-code theorem/equation numbers in text; always use `:ref` / `:eqref`.
 - Never guess bibliographic details.
+
+## Resuming work (state at the last stop)
+
+Unreviewed drafts live on the `drafts` branch (not published). To resume: `git checkout drafts -- src/content/docs curriculum/subjects` on top of main, then continue the workflow above.
+
+- Written and expanded, waiting for Codex review: analysis ch4–13, analytical-mechanics ch4–12, quantum-mechanics (all 13).
+- Written, not yet expanded or reviewed: complex-analysis, sets-logic, special-relativity, statistical-mechanics.
+- Reviewed but held: electromagnetism/relativistic-em (waits for special-relativity to be published).
+- Linear algebra ch1–2 predate the current quality bar (ch2 has only 6 exercises): needs an upgrade pass.
+- References softened to plain links by `scripts/soften-refs.mjs` (restore as `:ref` once the target is published): electromagnetism/electrostatics (thm-anl-divergence), mechanics/kinematics, measure-integration/lebesgue-measure, measure-integration/differentiation. Find them with `grep -rn '](/math/\|](/physics/' src/content/docs` and compare with the labels in published chapters.
