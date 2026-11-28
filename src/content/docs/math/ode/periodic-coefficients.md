@@ -174,7 +174,7 @@ Liouville の公式から $\prod_j\rho_j=\det M=\exp(\int_0^T\tr A)$。ここで
 
 ### 行列対数の枝と Floquet 指数の和
 
-個々の $\mu_j$ は虚部を $2\pi/T$ の整数倍ずらせるが、実部の和は定まる。[常微分方程式の式](/math/ode/linear-systems/#eq-ode-liouville) と $\prod_j|\rho_j|=|\det M|$ から
+個々の $\mu_j$ は虚部を $2\pi/T$ の整数倍ずらせるが、実部の和は定まる。:eqref[eq-ode-liouville] と $\prod_j|\rho_j|=|\det M|$ から
 $$
 \sum_j \Re\mu_j=\frac1T\int_0^T \Re\tr A(r)\dd r.
 $$
@@ -270,7 +270,7 @@ $\Phi(r)$ と $\Phi(r)^{-1}$ は $r\in[0,T]$ 上で有界なので、:eqref[eq-o
 
 ### 周期入力の可解条件
 
-$b$ は連続で $b(t+T)=b(t)$ とし、$x'=Ax+b$ を考える。[常微分方程式の式](/math/ode/linear-systems/#eq-ode-duhamel) より時刻 $T$ の値は $M\xi+d$、$d=\int_0^T U(T,r)b(r)\dd r$ である。従って $T$ 周期解の初期値は次の方程式を満たす。
+$b$ は連続で $b(t+T)=b(t)$ とし、$x'=Ax+b$ を考える。:eqref[eq-ode-duhamel] より時刻 $T$ の値は $M\xi+d$、$d=\int_0^T U(T,r)b(r)\dd r$ である。従って $T$ 周期解の初期値は次の方程式を満たす。
 $$
 (I-M)\xi=d
 \label{eq-ode-periodic-forcing}
@@ -564,7 +564,7 @@ $$
 $$
 K(t)=(2\cos2t-\delta)\,R(-t)\begin{pmatrix}0&0\\1&0\end{pmatrix}R(t).
 $$
-[常微分方程式の式](/math/ode/linear-systems/#eq-ode-peano-baker) の一次項と、残りの絶対収束評価から
+:eqref[eq-ode-peano-baker] の一次項と、残りの絶対収束評価から
 $$
 M=-[I+\varepsilon H+O(\varepsilon^2)],\qquad
 H=\int_0^\pi K(t)\dd t=\frac{\pi}{2}\begin{pmatrix}0&1+\delta\\1-\delta&0\end{pmatrix}.

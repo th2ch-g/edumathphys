@@ -47,7 +47,7 @@ $$
 :::
 
 :::proof
-[常微分方程式の線形系の全区間での存在](/math/ode/linear-systems/#thm-ode-linear-existence) と、高階方程式の連立系への置き換えにより $y_p$ と基底が存在する。任意の解との差は斉次解なので基底に関して一意に展開される。境界条件に代入すると上の連立式となり、逆にこの連立式の解からすべての条件を満たす関数が得られる。
+:ref[thm-ode-linear-existence]{full} と、高階方程式の連立系への置き換えにより $y_p$ と基底が存在する。任意の解との差は斉次解なので基底に関して一意に展開される。境界条件に代入すると上の連立式となり、逆にこの連立式の解からすべての条件を満たす関数が得られる。
 :::
 
 :::example[傾きの調整が効く場合]
@@ -325,7 +325,7 @@ $$
 上で定めた $p,q$ と、連続で正の重み $w$、実係数の斉次分離境界条件を取る。$Ly=\lambda wy$ を満たす非零解 $y$ があるとき、$\lambda$ を :term[固有値]{en="eigenvalue" yomi="こゆうち"}、$y$ を固有関数という。ここでの :term[正則 Sturm–Liouville 問題]{en="regular Sturm–Liouville problem" yomi="せいそくしゅとるむりうゔぃるもんだい"} では区間が有限で、$p,w$ が端点でも正である。
 :::
 
-重み付き内積は $\inner{u}{v}_w=\int_a^b u\conj v\,w\dd x$ とし、第一変数に線形とする。[常微分方程式の式](/math/ode/linear-systems/#eq-ode-lagrange) の自己随伴形の計算から
+重み付き内積は $\inner{u}{v}_w=\int_a^b u\conj v\,w\dd x$ とし、第一変数に線形とする。:eqref[eq-ode-lagrange] の自己随伴形の計算から
 $$
 \int_a^b [(Lu)\conj v-u\conj{Lv}]\dd x
 =[p(u\conj{v'}-u'\conj v)]_a^b.

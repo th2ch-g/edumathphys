@@ -23,7 +23,7 @@ notation:
 
 ### 固有状態と完全性
 
-[量子力学（発展）のコヒーレント状態](/physics/advanced-quantum-mechanics/second-quantization/#def-aqm-coherent) の状態を時間格子に入れる。[経路積分](/physics/advanced-quantum-mechanics/path-integrals/) の位置基底を用いる導出や、[場の経路積分](/physics/quantum-field-theory/path-integral/) と同じく、隣の時刻の間に完全性を挿入する。振動子で消滅演算子の固有状態を使うと、正規順序の演算子の行列要素を数の積で表せる。:term[コヒーレント状態]{en="coherent state" yomi="こひーれんとじょうたい"} の非規格化形を $|z)=e^{za^\dagger}\ket0=\sum_{n\ge0}z^n\ket n/\sqrt{n!}$ とする。係数を一つずらすと $a|z)=z|z)$ であり、内積は $(z|w)=e^{\bar zw}$ である。よって規格化するには $e^{-|z|^2/2}$ を掛ける。
+:ref[def-aqm-coherent]{full} の状態を時間格子に入れる。[経路積分](/physics/advanced-quantum-mechanics/path-integrals/) の位置基底を用いる導出や、[場の経路積分](/physics/quantum-field-theory/path-integral/) と同じく、隣の時刻の間に完全性を挿入する。振動子で消滅演算子の固有状態を使うと、正規順序の演算子の行列要素を数の積で表せる。:term[コヒーレント状態]{en="coherent state" yomi="こひーれんとじょうたい"} の非規格化形を $|z)=e^{za^\dagger}\ket0=\sum_{n\ge0}z^n\ket n/\sqrt{n!}$ とする。係数を一つずらすと $a|z)=z|z)$ であり、内積は $(z|w)=e^{\bar zw}$ である。よって規格化するには $e^{-|z|^2/2}$ を掛ける。
 
 :::proposition[コヒーレント状態の完全性]{#prop-mb-coherent-resolution}
 $$

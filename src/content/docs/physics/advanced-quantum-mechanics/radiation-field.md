@@ -32,7 +32,7 @@ $$
 \label{eq-aqm-vector-potential}
 $$
 
-$\vb e_{\vb k\lambda}$ は $\vb k$ と直交する二つの単位偏光である。実定在波の二モードから $\pm\vb k$ の二進行波へユニタリに移るので、二重に数えていない。[量子力学（発展）の式](/physics/advanced-quantum-mechanics/second-quantization/#eq-aqm-boson-actions) のボソンの代数を各モードに課す。実モードごとに共役な $q,p_q=\epsilon_0\dot q$ を取り、$a=\sqrt{\epsilon_0\omega/(2\hbar)}\,q+i p_q/\sqrt{2\epsilon_0\hbar\omega}$ とすれば、$[q,p_q]=i\hbar$ は $[a,a^\dagger]=1$ になる。逆に $q,p_q$ を $a,a^\dagger$ で表して $p_q^2/(2\epsilon_0)+\epsilon_0\omega^2 q^2/2$ に代入すると、$aa$ と $a^\dagger a^\dagger$ が打ち消し合う。進行波への基底変換は同じ $\omega$ の中だけなので、
+$\vb e_{\vb k\lambda}$ は $\vb k$ と直交する二つの単位偏光である。実定在波の二モードから $\pm\vb k$ の二進行波へユニタリに移るので、二重に数えていない。:eqref[eq-aqm-boson-actions] のボソンの代数を各モードに課す。実モードごとに共役な $q,p_q=\epsilon_0\dot q$ を取り、$a=\sqrt{\epsilon_0\omega/(2\hbar)}\,q+i p_q/\sqrt{2\epsilon_0\hbar\omega}$ とすれば、$[q,p_q]=i\hbar$ は $[a,a^\dagger]=1$ になる。逆に $q,p_q$ を $a,a^\dagger$ で表して $p_q^2/(2\epsilon_0)+\epsilon_0\omega^2 q^2/2$ に代入すると、$aa$ と $a^\dagger a^\dagger$ が打ち消し合う。進行波への基底変換は同じ $\omega$ の中だけなので、
 $H_{\mathrm{rad}}=\sum_{\vb k\lambda}\hbar\omega_k(a^\dagger a+1/2)$ になる。$\vb E$ の消滅項は $i\sqrt{\hbar\omega_k/(2\epsilon_0\mathcal V)}\,\vb e_{\vb k\lambda}a e^{i\vb k\cdot\vb r}$ である。随伴の生成項には逆の $i$ の符号が付く。
 
 $\sum_\lambda e_i e_j^*=\delta_{ij}-\hat k_i\hat k_j$ は横波平面への射影である。従って $\comm{A_i(\vb r)}{\Pi_j(\vb r')}=i\hbar\,\delta^\perp_{ij}(\vb r-\vb r')$ で、$\delta^\perp$ はこの射影の Fourier 和である。縦成分を独立な振動子に加えると Gauss の制約に反する。:term[光子]{en="photon" yomi="こうし"} はモードの一量子で、エネルギー $\hbar\omega$、運動量 $\hbar\vb k$ を持つ。運動量は $\vb r$ の並進でモード振幅が $e^{i\vb k\cdot\vb r}$ の位相を得ることから決まる。
@@ -76,7 +76,7 @@ $\vb k,-\vb k$ の一光子状態を確率重み $3/4,1/4$ の純粋な重ね合
 
 ## 光子の状態（Fock 状態・コヒーレント状態）
 
-一モードの数状態 $\ket n$ では $\langle a\rangle=0$ だが $\langle a^\dagger a\rangle=n$ である。従って平均電場は零でもエネルギーと光検出率は有限である。一方 [量子力学（発展）のコヒーレント状態](/physics/advanced-quantum-mechanics/second-quantization/#def-aqm-coherent) の状態なら $\langle a\rangle=\alpha$ なので、電場の平均は複素振幅 $\alpha$ を持つ古典モードになる。古典振動の位相は数基底の異なる成分の相対位相にある。
+一モードの数状態 $\ket n$ では $\langle a\rangle=0$ だが $\langle a^\dagger a\rangle=n$ である。従って平均電場は零でもエネルギーと光検出率は有限である。一方 :ref[def-aqm-coherent]{full} の状態なら $\langle a\rangle=\alpha$ なので、電場の平均は複素振幅 $\alpha$ を持つ古典モードになる。古典振動の位相は数基底の異なる成分の相対位相にある。
 
 $X=(a+a^\dagger)/\sqrt2$、$P=(a-a^\dagger)/(i\sqrt2)$ とすると $\comm{X}{P}=iI$ である。数状態では $\langle X^2\rangle=\langle P^2\rangle=n+1/2$ となる。各二次式で $a^2,a^{\dagger2}$ の期待値が零だからである。コヒーレント状態では $b=a-\alpha$ が状態を消し、$\comm{b}{b^\dagger}=I$ なので $X,P$ の分散はいずれも $1/2$ である。
 

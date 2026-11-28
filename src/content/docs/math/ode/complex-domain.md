@@ -317,7 +317,7 @@ $z^2y''-2y=0$ には $z^2,z^{-1}$ があり、指数差 $3$ でもモノドロ�
 
 ### 行列式と留数
 
-二階方程式を一階に直した係数行列のトレースは $-p(z)$ である。閉路 $\gamma$ に沿って行列式を運ぶと、[常微分方程式のLiouville の公式](/math/ode/linear-systems/#thm-ode-liouville) の行の多重線形性による導出が複素変数でも使え、作用の行列式は $\exp(-\int_\gamma p(z)\dd z)$ になる。有限の一点を一周する場合、:ref[thm-cpx-residue-theorem] によれば $e^{-2\pi i\,\mathrm{Res}\,p}$ である。指数の和が $1-\mathrm{Res}\,p$ だから :ref[prop-ode-local-monodromy] の二固有値の積とも一致する。
+二階方程式を一階に直した係数行列のトレースは $-p(z)$ である。閉路 $\gamma$ に沿って行列式を運ぶと、:ref[thm-ode-liouville]{full} の行の多重線形性による導出が複素変数でも使え、作用の行列式は $\exp(-\int_\gamma p(z)\dd z)$ になる。有限の一点を一周する場合、:ref[thm-cpx-residue-theorem] によれば $e^{-2\pi i\,\mathrm{Res}\,p}$ である。指数の和が $1-\mathrm{Res}\,p$ だから :ref[prop-ode-local-monodromy] の二固有値の積とも一致する。
 
 ### 冪を掛けて局所モノドロミーを変える
 

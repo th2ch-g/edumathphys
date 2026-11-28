@@ -21,7 +21,7 @@ notation:
 
 ## Fock 空間と生成消滅演算子の復習
 
-多体系で一粒子軌道を取り替えるとき、各粒子に名前をつけて追跡する必要はない。直交軌道を選び、それぞれを何個の粒子が占めるかを指定すればよい。[同種粒子](/physics/quantum-mechanics/identical-particles/) の :ref[def-qm-occupation] を出発点に、粒子の出入りも扱える空間を作る。粒子数部門の直和は [量子力学（発展）のFock 空間](/physics/advanced-quantum-mechanics/second-quantization/#def-aqm-fock) に対応する。
+多体系で一粒子軌道を取り替えるとき、各粒子に名前をつけて追跡する必要はない。直交軌道を選び、それぞれを何個の粒子が占めるかを指定すればよい。[同種粒子](/physics/quantum-mechanics/identical-particles/) の :ref[def-qm-occupation] を出発点に、粒子の出入りも扱える空間を作る。粒子数部門の直和は :ref[def-aqm-fock]{full} に対応する。
 
 :::definition[Fock 空間]{#def-mb-fock-space}
 一粒子 Hilbert 空間を $\mathcal H$ とし、内積は ket 側について線形とする。$\eta=+1$ を Bose 系、$\eta=-1$ を Fermi 系に割り当てる。$\mathcal H_\eta^{(N)}$ を、粒子の任意の交換に対して Bose 系では対称、Fermi 系では反対称なテンソルの空間とする。$\mathcal H_\eta^{(0)}=\C\ket{0}$ とし、Hilbert 直和 $\mathcal F_\eta=\bigoplus_{N=0}^\infty\mathcal H_\eta^{(N)}$ を :term[Fock 空間]{en="Fock space" yomi="ふぉっくくうかん"} と呼ぶ。生成・消滅演算子の積は、まず有限個の占有数基底ベクトルが張る共通の定義域で扱う。

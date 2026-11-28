@@ -36,7 +36,7 @@ $$
 :::
 
 :::proof
-級数の収束と $(e^{tA})'=Ae^{tA}$ は :ref[thm-linalg-matrix-exp] により、$t=s$ の値は $I$ である。従って [常微分方程式の線形系の全区間での存在](/math/ode/linear-systems/#thm-ode-linear-existence) の一意性から発展行列に等しい。連続な入力 $b$ に対する非斉次式は [常微分方程式の式](/math/ode/linear-systems/#eq-ode-duhamel) に代入して得る。
+級数の収束と $(e^{tA})'=Ae^{tA}$ は :ref[thm-linalg-matrix-exp] により、$t=s$ の値は $I$ である。従って :ref[thm-ode-linear-existence]{full} の一意性から発展行列に等しい。連続な入力 $b$ に対する非斉次式は :eqref[eq-ode-duhamel] に代入して得る。
 :::
 
 :::example[冪零行列で級数が止まる]
@@ -159,7 +159,7 @@ $$
 :::
 
 :::proof
-鎖の張る空間上で $A=\lambda I+N$、$Nv_j=v_{j-1}$、$Nv_1=0$ である。二項展開と絶対収束する級数の積から $e^{tA}=e^{\lambda t}e^{tN}$。$N^jv_j=0$ により級数は :eqref[eq-ode-jordan-mode] に止まる。:ref[thm-linalg-jordan] による基底を初期値として取り、[常微分方程式の線形系の全区間での存在](/math/ode/linear-systems/#thm-ode-linear-existence) の評価写像を使えば解の基底となる。
+鎖の張る空間上で $A=\lambda I+N$、$Nv_j=v_{j-1}$、$Nv_1=0$ である。二項展開と絶対収束する級数の積から $e^{tA}=e^{\lambda t}e^{tN}$。$N^jv_j=0$ により級数は :eqref[eq-ode-jordan-mode] に止まる。:ref[thm-linalg-jordan] による基底を初期値として取り、:ref[thm-ode-linear-existence]{full} の評価写像を使えば解の基底となる。
 :::
 
 実行列で非実固有値 $\lambda=\alpha+i\beta$ があれば、共役鎖も同じ長さで得られる。対応する複素解とその共役を実部・虚部に取り替える変換は複素線形に可逆なので、それらの実部と虚部は実解空間の基底を与える。固有値の実部は指数的な伸縮、虚部は振動、鎖の長さは $t$ の多項式次数を決める。
@@ -733,7 +733,7 @@ $$
 
 ### 一階系と高階方程式の変換公式の適用範囲
 
-入力 $f$ が局所区分的連続かつ指数型なら、定数係数の初期値解も、その状態成分 $y,\ldots,y^{(n-1)}$ とほとんど至る所での導関数が指数型となる。実際、連立系に [常微分方程式の式](/math/ode/linear-systems/#eq-ode-duhamel) の局所可積分な入力に対する形を使うと $\norm{e^{tA}}\le e^{t\norm A}$ から、初期項と入力積分はいずれも $C_1e^{a_1t}$ 以下になるように $a_1$ を取れる。例えば入力が $Ce^{at}$ 以下なら、積分は $Ct e^{\max(a,\norm A)t}$ 以下であり、$t$ は指数の定数を少し大きくすれば吸収できる。有限区間上では状態は絶対連続だから、部分積分には切替点の跳びが出ない。従って十分大きい $\Re s$ で
+入力 $f$ が局所区分的連続かつ指数型なら、定数係数の初期値解も、その状態成分 $y,\ldots,y^{(n-1)}$ とほとんど至る所での導関数が指数型となる。実際、連立系に :eqref[eq-ode-duhamel] の局所可積分な入力に対する形を使うと $\norm{e^{tA}}\le e^{t\norm A}$ から、初期項と入力積分はいずれも $C_1e^{a_1t}$ 以下になるように $a_1$ を取れる。例えば入力が $Ce^{at}$ 以下なら、積分は $Ct e^{\max(a,\norm A)t}$ 以下であり、$t$ は指数の定数を少し大きくすれば吸収できる。有限区間上では状態は絶対連続だから、部分積分には切替点の跳びが出ない。従って十分大きい $\Re s$ で
 $$
 P(s)Y(s)=\mathcal L f(s)+\sum_{j=1}^n a_j\sum_{\ell=0}^{j-1}s^{j-1-\ell}y^{(\ell)}(0),
 \qquad a_n=1 .

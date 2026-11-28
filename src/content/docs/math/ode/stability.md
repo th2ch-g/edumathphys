@@ -578,7 +578,7 @@ $U(x)=x^4/4-x^2/2$ の勾配流は $x'=x-x^3$。臨界点は $0,\pm1$ である�
 
 ### Hamilton 流
 
-標準座標 $(q,p)$ において $q'=H_p,\ p'=-H_q$ と書ける系を :term[Hamilton 系]{en="Hamiltonian system" yomi="はみるとんけい"} という。$H\in C^2$ なら $H'=\sum(H_qH_p-H_pH_q)=0$。混合偏微分が等しいので $\divg F=0$ である。:eqref[eq-ode-variational] と [常微分方程式のLiouville の公式](/math/ode/linear-systems/#thm-ode-liouville) を合わせると、流れの Jacobian 行列式は常に $1$ であり、座標体積を保存する。
+標準座標 $(q,p)$ において $q'=H_p,\ p'=-H_q$ と書ける系を :term[Hamilton 系]{en="Hamiltonian system" yomi="はみるとんけい"} という。$H\in C^2$ なら $H'=\sum(H_qH_p-H_pH_q)=0$。混合偏微分が等しいので $\divg F=0$ である。:eqref[eq-ode-variational] と :ref[thm-ode-liouville]{full} を合わせると、流れの Jacobian 行列式は常に $1$ であり、座標体積を保存する。
 
 :::example[極小点は安定でも吸引しない]
 $H=(p^2+4q^2)/2$ の原点は厳密な極小で、$V=H$ に :ref[thm-ode-lyapunov] を使うと安定である。非零な初期値は正のエネルギーを保存するため原点に収束しない。例えば $(q,p)=(1,0)$ からの軌道は $q=\cos2t,\ p=-2\sin2t$ である。

@@ -400,7 +400,7 @@ $U$ が Jordan 曲線の有界な内側なら、等角同型 $\mathbb D\to U$ �
 ### 横断弧の長さから境界の一点を復元する
 
 :::proof[Jordan 領域での境界延長の証明]
-$F:\mathbb D\to U$ を等角同型、$\Gamma=\partial U$ を Jordan 曲線とする。使う平面位相の事実は Jordan の分離定理である。単純閉曲線の補集合には有界成分と非有界成分が一つずつあり、その共通境界が曲線全体である。証明は [Jordan–Brouwer の分離定理](/math/algebraic-topology/homology-applications/#thm-at-jordan-brouwer) の平面の場合を参照せよ。
+$F:\mathbb D\to U$ を等角同型、$\Gamma=\partial U$ を Jordan 曲線とする。使う平面位相の事実は Jordan の分離定理である。単純閉曲線の補集合には有界成分と非有界成分が一つずつあり、その共通境界が曲線全体である。証明は :ref[thm-at-jordan-brouwer]{text="Jordan–Brouwer の分離定理"} の平面の場合を参照せよ。
 
 **面積から短い弧を選ぶ。** 円周上の一点 $\xi$ を固定し、$0<r<1$ について $\mathbb D\cap\{|z-\xi|=r\}$ を $A_r$ とする。これは円周を端とする一本の開円弧である。その像の長さを $L(r)$ とする。弧の両端までの正則性はまだないから、長さは閉部分弧の長さの上限として定めてよい。Cauchy–Schwarz の不等式から
 $$

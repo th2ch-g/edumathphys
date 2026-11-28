@@ -43,7 +43,6 @@ Workflow (Claude token use is kept minimal; Codex does the heavy work):
 
 ## Resuming work (state at the last stop)
 
-Every chapter of every subject is written, reviewed and published (`status: reviewed`); the `drafts` branch is obsolete.
+Every chapter of every subject is written, reviewed and published (`status: reviewed`).
 
-- Open follow-up: chapters contain plain links that used to be `:ref`/`:eqref` (softened by `scripts/soften-refs.mjs` while their targets were unpublished). All targets are published now: restore them with a Codex job. Find them with `grep -rn '](/math/\|](/physics/' src/content/docs` and compare with the labels in the target chapters.
 - `src/plugins/remark-edumath.ts:271` (quiz handling) has a pre-existing `tsc` type error.

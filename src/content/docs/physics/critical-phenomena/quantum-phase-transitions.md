@@ -18,7 +18,7 @@ notation:
 - 横磁場 Ising 模型を古典模型とフェルミオンに写す。
 - 有限温度で時間方向の切断が与える領域を判定する。
 
-$\hbar$ と $k_B$ を明示する。フェルミオンの Fock 空間は [量子力学（発展）のFock 空間](/physics/advanced-quantum-mechanics/second-quantization/#def-aqm-fock) を参照。
+$\hbar$ と $k_B$ を明示する。フェルミオンの Fock 空間は :ref[def-aqm-fock]{full} を参照。
 
 ## 量子相転移と量子臨界点
 

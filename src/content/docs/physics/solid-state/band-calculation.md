@@ -236,7 +236,7 @@ $$
 $$
 直積を使い対象粒子それぞれの平均電位に置くのが :term[Hartree 近似]{en="Hartree approximation" yomi="はーとりーきんじ"}、行列式上で変分するのが :term[Hartree–Fock 近似]{en="Hartree–Fock approximation" yomi="はーとりーふぉっくきんじ"} である。
 
-数密度 $\sum_i|\phi_i(x)|^2$ は粒子のスピン点 $x=(\vb r,\sigma)$ で書き、$\dd x$ は空間の積分とスピンの和を意味すると約束する。式の計数は二次量子化でも確かめられる。式 [量子力学（発展）の式](/physics/advanced-quantum-mechanics/second-quantization/#eq-aqm-two-body) の二体作用素では、占有した軌道の二粒子を消した後、同じ軌道へ生成し直した場合にだけ期待値が残る。$n_i\in\{0,1\}$ を占有数とすると、$\langle a_i^\dagger a_j^\dagger a_l a_k\rangle=n_i n_j(\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk})$ である。演算子の順序を交換すると一回の反交換で負符号が出るためである。$i=j$ では二つが相殺し、同じ軌道から二粒子を消せない条件も満たす。これを二体演算子に代入すると上の直接項と交換項になる。
+数密度 $\sum_i|\phi_i(x)|^2$ は粒子のスピン点 $x=(\vb r,\sigma)$ で書き、$\dd x$ は空間の積分とスピンの和を意味すると約束する。式の計数は二次量子化でも確かめられる。式 :eqref[eq-aqm-two-body] の二体作用素では、占有した軌道の二粒子を消した後、同じ軌道へ生成し直した場合にだけ期待値が残る。$n_i\in\{0,1\}$ を占有数とすると、$\langle a_i^\dagger a_j^\dagger a_l a_k\rangle=n_i n_j(\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk})$ である。演算子の順序を交換すると一回の反交換で負符号が出るためである。$i=j$ では二つが相殺し、同じ軌道から二粒子を消せない条件も満たす。これを二体演算子に代入すると上の直接項と交換項になる。
 
 直積の Hartree 変分では、粒子 $i$ が感じる平均場に $j\ne i$ の密度だけが入る。実装や計算の途中で全密度の Coulomb 汎関数 $\tfrac12\sum_{ij}J_{ij}$ を導入する場合は、粒子ごとの自己項 $\tfrac12\sum_iJ_{ii}$ と区別する。Hartree–Fock ではこの差が交換で自動的に出る。二体積分は $v_{12}=v_{21}$ を満たすので、$\phi_i^*$ に関する変分では、$J$ と $K$ の対称な添字交換で $1/2$ が消える。例えば直接項から $\delta\phi_i^*(x)\phi_i(x)\sum_j\int v_{12}|\phi_j(y)|^2\dd y$ が出る。交換項には $\delta\phi_i^*(x)\sum_j\phi_j(x)\int v_{12}\phi_j^*(y)\phi_i(y)\dd y$ が出る。
 

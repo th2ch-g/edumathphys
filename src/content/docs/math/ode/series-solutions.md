@@ -36,7 +36,7 @@ $$
 :::proof
 べき級数を代入し $x^n$ の係数を等置すると式が必要である。形式的に定めた係数の収束を示すため、$u=(y,y',1)^\top$、$u'=A(x)u$ と拡大する。$A$ は第 1 行 $(0,1,0)$、第 2 行 $(-q,-p,g)$、第 3 行 $(0,0,0)$ を持つ。ある $0<\sigma<\rho<R$ を取り $A(x)=\sum A_jx^j$、$\norm{A_j}\le C\rho^{-j}$ とする。これは絶対収束から得られる。$u=\sum u_nx^n$ の漸化式は $(n+1)u_{n+1}=\sum_{j=0}^n A_j u_{n-j}$ である。
 
-$\norm{u_k}\le M\sigma^{-k}$（$k\le n$）なら、右辺は $CM\sigma^{-n}\sum_{j=0}^n(\sigma/\rho)^j$ 以下である。従って $n+1\ge C\sigma/(1-\sigma/\rho)$ のとき $\norm{u_{n+1}}\le M\sigma^{-(n+1)}$。有限個の最初の係数を覆うように $M$ を選べば帰納法が閉じる。よって $|x|<\sigma$ で収束し、$\sigma$ は $R$ に任意に近づけられる。項別微分と積の級数は :ref[prop-anl-analytic-series] により正当化され、初期値と方程式を満たす。実区間での一意性は [常微分方程式の線形系の全区間での存在](/math/ode/linear-systems/#thm-ode-linear-existence) による。
+$\norm{u_k}\le M\sigma^{-k}$（$k\le n$）なら、右辺は $CM\sigma^{-n}\sum_{j=0}^n(\sigma/\rho)^j$ 以下である。従って $n+1\ge C\sigma/(1-\sigma/\rho)$ のとき $\norm{u_{n+1}}\le M\sigma^{-(n+1)}$。有限個の最初の係数を覆うように $M$ を選べば帰納法が閉じる。よって $|x|<\sigma$ で収束し、$\sigma$ は $R$ に任意に近づけられる。項別微分と積の級数は :ref[prop-anl-analytic-series] により正当化され、初期値と方程式を満たす。実区間での一意性は :ref[thm-ode-linear-existence]{full} による。
 :::
 
 :::example[次数が三つずつ進む Airy 方程式]
@@ -289,7 +289,7 @@ $$
 :::
 
 :::proof
-[常微分方程式の既知解からの階数低下](/math/ode/linear-systems/#thm-ode-dalembert) を使う。$p=P_0/x+\widetilde p$、$\widetilde p$ は解析的であるから、積分の中身は定数倍を除いて
+:ref[thm-ode-dalembert]{full} を使う。$p=P_0/x+\widetilde p$、$\widetilde p$ は解析的であるから、積分の中身は定数倍を除いて
 $$
 \frac{x^{-P_0}\exp(-\int_0^x\widetilde p)}{x^{2r_1}a(x)^2}
 =x^{-m-1}B(x),\qquad B(0)=1,
@@ -435,7 +435,7 @@ $$
 :::
 
 :::proof
-まず非整数 $\nu>0$ で、先頭係数から $xW(J_\nu,J_{-\nu})=-2\nu/[\Gamma(1+\nu)\Gamma(1-\nu)]$ を得る。この量は [常微分方程式のAbel の恒等式](/math/ode/linear-systems/#cor-ode-abel) により $x$ によらない。:ref[thm-cpx-gamma-reflection] と $\Gamma(1+\nu)=\nu\Gamma(\nu)$ から右辺は $-2\sin(\pi\nu)/\pi$。従って定義通りの線形結合の Wronskian は $2/(\pi x)$ である。整数では、上で示したパラメータの極限と、$x$ 微分した級数の局所一様収束から同じ式を得る。
+まず非整数 $\nu>0$ で、先頭係数から $xW(J_\nu,J_{-\nu})=-2\nu/[\Gamma(1+\nu)\Gamma(1-\nu)]$ を得る。この量は :ref[cor-ode-abel]{full} により $x$ によらない。:ref[thm-cpx-gamma-reflection] と $\Gamma(1+\nu)=\nu\Gamma(\nu)$ から右辺は $-2\sin(\pi\nu)/\pi$。従って定義通りの線形結合の Wronskian は $2/(\pi x)$ である。整数では、上で示したパラメータの極限と、$x$ 微分した級数の局所一様収束から同じ式を得る。
 :::
 
 ### 漸化式と半整数の例
@@ -692,7 +692,7 @@ $$
 となる。
 
 :::example[両端の条件で解を選ぶ]
-$\lambda=0$ では $(1-x^2)y'=C$ なので、第二解は $\frac12\log[(1+x)/(1-x)]$ である。これは両端で発散し、両端有界な解は定数倍の $P_0$ だけである。一般の $n$ でも $P_n(1)=1$ のため、$x=1$ の近くで [常微分方程式の式](/math/ode/linear-systems/#eq-ode-dalembert) の被積分関数は $1/[(1-x^2)P_n^2]$ の定数倍となり、第二解は対数的に発散する。
+$\lambda=0$ では $(1-x^2)y'=C$ なので、第二解は $\frac12\log[(1+x)/(1-x)]$ である。これは両端で発散し、両端有界な解は定数倍の $P_0$ だけである。一般の $n$ でも $P_n(1)=1$ のため、$x=1$ の近くで :eqref[eq-ode-dalembert] の被積分関数は $1/[(1-x^2)P_n^2]$ の定数倍となり、第二解は対数的に発散する。
 :::
 
 ### 母関数から多項式をまとめて読む

@@ -222,7 +222,7 @@ $$
 :::
 
 :::proof
-$D\Phi_T(p)$ は接方向 $X(p)$ を自分自身に移す。これは :ref[prop-ode-flow-group] の合成則を時間について微分すれば分かる。横断方向 $v$ について帰還点を微分すると $D\Phi_T(p)v+X(p)\tau'(p)$ となり、後ろの項は接方向だけにある。従って基底 $(X(p),v)$ の第二成分の倍率は $D\Phi_T(p)$ の行列式と等しい。:eqref[eq-ode-variational] と [常微分方程式の式](/math/ode/linear-systems/#eq-ode-liouville) によりその行列式は :eqref[eq-ode-return-derivative] の値である。
+$D\Phi_T(p)$ は接方向 $X(p)$ を自分自身に移す。これは :ref[prop-ode-flow-group] の合成則を時間について微分すれば分かる。横断方向 $v$ について帰還点を微分すると $D\Phi_T(p)v+X(p)\tau'(p)$ となり、後ろの項は接方向だけにある。従って基底 $(X(p),v)$ の第二成分の倍率は $D\Phi_T(p)$ の行列式と等しい。:eqref[eq-ode-variational] と :eqref[eq-ode-liouville] によりその行列式は :eqref[eq-ode-return-derivative] の値である。
 :::
 
 $0<P'<1$ なら帰還点の差は反復で縮む。実際、微分の連続性と平均値の定理により、十分近くでは差が一反復当たり $q<1$ 倍以下になる。$P'>1$ なら同じ議論で前進反復により離れ、後退帰還では縮む。帰還点の間の時刻区間は基準周期に近く、その間の軌道も連続依存性から基準軌道へ近づく。$P'=1$ では高次の項か、直接の符号を調べる必要がある。

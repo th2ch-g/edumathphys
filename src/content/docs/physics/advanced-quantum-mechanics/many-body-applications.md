@@ -23,7 +23,7 @@ notation:
 
 相互作用するフェルミオンを一つの Slater 行列式で近似すると、反対称性を厳密に課したまま軌道を変分できる。正規直交する占有軌道を $\phi_1,\ldots,\phi_N$、一体演算子を $h$、粒子対の相互作用を $W(x,y)$ とする。スピンも $x$ に含める。
 
-占有基底の状態で $\langle a_i^\dagger a_j^\dagger a_l a_k\rangle=n_i n_j(\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk})$ である。消滅した軌道を同じ組で戻す必要があり、二通りの順序の符号が逆になるからである。[量子力学（発展）の式](/physics/advanced-quantum-mechanics/second-quantization/#eq-aqm-two-body) に代入して
+占有基底の状態で $\langle a_i^\dagger a_j^\dagger a_l a_k\rangle=n_i n_j(\delta_{ik}\delta_{jl}-\delta_{il}\delta_{jk})$ である。消滅した軌道を同じ組で戻す必要があり、二通りの順序の符号が逆になるからである。:eqref[eq-aqm-two-body] に代入して
 
 $$
 E=\sum_i\mel{i}{h}{i}+\frac12\sum_{ij}(W_{ij;ij}-W_{ij;ji})
@@ -204,7 +204,7 @@ H_2=\frac{gn^2\mathcal V}{2}+\sum_{\vb k\ne0}
 \quad\epsilon_k=\frac{\hbar^2 k^2}{2m}.
 $$
 
-$\vb k,-\vb k$ ごとに $a_{\vb k}=u_k b_{\vb k}-v_k b_{-\vb k}^\dagger$ と置き、$u=\cosh r$、$v=\sinh r$ を用いる。異常項が消える条件は $\tanh(2r)=gn/(\epsilon_k+gn)$ で、[量子力学（発展）の式](/physics/advanced-quantum-mechanics/second-quantization/#eq-aqm-bogoliubov-one) と同じ二次式から
+$\vb k,-\vb k$ ごとに $a_{\vb k}=u_k b_{\vb k}-v_k b_{-\vb k}^\dagger$ と置き、$u=\cosh r$、$v=\sinh r$ を用いる。異常項が消える条件は $\tanh(2r)=gn/(\epsilon_k+gn)$ で、:eqref[eq-aqm-bogoliubov-one] と同じ二次式から
 
 $$
 E_k=\sqrt{\epsilon_k(\epsilon_k+2gn)},\qquad
