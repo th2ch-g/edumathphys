@@ -43,8 +43,7 @@ Workflow (Claude token use is kept minimal; Codex does the heavy work):
 
 ## Resuming work (state at the last stop)
 
-Unreviewed drafts live on the `drafts` branch (not published). To resume: `git checkout drafts -- src/content/docs curriculum/subjects` on top of main, then `git reset -q` (checkout also stages the drafts; `stage-chapters.mjs` must start from a clean index), then continue the workflow above.
+Every chapter of every subject is written, reviewed and published (`status: reviewed`); the `drafts` branch is obsolete.
 
-- Every chapter of every subject exists at least as a draft. Published: all subjects except the 46 below.
-- Expanded, waiting for Codex review (review jobs also fix the `npm run check` errors in these drafts): the 46 subjects that were stubs before (algebraic-geometry … vibrations-waves).
-- References softened to plain links by `scripts/soften-refs.mjs` (restore as `:ref` once the target is published): electromagnetism/electrostatics (thm-anl-divergence), mechanics/kinematics, measure-integration/lebesgue-measure, measure-integration/differentiation, analysis/euclidean-space (thm-sets-demorgan), analysis/multiple-integral (prop-sets-characteristic), complex-analysis/harmonic-functions. Find them with `grep -rn '](/math/\|](/physics/' src/content/docs` and compare with the labels in published chapters.
+- Open follow-up: chapters contain plain links that used to be `:ref`/`:eqref` (softened by `scripts/soften-refs.mjs` while their targets were unpublished). All targets are published now: restore them with a Codex job. Find them with `grep -rn '](/math/\|](/physics/' src/content/docs` and compare with the labels in the target chapters.
+- `src/plugins/remark-edumath.ts:271` (quiz handling) has a pre-existing `tsc` type error.
