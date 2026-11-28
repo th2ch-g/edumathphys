@@ -16,63 +16,80 @@ references: [neukirch-ant, serre-local, cassels-frohlich, kato-kurokawa-saito, m
 chapters:
   - id: dedekind-extensions
     title: Dedekind 整域の拡大と素イデアルの分解
+    status: reviewed
     prerequisites: [commutative-algebra/dedekind, number-theory/ideal-factorization, fields-galois/norm-trace]
     sections: [整閉包の有限性と Dedekind 性, 素イデアルの分解と基本等式 Σ e_i f_i = n, Kummer–Dedekind の定理と共通指数因子, 相対ノルムとイデアルのノルム, 共役差積と判別式, Dedekind の判別定理, 合成体における分岐]
   - id: hilbert-ramification
     title: Hilbert の分岐理論
+    status: reviewed
     prerequisites: [fields-galois/galois-correspondence]
     sections: [Galois 群の素イデアルへの推移的作用, 分解群と惰性群, Frobenius 置換と Artin 記号, 分解体と惰性体, アーベル拡大における素イデアルの分解, 例：二次体と円分体]
   - id: cyclotomic-fields
     title: 円分体
+    status: reviewed
     prerequisites: [fields-galois/cyclotomic, number-theory/quadratic-reciprocity]
     sections: [円分体の整数環と判別式, 円分体における素数の分解, 二次部分体と Gauss 和, 円分体による平方剰余の相互法則の証明, 円単数と実円分体, Kummer の正則素数と Fermat の最終定理, Stickelberger の定理]
   - id: valuations
     title: 付値と完備化
+    status: reviewed
     prerequisites: [commutative-algebra/valuation-rings, number-theory/p-adic-numbers]
     sections: [絶対値と付値, 代数体の絶対値と Ostrowski の定理, 弱近似定理, 完備化と完備付値体, 完備体における付値の拡張の一意性, 不完備な体における付値の拡張と素イデアルの分解, 積公式]
   - id: local-fields
     title: 局所体
+    status: reviewed
     prerequisites: [commutative-algebra/completion]
     sections: [局所体の定義と分類, 一般の Hensel の補題と Newton 多角形, 局所体の乗法群の構造, 不分岐拡大と最大不分岐拡大, 完全分岐拡大と Eisenstein 多項式, 順分岐拡大, Krasner の補題と局所体の拡大の有限性]
   - id: ramification-groups
     title: 高次分岐群
+    status: reviewed
     sections: [下付き番号の分岐群, 分岐群の商と剰余体, 共役差積と分岐群（Hilbert の公式）, Herbrand 関数と上付き番号, Hasse–Arf の定理, 導手と導手判別式公式]
   - id: adeles-ideles
     title: アデールとイデール
+    status: reviewed
     prerequisites: [topology/compactness, number-theory/class-group-units]
     sections: [制限直積, アデール環とその位相, 大域体はアデール環の離散余コンパクト部分群であること, イデール群とイデール類群, イデール類群とイデアル類群・射類群, ノルム 1 イデール類群のコンパクト性, 類数の有限性と単数定理の再証明, 強近似定理]
   - id: dedekind-zeta
     title: Dedekind ゼータ関数と類数公式
+    status: reviewed
     prerequisites: [number-theory/zeta-functions]
     sections: [Dedekind ゼータ関数と Euler 積, テータ関数と Mellin 変換, 解析接続と関数等式, 解析的類数公式, アーベル体のゼータ関数の Dirichlet L 関数による分解, Brauer–Siegel の定理]
   - id: tate-thesis
     title: Hecke L 関数と Tate の主論文
+    status: reviewed
     prerequisites: [fourier-analysis/lca-groups]
     sections: [Hecke 指標（量指標）, 局所体上の Fourier 解析と自己双対測度, 局所ゼータ積分と局所関数等式, アデール上の Poisson 和公式と Riemann–Roch の定理, 大域ゼータ積分と関数等式, Hecke L 関数の解析接続]
   - id: galois-cohomology
     title: Galois コホモロジー
+    status: reviewed
     prerequisites: [category-homological/group-cohomology]
     sections: [副有限群と Galois 加群, 副有限群のコホモロジー, Hilbert の定理 90, Tate コホモロジー, Herbrand 商, Tate–中山の定理, Brauer 群]
   - id: local-cft
     title: 局所類体論
+    status: reviewed
     prerequisites: [fields-galois/infinite-galois]
     sections: [局所体の Brauer 群と不変量写像, 類構造の公理, 局所相互写像, ノルム群と存在定理, 局所 Kronecker–Weber の定理, Hilbert 記号とノルム剰余記号]
   - id: lubin-tate
     title: Lubin–Tate 理論
+    status: reviewed
     sections: [形式群, Lubin–Tate 形式群, 等分点と Lubin–Tate 拡大, 局所相互写像の明示公式, 分岐群と相互写像, 例：ℚ_p の円分拡大]
   - id: class-field-theory
     title: 大域類体論の主定理
+    status: reviewed
     sections: [射類群と射類体, Artin 写像, Artin の相互法則, 高木の存在定理, 導手と分岐, Hilbert 類体と最大アーベル拡大のイデール的記述]
   - id: global-cft-proofs
     title: 大域類体論の証明
+    status: reviewed
     sections: [イデール類群のコホモロジー, 第一不等式, 第二不等式（解析的証明）, 大域相互写像の構成, 相互法則の証明, 存在定理の証明]
   - id: cft-applications
     title: 類体論の応用
+    status: reviewed
     sections: [Kronecker–Weber の定理, 冪剰余の相互法則と Hilbert の相互法則, p = x² + ny² 型の素数と環類体, 単項化定理, 類体塔問題と Golod–Shafarevich の定理, 虚数乗法論の概観]
   - id: artin-l-chebotarev
     title: Artin L 関数と Chebotarev の密度定理
+    status: reviewed
     prerequisites: [representation-theory/induction-theorems]
     sections: [Dirichlet 密度と自然密度, Artin L 関数の定義, Artin L 関数の誘導性と Brauer の誘導定理, Artin 導手, Chebotarev の密度定理の証明, 応用：素数の分解法則と Galois 群の決定]
   - id: iwasawa-theory
     title: 岩澤理論入門
+    status: reviewed
     sections: [ℤ_p 拡大, 岩澤代数と有限生成加群の構造定理, 岩澤の類数公式, 円分 ℤ_p 拡大と岩澤不変量, 久保田–Leopoldt の p 進 L 関数, 岩澤主予想の主張]

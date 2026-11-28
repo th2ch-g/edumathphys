@@ -14,51 +14,65 @@ references: [milnor-tdv, guillemin-pollack, hirsch-dt, bott-tu, milnor-stasheff,
 chapters:
   - id: sard-whitney
     title: Sard の定理と Whitney の埋め込み定理
+    status: reviewed
     prerequisites: [manifolds/submanifolds, measure-integration/lebesgue-measure]
     sections: [測度 0 集合と Sard の定理, 臨界値と正則値, Whitney の近似定理, Whitney のはめ込み定理, Whitney の埋め込み定理, 強 Whitney 埋め込み定理の概観]
   - id: transversality
     title: 横断性と管状近傍
+    status: reviewed
     sections: [写像の横断性と逆像としての部分多様体, パラメータ付き横断性定理, 横断性の安定性と一般性, ジェット空間と Thom の横断性定理, 管状近傍定理, 襟近傍と境界付き多様体の貼り合わせ]
   - id: degree
     title: 写像度と交叉数
+    status: reviewed
     sections: [mod 2 写像度, 向き付けられた写像度, 写像度のホモトピー不変性, Hopf の定理（球面への写像のホモトピー分類）, 交叉数と自己交叉数, Lefschetz 数と Lefschetz の不動点定理, 回転数と絡み数]
   - id: vector-field-index
     title: ベクトル場の指数と Poincaré–Hopf の定理
+    status: reviewed
     sections: [ベクトル場の孤立零点の指数, Poincaré–Hopf の定理, Euler 標数との一致, Gauss 写像の写像度と Hopf の定理, 零点を持たないベクトル場の存在条件]
   - id: morse-functions
     title: Morse 関数と Morse 理論
+    status: reviewed
     prerequisites: [algebraic-topology/cw-complexes]
     sections: [非退化臨界点と Morse の補題, Morse 関数の存在と一般性, 臨界値を通過しない等位集合の変化, ハンドル接着と臨界点の指数, Morse 不等式, 多様体の CW 複体構造]
   - id: morse-applications
     title: Morse 理論の応用
+    status: reviewed
     prerequisites: [riemannian-geometry/index-cut-locus]
     sections: [Reeb の定理, 道空間の Morse 理論と測地線, Lie 群とループ空間のホモトピー型, Bott の周期性定理の概観, Lefschetz 超平面定理, Morse ホモロジーの概観]
   - id: cobordism
     title: ハンドル分解とコボルディズム
+    status: reviewed
     sections: [コボルディズム群, ハンドル分解とハンドルの相殺, h コボルディズム定理の概観と高次元 Poincaré 予想, Pontryagin–Thom 構成, 枠付きコボルディズムと球面のホモトピー群, Milnor のエキゾチック球面の概観, 向き付けられたコボルディズム環と Thom の定理の概観]
   - id: compact-support
     title: コンパクト台コホモロジーと Poincaré 双対性
+    status: reviewed
     prerequisites: [manifolds/de-rham]
     sections: [コンパクト台 de Rham コホモロジー, コンパクト台の Mayer–Vietoris 完全列, 良い被覆とコホモロジーの有限次元性, Poincaré 双対性, Künneth の公式と Leray–Hirsch の定理, 次数と積分]
   - id: thom-isomorphism
     title: Thom 同型と Poincaré 双対形式
+    status: reviewed
     sections: [ベクトル束の垂直コンパクト台コホモロジー, Thom 同型と Thom 類, 閉部分多様体の Poincaré 双対形式, 微分形式による交叉理論, Euler 類と Gysin 完全列, 大域角形式]
   - id: de-rham-theorem
     title: Čech–de Rham 複体と de Rham の定理
+    status: reviewed
     prerequisites: [algebraic-topology/cohomology]
     sections: [前層と Čech コホモロジー, Čech–de Rham 二重複体, 一般化された Mayer–Vietoris 原理, de Rham の定理, 特異コホモロジーとの同型と積構造, 微分形式の周期と整数係数コホモロジー]
   - id: bundle-classification
     title: ベクトル束の分類
+    status: reviewed
     prerequisites: [algebraic-topology/fibrations]
     sections: [主束と構造群, Grassmann 多様体と普遍束, 分類空間とベクトル束の分類定理, 構造群の簡約, 安定同値と位相的 K 理論の概観]
   - id: stiefel-whitney
     title: Stiefel–Whitney 類
+    status: reviewed
     prerequisites: [algebraic-topology/eilenberg-maclane]
     sections: [Stiefel–Whitney 類の公理, 射影空間上の束と存在, Grassmann 多様体のコホモロジー, はめ込みと埋め込みへの応用, Stiefel–Whitney 数とコボルディズム, Wu の公式]
   - id: chern-pontryagin
     title: Chern 類・Pontryagin 類・Euler 類
+    status: reviewed
     sections: [複素ベクトル束と Chern 類, 分裂原理, Pontryagin 類, Euler 類と向き付けられた実ベクトル束, 特性数と Pontryagin 数, Hirzebruch の符号数定理の概観]
   - id: chern-weil
     title: Chern–Weil 理論
+    status: reviewed
     prerequisites: [riemannian-geometry/vector-bundle-connections]
     sections: [不変多項式, 曲率形式による特性形式, 特性形式の閉性と接続への非依存性, Chern 形式と Pontryagin 形式, Euler 形式と Gauss–Bonnet–Chern の定理, Chern–Simons 形式と平坦束の概観]

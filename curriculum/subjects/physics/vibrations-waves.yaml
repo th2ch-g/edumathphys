@@ -13,33 +13,43 @@ references: [crawford-waves, georgi-waves, french-vibrations]
 chapters:
   - id: oscillators
     title: 調和振動子と応答
+    status: reviewed
     prerequisites: [mechanics/oscillations]
     sections: [単振動の複素表示と位相, 減衰振動と強制振動の複素振幅, 共鳴曲線と Q 値・線幅, 応答関数と因果性, エネルギー吸収と散逸, パラメトリック共振, 非線形振動子（Duffing 振動子と van der Pol 振動子）]
   - id: coupled-oscillators
     title: 連成振動
+    status: reviewed
     prerequisites: [linear-algebra/eigenvalues]
     sections: [2 自由度の連成振動とうなり, 基準振動と基準座標, 固有値問題としての基準振動, 対称性による基準振動の決定, 減衰と外力のある連成振動, N 個の質点の連成振動（ビーズ付きの弦）, 分散関係とカットオフ周波数]
   - id: wave-equation
     title: 波動方程式
+    status: reviewed
     sections: [連成振動の連続極限, 弦の波動方程式の導出, d'Alembert の解, 進行波と定在波, 境界条件と固有振動, 波のエネルギー密度とエネルギー流, 棒と気柱の縦波]
   - id: fourier-waves
     title: Fourier 解析と波
+    status: reviewed
     sections: [Fourier 級数による固有振動の重ね合わせ, 撥弦と打弦の初期値問題, 直交性と Parseval の等式, Fourier 変換と波束, 帯域幅と持続時間の関係（不確定性関係）, スペクトル解析と音色]
   - id: membranes
     title: 膜の振動と 2 次元の波
+    status: reviewed
     sections: [膜の波動方程式, 長方形膜の固有振動と縮退, 円形膜の振動と Bessel 関数, 節線と Chladni 図形, Rayleigh 商と固有振動数の評価]
   - id: dispersion
     title: 分散と群速度
+    status: reviewed
     sections: [分散関係の例（格子・深水波・Klein–Gordon 方程式）, 位相速度と群速度, 波束の伝播と広がり, 停留位相法, エバネッセント波とカットオフ, 異常分散と信号速度]
   - id: reflection-transmission
     title: 反射と透過
+    status: reviewed
     sections: [特性インピーダンス, 境界での反射係数と透過係数, エネルギーの流れと保存, インピーダンス整合と反射防止, 多層媒質と伝達行列, 障壁の透過（トンネル効果の古典的類似）]
   - id: waves-3d
     title: 3 次元の波と音波
+    status: reviewed
     sections: [3 次元波動方程式と平面波, 球面波と点源, 流体中の音波の導出, 音の強さとデシベル, Doppler 効果, 衝撃波と Mach 円錐, 導波管とモード]
   - id: interference-diffraction
     title: 干渉と回折
+    status: reviewed
     sections: [重ね合わせと干渉, Young の実験と多スリット干渉, 薄膜干渉, Huygens–Fresnel の原理, Fraunhofer 回折（単スリット・円形開口）, 回折格子と分解能]
   - id: nonlinear-waves
     title: 非線形波動入門
+    status: reviewed
     sections: [非線形性による波形の突っ立ち, Burgers 方程式と衝撃波, KdV 方程式とソリトン, sine-Gordon 方程式とキンク, 非線形 Schrödinger 方程式と変調不安定性, 戸田格子]

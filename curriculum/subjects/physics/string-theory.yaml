@@ -17,59 +17,76 @@ references: [zwiebach-string, polchinski-1, polchinski-2, gsw-1, bbs-string, dif
 chapters:
   - id: introduction
     title: 弦理論への導入
+    status: reviewed
     prerequisites: [general-relativity/einstein-equations]
     sections: [弦理論の動機と歴史（双対共鳴模型から量子重力へ）, 余剰次元と Kaluza–Klein 理論, 様々な次元の電磁気学と重力, Planck スケールと弦のスケール, 相対論的点粒子の作用と再パラメータ化不変性]
   - id: classical-string
     title: 相対論的古典弦
+    status: reviewed
     sections: [Nambu–Goto 作用, 運動方程式と境界条件（Neumann 条件・Dirichlet 条件）, 静的ゲージと弦の運動, 世界面のカレントと保存量, 回転する開弦と Regge 軌跡, Polyakov 作用と世界面計量]
   - id: light-cone-quantization
     title: 光円錐ゲージ量子化
+    status: reviewed
     sections: [光円錐ゲージと横方向の振動子, 開弦の量子化とスペクトル, 臨界次元 D = 26 の導出, 閉弦の量子化と準位整合条件, 質量ゼロ状態（重力子・Kalb–Ramond 場・ディラトン）, タキオンと状態の数え上げ]
   - id: worldsheet-cft
     title: 世界面の共形場理論
+    status: reviewed
     prerequisites: [critical-phenomena/cft]
     sections: [世界面上の共形対称性, 演算子積展開と自由ボソン, Virasoro 代数と中心電荷, bc ゴースト系, 状態–演算子対応, 頂点演算子]
   - id: covariant-quantization
     title: 共変量子化と BRST 量子化
+    status: reviewed
     prerequisites: [quantum-field-theory/gauge-quantization]
     sections: [旧共変量子化と Virasoro 拘束, ノーゴースト定理, Polyakov 経路積分と Faddeev–Popov ゴースト, BRST 量子化と物理的状態, Weyl アノマリーと臨界次元]
   - id: string-interactions
     title: 弦の相互作用と散乱振幅
+    status: reviewed
     prerequisites: [complex-analysis/riemann-surfaces, complex-geometry/riemann-roch]
     sections: [Riemann 面と弦の摂動展開, モジュライ空間と共形 Killing ベクトル, 球面上の頂点演算子の相関関数, Veneziano 振幅と Virasoro–Shapiro 振幅, 高エネルギー挙動と双対性, 弦の結合定数とディラトン]
   - id: one-loop
     title: 1 ループ振幅とモジュラー不変性
+    status: reviewed
     sections: [トーラスとモジュラー群, 閉弦の 1 ループ真空振幅, モジュラー不変性と紫外有限性, 開弦の 1 ループ振幅（円筒・Möbius の帯・Klein の壺）, タドポールの相殺]
   - id: compactification
     title: トロイダルコンパクト化と T 双対性
+    status: reviewed
     sections: [円周上の場の理論と Kaluza–Klein 粒子, 閉弦の巻き付き数と運動量, T 双対性, 自己双対半径とゲージ対称性の増大, 開弦の T 双対性と D ブレイン, Narain 格子とモジュライ空間]
   - id: d-branes
     title: D ブレインとゲージ場
+    status: reviewed
     sections: [D ブレイン上の開弦, Chan–Paton 因子と非可換ゲージ対称性, 重なった D ブレインと U(N) ゲージ理論, Dirac–Born–Infeld 作用, D ブレインの張力と電荷, 交差する D ブレインと弦の励起]
   - id: effective-action
     title: 弦の低エネルギー有効作用
+    status: reviewed
     sections: [背景場中の弦と非線形 σ 模型, 世界面の β 関数と Einstein 方程式, 弦フレームと Einstein フレーム, 線形ディラトン背景, 弦の熱力学と Hagedorn 温度]
   - id: superstrings
     title: 超弦理論
+    status: reviewed
     sections: [世界面超対称性と RNS 形式, NS セクターと R セクター, GSO 射影, 超弦の臨界次元 D = 10, Type IIA 超弦と Type IIB 超弦, 時空超対称性と Green–Schwarz 形式の概観]
   - id: heterotic-type-i
     title: Type I 弦とヘテロティック弦
+    status: reviewed
     sections: [向き付けのない弦と Type I 理論, ヘテロティック弦の構成, SO(32) と E₈×E₈ のゲージ群, ゲージアノマリーの相殺と Green–Schwarz 機構, 超弦の 1 ループ振幅]
   - id: supergravity
     title: 超重力理論
+    status: reviewed
     prerequisites: [quantum-field-theory/supersymmetry]
     sections: [超対称性代数と超多重項, 11 次元超重力, Type IIA 超重力と Type IIB 超重力, p ブレイン解と BPS 状態, 超弦理論の低エネルギー極限としての超重力]
   - id: dualities
     title: 双対性と M 理論
+    status: reviewed
     sections: [強結合の超弦理論, Type IIB 理論の S 双対性, 11 次元への持ち上げと M 理論, M2 ブレインと M5 ブレイン, ヘテロティック弦と Type I 弦の双対性, 双対性の網]
   - id: calabi-yau
     title: Calabi–Yau コンパクト化
+    status: reviewed
     prerequisites: [complex-geometry/kahler, complex-geometry/deformations]
     sections: [4 次元の超対称性と特殊ホロノミー, Calabi–Yau 多様体の基礎, Hodge 数と低エネルギースペクトル, オービフォールド, ミラー対称性の概観, 現象論的模型構築の概観]
   - id: black-holes
     title: 弦理論とブラックホール
+    status: reviewed
     prerequisites: [general-relativity/black-holes]
     sections: [ブラックホール熱力学と Bekenstein–Hawking エントロピー, BPS ブラックホールと D ブレインの束縛状態, Strominger–Vafa のエントロピー計算, D ブレインからの Hawking 放射, 情報喪失問題の概観]
   - id: ads-cft
     title: AdS/CFT 対応
+    status: reviewed
     sections: [反 de Sitter 時空の幾何学, D3 ブレインと Maldacena の対応, 場と演算子の対応（GKP–Witten 処方）, 相関関数の計算, 有限温度と AdS ブラックホール, Wilson ループと Ryu–Takayanagi 公式の概観]

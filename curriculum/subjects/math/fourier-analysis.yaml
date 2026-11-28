@@ -16,50 +16,65 @@ references: [stein-shakarchi-fourier, folland-real, katznelson-harmonic, grafako
 chapters:
   - id: fourier-series
     title: Fourier 級数の基礎
+    status: reviewed
     sections: [歴史的動機：弦の振動と熱伝導, 三角級数と Fourier 係数, Riemann–Lebesgue の補題, 一意性定理, Dirichlet 核と各点収束, Dini の判定法と局所性原理, Gibbs 現象]
   - id: summability
     title: 総和法と良い核
+    status: reviewed
     sections: [畳み込みと良い核, Fejér 核と Cesàro 和, Abel 和と Poisson 核, Fejér の定理と三角多項式による近似, Fourier 係数の減衰と関数の滑らかさ, Fourier 級数が発散する連続関数]
   - id: l2-fourier-series
     title: L² 理論と Fourier 級数の応用
+    status: reviewed
     sections: [L² における完全性と Parseval の等式, 平均収束, 等周不等式, Weyl の一様分布定理, 至る所微分不可能な連続関数, 空隙級数と Carleson の定理（概観）]
   - id: fourier-transform
     title: ℝⁿ 上の Fourier 変換
+    status: reviewed
     sections: [L¹ 上の Fourier 変換, Schwartz 空間と Fourier 変換, 反転公式, Plancherel の定理, Hausdorff–Young の不等式, 畳み込みと Fourier 変換, 例：Gauss 関数と球対称関数の Fourier 変換]
   - id: poisson-summation
     title: Poisson の和公式と不確定性原理
+    status: reviewed
     prerequisites: [complex-analysis/cauchy-formula]
     sections: [Poisson の和公式, テータ関数とその変換公式, Shannon の標本化定理, Heisenberg の不確定性原理, Paley–Wiener の定理, Hermite 関数と Fourier 変換の固有関数]
   - id: finite-fourier
     title: 有限 Abel 群上の Fourier 解析
+    status: reviewed
     sections: [有限 Abel 群の指標と双対群, 離散 Fourier 変換, 高速 Fourier 変換, 巡回畳み込みと巡回行列, Gauss 和]
   - id: distributions
     title: 超関数
+    status: reviewed
     prerequisites: [functional-analysis/locally-convex]
     sections: [試験関数の空間とその位相, 超関数の定義と例, 超関数の微分と演算, 超関数の台とコンパクト台の超関数, 超関数の畳み込み, 基本解と Malgrange–Ehrenpreis の定理（概観）]
   - id: tempered-distributions
     title: 緩増加超関数と Fourier 変換
+    status: reviewed
     sections: [緩増加超関数, 緩増加超関数の Fourier 変換, 例：主値・Heaviside 関数・斉次超関数, Fourier 変換による Sobolev 空間 Hˢ, L² 型の Sobolev の埋め込み定理, 緩増加超関数の構造定理]
   - id: applications-pde
     title: 偏微分方程式への応用
+    status: reviewed
     sections: [円周上と ℝ 上の熱方程式, 波動方程式と球面平均, 上半平面の Laplace 方程式と Poisson 核, Schrödinger 方程式と分散評価, Radon 変換と CT 再構成]
   - id: maximal-functions
     title: 極大関数と概収束
+    status: reviewed
     prerequisites: [measure-integration/differentiation]
     sections: [極大関数による概収束定理, 上半空間の調和関数と Poisson 積分, 非接極大関数と Fatou の定理, Calderón–Zygmund 分解, Whitney 分解]
   - id: hilbert-transform
     title: 共役関数と Hilbert 変換
+    status: reviewed
     sections: [共役関数と共役 Poisson 核, Hilbert 変換の L² 理論, M. Riesz の定理, Kolmogorov の弱型評価, Fourier 級数の Lᵖ ノルム収束, 上半平面の Hardy 空間（概観）]
   - id: singular-integrals
     title: Calderón–Zygmund の特異積分作用素
+    status: reviewed
     sections: [特異積分核と Hörmander 条件, Calderón–Zygmund の定理, Riesz 変換, 斉次核をもつ特異積分, 楕円型方程式の Lᵖ 評価への応用]
   - id: littlewood-paley
     title: Littlewood–Paley 理論と Fourier 乗算子
+    status: reviewed
     sections: [Fourier 乗算子, Littlewood–Paley 分解, 二乗関数と Lᵖ ノルムの同値性, Mikhlin–Hörmander の乗算子定理, Marcinkiewicz の乗算子定理, Besov 空間と Triebel–Lizorkin 空間（概観）]
   - id: bmo-hardy
     title: BMO と Hardy 空間
+    status: reviewed
     sections: [BMO 空間, John–Nirenberg の不等式, 特異積分の L^∞ から BMO への有界性, H¹ 空間と原子分解, H¹ と BMO の双対性]
   - id: lca-groups
     title: 局所コンパクト Abel 群上の Fourier 解析
+    status: reviewed
     prerequisites: [measure-integration/haar-measure, functional-analysis/banach-algebras]
     sections: [双対群, Fourier 変換と Plancherel の定理, Bochner の定理, Pontryagin の双対定理, Wiener の Tauber 型定理]

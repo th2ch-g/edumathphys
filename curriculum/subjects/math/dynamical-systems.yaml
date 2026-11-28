@@ -13,60 +13,77 @@ references: [hirsch-smale-devaney, guckenheimer-holmes, katok-hasselblatt, walte
 chapters:
   - id: flows-maps
     title: 流れと写像
+    status: reviewed
     prerequisites: [ode/existence-uniqueness]
     sections: [連続力学系と離散力学系, 軌道・不動点・周期軌道, 極限集合と不変集合, 位相共役と位相同値, Poincaré 写像, 回帰性と非遊走集合, 円周の回転と倍角写像の例]
   - id: planar-systems
     title: 平面の力学系
+    status: reviewed
     prerequisites: [ode/stability, ode/phase-plane]
     sections: [線形系の相図の分類, 平衡点の線形化, Lyapunov 関数による安定性解析, 勾配系とハミルトン系, Poincaré–Bendixson の定理, 極限周期軌道と Liénard 方程式（van der Pol 方程式）, 指数と Bendixson–Dulac の判定法]
   - id: hyperbolicity
     title: 双曲型不動点
+    status: reviewed
     prerequisites: [ode/periodic-coefficients]
     sections: [双曲型線形写像と双曲型不動点, Hartman–Grobman の定理, 安定多様体定理, 周期軌道の双曲性と Floquet 乗数, 局所構造安定性]
   - id: center-manifolds
     title: 中心多様体と標準形
+    status: reviewed
     sections: [中心多様体定理, 中心多様体への縮約, 標準形理論と Poincaré–Dulac の定理, 共鳴条件, 写像の標準形]
   - id: bifurcations
     title: 局所分岐
+    status: reviewed
     sections: [分岐の定義と横断性条件, サドルノード分岐, トランスクリティカル分岐と熊手型分岐, Andronov–Hopf 分岐, 写像の周期倍分岐, Neimark–Sacker 分岐, Lorenz 系と Brusselator における分岐]
   - id: global-bifurcations
     title: 大域分岐と余次元 2 分岐
+    status: reviewed
     sections: [ホモクリニック分岐, Shilnikov の定理, ヘテロクリニック軌道, Bogdanov–Takens 分岐, カスプ分岐, 周期軌道のサドルノード分岐]
   - id: averaging-melnikov
     title: 平均化法と Melnikov の方法
+    status: reviewed
     sections: [周期摂動系, 平均化定理, 摂動されたハミルトン系, Melnikov 関数, 横断的ホモクリニック点の存在判定, 強制 Duffing 振動子の解析]
   - id: one-dim-maps
     title: 1 次元写像
+    status: reviewed
     sections: [区間写像の周期点, Sharkovskii の定理, ロジスティック写像と分岐図, 周期倍分岐カスケードと Feigenbaum 普遍性, Schwarz 導関数と Singer の定理, テント写像の絶対連続不変測度, 位相共役による分類]
   - id: circle-maps
     title: 円周写像
+    status: reviewed
     sections: [持ち上げと回転数, Poincaré の分類定理, Denjoy の定理と Denjoy の反例, 円周の微分同相の線形化と Arnold の定理, 標準円周写像族と Arnold 舌]
   - id: symbolic-dynamics
     title: 記号力学
+    status: reviewed
     prerequisites: [linear-algebra/matrix-analysis]
     sections: [シフト空間とシフト写像, 有限型部分シフトと推移行列, Perron–Frobenius の定理, 周期点の個数と位相的エントロピー, 位相的混合性, Markov 分割と符号化]
   - id: chaos
     title: Smale の馬蹄とカオス
+    status: reviewed
     sections: [Smale の馬蹄と記号力学への共役, 横断的ホモクリニック点と Smale–Birkhoff の定理, 初期値鋭敏性と Devaney のカオス, Lyapunov 指数, Lorenz アトラクタ, Hénon 写像とストレンジアトラクタ, フラクタル次元]
   - id: hyperbolic-sets
     title: 一様双曲系と構造安定性
+    status: reviewed
     prerequisites: [manifolds/tangent-spaces]
     sections: [双曲集合, 双曲集合の安定多様体定理, Anosov 微分同相と猫写像, 陰影補題, 構造安定性と Ω-安定性, Axiom A 系と Smale のスペクトル分解, 双曲トーラス自己同型の分類]
   - id: topological-entropy
     title: 位相力学と位相的エントロピー
+    status: reviewed
     sections: [極小性と一様回帰性, 位相的推移性と位相的混合性, Adler–Konheim–McAndrew の定義, Bowen の定義と分離集合・生成集合, 位相共役不変性, シフト・トーラス自己同型・区間写像のエントロピー, 拡大写像]
   - id: ergodic-theory
     title: エルゴード理論の基礎
+    status: reviewed
     prerequisites: [probability/ergodic-theorems]
     sections: [保測変換と不変測度, Krylov–Bogolyubov の定理と一意エルゴード性, Poincaré の再帰定理, 平均エルゴード定理と各点エルゴード定理, エルゴード性と混合性, Koopman 作用素とスペクトル的性質, Weyl の一様分布定理と応用]
   - id: measure-entropy
     title: 測度論的エントロピー
+    status: reviewed
     prerequisites: [probability/conditional-expectation]
     sections: [分割とエントロピー, Kolmogorov–Sinai エントロピー, 生成分割と Kolmogorov–Sinai の定理, Bernoulli シフトのエントロピーと同型問題, 変分原理, Shannon–McMillan–Breiman の定理]
   - id: lyapunov-exponents
     title: Lyapunov 指数と乗法的エルゴード定理
+    status: reviewed
     sections: [線形コサイクル, Furstenberg–Kesten の定理, Oseledets の乗法的エルゴード定理, Ruelle の不等式と Pesin のエントロピー公式, SRB 測度]
   - id: hamiltonian-kam
     title: ハミルトン力学系と KAM 理論
+    status: reviewed
     prerequisites: [manifolds/differential-forms]
     sections: [シンプレクティック写像と面積保存写像, 可積分系と作用角変数, 捩れ写像と Poincaré–Birkhoff の定理, 小分母問題と Diophantus 条件, KAM 定理と証明の概略, Aubry–Mather 理論, Arnold 拡散]

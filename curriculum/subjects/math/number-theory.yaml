@@ -14,59 +14,76 @@ references: [takagi-shoto, ireland-rosen, serre-arithmetic, hardy-wright, aposto
 chapters:
   - id: divisibility
     title: 整除と素数
+    status: reviewed
     sections: [整除と除法の原理, 最大公約数と Euclid の互除法, 素因数分解の一意性, 素数の無限性, 一次不定方程式, Euclid 整域としての Gauss 整数環]
   - id: arithmetic-functions
     title: 数論的関数
+    status: reviewed
     sections: [乗法的関数（約数関数と Euler 関数）, Dirichlet 積, Möbius 関数と Möbius の反転公式, 完全数と Mersenne 素数, 数論的関数の平均位数, Euler–Maclaurin の和公式と Dirichlet の約数問題]
   - id: congruences
     title: 合同式
+    status: reviewed
     prerequisites: [group-theory/cosets]
     sections: [合同式の基本性質, 剰余環 ℤ/nℤ と既約剰余類群, Fermat の小定理と Euler の定理, Wilson の定理, 中国式剰余定理, 一次合同式と連立合同式, 多項式の合同式と Hensel の持ち上げ]
   - id: primitive-roots
     title: 原始根と冪剰余
+    status: reviewed
     prerequisites: [fields-galois/finite-fields]
     sections: [位数と原始根, 原始根の存在定理, 既約剰余類群 (ℤ/nℤ)^× の構造, 指数（離散対数）, n 乗剰余と Euler の規準の一般化, 応用：素数判定と RSA 暗号]
   - id: quadratic-reciprocity
     title: 平方剰余の相互法則
+    status: reviewed
     sections: [平方剰余と Legendre 記号, Euler の規準, Gauss の補題と第二補充法則, 相互法則の格子点による証明, 相互法則の Gauss 和による証明, Jacobi 記号とその相互法則, 応用：平方剰余の計算と素数の表現]
   - id: gauss-jacobi-sums
     title: Gauss 和と Jacobi 和
+    status: reviewed
     prerequisites: [fields-galois/finite-fields]
     sections: [有限体の乗法的指標, Gauss 和とその絶対値, Jacobi 和, 有限体上の方程式の解の個数, 三次剰余と四次剰余の相互法則, Fermat 型超曲面のゼータ関数と Weil 予想の例]
   - id: continued-fractions
     title: 連分数と Diophantus 近似
+    status: reviewed
     sections: [単純連分数展開, 近似分数と最良近似, Dirichlet の近似定理と Hurwitz の定理, 二次無理数と循環連分数（Lagrange の定理）, Pell 方程式の解法, Liouville の定理と超越数]
   - id: diophantine
     title: Diophantus 方程式
+    status: reviewed
     sections: [Pythagoras 数, 二平方和定理, Lagrange の四平方和定理, 三平方和定理の概観, 無限降下法と Fermat の最終定理（n=4）, Legendre の定理（ax²+by²+cz²=0）]
   - id: binary-quadratic-forms
     title: 二元二次形式
+    status: reviewed
     sections: [判別式と形式の同値, 正定値形式の簡約理論, 類数の有限性, 形式による整数の表現, Gauss の合成と形式類群, 種の理論と p = x² + ny² 型の素数]
   - id: p-adic-numbers
     title: p 進数
+    status: reviewed
     prerequisites: [topology/complete-metric]
     sections: [p 進付値と p 進絶対値, ℚ の完備化としての ℚ_p, ℤ_p と射影極限, Hensel の補題, Ostrowski の定理, ℚ_p の乗法群の構造と平方類, Hilbert 記号と積公式]
   - id: rational-quadratic-forms
     title: 二次形式と Hasse–Minkowski の定理
+    status: reviewed
     sections: [体上の二次形式と対角化, Witt の消去定理, ℚ_p 上の二次形式の分類, Hasse–Minkowski の定理, 有理数体上の二次形式の分類, 応用：三平方和定理の証明]
   - id: algebraic-integers
     title: 代数的整数
+    status: reviewed
     prerequisites: [fields-galois/field-extensions]
     sections: [代数的数と代数的整数, 代数体と整数環, ノルムとトレース, 判別式, 整数基底の存在と計算, 二次体の整数環, 円分体の整数環]
   - id: ideal-factorization
     title: イデアルの素因数分解
+    status: reviewed
     sections: [整数環の Dedekind 性, イデアルの素因数分解の一意性, イデアルのノルム, 素イデアルの分解と Kummer–Dedekind の定理, 分岐と判別式, 二次体における素数の分解法則, 円分体における素数の分解法則]
   - id: class-group-units
     title: イデアル類群と単数群
+    status: reviewed
     sections: [格子と Minkowski の凸体定理, 代数体の埋め込みと Minkowski 空間, Minkowski の判別式評価, 類数の有限性, 類数の計算例（二次体）, Dirichlet の単数定理, 実二次体の基本単数と Pell 方程式]
   - id: zeta-functions
     title: ゼータ関数と Dirichlet L 関数
+    status: reviewed
     prerequisites: [complex-analysis, representation-theory/abelian-fourier]
     sections: [Riemann ゼータ関数と Euler 積, Dirichlet 級数の収束, Dirichlet 指標と L 関数, Dirichlet L 関数の s = 1 での非零性, Dirichlet の算術級数定理, 二次体の類数公式, Bernoulli 数とゼータ関数の特殊値]
   - id: prime-number-theorem
     title: 素数定理
+    status: reviewed
     prerequisites: [complex-analysis/gamma-zeta]
     sections: [Chebyshev 関数と Chebyshev の評価, Mertens の定理, 直線 Re s = 1 上の非零性, Newman の Tauber 型定理, 素数定理の証明, 明示公式と Riemann 予想の概観]
   - id: elliptic-curves
     title: 楕円曲線の数論入門
+    status: reviewed
     sections: [Weierstrass 方程式と群法則, 有理点のねじれ部分と Nagell–Lutz の定理, 高さと Mordell の定理, 有限体上の楕円曲線と Hasse の定理, 合同数問題, 応用：楕円曲線法による素因数分解]

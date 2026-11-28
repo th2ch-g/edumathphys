@@ -16,53 +16,69 @@ references: [chen-plasma, bellan-plasma, nicholson-plasma, krall-trivelpiece, st
 chapters:
   - id: basics
     title: プラズマの基本的性質
+    status: reviewed
     sections: [プラズマの定義と存在領域, Debye 遮蔽, プラズマ振動とプラズマ周波数, プラズマパラメータと結合の強さ, 準中性条件, 宇宙・実験室プラズマの特徴的スケール]
   - id: particle-motion
     title: 荷電粒子の運動
+    status: reviewed
     sections: [一様磁場中のサイクロトロン運動, E×B ドリフトと重力ドリフト, 勾配 B ドリフトと曲率ドリフト, 時間変化する場と分極ドリフト, 断熱不変量と磁気ミラー, 地球磁気圏の荷電粒子と van Allen 帯, 案内中心近似の系統的導出]
   - id: collisions
     title: Coulomb 衝突と輸送
+    status: reviewed
     sections: [Coulomb 衝突と Coulomb 対数, 衝突周波数と緩和時間, Spitzer 抵抗率, 弱電離プラズマの拡散と両極性拡散, 磁場を横切る古典拡散, Bohm 拡散と新古典輸送の概観]
   - id: fluid-mhd
     title: 流体記述と二流体理論
+    status: reviewed
     prerequisites: [continuum-mechanics/stress]
     sections: [速度モーメントと流体方程式の導出, 二流体方程式, 反磁性ドリフトと流体ドリフト, 閉包問題と状態方程式, 一般化 Ohm の法則, 一流体方程式への縮約]
   - id: waves
     title: 冷たいプラズマ中の波
+    status: reviewed
     sections: [線形化と分散関係の求め方, 電子プラズマ波（Bohm–Gross 波）, イオン音波, 非磁化プラズマ中の電磁波とカットオフ, 磁場に垂直な静電波（高域混成波と低域混成波）, 磁場に平行な電磁波（R 波・L 波・ホイッスラー波）, 磁場に垂直な電磁波（O 波と X 波）]
   - id: dielectric-tensor
     title: 誘電テンソルと波動伝播
+    status: reviewed
     sections: [冷たいプラズマの誘電テンソルと Stix パラメータ, 任意の伝播方向の分散関係, CMA 図, 共鳴とカットオフ, WKB 近似と波の伝播・吸収, 波動加熱と電流駆動]
   - id: mhd
     title: 電磁流体力学
+    status: reviewed
     sections: [理想 MHD 方程式, 磁気凍結と磁力線の保存, 磁気圧と磁気張力, Alfvén 波と磁気音波, 抵抗性 MHD と磁気 Reynolds 数, MHD のエネルギー原理, ダイナモ理論の概観]
   - id: equilibrium
     title: MHD 平衡と磁場閉じ込め
+    status: reviewed
     sections: [力のつりあいと磁気面, ピンチ平衡（θ ピンチ・Z ピンチと Bennett 関係）, Grad–Shafranov 方程式, 安全係数と磁気シア, トロイダル平衡とトカマク, ステラレータとヘリカル系]
   - id: instabilities
     title: MHD 不安定性と磁気再結合
+    status: reviewed
     sections: [交換型不安定性と Rayleigh–Taylor 不安定性, ソーセージ不安定性とキンク不安定性, Kruskal–Shafranov 条件, バルーニングモード, 抵抗性不安定性とテアリングモード, 磁気再結合と Sweet–Parker 模型, 高速磁気再結合と Petschek 模型]
   - id: kinetic-theory
     title: 運動論
+    status: reviewed
     prerequisites: [nonequilibrium/boltzmann-equation, nonequilibrium/kinetic-theory]
     sections: [分布関数と Klimontovich 方程式, BBGKY 階層と Vlasov 方程式, 線形化 Vlasov 方程式と Landau の初期値問題, Landau 減衰, プラズマ分散関数, イオン音波の Landau 減衰, Bernstein–Greene–Kruskal モード]
   - id: magnetized-kinetics
     title: 磁化プラズマの運動論
+    status: reviewed
     sections: [磁化プラズマの線形化 Vlasov 方程式, 熱いプラズマの誘電テンソル, サイクロトロン減衰, Bernstein 波, ドリフト運動論, ジャイロ運動論の概観]
   - id: microinstabilities
     title: 速度空間不安定性
+    status: reviewed
     sections: [二流体不安定性とビーム–プラズマ不安定性, Penrose の判定条件, イオン音波不安定性, ドリフト波と普遍的不安定性, Weibel 不安定性, 温度異方性による不安定性]
   - id: collisional-kinetics
     title: 衝突の運動論
+    status: reviewed
     prerequisites: [nonequilibrium/fokker-planck]
     sections: [Fokker–Planck 方程式の導出, Landau 衝突演算子, Rosenbluth ポテンシャル, Lorentz 気体模型と電気伝導度, 逃走電子, 輸送係数と Braginskii 方程式の概観]
   - id: nonlinear
     title: 非線形プラズマ現象
+    status: reviewed
     sections: [準線形理論, 粒子捕捉と非線形 Landau 減衰, イオン音波ソリトンと KdV 方程式, パラメトリック不安定性, 無衝突衝撃波, プラズマ乱流の概観]
   - id: fusion
     title: 核融合プラズマ
+    status: reviewed
     prerequisites: [nuclear-physics/reactions]
     sections: [核融合反応と反応率, Lawson 条件と点火, トカマクの閉じ込めと閉じ込め時間, プラズマの加熱法, 慣性閉じ込め核融合, 核融合炉の課題]
   - id: space-plasma
     title: 宇宙・天体プラズマ
+    status: reviewed
     sections: [太陽風と Parker 解, 地球磁気圏とバウショック, 太陽フレアと磁気再結合, 衝撃波統計加速（Fermi 加速）と宇宙線, 降着円盤と磁気回転不安定性]

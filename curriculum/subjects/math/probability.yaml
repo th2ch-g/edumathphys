@@ -13,52 +13,67 @@ references: [funaki-prob, ito-prob, durrett-prob, williams-martingales, billings
 chapters:
   - id: probability-spaces
     title: 確率空間と確率変数
+    status: reviewed
     prerequisites: [measure-integration/integration]
     sections: [確率空間の公理と例, 確率変数と生成される σ-加法族, 分布と分布関数, 期待値と積率, 確率の不等式（Markov・Chebyshev・Jensen）, 変数変換と密度関数, 主な離散分布と連続分布]
   - id: independence
     title: 独立性
+    status: reviewed
     prerequisites: [measure-integration/product-measures]
     sections: [事象と σ-加法族の独立性, π-λ 定理による独立性の判定, 独立な確率変数と積測度, 独立確率変数列の存在, 和の分布と畳み込み, Borel–Cantelli の補題, Kolmogorov の 0-1 法則と Hewitt–Savage の 0-1 法則]
   - id: laws-of-large-numbers
     title: 大数の法則
+    status: reviewed
     prerequisites: [measure-integration/lp-spaces]
     sections: [概収束・確率収束・Lᵖ 収束, 一様可積分性, L² による弱法則, 打ち切りによる弱法則, Kolmogorov の不等式と三級数定理, Etemadi の強法則, Glivenko–Cantelli の定理, 更新理論への応用]
   - id: characteristic-functions
     title: 分布の弱収束と特性関数
+    status: reviewed
     prerequisites: [fourier-analysis/fourier-transform, measure-integration/riesz-representation]
     sections: [分布の弱収束と Portmanteau 定理, Skorokhod の表現定理, Helly の選択定理と緊密性, 特性関数の定義と性質, 反転公式と一意性定理, Lévy の連続性定理, モーメント問題とモーメント法]
   - id: central-limit
     title: 中心極限定理
+    status: reviewed
     sections: [Lindeberg–Lévy の定理, Lindeberg–Feller の定理と Lyapunov の条件, Berry–Esseen の不等式, 多次元の中心極限定理と Cramér–Wold の方法, 格子分布の局所極限定理, Poisson の少数の法則, 従属列の中心極限定理の例]
   - id: infinitely-divisible
     title: 無限分解可能分布と安定分布
+    status: reviewed
     sections: [無限分解可能分布の定義と例, 複合 Poisson 分布, Lévy–Khintchine の表現定理, 三角配列の極限定理, 安定分布とその特性関数, 吸引領域と一般化中心極限定理]
   - id: large-deviations
     title: 大偏差原理と集中不等式
+    status: reviewed
     sections: [Chernoff 限界と Hoeffding の不等式, Cramér の定理, 大偏差原理の一般的枠組みと縮約原理, 相対エントロピーと Sanov の定理, Varadhan の補題, Gärtner–Ellis の定理]
   - id: conditional-expectation
     title: 条件付き期待値
+    status: reviewed
     prerequisites: [measure-integration/radon-nikodym]
     sections: [初等的な条件付き確率と Bayes の公式, Radon–Nikodym の定理による定義と存在, 条件付き期待値の性質, L² 射影としての条件付き期待値, 正則条件付き分布と分解定理, 条件付き独立性, 正規分布の条件付き分布の計算]
   - id: martingales
     title: 離散時間マルチンゲール
+    status: reviewed
     sections: [フィルトレーションとマルチンゲール, 停止時刻と停止過程, 任意停止定理, Doob の分解, 上渡回数不等式と概収束定理, Doob の最大不等式と Lᵖ 収束, 一様可積分マルチンゲールと L¹ 収束, 後ろ向きマルチンゲール]
   - id: martingale-applications
     title: マルチンゲールの応用
+    status: reviewed
     sections: [Azuma–Hoeffding の不等式, Galton–Watson 分枝過程, Pólya の壺, 尤度比マルチンゲールと Radon–Nikodym 導関数, Kakutani の積マルチンゲール定理, 後ろ向きマルチンゲールによる強法則, 交換可能性と de Finetti の定理]
   - id: markov-chains
     title: Markov 連鎖
+    status: reviewed
     sections: [推移確率と Markov 性, 強 Markov 性, 状態の分類と再帰性・過渡性, 単純ランダムウォークの再帰性と Pólya の定理, 定常分布の存在と一意性, 周期性と収束定理, Markov 連鎖のエルゴード定理, 可逆性と詳細つり合い条件]
   - id: poisson-processes
     title: Poisson 過程と連続時間 Markov 連鎖
+    status: reviewed
     sections: [指数分布と無記憶性, Poisson 過程の構成と特徴付け, 複合 Poisson 過程と Poisson 点過程, 連続時間 Markov 連鎖と Q 行列, Kolmogorov の前向き方程式と後ろ向き方程式, 出生死滅過程と待ち行列]
   - id: ergodic-theorems
     title: 定常過程とエルゴード定理
+    status: reviewed
     sections: [定常過程と保測変換, 不変 σ-加法族とエルゴード性, Birkhoff のエルゴード定理, 混合性, Kingman の劣加法的エルゴード定理, ランダムウォークの値域と再帰への応用]
   - id: brownian-motion
     title: Brown 運動
+    status: reviewed
     sections: [Gauss 過程と Kolmogorov の拡張定理, Brown 運動の構成（Lévy–Ciesielski の方法）, Kolmogorov の連続性定理, 標本路の Hölder 連続性と非微分可能性, Markov 性と Blumenthal の 0-1 法則, 強 Markov 性と鏡像原理, 到達時刻の分布と逆正弦法則, 二次変分]
   - id: invariance-principle
     title: Donsker の不変原理
+    status: reviewed
     prerequisites: [topology/complete-metric]
     sections: [距離空間上の確率測度と Prokhorov の定理, 連続関数空間における緊密性, Donsker の不変原理, Skorokhod の埋め込み定理, 重複対数の法則, 経験過程と Kolmogorov–Smirnov 統計量]

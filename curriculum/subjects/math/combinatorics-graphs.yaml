@@ -13,55 +13,71 @@ references: [stanley-ec1, vanlint-wilson, diestel-graph, bollobas-mgt, alon-spen
 chapters:
   - id: counting
     title: 基本的な数え上げ
+    status: reviewed
     sections: [和の法則と積の法則, 順列・組合せ・重複組合せ, 二項定理と多項定理, 二項係数の恒等式と二重数え上げ, 鳩の巣原理, 集合の分割と Stirling 数, 整数の分割と十二通りの数え上げ]
   - id: inclusion-exclusion
     title: 包除原理と篩法
+    status: reviewed
     sections: [包除原理, 攪乱順列とメナージュ問題, 全射の個数, 禁止位置のある順列とルーク多項式, パーマネントとその評価, 符号反転対合による証明]
   - id: generating-functions
     title: 母関数
+    status: reviewed
     sections: [形式的べき級数環, 通常母関数と線形漸化式, 指数型母関数, Catalan 数と Lagrange の反転公式, 分割数の母関数と Euler の五角数定理, 有理母関数と転送行列法]
   - id: posets-mobius
     title: 半順序集合と Möbius 反転
+    status: reviewed
     prerequisites: [sets-logic/orders]
     sections: [局所有限半順序集合と接続代数, Möbius 関数と Möbius 反転公式, 古典的 Möbius 反転と包除原理, 束と分配束, Dilworth の定理と Mirsky の定理, Sperner の定理と LYM 不等式, Erdős–Ko–Rado の定理]
   - id: polya
     title: Pólya の数え上げ
+    status: reviewed
     prerequisites: [group-theory/group-actions]
     sections: [Burnside の補題, 循環指数, Pólya の数え上げ定理, ネックレスとグラフの数え上げ, de Bruijn による一般化]
   - id: graphs
     title: グラフの基礎
+    status: reviewed
     sections: [グラフ・次数・部分グラフ, グラフの同型と隣接行列, 道・閉路・連結性, 二部グラフの特徴付け, Euler 回路, Hamilton 閉路と Dirac・Ore の定理, 有向グラフとトーナメント]
   - id: trees
     title: 木
+    status: reviewed
     prerequisites: [linear-algebra/determinants]
     sections: [木の特徴付け, 全域木と最小全域木（Kruskal 法・Prim 法）, 最短路問題と Dijkstra 法, Cayley の公式と Prüfer 符号, 行列木定理]
   - id: connectivity
     title: 連結度
+    status: reviewed
     sections: [点連結度と辺連結度, Menger の定理, ブロックと切断点, 2-連結グラフと耳分解, 3-連結グラフと Tutte の車輪定理]
   - id: matchings-flows
     title: マッチングとネットワークフロー
+    status: reviewed
     sections: [Hall の結婚定理, Kőnig–Egerváry の定理, Tutte の 1-因子定理, 安定結婚問題と Gale–Shapley のアルゴリズム, ネットワークフローと最大流最小カット定理, Ford–Fulkerson 法と整数性, 最小費用流と割当問題]
   - id: planarity-coloring
     title: 平面グラフ
+    status: reviewed
     sections: [平面グラフと Euler の公式, 平面グラフの辺数の評価と非平面グラフ, Kuratowski の定理と Wagner の定理, 双対グラフ, 五色定理, 四色定理の概観]
   - id: coloring
     title: グラフの彩色
+    status: reviewed
     sections: [頂点彩色と彩色数, Brooks の定理, 彩色多項式, 辺彩色と Vizing の定理, 大きな内周と彩色数をもつグラフ（Mycielski 構成）, 完全グラフ（perfect graph）と弱完全グラフ定理]
   - id: extremal
     title: 極値グラフ理論
+    status: reviewed
     sections: [Mantel の定理と Turán の定理, Erdős–Stone の定理, Kővári–Sós–Turán の定理, Szemerédi の正則化補題, 正則化補題の応用（三角形除去補題と Roth の定理）]
   - id: ramsey-probabilistic
     title: Ramsey 理論
+    status: reviewed
     sections: [Ramsey の定理（グラフと超グラフ）, Ramsey 数の上界と下界, 無限 Ramsey の定理, Schur の定理, van der Waerden の定理, Hales–Jewett の定理（主張）]
   - id: probabilistic-method
     title: 確率的方法
+    status: reviewed
     prerequisites: [probability]
     sections: [基本的方法と期待値の線形性, 変更法, 2 次モーメント法, Lovász の局所補題, Chernoff 型の集中不等式, Erdős–Rényi ランダムグラフと閾値現象]
   - id: spectral-graphs
     title: 代数的グラフ理論
+    status: reviewed
     prerequisites: [linear-algebra/spectral-theorem]
     sections: [隣接行列とスペクトル, 正則グラフと固有値の評価, Laplacian 行列と代数的連結度, 強正則グラフと Hoffman–Singleton の定理, エクスパンダーと Cheeger 不等式, グラフ上のランダムウォーク]
   - id: designs-codes
     title: ブロックデザインと符号
+    status: reviewed
     prerequisites: [fields-galois/finite-fields]
     sections: [ブロックデザインと Fisher の不等式, 有限射影平面, ラテン方格と直交ラテン方格, Steiner 系, 誤り訂正符号の基礎, Hamming 符号と完全符号]

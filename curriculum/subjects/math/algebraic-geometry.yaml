@@ -17,82 +17,105 @@ references: [hartshorne-ag, shafarevich-bag, mumford-red, liu-ag, ueno-ag]
 chapters:
   - id: affine-varieties
     title: アフィン代数多様体
+    status: reviewed
     prerequisites: [commutative-algebra/nullstellensatz]
     sections: [代数的集合と Zariski 位相, イデアルと代数的集合の対応, 既約性と既約成分分解, Noether 位相空間, 座標環とアフィン多様体, 例：平面曲線・行列式多様体・ねじれ三次曲線]
   - id: projective-varieties
     title: 射影多様体
+    status: reviewed
     sections: [射影空間と斉次座標, 斉次イデアルと射影的零点定理, 射影閉包, 斉次座標環, Veronese 埋め込みと Segre 埋め込み, Grassmann 多様体と Plücker 埋め込み]
   - id: morphisms
     title: 正則関数と射
+    status: reviewed
     sections: [正則関数と局所環, 関数体, 多様体の射と準射影多様体, 射影多様体の像の閉性と完備性, 有理写像と双有理同値, 例：二次曲面の有理性と Cremona 変換]
   - id: dimension-smoothness
     title: 次元と非特異性
+    status: reviewed
     prerequisites: [commutative-algebra/dimension, commutative-algebra/regular-local-rings]
     sections: [次元と超越次数, 超曲面と射影空間内の交わりの次元, 射のファイバーの次元, Zariski 接空間, 非特異点と Jacobian 判定法, 非特異性と正則局所環, ブローアップと特異点の解消の例]
   - id: plane-curves
     title: 平面曲線と Bézout の定理
+    status: reviewed
     sections: [交点重複度, Bézout の定理, 平面曲線の特異点と重複度, 双対曲線と Plücker の公式, 三次曲線と群法則, 正規化と有理曲線のパラメータ表示]
   - id: sheaves
     title: 層と環付き空間
+    status: reviewed
     prerequisites: [category-homological/sheaves]
     sections: [代数多様体上の正則関数の層, 層の射と完全性, 環付き空間と局所環付き空間, 多様体を局所環付き空間とみなすこと, 層の順像と逆像, 層の貼り合わせ]
   - id: schemes
     title: スキーム
+    status: reviewed
     prerequisites: [commutative-algebra/localization]
     sections: [アフィンスキーム Spec A と構造層, スキームの定義と貼り合わせ, 次数付き環の Proj, 多様体に付随するスキーム, スキームの点とジェネリック点, 例：Spec ℤ・非被約スキーム・射影空間]
   - id: scheme-properties
     title: スキームと射の性質
+    status: reviewed
     sections: [被約・既約・整スキーム, 局所 Noether スキームと Noether スキーム, 開埋め込みと閉埋め込み, ファイバー積の存在, ファイバーと基底変換, 有限型の射と有限射, 点の関手と表現可能性]
   - id: separated-proper
     title: 分離射と固有射
+    status: reviewed
     prerequisites: [commutative-algebra/valuation-rings]
     sections: [分離射, 分離性の付値判定法, 固有射, 固有性の付値判定法, 射影射と射影空間の固有性, 例：原点を二重化した直線]
   - id: quasi-coherent
     title: 加群の層と準連接層
+    status: reviewed
     sections: [O_X 加群, アフィンスキーム上の加群と準連接層の対応, 準連接層と連接層, 閉部分スキームとイデアル層, 次数付き加群と射影スキーム上の層, Serre のねじり層 O(n), 局所自由層とベクトル束]
   - id: divisors
     title: 因子と直線束
+    status: reviewed
     prerequisites: [commutative-algebra/normal-rings]
     sections: [Weil 因子と因子類群, Cartier 因子, 可逆層と Picard 群, Weil 因子と Cartier 因子の比較, 射影空間と超曲面の補集合の Picard 群, 例：二次錐の因子類群]
   - id: projective-morphisms
     title: 射影空間への射とブローアップ
+    status: reviewed
     sections: [大域切断による射影空間への射, 豊富な直線束と非常に豊富な直線束, 線形系と基点, 相対 Proj とスキームのブローアップ, 例外因子と固有変換, 例：射影空間の自己同型群]
   - id: differentials
     title: 微分形式の層と平滑性
+    status: reviewed
     prerequisites: [commutative-algebra/differentials]
     sections: [相対微分形式の層, 非特異多様体と余接層, 標準層と随伴公式, 平滑射とエタール射, 一般平滑性, Bertini の定理]
   - id: sheaf-cohomology
     title: 層のコホモロジー
+    status: reviewed
     prerequisites: [category-homological/derived-functors]
     sections: [導来関手としての層のコホモロジー, 脆弱層と Grothendieck の消滅定理, Noether アフィンスキームのコホモロジー消滅, Čech コホモロジー, Čech コホモロジーと導来関手コホモロジーの比較, 例：Picard 群と H¹(X; O_X^×)]
   - id: projective-cohomology
     title: 射影スキームのコホモロジー
+    status: reviewed
     sections: [射影空間のコホモロジーの計算, Serre の有限性定理, Serre の消滅定理と豊富性の判定, Euler 標数と Hilbert 多項式, 高次順像, 例：完全交叉のコホモロジー]
   - id: serre-duality
     title: Serre 双対性
+    status: reviewed
     prerequisites: [category-homological/ext-tor]
     sections: [射影空間上の双対性, Ext 層と局所 Ext, 双対化層, Serre 双対性定理, Cohen–Macaulay 性と双対性, 例：曲線と曲面における双対性]
   - id: flat-morphisms
     title: 平坦射と半連続定理
+    status: reviewed
     prerequisites: [commutative-algebra/flatness]
     sections: [平坦射, 平坦族と Hilbert 多項式の一定性, コホモロジーと基底変換, 半連続定理, Grauert の定理, 形式関数定理と Zariski の連結性定理]
   - id: curves
     title: 代数曲線と Riemann–Roch の定理
+    status: reviewed
     sections: [曲線の因子と次数, Riemann–Roch の定理, 種数と算術種数, 有限射と Hurwitz の公式, 超楕円曲線, 種数 0 の曲線]
   - id: curves-embeddings
     title: 曲線の射影埋め込み
+    status: reviewed
     sections: [非常に豊富な因子の判定法, 射影空間への埋め込みと射影, 標準埋め込み, Clifford の定理, 空間曲線の分類, Weierstrass 点]
   - id: elliptic-curves
     title: 楕円曲線
+    status: reviewed
     prerequisites: [complex-analysis/elliptic-functions]
     sections: [Weierstrass 標準形, 楕円曲線の群構造, j 不変量と同型類, 同種写像と双対同種写像, 複素楕円曲線と格子, 有限体上の楕円曲線と Hasse の定理]
   - id: surfaces-intersection
     title: 曲面上の交点理論
+    status: reviewed
     sections: [曲面上の交点形式, 曲面の Riemann–Roch の定理, 随伴公式と曲面上の曲線の種数, Hodge の指数定理, Nakai–Moishezon の判定法, 例：ℙ¹×ℙ¹ と射影平面のブローアップ]
   - id: surfaces-birational
     title: 曲面の双有理幾何
+    status: reviewed
     sections: [曲面のブローアップと例外曲線, Castelnuovo の縮約定理, 双有理写像の分解, 線織曲面, 三次曲面上の 27 本の直線, 極小モデルと Enriques–小平の分類の概観]
   - id: moduli
     title: 表現可能関手とモジュライ入門
+    status: reviewed
     prerequisites: [category-homological/yoneda]
     sections: [点の関手とスキームの表現可能性, Grassmann スキーム, Hilbert スキーム, Picard スキーム, 曲線のモジュライ空間の概観, 変形理論入門]

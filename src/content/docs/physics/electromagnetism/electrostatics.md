@@ -573,7 +573,7 @@ $$
 \phi(\vb r)=k_e D_s\oint_S\hat{\vb n}'\cdot\nabla'\frac1{|\vb r-\vb r'|}\,\dd S'.
 $$
 
-観測点が球殻の内部なら、[解析学（微分積分学）のGauss の発散定理](/math/analysis/vector-calculus/#thm-anl-divergence) を使うと上の積分は $-4\pi$ になる。外部なら核に特異点がなく零である。この議論は任意の滑らかな閉曲面にも通用する。従って内部では一定値 $-D_s/\varepsilon_0$、外部では零であり、外向きに横切ると :eqref[eq-em-double-layer-jump] が再現される。開いた二重層では積分は向き付き立体角に依存し、縁の近くに場が現れる。例えば $D_s=1.00\,\mathrm{pC/m}$ の閉じた層なら外部と内部の電位差は $0.113\,\mathrm V$ である。
+観測点が球殻の内部なら、:ref[thm-anl-divergence] を使うと上の積分は $-4\pi$ になる。外部なら核に特異点がなく零である。この議論は任意の滑らかな閉曲面にも通用する。従って内部では一定値 $-D_s/\varepsilon_0$、外部では零であり、外向きに横切ると :eqref[eq-em-double-layer-jump] が再現される。開いた二重層では積分は向き付き立体角に依存し、縁の近くに場が現れる。例えば $D_s=1.00\,\mathrm{pC/m}$ の閉じた層なら外部と内部の電位差は $0.113\,\mathrm V$ である。
 
 
 :::example[中性分子の電位を点双極子で置き換える距離]

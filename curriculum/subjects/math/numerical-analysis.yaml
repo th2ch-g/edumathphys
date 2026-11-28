@@ -13,53 +13,67 @@ references: [sugihara-murota, mori-numerical, trefethen-bau, golub-vanloan, quar
 chapters:
   - id: floating-point
     title: 浮動小数点数と誤差解析
+    status: reviewed
     sections: [浮動小数点数の表現と IEEE 754, 丸め誤差と機械イプシロン, 桁落ちと情報落ち, 問題の条件数, 前進誤差と後退誤差, アルゴリズムの安定性, 補償付き総和, 区間演算と精度保証付き数値計算]
   - id: linear-systems
     title: 連立一次方程式の直接法
+    status: reviewed
     prerequisites: [linear-algebra/linear-equations]
     sections: [Gauss 消去法と LU 分解, ピボット選択と増大因子, LU 分解の後退誤差解析, Cholesky 分解と対称正定値行列, 帯行列と疎行列の直接法, 摂動解析と条件数, 反復改良と解の精度保証]
   - id: least-squares
     title: 最小二乗問題と直交変換
+    status: reviewed
     prerequisites: [linear-algebra/matrix-analysis]
     sections: [正規方程式, Householder 変換と QR 分解, Givens 回転, Gram–Schmidt 法と修正 Gram–Schmidt 法の安定性, 特異値分解と擬似逆行列, ランク落ち最小二乗問題, Tikhonov 正則化]
   - id: iterative-methods
     title: 線形方程式の反復法
+    status: reviewed
     prerequisites: [linear-algebra/spectral-theorem]
     sections: [定常反復法（Jacobi 法・Gauss–Seidel 法・SOR 法）, 収束条件とスペクトル半径, SOR 法の最適緩和係数, 共役勾配法と収束解析, Krylov 部分空間と Arnoldi 過程, GMRES 法と BiCGSTAB 法, 前処理]
   - id: eigenvalue-computation
     title: 固有値問題の数値解法
+    status: reviewed
     sections: [Gershgorin の定理と固有値の摂動, 冪乗法と逆反復法, Hessenberg 化と Householder 三重対角化, シフト付き QR 法, 対称固有値問題の Jacobi 法・二分法・分割統治法, Lanczos 法と Arnoldi 法, 特異値分解の計算と Golub–Kahan 二重対角化]
   - id: nonlinear-equations
     title: 非線形方程式
+    status: reviewed
     prerequisites: [topology/complete-metric]
     sections: [二分法と挟み撃ち法, 不動点反復と縮小写像, Newton 法と局所 2 次収束, 割線法と収束次数, 多変数 Newton 法と Kantorovich の定理, 準 Newton 法と Broyden 法, 代数方程式の Durand–Kerner 法, Krawczyk 法による解の存在検証]
   - id: optimization
     title: 数値最適化
+    status: reviewed
     prerequisites: [analysis/multivariable-differentiation]
     sections: [無制約最適化の最適性条件, 直線探索と最急降下法, Newton 法と準 Newton 法（BFGS 公式）, 信頼領域法, 制約付き最適化と KKT 条件, 線形計画法の単体法と内点法]
   - id: interpolation-quadrature
     title: 補間と関数近似
+    status: reviewed
     prerequisites: [analysis/uniform-convergence]
     sections: [Lagrange 補間と Newton の差分商, 補間誤差と Runge 現象, Chebyshev 点と Lebesgue 定数, Hermite 補間, スプライン補間, 最良一様近似と Chebyshev の交代定理, 直交多項式と最小二乗近似]
   - id: numerical-integration
     title: 数値積分
+    status: reviewed
     sections: [Newton–Cotes 公式と誤差, 複合公式, Euler–Maclaurin の公式と Romberg 積分, Gauss 型積分公式, 適応型積分, 二重指数型変換（DE 公式）, 多重積分と Monte Carlo 積分]
   - id: fft-spectral
     title: 高速 Fourier 変換とスペクトル法
+    status: reviewed
     prerequisites: [fourier-analysis/fourier-series]
     sections: [離散 Fourier 変換, Cooley–Tukey の高速 Fourier 変換, 巡回畳み込みと多項式乗算, 三角補間とエイリアシング, 離散コサイン変換と Chebyshev 展開, Fourier スペクトル法, Chebyshev 擬スペクトル法]
   - id: ode-numerics
     title: 常微分方程式の初期値問題
+    status: reviewed
     prerequisites: [ode/existence-uniqueness]
     sections: [Euler 法と局所誤差・大域誤差, Runge–Kutta 法と次数条件, 埋め込み型公式と刻み幅制御, 線形多段階法（Adams 法・BDF）, 零安定性と Dahlquist の同等定理, 絶対安定性と硬い方程式, 陰的 Runge–Kutta 法と A 安定性]
   - id: geometric-integration
     title: 幾何学的数値積分
+    status: reviewed
     sections: [ハミルトン系とシンプレクティック写像, シンプレクティック Euler 法と Störmer–Verlet 法, シンプレクティック Runge–Kutta 法, 後方誤差解析と修正ハミルトニアン, 長時間のエネルギー保存, 第一積分と対称性の保存]
   - id: pde-numerics
     title: 境界値問題と偏微分方程式の差分法
+    status: reviewed
     prerequisites: [pde/heat]
     sections: [2 点境界値問題の射撃法と差分法, 離散最大値原理と収束解析, Poisson 方程式の差分近似, 熱方程式の陽解法・陰解法と Crank–Nicolson 法, von Neumann の安定性解析, 移流方程式の風上差分と CFL 条件, Lax の同等定理, 保存則と Lax–Wendroff 法]
   - id: finite-element
     title: 有限要素法
+    status: reviewed
     prerequisites: [pde/weak-solutions, functional-analysis/sobolev-spaces]
     sections: [弱形式と Galerkin 法, 有限要素空間と区分線形要素, Céa の補題, 補間誤差評価と収束次数, Aubin–Nitsche の技法, 剛性行列の組み立てと数値積分, 放物型問題への適用]

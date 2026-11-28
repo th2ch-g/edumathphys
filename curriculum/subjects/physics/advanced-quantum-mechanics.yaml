@@ -16,49 +16,63 @@ references: [sakurai-qm, weinberg-lqm, schwabl-aqm, messiah-qm, sakurai-aqm, bjo
 chapters:
   - id: symmetry
     title: 対称性と保存則
+    status: reviewed
     prerequisites: [quantum-mechanics/angular-momentum, quantum-mechanics/spin]
     sections: [量子力学における対称性と Wigner の定理, 連続対称性と生成子, 回転群の表現と Wigner の D 行列, 既約テンソル演算子, Wigner–Eckart の定理と選択則, 空間反転とパリティ, 時間反転と反ユニタリ演算子, Kramers 縮退]
   - id: angular-momentum-coupling
     title: 角運動量の結合理論
+    status: reviewed
     sections: [Clebsch–Gordan 係数の一般的性質, Wigner の 3j 記号, 3 つの角運動量の再結合と 6j 記号, Racah 代数と 9j 記号, Schwinger のボソン表示, 既約テンソル積と応用（LS 結合と jj 結合）]
   - id: scattering
     title: 散乱理論
+    status: reviewed
     prerequisites: [mathematical-physics/green-functions, mathematical-physics/special-functions]
     sections: [散乱振幅と微分断面積, Lippmann–Schwinger 方程式と散乱の Green 関数, Born 近似と Born 級数, 部分波展開と位相のずれ, 光学定理, 低エネルギー散乱と散乱長・有効距離理論, Coulomb 散乱と Rutherford 公式]
   - id: scattering-advanced
     title: 散乱理論の展開
+    status: reviewed
     sections: [共鳴散乱と Breit–Wigner 公式, 時間に依存する散乱理論と Møller 演算子, S 行列とユニタリ性, S 行列の解析性と束縛状態の極, Levinson の定理, 同種粒子の散乱, 非弾性散乱と多チャネル散乱, アイコナール近似と高エネルギー散乱]
   - id: path-integrals
     title: 経路積分
+    status: reviewed
     prerequisites: [analytical-mechanics/calculus-of-variations, statistical-mechanics/quantum-statistics]
     sections: [伝播関数と時間発展核, 時間分割による経路積分の導出, 自由粒子と調和振動子の経路積分, 停留位相近似と半古典極限, 虚時間経路積分と分配関数, 電磁場中の粒子と Aharonov–Bohm 効果, トンネル効果とインスタントン]
   - id: second-quantization
     title: 第二量子化
+    status: reviewed
     prerequisites: [quantum-mechanics/identical-particles]
     sections: [同種粒子の多体状態と Fock 空間, ボソンの生成消滅演算子, フェルミオンの生成消滅演算子, 場の演算子と 1 体・2 体演算子, 多体 Hamiltonian と相互作用, コヒーレント状態, Bogoliubov 変換と正準変換]
   - id: many-body-applications
     title: 第二量子化の多体系への応用
+    status: reviewed
     sections: [Hartree–Fock 近似, 一様電子ガスと交換エネルギー, 弱く相互作用する Bose 気体と Bogoliubov 理論, 超流動と Landau の判定条件, 密度相関関数と動的構造因子, スピン波と Holstein–Primakoff 変換]
   - id: radiation-field
     title: 輻射場の量子化
+    status: reviewed
     prerequisites: [electromagnetism/potentials-gauge, quantum-mechanics/time-dependent-perturbation]
     sections: [自由電磁場の正準量子化と光子, 光子の状態（Fock 状態・コヒーレント状態）, 真空のゆらぎと Casimir 効果, 原子と輻射場の相互作用, 自然放出と Einstein 係数, 双極子選択則と寿命, 光の散乱（Rayleigh 散乱・Thomson 散乱・Raman 散乱）, Lamb シフトの概観]
   - id: klein-gordon
     title: Klein–Gordon 方程式
+    status: reviewed
     prerequisites: [special-relativity/four-vectors]
     sections: [相対論的波動方程式の構成, Klein–Gordon 方程式の解と負エネルギー問題, 保存カレントと確率解釈の困難, 電磁場との結合と非相対論的極限, Coulomb ポテンシャル中の Klein–Gordon 粒子, Klein のパラドックス]
   - id: dirac-equation
     title: Dirac 方程式
+    status: reviewed
     sections: [Dirac 方程式の導出, γ 行列と Clifford 代数, Lorentz 共変性とスピノルの変換, 双一次形式, 平面波解とスピン・ヘリシティ, 非相対論的極限と g 因子, Foldy–Wouthuysen 変換とスピン軌道相互作用]
   - id: dirac-applications
     title: Dirac 方程式の応用と 1 粒子理論の限界
+    status: reviewed
     sections: [中心力場中の Dirac 方程式, 水素原子の厳密解と微細構造, 空孔理論と陽電子, 荷電共役・パリティ・時間反転, Zitterbewegung, Weyl 方程式と Majorana 方程式, 1 粒子理論の限界と場の理論の必要性]
   - id: berry-phase
     title: 断熱近似と Berry 位相
+    status: reviewed
     sections: [断熱定理, Berry 位相, Berry 接続と Berry 曲率, スピンの Berry 位相と磁気単極子, Born–Oppenheimer 近似と幾何学的位相, Aharonov–Anandan 位相と非可換 Berry 位相]
   - id: open-systems
     title: 密度行列と開放量子系
+    status: reviewed
     sections: [純粋状態と混合状態, 縮約密度行列と量子もつれ, Schmidt 分解と純粋化, 量子チャネルと Kraus 表現, Born–Markov 近似と Lindblad 方程式, デコヒーレンス, 例：減衰する二準位系と調和振動子]
   - id: measurement
     title: 量子測定理論
+    status: reviewed
     sections: [射影測定と POVM, von Neumann の測定モデルと間接測定, 量子 Zeno 効果, 弱測定, EPR パラドックスと Bell の不等式, CHSH 不等式と Kochen–Specker の定理, 量子力学の解釈問題の概観]

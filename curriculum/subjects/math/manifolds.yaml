@@ -14,51 +14,65 @@ references: [matsushima-manifolds, tu-manifolds, lee-smooth, matsumoto-manifolds
 chapters:
   - id: smooth-manifolds
     title: 可微分多様体
+    status: reviewed
     prerequisites: [topology/compactness]
     sections: [位相多様体と座標近傍, 可微分構造と極大アトラス, 例（球面・射影空間・Grassmann 多様体・積多様体）, 滑らかな関数と滑らかな写像, 微分同相, 隆起関数と 1 の分割, 1 の分割の応用（滑らかな Urysohn の補題と固有関数）]
   - id: tangent-spaces
     title: 接空間と写像の微分
+    status: reviewed
     prerequisites: [analysis/multivariable-differentiation]
     sections: [導分としての接ベクトル, 写像の微分と連鎖律, 座標による計算と座標変換, 曲線の速度ベクトル, 接ベクトルの同値な定義（曲線の同値類・座標成分）, 接束の多様体構造]
   - id: rank-theorem
     title: はめ込み・沈め込み・埋め込み
+    status: reviewed
     prerequisites: [analysis/implicit-function]
     sections: [定階数写像と階数定理, はめ込みと沈め込み, 埋め込みと固有写像, 局所微分同相と滑らかな被覆写像, 沈め込みの局所切断と商写像の普遍性]
   - id: submanifolds
     title: 部分多様体
+    status: reviewed
     sections: [埋め込まれた部分多様体とスライス条件, 正則値定理と等位集合, はめ込まれた部分多様体, 部分多様体への写像の制限, 部分多様体の接空間, 例：直交群と特殊線形群]
   - id: vector-fields
     title: ベクトル場と流れ
+    status: reviewed
     prerequisites: [ode/existence-uniqueness]
     sections: [ベクトル場と導分, 写像に関係するベクトル場, Lie 括弧, 積分曲線, 流れの基本定理, 完備ベクトル場, Lie 微分と可換な流れ]
   - id: vector-bundles
     title: ベクトル束
+    status: reviewed
     sections: [ベクトル束と局所自明化, 変換関数によるベクトル束の構成, 切断と局所枠, 束準同型・部分束・商束, 束の演算（Whitney 和・テンソル積・双対・引き戻し）, 部分多様体の法束]
   - id: tensor-fields
     title: 余接束とテンソル場
+    status: reviewed
     prerequisites: [linear-algebra/dual-and-quotient, linear-algebra/tensor-products]
     sections: [余接空間と余接束, 関数の微分と 1 形式, 1 形式の線積分と保存的な 1 形式, 多重線形代数とテンソル, テンソル場と引き戻し, 対称テンソル場と Riemann 計量の存在]
   - id: differential-forms
     title: 微分形式
+    status: reviewed
     sections: [交代テンソルと外積, 微分形式と外積, 外微分の存在と一意性, 引き戻しと外微分の自然性, 内部積と微分形式の Lie 微分, Cartan の公式, 微分形式と ℝ³ のベクトル解析]
   - id: integration
     title: 向きと多様体上の積分・Stokes の定理
+    status: reviewed
     prerequisites: [analysis/multiple-integral, analysis/vector-calculus]
     sections: [向き付けと向き形式, 境界付き多様体と境界の誘導向き, 微分形式の積分, Stokes の定理, 古典的積分定理（Green・Gauss・Stokes）の統一, Riemann 多様体上の体積形式と発散定理, 密度と向き付け不能多様体上の積分]
   - id: de-rham
     title: de Rham コホモロジー
+    status: reviewed
     sections: [de Rham コホモロジー群の定義, ホモトピー不変性, Poincaré の補題, Mayer–Vietoris 完全列, 球面・トーラス・射影空間の計算, 0 次と最高次のコホモロジー, 応用：球面の非可縮性と不動点定理]
   - id: distributions
     title: 分布と Frobenius の定理
+    status: reviewed
     sections: [分布と積分多様体, 包合性, Frobenius の定理, 微分形式による Frobenius の定理, 葉層構造, 応用：全微分方程式の可積分条件]
   - id: lie-groups-intro
     title: Lie 群入門
+    status: reviewed
     prerequisites: [group-theory/groups]
     sections: [Lie 群と Lie 群準同型, Lie 群の例（行列群・トーラス・被覆群）, 左不変ベクトル場と Lie 代数, 1 パラメータ部分群と指数写像, Lie 部分群と閉部分群定理, Lie 群準同型と Lie 代数準同型, 随伴表現]
   - id: group-actions
     title: 群作用と等質空間
+    status: reviewed
     prerequisites: [group-theory/group-actions, algebraic-topology/covering-spaces]
     sections: [Lie 群の滑らかな作用, 軌道と固定部分群, 固有作用と商多様体定理, 等質空間と等変写像, 例：球面・Grassmann 多様体・旗多様体, 離散群の作用と被覆空間]
   - id: symplectic
     title: シンプレクティック多様体
+    status: reviewed
     sections: [シンプレクティック線形代数, シンプレクティック形式と例, 余接束の標準シンプレクティック構造, Hamilton ベクトル場と Poisson 括弧, Darboux の定理, Lagrange 部分多様体, 運動量写像とシンプレクティック簡約の概観]

@@ -15,45 +15,59 @@ references: [hecht-optics, born-wolf, saleh-teich, siegman-lasers]
 chapters:
   - id: light-em-waves
     title: 光の電磁波理論
+    status: reviewed
     prerequisites: [electromagnetism/em-waves]
     sections: [Maxwell 方程式から波動方程式へ, 平面波と球面波の複素表示, Poynting ベクトルと放射照度, 屈折率と物質中の光速, 光の運動量と放射圧, 光子と光の二重性]
   - id: reflection-refraction
     title: 反射と屈折
+    status: reviewed
     sections: [境界条件と反射・屈折の法則, Fresnel の式, Brewster 角と偏光, 全反射とエバネッセント波, Goos–Hänchen シフト, 金属面での反射]
   - id: geometrical-optics
     title: 幾何光学
+    status: reviewed
     sections: [Fermat の原理, アイコナール方程式と光線方程式, 球面での屈折と近軸近似, 薄レンズと結像公式, 球面鏡と反射系, 行列光学（ABCD 行列）, 屈折率分布媒質と蜃気楼]
   - id: optical-systems
     title: 光学系と収差
+    status: reviewed
     sections: [厚いレンズと主点・節点, 絞りと瞳・視野, 光学機器（眼・カメラ・顕微鏡・望遠鏡）, 単色収差と Seidel の 5 収差, 色収差とアクロマート, 波面収差と Strehl 比]
   - id: polarization
     title: 偏光と結晶光学
+    status: reviewed
     sections: [偏光状態と Jones ベクトル, 偏光素子と Jones 行列, Stokes パラメータと Poincaré 球, 部分偏光と Mueller 行列, 異方性媒質と屈折率楕円体, 一軸性結晶と複屈折, 旋光性と Faraday 効果]
   - id: dispersion-absorption
     title: 物質中の光と分散
+    status: reviewed
     sections: [Lorentz 振動子モデル, 複素屈折率と吸収係数, 正常分散と異常分散, 金属の光学と Drude モデル, Kramers–Kronig の関係, 光パルスの伝播と群速度分散, Rayleigh 散乱と Mie 散乱]
   - id: interference
     title: 干渉と干渉計
+    status: reviewed
     sections: [2 光束干渉と可干渉性の条件, 波面分割干渉（Young の干渉・Lloyd 鏡）, 振幅分割干渉（薄膜・Newton リング）, Michelson 干渉計と Mach–Zehnder 干渉計, 多光束干渉と Fabry–Pérot 干渉計, 誘電体多層膜と干渉フィルター]
   - id: diffraction
     title: 回折理論
+    status: reviewed
     sections: [Huygens–Fresnel の原理, Kirchhoff の回折積分, Rayleigh–Sommerfeld の回折理論, Fresnel 回折と Fresnel 帯, Fresnel 積分と Cornu 螺旋, Fraunhofer 回折（矩形開口・円形開口と Airy パターン）, 回折格子と分光器の分解能, Babinet の原理]
   - id: fourier-optics
     title: Fourier 光学
+    status: reviewed
     sections: [角スペクトル表示と自由空間の伝達関数, Fraunhofer 回折と Fourier 変換, レンズの Fourier 変換作用, コヒーレント結像と瞳関数, インコヒーレント結像と光学伝達関数, 空間フィルタリングと位相差顕微鏡, ホログラフィー]
   - id: coherence
     title: コヒーレンス
+    status: reviewed
     sections: [準単色光と解析信号, 時間的コヒーレンスと自己相関関数, Wiener–Khinchin の定理とスペクトル, 空間的コヒーレンスと相互コヒーレンス関数, van Cittert–Zernike の定理, 恒星干渉計, 強度干渉と Hanbury Brown–Twiss 効果]
   - id: beam-optics
     title: ガウスビームと光共振器
+    status: reviewed
     sections: [近軸 Helmholtz 方程式, ガウスビームと Rayleigh 長・Gouy 位相, 高次モード（Hermite–Gauss・Laguerre–Gauss）, ABCD 則と q パラメータ, 光共振器の安定条件, 共振器の縦モードと横モード, フィネスと光子寿命]
   - id: waveguides
     title: 導波光学と光ファイバー
+    status: reviewed
     sections: [平板誘電体導波路のモード, 光ファイバーの導波モードと開口数, 単一モードファイバーと LP モード, ファイバーの分散と損失, モード結合理論と方向性結合器, フォトニック結晶入門]
   - id: lasers
     title: レーザーの原理
+    status: reviewed
     prerequisites: [quantum-mechanics/time-dependent-perturbation, statistical-mechanics]
     sections: [黒体放射と Einstein の A 係数・B 係数, 誘導放出と反転分布, スペクトル線の広がり（均一広がり・不均一広がり）, 光増幅と利得飽和, 3 準位・4 準位レーザーと速度方程式, 発振条件と出力特性, Q スイッチとモード同期, 代表的なレーザー]
   - id: nonlinear-optics
     title: 非線形光学
+    status: reviewed
     sections: [非線形分極と非線形感受率, 第 2 高調波発生と位相整合, 和周波・差周波発生とパラメトリック増幅, 3 次の非線形効果（光 Kerr 効果・自己位相変調）, 光ソリトン, 電気光学効果と音響光学効果, 誘導 Raman 散乱と誘導 Brillouin 散乱]

@@ -14,57 +14,73 @@ references: [kubo-toda-hashitsume, zwanzig-noneq, sekimoto-stochastic, risken-fp
 chapters:
   - id: brownian-motion
     title: Brown 運動と Langevin 方程式
+    status: reviewed
     prerequisites: [statistical-mechanics/canonical]
     sections: [Brown 運動の現象論と Einstein の関係, Langevin 方程式とその解, 速度相関関数と拡散係数, 揺動散逸関係, 過減衰極限, 外力下の Brown 粒子と移動度]
   - id: stochastic-processes
     title: 確率過程の基礎
+    status: reviewed
     prerequisites: [probability/markov-chains, stochastic-analysis/sde]
     sections: [確率過程と Markov 性, Chapman–Kolmogorov 方程式, Wiener 過程と白色雑音, Ornstein–Uhlenbeck 過程, 確率微分方程式の Itô 解釈と Stratonovich 解釈, 定常過程とパワースペクトル（Wiener–Khinchin の定理）]
   - id: master-equation
     title: マスター方程式
+    status: reviewed
     sections: [マスター方程式の導出, 詳細つり合いと平衡への緩和, 出生死滅過程, 生成関数の方法, van Kampen の系サイズ展開, 化学反応系と Gillespie 法]
   - id: fokker-planck
     title: Fokker–Planck 方程式
+    status: reviewed
     sections: [Kramers–Moyal 展開, Fokker–Planck 方程式の導出, 定常解とポテンシャル条件, 固有関数展開と緩和, Kramers 方程式と Smoluchowski 方程式, 初到達時間問題]
   - id: reaction-rates
     title: 反応速度論と Kramers 理論
+    status: reviewed
     sections: [遷移状態理論, Kramers の脱出率（中・強摩擦）, 弱摩擦極限と Kramers のターンオーバー, 多次元の脱出問題と Langer 理論, 確率共鳴]
   - id: kinetic-theory
     title: 気体分子運動論と BBGKY 階層
+    status: reviewed
     prerequisites: [analytical-mechanics/hamiltonian]
     sections: [Liouville 方程式, 縮約分布関数と BBGKY 階層, 平均自由行程と衝突頻度, 初等的輸送理論（粘性・熱伝導・拡散）, Vlasov 方程式と平均場近似]
   - id: boltzmann-equation
     title: Boltzmann 方程式
+    status: reviewed
     prerequisites: [continuum-mechanics/viscous-fluids]
     sections: [Boltzmann 方程式の導出と分子カオス仮説, 衝突不変量と局所平衡, H 定理と不可逆性, Loschmidt と Zermelo のパラドックス, 線形化 Boltzmann 方程式と緩和時間近似, Chapman–Enskog 展開と輸送係数, 流体力学方程式の導出]
   - id: linear-response
     title: 線形応答理論
+    status: reviewed
     prerequisites: [statistical-mechanics/quantum-statistics]
     sections: [力学的摂動と応答関数, 久保公式, 複素感受率と Kramers–Kronig の関係, 揺動散逸定理（第一種と第二種）, Green–Kubo 公式と輸送係数, 総和則と Onsager–Casimir の対称性]
   - id: projection-operators
     title: 射影演算子法と一般化 Langevin 方程式
+    status: reviewed
     sections: [Mori–Zwanzig の射影演算子法, 一般化 Langevin 方程式の導出, 記憶関数と連分数展開, Markov 近似と時間スケールの分離, 熱的外力と局所平衡分布（Zubarev の方法）]
   - id: hydrodynamic-fluctuations
     title: 流体力学的ゆらぎとモード結合
+    status: reviewed
     sections: [保存量と流体力学的モード, 動的構造因子と Rayleigh–Brillouin 散乱, ゆらぐ流体力学（Landau–Lifshitz 理論）, 速度相関関数の長時間尾, モード結合理論]
   - id: onsager
     title: 非平衡熱力学
+    status: reviewed
     prerequisites: [thermodynamics/entropy, thermodynamics/mixtures]
     sections: [局所平衡仮説とエントロピー収支, エントロピー生成と熱力学的流れ・力, Onsager の相反定理, 熱電効果と Kelvin の関係, 拡散と化学反応への応用, 最小エントロピー生成原理]
   - id: quantum-dissipation
     title: 量子散逸系
+    status: reviewed
     prerequisites: [advanced-quantum-mechanics/open-systems, advanced-quantum-mechanics/path-integrals]
     sections: [Caldeira–Leggett 模型, 量子 Langevin 方程式, 量子マスター方程式と Born–Markov 近似, 量子揺動散逸定理, 散逸のある量子トンネル]
   - id: stochastic-thermodynamics
     title: 確率熱力学
+    status: reviewed
     sections: [Langevin 系の熱と仕事（確率エネルギー論）, 確率的エントロピー生成, 第二法則の確率過程的表現, 非平衡定常状態と housekeeping 熱, 熱力学的不確定性関係, 確率熱機関と効率]
   - id: fluctuation-theorems
     title: ゆらぎの定理
+    status: reviewed
     sections: [時間反転と経路確率, Crooks のゆらぎの定理, Jarzynski 等式, 定常状態のゆらぎの定理（Gallavotti–Cohen）, ゆらぎの定理からの線形応答理論の再導出, 実験による検証]
   - id: information-thermodynamics
     title: 情報熱力学
+    status: reviewed
     sections: [Maxwell のデーモンと Szilard エンジン, Landauer の原理, 測定とフィードバックを含む第二法則, 相互情報量とゆらぎの定理, 量子系への拡張]
   - id: driven-systems
     title: 非平衡相転移と駆動系
+    status: reviewed
     prerequisites: [critical-phenomena/renormalization-group, critical-phenomena/dynamic-critical]
     sections: [非対称単純排他過程（ASEP）とその厳密解, 有向パーコレーションと吸収状態転移, 界面成長と KPZ 方程式, 動的臨界現象（模型 A と模型 B）, パターン形成と反応拡散系]

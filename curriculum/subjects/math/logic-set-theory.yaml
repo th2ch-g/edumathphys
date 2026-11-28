@@ -14,59 +14,77 @@ references: [arai-logic, enderton-logic, shoenfield-logic, kunen-set, jech-set]
 chapters:
   - id: propositional-logic
     title: 命題論理
+    status: reviewed
     sections: [論理式の帰納的定義と一意読み取り, 真理値割り当てと恒真式, 関数完全性と標準形, Hilbert 流の証明体系, 健全性と完全性, 命題論理のコンパクト性]
   - id: first-order-logic
     title: 一階述語論理の構文と意味
+    status: reviewed
     sections: [言語・項・論理式, 自由変数と代入, 構造と充足関係, 論理的帰結と恒真性, 準同型・同型と初等同値, 定義可能集合]
   - id: formal-proofs
     title: 形式的証明
+    status: reviewed
     sections: [公理系と推論規則, 演繹定理, 一般化定理と同値置換, 自然演繹, シークエント計算, 健全性定理]
   - id: completeness
     title: 完全性定理とコンパクト性定理
+    status: reviewed
     sections: [極大無矛盾集合と Henkin 拡大, Gödel の完全性定理, 等号と関数記号の扱い, コンパクト性定理, Löwenheim–Skolem の定理, 応用（群・グラフ彩色・体の理論）]
   - id: model-theory
     title: モデル理論入門
+    status: reviewed
     prerequisites: [fields-galois/splitting-fields]
     sections: [初等部分構造と Tarski–Vaught の判定法, 超積と Łoś の定理, 超準モデルと超準解析, 型と飽和モデル, 量化子消去（稠密線形順序・代数閉体・実閉体）, 範疇性と Łoś–Vaught の判定法, Morley の範疇性定理（主張）]
   - id: computability
     title: 計算可能性
+    status: reviewed
     sections: [原始帰納的関数, 帰納的関数と μ 作用素, Turing 機械, Turing 計算可能性と帰納性の同値, Church–Turing の提唱, 万能 Turing 機械と Kleene の標準形定理]
   - id: undecidability
     title: 決定不能性と帰納的可算集合
+    status: reviewed
     sections: [停止問題の決定不能性, 帰納的可算集合の特徴付け, Rice の定理, 多対一還元と完全集合, 一階述語論理の決定不能性（Church の定理）, Hilbert の第 10 問題（主張）]
   - id: degrees
     title: 相対計算可能性と算術的階層
+    status: reviewed
     sections: [神託計算と Turing 還元, Kleene の再帰定理, 算術的階層と Post の定理, Turing 次数とジャンプ, Post の問題と Friedberg–Muchnik の定理（概略）]
   - id: arithmetic
     title: 形式的算術と表現可能性
+    status: reviewed
     sections: [Robinson 算術 Q と Peano 算術 PA, 算術の標準モデルと超準モデル, Σ₁ 完全性, 帰納的関数の表現可能性, 構文の算術化と Gödel 数, 証明可能性述語]
   - id: incompleteness
     title: 不完全性定理
+    status: reviewed
     sections: [対角化補題, 第一不完全性定理（Gödel と Rosser）, Tarski の真理定義不可能性定理, 導出可能性条件, 第二不完全性定理, Löb の定理, 本質的決定不能な理論]
   - id: proof-theory
     title: 証明論
+    status: reviewed
     sections: [シークエント計算 LK, カット除去定理, 部分論理式性と Herbrand の定理, Craig の補間定理, 直観主義論理と LJ, Gentzen による PA の無矛盾性証明と ε₀]
   - id: zfc
     title: ZFC 公理系
+    status: reviewed
     prerequisites: [sets-logic/choice]
     sections: [ZF の公理と動機, クラスと集合, 対・和・冪の公理と基本的構成, 分出公理と置換公理, 基礎の公理と整礎性, 選択公理と同値命題]
   - id: ordinals
     title: 順序数
+    status: reviewed
     prerequisites: [sets-logic/ordinals]
     sections: [推移的集合と von Neumann 順序数, 順序数の整列性, 超限帰納法と超限再帰, 順序数の算術, Cantor 標準形, 整礎関係と階数]
   - id: cardinals
     title: 基数
+    status: reviewed
     prerequisites: [sets-logic/cardinal-arithmetic]
     sections: [基数と始順序数, アレフ階層, 基数の和と積, 基数の冪と König の不等式, 共終数と正則基数・特異基数, 一般連続体仮説, 到達不能基数]
   - id: infinite-combinatorics
     title: 無限組合せ論
+    status: reviewed
     sections: [閉非有界集合と定常集合, Fodor の補題, Δ システム補題, 木と Aronszajn 木, Suslin 問題, 無限 Ramsey 理論と分割関係]
   - id: models-of-set-theory
     title: 集合論のモデルと絶対性
+    status: reviewed
     sections: [累積階層, 相対化と推移的モデル, Δ₀ 論理式と絶対性, 反映原理, Mostowski の崩壊補題と可算推移的モデル, 到達不能基数と ZFC のモデル]
   - id: constructible
     title: 構成可能集合と相対無矛盾性
+    status: reviewed
     sections: [定義可能冪集合と構成可能階層, L が ZF のモデルであること, 構成可能性の公理 V = L, L における選択公理, 凝縮補題, L における一般連続体仮説]
   - id: independence
     title: 強制法と独立性証明
+    status: reviewed
     sections: [半順序集合とジェネリックフィルター, ジェネリック拡大の構成, 強制関係と強制定理, 可算鎖条件と基数の保存, 連続体仮説の否定の無矛盾性, 選択公理の独立性（対称モデルの概観）, Martin の公理]

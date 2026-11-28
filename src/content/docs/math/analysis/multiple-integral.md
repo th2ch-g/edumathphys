@@ -105,7 +105,7 @@ $$
 
 :::definition[Jordan 内容と領域上の積分]{#def-anl-jordan}
 有界集合 $D$ を内部に含む箱を選ぶ。
-集合の所属を $1$ と $0$ で表す [集合と論理の部分集合と特性関数](/math/sets-logic/maps/#prop-sets-characteristic) の指示関数 $\mathbf1_D$ を使う。
+集合の所属を $1$ と $0$ で表す :ref[prop-sets-characteristic] の指示関数 $\mathbf1_D$ を使う。
 その下積分、上積分を内 Jordan 内容、外 Jordan 内容という。
 一致するとき $D$ は :term[Jordan 可測]{en="Jordan measurable" yomi="じょるだんかそく"} で、$|D|=\int\mathbf1_D$ が体積である。
 $D$ 上の有界関数を外で零とした関数が可積分なら、その積分を $\int_D f$ とする。

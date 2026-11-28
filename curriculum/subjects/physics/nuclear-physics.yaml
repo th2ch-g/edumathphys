@@ -13,50 +13,63 @@ references: [krane-nuclear, bohr-mottelson, ring-schuck, blatt-weisskopf, yagi-n
 chapters:
   - id: nuclear-properties
     title: 原子核の基本的性質
+    status: reviewed
     prerequisites: [quantum-mechanics/angular-momentum]
     sections: [原子核の構成と核図表, 電子散乱と電荷分布・形状因子, 質量と結合エネルギー, Weizsäcker の質量公式と β 安定線, 核スピン・パリティと電磁モーメント, アイソスピン]
   - id: radioactivity
     title: 放射性崩壊と放射線計測
+    status: reviewed
     sections: [崩壊法則と半減期, 逐次崩壊と放射平衡, 荷電粒子と物質の相互作用（Bethe–Bloch の式）, γ 線と中性子の物質との相互作用, 放射線検出器, 加速器の原理, 放射年代測定]
   - id: nuclear-force
     title: 核力と二核子系
+    status: reviewed
     prerequisites: [advanced-quantum-mechanics/scattering, quantum-mechanics/spin]
     sections: [重陽子の束縛状態とテンソル力, 低エネルギー核子-核子散乱と有効距離理論, 核力の荷電独立性とアイソスピン, 核力のスピン依存性と交換性, 湯川理論と一 π 中間子交換ポテンシャル, 現実的核力と斥力芯, 三体力の概観]
   - id: shell-model
     title: 殻模型
+    status: reviewed
     prerequisites: [quantum-mechanics/hydrogen-atom]
     sections: [魔法数の実験的証拠, 調和振動子ポテンシャルと Woods–Saxon ポテンシャル, スピン軌道結合と殻構造, 単一粒子状態と基底状態のスピン・パリティ, 磁気モーメントと Schmidt 線, 配位混合と残留相互作用]
   - id: mean-field
     title: 核子多体系と平均場理論
+    status: reviewed
     prerequisites: [many-body/second-quantization-review]
     sections: [Fermi 気体模型, 核物質の飽和性, Hartree–Fock 理論, Skyrme 力と核密度汎関数, 相対論的平均場理論の概観, 対称エネルギーと核物質の状態方程式]
   - id: pairing
     title: 対相関と原子核の超流動性
+    status: reviewed
     prerequisites: [many-body/bcs]
     sections: [対相互作用と偶奇質量差, seniority 模型, BCS 理論と準粒子, Hartree–Fock–Bogoliubov 理論の概観, 対相関と慣性能率]
   - id: collective-model
     title: 集団運動
+    status: reviewed
     prerequisites: [advanced-quantum-mechanics/symmetry]
     sections: [原子核の変形と Nilsson 模型, 回転バンドと慣性能率, 表面振動（四重極振動と八重極振動）, 乱雑位相近似と集団励起, 巨大共鳴, 高スピン状態とバックベンディング]
   - id: decays
     title: α 崩壊と γ 遷移
+    status: reviewed
     prerequisites: [quantum-mechanics/variational-wkb, advanced-quantum-mechanics/radiation-field]
     sections: [α 崩壊の系統性と Geiger–Nuttall 則, Gamow のトンネル理論, 多重極放射と遷移確率, Weisskopf 単位と選択則, 内部転換と核異性体, Mössbauer 効果]
   - id: beta-decay
     title: β 崩壊と弱い相互作用
+    status: reviewed
     prerequisites: [quantum-mechanics/time-dependent-perturbation, standard-model/electroweak]
     sections: [β 崩壊のエネルギー論と電子捕獲, Fermi の理論と Kurie プロット, ft 値と許容遷移・禁止遷移, Fermi 型遷移と Gamow–Teller 型遷移, パリティ非保存と Wu の実験, ニュートリノの性質と二重 β 崩壊]
   - id: reactions
     title: 核反応
+    status: reviewed
     prerequisites: [advanced-quantum-mechanics/scattering]
     sections: [反応の運動学と Q 値, 断面積と保存則, 光学模型, 複合核反応と Breit–Wigner 共鳴, Hauser–Feshbach 理論の概観, 直接反応（ストリッピングとピックアップ）, 重イオン反応]
   - id: fission-fusion
     title: 核分裂と核融合
+    status: reviewed
     sections: [核分裂の液滴模型と分裂障壁, 分裂生成物と即発・遅発中性子, 中性子の減速と原子炉の臨界条件, 核融合反応と Coulomb 障壁, Lawson 条件と磁場閉じ込め・慣性閉じ込め]
   - id: mesons-quarks
     title: 中間子・ハドロンと原子核
+    status: reviewed
     prerequisites: [standard-model/qcd, standard-model/quark-model]
     sections: [π 中間子とその性質, ハドロンのクォーク模型, ストレンジネスとハイパー核, 量子色力学と原子核, クォーク・グルーオン・プラズマと重イオン衝突]
   - id: nucleosynthesis
     title: 原子核天体物理と元素合成
+    status: reviewed
     sections: [熱核反応率と天体物理的 S 因子, 水素燃焼（pp 連鎖と CNO サイクル）, ヘリウム燃焼とそれ以降の核燃焼, s 過程と r 過程, ビッグバン元素合成, 超新星と中性子星物質]

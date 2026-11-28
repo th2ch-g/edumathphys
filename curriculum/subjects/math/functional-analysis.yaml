@@ -16,54 +16,69 @@ references: [kuroda-fa, reed-simon-1, brezis-fa, kreyszig-fa, rudin-fa, conway-f
 chapters:
   - id: normed-spaces
     title: ノルム空間と Banach 空間
+    status: reviewed
     prerequisites: [measure-integration/lp-spaces]
     sections: [ノルム空間と同値なノルム, Banach 空間の例, 有限次元ノルム空間と Riesz の補題, 有界線形作用素と作用素ノルム, 商空間と直和, 縮小写像の原理と積分方程式]
   - id: hilbert-spaces
     title: Hilbert 空間
+    status: reviewed
     prerequisites: [linear-algebra/inner-product-spaces]
     sections: [内積空間と Hilbert 空間, 中線定理と Jordan–von Neumann の定理, 最良近似と射影定理, Riesz の表現定理, 正規直交系と Bessel の不等式, 完全正規直交系と Parseval の等式, 可分 Hilbert 空間と ℓ² への同型]
   - id: hilbert-operators
     title: Hilbert 空間上の有界作用素
+    status: reviewed
     sections: [共役作用素, 自己共役作用素とユニタリ作用素, 正規作用素と正作用素, 直交射影, 正作用素の平方根と極分解, Lax–Milgram の定理と Stampacchia の定理]
   - id: hahn-banach
     title: Hahn–Banach の定理と双対空間
+    status: reviewed
     prerequisites: [sets-logic/choice]
     sections: [解析的 Hahn–Banach の定理, 複素 Hahn–Banach の定理, Minkowski 汎関数と凸集合の分離定理, 双対空間の具体例, 二重双対と反射的空間, Banach 空間の共役作用素, 凸関数と Fenchel 共役]
   - id: baire-theorems
     title: Baire の定理の帰結
+    status: reviewed
     prerequisites: [topology/complete-metric]
     sections: [Baire の範疇定理, 一様有界性原理と Banach–Steinhaus の定理, 開写像定理と有界逆写像定理, 閉グラフ定理, 閉値域定理, 補空間と有界射影, 応用：Fourier 級数が発散する連続関数]
   - id: weak-topologies
     title: 弱位相
+    status: reviewed
     prerequisites: [topology/compactness]
     sections: [弱位相と弱 * 位相, Banach–Alaoglu の定理, 反射性と Kakutani の定理, 可分性と弱位相の距離化可能性, 一様凸空間と Milman–Pettis の定理, 弱収束と弱 * 収束の例]
   - id: locally-convex
     title: 位相線形空間と局所凸空間
+    status: reviewed
     sections: [位相線形空間, セミノルム族と局所凸位相, Fréchet 空間, 局所凸空間の分離定理, Krein–Milman の定理, 帰納極限位相, Schauder の不動点定理]
   - id: compact-operators
     title: コンパクト作用素と Fredholm 理論
+    status: reviewed
     sections: [コンパクト作用素の定義と基本性質, 有限階作用素による近似, Riesz–Schauder の理論, Fredholm の択一定理, Fredholm 作用素と指数, 積分方程式への応用]
   - id: compact-hilbert
     title: Hilbert 空間上のコンパクト作用素と作用素イデアル
+    status: reviewed
     sections: [コンパクト自己共役作用素のスペクトル定理, 特異値と Schmidt 展開, min-max 原理, Hilbert–Schmidt 作用素, トレースクラス作用素とトレース, Schatten クラス, 応用：Sturm–Liouville 問題の固有関数展開]
   - id: banach-algebras
     title: Banach 代数と Gelfand 理論
+    status: reviewed
     prerequisites: [complex-analysis/cauchy-formula]
     sections: [Banach 代数, スペクトルと Gelfand–Mazur の定理, スペクトル半径公式, 正則関数カルキュラス, 可換 Banach 代数の指標と極大イデアル, Gelfand 変換, 例：ℓ¹(ℤ) と Wiener の補題]
   - id: spectral-theory
     title: 有界作用素のスペクトル理論
+    status: reviewed
     prerequisites: [measure-integration/riesz-representation]
     sections: [スペクトルとレゾルベント, 点スペクトル・連続スペクトル・剰余スペクトル, 自己共役作用素のスペクトルの性質, 連続関数カルキュラス, 射影値測度とスペクトル測度, 有界自己共役作用素のスペクトル定理, 正規作用素のスペクトル定理と乗法作用素表示]
   - id: unbounded-operators
     title: 非有界作用素
+    status: reviewed
     sections: [閉作用素と可閉作用素, 非有界作用素の共役, 対称作用素と自己共役作用素, 自己共役性の基本判定条件, 不足指数と von Neumann の拡大理論, 例：運動量作用素と Laplace 作用素]
   - id: unbounded-spectral
     title: 非有界自己共役作用素のスペクトル理論
+    status: reviewed
     sections: [非有界自己共役作用素のスペクトル定理, 関数カルキュラス, Stone の定理, Kato–Rellich の定理, 二次形式と Friedrichs 拡大, Trotter の積公式]
   - id: semigroups
     title: 作用素半群
+    status: reviewed
     sections: [強連続半群と生成作用素, Hille–Yosida の定理, Lumer–Phillips の定理と縮小半群, 解析半群, 発展方程式への応用]
   - id: sobolev-spaces
     title: Sobolev 空間
+    status: reviewed
     prerequisites: [measure-integration/convolution]
     sections: [弱微分, Sobolev 空間とその完備性, 1 次元の Sobolev 空間, 滑らかな関数による近似と延長作用素, Sobolev の埋め込み定理, Rellich–Kondrachov のコンパクト性定理, トレース定理と Poincaré の不等式]

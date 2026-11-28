@@ -14,63 +14,81 @@ references: [foot-atomic, scully-zubairy, gerry-knight, walls-milburn, loudon-li
 chapters:
   - id: hydrogen-fine
     title: 水素原子の精密構造
+    status: reviewed
     prerequisites: [advanced-quantum-mechanics/dirac-equation]
     sections: [水素原子のスペクトル系列, 微細構造（相対論補正とスピン軌道相互作用）, Lamb シフト, 超微細構造と 21 cm 線, 同位体シフトと有限核サイズ効果]
   - id: atomic-structure
     title: 多電子原子
+    status: reviewed
     prerequisites: [quantum-mechanics/identical-particles]
     sections: [ヘリウム原子と交換相互作用, 中心場近似と周期表, Hartree–Fock 法, アルカリ原子と量子欠損, LS 結合と jj 結合, 項記号と多重項, Hund の規則と Landé の間隔則]
   - id: external-fields
     title: 外場中の原子
+    status: reviewed
     sections: [正常 Zeeman 効果と異常 Zeeman 効果, Paschen–Back 効果, 超微細構造と磁場（Breit–Rabi の式）, 1 次と 2 次の Stark 効果, 分極率と AC Stark シフト]
   - id: molecules
     title: 分子の電子状態
+    status: reviewed
     sections: [Born–Oppenheimer 近似, 水素分子イオンと LCAO 法, 水素分子と Heitler–London 法, 分子軌道と化学結合, 二原子分子の電子状態の分類, 多原子分子と混成軌道]
   - id: molecular-spectra
     title: 分子の回転・振動スペクトル
+    status: reviewed
     sections: [剛体回転子と回転スペクトル, 振動スペクトルと Morse ポテンシャル, 振動回転スペクトル, 電子遷移と Franck–Condon 原理, Raman 散乱, 核スピン統計とオルト・パラ]
   - id: light-matter
     title: 光と原子の相互作用
+    status: reviewed
     sections: [半古典論と双極子近似, Einstein の A 係数と B 係数, 遷移確率と選択則, 二準位系と Rabi 振動, 回転波近似, 光学 Bloch 方程式と Bloch ベクトル, 線幅の機構（自然幅・Doppler 幅・衝突幅）]
   - id: laser-spectroscopy
     title: レーザー分光
+    status: reviewed
     sections: [飽和吸収分光, 二光子分光, 光ポンピング, コヒーレント分布捕獲と電磁誘起透明化, Ramsey 法と原子時計, 光周波数コム]
   - id: field-quantization
     title: 電磁場の量子化と光子
+    status: reviewed
     prerequisites: [advanced-quantum-mechanics/radiation-field]
     sections: [共振器と自由空間の電磁場の量子化, 真空ゆらぎと零点エネルギー, Casimir 効果, 多モード場と光子の伝播, ビームスプリッターと干渉計の量子論]
   - id: quantum-light
     title: 光の量子状態
+    status: reviewed
     sections: [光子数状態, コヒーレント状態, スクイーズド状態, 熱的状態, 準確率分布（P 表示・Q 関数・Wigner 関数）, 非古典光の判定基準]
   - id: coherence
     title: 光のコヒーレンスと光子統計
+    status: reviewed
     prerequisites: [optics/coherence]
     sections: [古典的コヒーレンスと 1 次相関関数, Glauber の相関関数, Hanbury Brown–Twiss 効果, 光子集群と光子反集群, Hong–Ou–Mandel 効果, 光検出の量子論]
   - id: open-quantum-optics
     title: 散逸と量子光学のマスター方程式
+    status: reviewed
     prerequisites: [advanced-quantum-mechanics/open-systems]
     sections: [系と熱浴の模型, Born–Markov 近似とマスター方程式, 量子 Langevin 方程式と入出力理論, 量子回帰定理, 量子ジャンプと量子軌道法]
   - id: resonance-fluorescence
     title: 共鳴蛍光とドレスト原子
+    status: reviewed
     sections: [Weisskopf–Wigner 理論と自然放出, ドレスト原子描像, Mollow の三重項, 共鳴蛍光の光子反集群, Autler–Townes 分裂]
   - id: cavity-qed
     title: 共振器量子電磁力学
+    status: reviewed
     sections: [Jaynes–Cummings 模型, Rabi 振動の崩壊と復活, 真空 Rabi 分裂, Purcell 効果, 強結合領域と分散領域, 回路量子電磁力学の概観]
   - id: laser
     title: レーザーの理論
+    status: reviewed
     prerequisites: [optics/lasers]
     sections: [誘導放出と反転分布, レート方程式と発振条件, 半古典レーザー理論（Lamb 理論）, レーザーの量子論と Schawlow–Townes 線幅, レーザー光のコヒーレンスと光子統計, モード同期と超短パルス]
   - id: nonlinear-quantum-optics
     title: 非線形光学と量子光学
+    status: reviewed
     prerequisites: [optics/nonlinear-optics]
     sections: [非線形感受率, 第二高調波発生と位相整合, パラメトリック下方変換ともつれ光子対, スクイーズド光の生成, Kerr 効果と光双安定性]
   - id: cold-atoms
     title: レーザー冷却と原子トラップ
+    status: reviewed
     sections: [散乱力と光双極子力, Doppler 冷却と Doppler 限界, 偏光勾配冷却（Sisyphus 冷却）, 磁気光学トラップ, 磁気トラップと蒸発冷却, 光双極子トラップと光格子]
   - id: bec
     title: 冷却原子気体の Bose–Einstein 凝縮
+    status: reviewed
     prerequisites: [many-body/bose-systems]
     sections: [調和ポテンシャル中の理想 Bose 気体, 散乱長と擬ポテンシャル, Gross–Pitaevskii 方程式と Thomas–Fermi 近似, 集団励起と Bogoliubov 理論, 量子渦と超流動性, Feshbach 共鳴, 光格子と Bose–Hubbard 模型]
   - id: ion-traps-interferometry
     title: イオントラップと原子干渉計
+    status: reviewed
     sections: [Paul トラップと Penning トラップ, サイドバンド冷却, イオンによる量子ゲート, 原子干渉計, 精密測定と基礎物理定数]

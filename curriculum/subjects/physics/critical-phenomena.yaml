@@ -14,61 +14,79 @@ references: [goldenfeld-lectures, cardy-scaling, nishimori-ortiz, kardar-fields,
 chapters:
   - id: phenomenology
     title: 臨界現象の現象論
+    status: reviewed
     prerequisites: [statistical-mechanics/interacting-systems]
     sections: [相転移の分類と秩序変数, 臨界指数の定義, 臨界指数間の不等式（Rushbrooke・Griffiths）, 相関関数と相関長, 普遍性クラスと実験例, 対称性の破れと秩序変数空間]
   - id: mean-field
     title: 平均場理論と Landau 理論
+    status: reviewed
     prerequisites: [statistical-mechanics/mean-field]
     sections: [平均場近似の変分的定式化と無限レンジ模型, ベクトル秩序変数と対称性による Landau 展開, 3 次項と 1 次転移, 三重臨界点と多重臨界点, 結合した秩序変数と Lifshitz 点, Bethe 格子上の厳密解]
   - id: fluctuations
     title: ゆらぎと Landau 理論の破綻
+    status: reviewed
     sections: [Landau–Ginzburg 自由エネルギー汎関数, Gauss 近似と Ornstein–Zernike 相関関数, ゆらぎによる比熱の補正, Ginzburg の判定条件と上部臨界次元, Goldstone モードと下部臨界次元, Hubbard–Stratonovich 変換による格子模型から場の理論への移行]
   - id: scaling
     title: スケーリング理論
+    status: reviewed
     sections: [Widom のスケーリング仮説, 臨界指数間のスケーリング関係, ハイパースケーリングとその破れ, Kadanoff のブロックスピンの描像, 有限サイズスケーリング, クロスオーバー現象]
   - id: rigorous-foundations
     title: 相転移の厳密な基礎
+    status: reviewed
     sections: [熱力学極限の存在, Lee–Yang の円定理, Peierls の議論と長距離秩序の存在証明, 相関不等式（Griffiths 不等式・FKG 不等式）, 低次元における相転移の不在, 反射正値性と赤外評価の概観]
   - id: exact-solutions
     title: 厳密に解ける模型
+    status: reviewed
     sections: [転送行列法, 高温展開と低温展開, Kramers–Wannier 双対性と臨界点, 2 次元 Ising 模型の Onsager 解, 自発磁化と相関関数, Pfaffian によるダイマー模型と Ising 模型の解法]
   - id: integrable-lattice-models
     title: 可解格子模型
+    status: reviewed
     sections: [頂点模型と氷の残留エントロピー, 6 頂点模型と Bethe 仮説, Yang–Baxter 方程式と可換な転送行列, 8 頂点模型の概観, 球形模型と大 n 極限, Potts 模型と Fortuin–Kasteleyn 表示]
   - id: renormalization-group
     title: くりこみ群
+    status: reviewed
     sections: [くりこみ群変換の一般的構造, 固定点と線形化, 関連・無関連・周辺演算子, 固定点からの臨界指数の導出, 普遍性の説明, 臨界面とクロスオーバー]
   - id: real-space-rg
     title: 実空間くりこみ群
+    status: reviewed
     sections: [1 次元 Ising 模型の decimation, Migdal–Kadanoff 近似, Niemeijer–van Leeuwen のクラスター展開, 階層模型, パーコレーションの実空間くりこみ群, 数値的くりこみ群の概観]
   - id: field-theoretic-rg
     title: 場の理論的くりこみ群
+    status: reviewed
     prerequisites: [quantum-field-theory/renormalization]
     sections: [Landau–Ginzburg–Wilson ハミルトニアン, Gauss 固定点, 運動量殻くりこみ群, ε 展開と Wilson–Fisher 固定点, O(n) 模型の臨界指数の 1 ループ計算, 2 ループ計算と異常次元]
   - id: field-theory-methods
     title: 場の理論による臨界現象の解析
+    status: reviewed
     prerequisites: [quantum-field-theory/renormalization-group]
     sections: [くりこまれた場の理論と Callan–Symanzik 方程式, 最小引き算と ε 展開の系統化, 大 n 展開, 非線形 σ 模型と 2+ε 展開, 演算子積展開とスケーリング次元, 臨界指数の精密決定と共形ブートストラップの概観]
   - id: kt-transition
     title: Kosterlitz–Thouless 転移
+    status: reviewed
     sections: [2 次元 XY 模型とスピン波近似, Mermin–Wagner の定理, 渦とトポロジカル欠陥, Kosterlitz–Thouless のくりこみ群, 超流動膜とヘリシティ率の普遍跳躍, Coulomb ガスと sine-Gordon 模型との対応]
   - id: cft
     title: 2 次元共形場理論
+    status: reviewed
     prerequisites: [complex-analysis/conformal-maps]
     sections: [共形変換と共形群, 準プライマリ場と相関関数への制約, エネルギー運動量テンソルと共形 Ward 恒等式, Virasoro 代数と中心電荷, 最小模型と Kac 表, Ising 模型の共形場理論による記述, 円筒上の共形場理論と有限サイズスペクトル]
   - id: cft-applications
     title: 共形場理論の応用
+    status: reviewed
     sections: [トーラス上の分配関数とモジュラー不変性, 自由ボソンと Coulomb ガス表示, 境界共形場理論と表面臨界現象, 共形摂動論と Zamolodchikov の c 定理, エンタングルメントエントロピーと中心電荷]
   - id: percolation
     title: パーコレーションと高分子の統計
+    status: reviewed
     sections: [パーコレーション模型と臨界確率, 1 次元と Bethe 格子での厳密解, クラスターサイズ分布とスケーリング, 2 次元パーコレーションの厳密な結果, 自己回避歩行と高分子の統計, de Gennes の n→0 対応]
   - id: disorder
     title: ランダム系と臨界現象
+    status: reviewed
     sections: [quenched 平均と annealed 平均, Harris の基準, ランダム磁場 Ising 模型と Imry–Ma の議論, レプリカ法, スピングラスと Sherrington–Kirkpatrick 模型, Griffiths 特異性]
   - id: quantum-phase-transitions
     title: 量子相転移
+    status: reviewed
     prerequisites: [advanced-quantum-mechanics/second-quantization]
     sections: [量子相転移と量子臨界点, 横磁場 Ising 模型, d 次元量子系と d+1 次元古典系の対応, Jordan–Wigner 変換による横磁場 Ising 鎖の厳密解, 量子臨界領域と有限温度クロスオーバー, 量子臨界現象の例]
   - id: dynamic-critical
     title: 動的臨界現象
+    status: reviewed
     sections: [臨界緩和と動的臨界指数, Langevin 方程式と動的普遍性クラス（Model A・Model B）, 動的くりこみ群, 保存則と動的スケーリング, 相分離の動力学（スピノーダル分解と粗大化）]
