@@ -18,10 +18,10 @@ for (const doc of docs.values()) {
   const rel = relative(process.cwd(), doc.file);
   const { tree } = parseMarkdown(readFileSync(doc.file, 'utf8'));
   visit(tree, (node) => {
-    if (node.type !== 'math' && node.type !== 'inlineMath') return;
+    if (node.type !== 'math' && node.type !== 'inlineMath' && !(node.type === 'code' && node.lang === 'math')) return;
     const value = node.type === 'math' ? extractEquationLabel(node.value).value : node.value;
     try {
-      katex.renderToString(value, { ...katexOptions, macros: { ...katexOptions.macros }, displayMode: node.type === 'math', throwOnError: true });
+      katex.renderToString(value, { ...katexOptions, macros: { ...katexOptions.macros }, displayMode: node.type !== 'inlineMath', throwOnError: true });
     } catch (e) {
       errors.push(`${rel}:${node.position?.start.line ?? '?'}: ${(e as Error).message}`);
     }

@@ -1,3 +1,5 @@
+import { renderMath } from './math.ts';
+
 const pageCache = new Map<string, Promise<Document | undefined>>();
 
 function fetchPage(url: string): Promise<Document | undefined> {
@@ -49,6 +51,8 @@ export function initXrefPreview(): void {
     clone.removeAttribute('id');
     clone.querySelectorAll('[id]').forEach((el) => el.removeAttribute('id'));
     clone.querySelectorAll('details').forEach((d) => d.remove());
+    await renderMath(clone);
+    if (active !== link) return;
     pop.replaceChildren(clone);
     pop.id = 'xref-popover';
     link.setAttribute('aria-describedby', pop.id);

@@ -2,14 +2,12 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import { unified } from '@astrojs/markdown-remark';
 import remarkMath from 'remark-math';
-import rehypeKatex from 'rehype-katex';
 import starlightLinksValidator from 'starlight-links-validator';
 import { CONTENT_DIR, CURRICULUM_DIR, loadCurriculum } from './src/lib/curriculum.ts';
-import { katexOptions } from './src/lib/katex-macros.ts';
 import { buildSidebar } from './src/lib/sidebar.ts';
 import { edumathIntegration } from './src/lib/integration.ts';
 import remarkEduMath from './src/plugins/remark-edumath.ts';
-import rehypeMathGate from './src/plugins/rehype-math-gate.ts';
+import rehypeMathSource from './src/plugins/rehype-math-source.ts';
 
 const base = process.env.SITE_BASE ?? '/';
 
@@ -31,7 +29,7 @@ export default defineConfig({
   markdown: {
     processor: unified({
       remarkPlugins: [remarkMath, [remarkEduMath, { include: [CONTENT_DIR] }]],
-      rehypePlugins: [[rehypeKatex, katexOptions], rehypeMathGate],
+      rehypePlugins: [rehypeMathSource],
       smartypants: false,
     }),
   },

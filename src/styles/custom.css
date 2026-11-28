@@ -32,11 +32,34 @@
 }
 
 /* Math */
-.sl-markdown-content .katex-display {
+:is(.sl-markdown-content, .xref-popover) :is(.math-display, .katex-display) {
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0.2rem 0;
   margin: 0.8rem 0;
+}
+:is(.sl-markdown-content, .xref-popover) .katex-display > .katex > .katex-html:has(> .katex-tag) {
+  display: flow-root;
+  width: max-content;
+  min-width: 100%;
+}
+:is(.sl-markdown-content, .xref-popover) .katex-display > .katex > .katex-html > .katex-tag {
+  position: static;
+  float: inline-end;
+  margin-inline-start: 1em;
+}
+.math-display {
+  min-height: 1.5em;
+  white-space: pre;
+  overflow-wrap: normal;
+}
+@media (scripting: enabled) {
+  :is(.math-inline, .math-display):not([data-math-fallback]) {
+    visibility: hidden;
+  }
+  .math-display:not([data-math-fallback]) {
+    max-height: 3lh;
+  }
 }
 .sl-markdown-content .katex {
   font-size: 1.08em;

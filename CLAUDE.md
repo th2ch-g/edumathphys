@@ -6,7 +6,7 @@ Japanese self-study site for university mathematics and physics (undergraduate t
 
 - `npm run dev` — dev server
 - `npm run check` — fast consistency check (registry, labels, refs, citations, terms, KaTeX)
-- `npm run build` — full build (fails on any content error, KaTeX error or broken link)
+- `npm run build` — full build with content and link validation. Run `npm run check` to validate chapter math rendered by KaTeX in the browser.
 - `npm run typecheck` — `astro check`
 
 ## Layout

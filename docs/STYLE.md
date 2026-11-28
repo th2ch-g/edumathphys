@@ -111,6 +111,8 @@ $$
 
 One `\label` per display. Use `aligned` for multi-line equations. Unlabeled equations are unnumbered.
 
+The browser renders chapter math with KaTeX. Use `npm run check` to validate TeX syntax.
+
 ### Exercises
 
 ```markdown
